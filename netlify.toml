@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects for SEO preservation when migrating from Wix
+[[redirects]]
+  from = "/copy-of-summer-camp-2024-7-12-years"
+  to = "https://phuketcamp.com"
+  status = 301
+  force = true
+
+# Handle Next.js routing
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sage: #BED7AF;
+  --sage-dark: #8fb07a;
+  --cream: #FAF9F6;
+  --charcoal: #2d2d2d;
+  --text: #444;
+  --text-light: #666;
+  --highlight: #c9e4b8;
+
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sage: var(--sage);
+  --color-sage-dark: var(--sage-dark);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+/* Typography utilities */
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+
+.font-sans {
+  font-family: var(--font-inter);
+}
+
+/* Button styles */
+.btn {
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--sage);
+  color: var(--charcoal);
+}
+
+.btn-primary:hover {
+  background: var(--sage-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--charcoal);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Activity card animations */
+.activity-card .hover-content {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover .hover-content {
+  transform: translateY(0);
+}
+
+.activity-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Scroll indicator animation */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
 }
