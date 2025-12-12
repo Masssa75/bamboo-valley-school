@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="relative z-[3] text-center text-white max-w-[1100px] px-8 w-full">
         {/* Logo */}
         <Image
-          src="/images/logo-white.png"
+          src="/images/logo.png"
           alt="Bamboo Valley"
           width={220}
           height={220}
