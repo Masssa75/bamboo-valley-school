@@ -34,12 +34,12 @@ export default function Navigation() {
       <ul className="hidden md:flex gap-10 items-center list-none">
         <li>
           <Link
-            href="#about"
+            href="/our-story"
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
               scrolled ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            About
+            Our Story
           </Link>
         </li>
         <li>
@@ -106,7 +106,7 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="flex flex-col py-4">
-            <Link href="#about" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>About</Link>
+            <Link href="/our-story" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Our Story</Link>
             <Link href="#programs" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
             <Link href="/science" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>The Science</Link>
             <Link href="/contact" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Visit Us</Link>
