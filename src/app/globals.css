@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --sage: #BED7AF;
@@ -8,16 +10,6 @@
   --text: #444;
   --text-light: #666;
   --highlight: #c9e4b8;
-
-  --font-cormorant: 'Cormorant Garamond', serif;
-  --font-inter: 'Inter', sans-serif;
-}
-
-@theme inline {
-  --color-sage: var(--sage);
-  --color-sage-dark: var(--sage-dark);
-  --color-cream: var(--cream);
-  --color-charcoal: var(--charcoal);
 }
 
 * {
@@ -27,7 +19,7 @@
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), 'Inter', sans-serif;
   color: var(--charcoal);
   background: var(--cream);
   line-height: 1.6;
@@ -35,11 +27,11 @@ body {
 
 /* Typography utilities */
 .font-serif {
-  font-family: var(--font-cormorant);
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
 }
 
 .font-sans {
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
 /* Button styles */
