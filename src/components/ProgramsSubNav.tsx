@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const programs = [
   { id: "nursery", label: "Nursery", ages: "2-4" },
@@ -15,15 +15,20 @@ const programs = [
 export default function ProgramsSubNav() {
   const [activeSection, setActiveSection] = useState("nursery");
   const [isSticky, setIsSticky] = useState(false);
+  const isScrollingRef = useRef(false);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       // Check if sub-nav should be sticky (after scrolling past hero)
       setIsSticky(window.scrollY > 200);
 
+      // Don't update active section while programmatic scroll is in progress
+      if (isScrollingRef.current) return;
+
       // Find which section is currently in view
       const sections = programs.map((p) => document.getElementById(p.id));
-      const scrollPosition = window.scrollY + 150; // Offset for nav height
+      const scrollPosition = window.scrollY + 200; // Offset for nav height
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -39,13 +44,26 @@ export default function ProgramsSubNav() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    setActiveSection(id); // Immediately set active on click
+    // Clear any existing timeout
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+
+    // Set active immediately and block scroll handler
+    isScrollingRef.current = true;
+    setActiveSection(id);
+
     const element = document.getElementById(id);
     if (element) {
       const offset = 160; // Account for main nav (~72px) + sub-nav (~56px) + padding
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
+
+    // Re-enable scroll handler after animation completes
+    scrollTimeoutRef.current = setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 800);
   };
 
   return (
