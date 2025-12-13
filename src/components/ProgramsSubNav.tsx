@@ -39,6 +39,7 @@ export default function ProgramsSubNav() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setActiveSection(id); // Immediately set active on click
     const element = document.getElementById(id);
     if (element) {
       const offset = 160; // Account for main nav (~72px) + sub-nav (~56px) + padding
