@@ -13,12 +13,18 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
-        <div className="max-w-[800px] mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-[#2d2d2d]">
+      <section
+        className="relative pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/contact-hero.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        <div className="relative max-w-[800px] mx-auto text-center">
+          <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-white">
             Come See Us
           </h1>
-          <p className="text-lg text-[#666] max-w-[600px] mx-auto">
+          <p className="text-lg text-white/90 max-w-[600px] mx-auto">
             The best way to understand Bamboo Valley is to experience it.
             Schedule a visit and see what happens when children are free.
           </p>
