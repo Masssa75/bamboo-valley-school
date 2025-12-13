@@ -45,7 +45,7 @@ export default function ContactPage() {
                     Thailand
                   </p>
                   <a
-                    href="https://maps.google.com/?q=3/74+Moo+4+Cherngtalay+Thalang+Phuket+83110+Thailand"
+                    href="https://maps.app.goo.gl/BSgZ5mBeAZqQnZEN6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-2 text-[#8fb07a] hover:text-[#6d9b5a] font-medium text-sm"
@@ -149,7 +149,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-[400px] bg-gray-200">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5!2d98.2977!3d7.9785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnNDIuNiJOIDk4wrAxNyc1MS43IkU!5e0!3m2!1sen!2sth!4v1699000000000!5m2!1sen!2sth"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8!2d98.3179683!3d8.0042192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305037d692c8e82b%3A0x9d66d629c16cb3c6!2sBamboo%20Valley%20Phuket!5e0!3m2!1sen!2sth!4v1702468800000!5m2!1sen!2sth"
           width="100%"
           height="100%"
           style={{ border: 0 }}
