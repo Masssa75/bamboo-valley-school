@@ -159,20 +159,18 @@ export default function OurStoryPage() {
             Our approach is rooted in Waldorf education, outdoor learning, the British curriculum, and the fundamental belief that children have a strong innate drive to learn and excel. We blend these elements differently at each developmental stage to nurture extraordinary human beings.
           </p>
 
-          <h3 className="font-serif text-2xl font-normal mt-10 mb-4 text-[#2d2d2d]">Ages 2-4: Nursery</h3>
           <p className="text-[#444] leading-relaxed mb-6">
-            At this age, we strengthen children's innate desire to learn, engage, and experiment while developing their physical, social, emotional, and creative abilities. We give them a rich outdoor and indoor playground where they can learn to choose what interests them, try it, fail, persist, and ultimately succeed. This creates a huge appetite to explore and learn new things.
+            From our Nursery (ages 2-4) where we strengthen children's innate desire to learn, through Kindergarten (ages 3-6) where we identify and nurture each child's unique talents, to Primary (ages 6-9) where we fully cover the British curriculum while intensifying our focus on individual strengths — every stage is designed to help children reach their full potential.
           </p>
 
-          <h3 className="font-serif text-2xl font-normal mt-10 mb-4 text-[#2d2d2d]">Ages 3-6: Kindergarten</h3>
-          <p className="text-[#444] leading-relaxed mb-6">
-            At this stage, we begin systematic observation to identify and nurture each child's unique talents and interests. We document how children learn, what captivates them, and where their natural strengths lie. Some children teach themselves to read and fill diaries with stories. Others build elaborate structures or show remarkable social leadership.
-          </p>
-
-          <h3 className="font-serif text-2xl font-normal mt-10 mb-4 text-[#2d2d2d]">Ages 6-9: Primary</h3>
-          <p className="text-[#444] leading-relaxed mb-12">
-            Now we fully cover the British curriculum while intensifying our focus on each child's unique talents. We add expanded opportunities - specialist teachers for arts, music, sports; visits to external facilities; chances to compete, perform, and showcase their abilities. When we spot a child's passion and talent, we work with parents to provide the support needed to bring out the absolute best in them.
-          </p>
+          <div className="my-8">
+            <Link href="/programs" className="inline-flex items-center gap-2 text-[#8fb07a] hover:text-[#6d9b5a] font-medium">
+              Explore our programs in detail
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
 
           {/* CTA */}
           <div className="bg-[#FAF9F6] p-8 md:p-12 rounded-lg text-center mt-16">
