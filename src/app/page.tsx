@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhatWeAre from "@/components/WhatWeAre";
 import Activities from "@/components/Activities";
+import Camps from "@/components/Camps";
 import SpaceVideo from "@/components/SpaceVideo";
 import Community from "@/components/Community";
 import CTA from "@/components/CTA";
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <WhatWeAre />
       <Activities />
+      <Camps />
       <SpaceVideo />
       <Community />
       <CTA />
