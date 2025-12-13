@@ -43,7 +43,10 @@ body {
   border-radius: 4px;
   transition: all 0.3s;
   letter-spacing: 0.5px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .btn-primary {
