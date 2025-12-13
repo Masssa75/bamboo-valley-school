@@ -12,13 +12,13 @@ const activities = [
   {
     title: "Animal Care",
     subtitle: "Where kindness grows",
-    image: "/images/Animal-Care.png",
+    image: "/images/Animal-Care.jpg",
     science: "Children who care for animals develop stronger empathy that transfers to humans. Having responsibility for another living being builds moral reasoning.",
   },
   {
     title: "Mud Play",
     subtitle: "Where immunity is built",
-    image: "/images/Mud-Play.png",
+    image: "/images/Mud-Play.jpg",
     science: "Within one month, children playing in forest soil show improved immune responses. One gram of soil contains 10 billion microorganisms that train the immune system.",
   },
   {
