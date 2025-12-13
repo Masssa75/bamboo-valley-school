@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
+import ProgramsSubNav from "@/components/ProgramsSubNav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <>
-      <Navigation />
+      <Navigation variant="light" />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
+      <section className="pt-32 pb-8 md:pt-40 md:pb-12 px-6 bg-[#FAF9F6]">
         <div className="max-w-[800px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-[#2d2d2d]">
             Our Programs
@@ -24,6 +25,9 @@ export default function ProgramsPage() {
           </p>
         </div>
       </section>
+
+      {/* Sticky Sub-Navigation */}
+      <ProgramsSubNav />
 
       {/* Main Programs */}
       <section className="py-16 md:py-24 px-6 bg-white">
@@ -37,7 +41,7 @@ export default function ProgramsPage() {
 
           <div className="space-y-16">
             {/* Nursery */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div id="nursery" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center scroll-mt-32">
               <div className="order-2 md:order-1">
                 <div className="inline-block bg-[#BED7AF]/30 text-[#5a7a4a] px-3 py-1 rounded-full text-sm font-medium mb-4">
                   Ages 2–4
@@ -65,7 +69,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Kindergarten */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div id="kindergarten" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center scroll-mt-32">
               <div className="aspect-[4/3] bg-[#e8f0e3] rounded-lg overflow-hidden">
                 <img
                   src="/images/kindergarten.jpg"
@@ -93,7 +97,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Primary */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div id="primary" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center scroll-mt-32">
               <div className="order-2 md:order-1">
                 <div className="inline-block bg-[#BED7AF]/30 text-[#5a7a4a] px-3 py-1 rounded-full text-sm font-medium mb-4">
                   Ages 6–9
@@ -135,7 +139,7 @@ export default function ProgramsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Parent & Toddler */}
-            <div className="bg-white p-8 rounded-lg">
+            <div id="toddler" className="bg-white p-8 rounded-lg scroll-mt-32">
               <div className="inline-block bg-[#FAD7AA]/40 text-[#8a6d3b] px-3 py-1 rounded-full text-sm font-medium mb-4">
                 Ages 1–3 with parent
               </div>
@@ -152,7 +156,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* After School */}
-            <div className="bg-white p-8 rounded-lg">
+            <div id="after-school" className="bg-white p-8 rounded-lg scroll-mt-32">
               <div className="inline-block bg-[#C8DCE1]/50 text-[#4a6670] px-3 py-1 rounded-full text-sm font-medium mb-4">
                 Ages 3–6
               </div>
@@ -169,7 +173,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Saturday Workshop */}
-            <div className="bg-white p-8 rounded-lg">
+            <div id="saturday" className="bg-white p-8 rounded-lg scroll-mt-32">
               <div className="inline-block bg-[#EBC3C3]/40 text-[#8a5a5a] px-3 py-1 rounded-full text-sm font-medium mb-4">
                 Ages 3–6
               </div>
@@ -187,7 +191,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Holiday Camps */}
-            <div className="bg-white p-8 rounded-lg">
+            <div id="camps" className="bg-white p-8 rounded-lg scroll-mt-32">
               <div className="inline-block bg-[#BED7AF]/30 text-[#5a7a4a] px-3 py-1 rounded-full text-sm font-medium mb-4">
                 Ages 3–12
               </div>

@@ -3,7 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function Navigation() {
+interface NavigationProps {
+  variant?: "dark" | "light"; // dark = white text on transparent (for dark heroes), light = dark text (for light backgrounds)
+}
+
+export default function Navigation({ variant = "dark" }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,16 +19,19 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Use dark text styling if variant is "light" OR if user has scrolled
+  const useDarkText = variant === "light" || scrolled;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex justify-between items-center transition-all duration-300 ${
-        scrolled ? "bg-white/95 shadow-lg" : "bg-transparent"
+        scrolled ? "bg-white/95 shadow-lg" : variant === "light" ? "bg-white/80" : "bg-transparent"
       }`}
     >
       <Link
         href="/"
         className={`font-serif text-2xl font-semibold transition-colors ${
-          scrolled ? "text-[#2d2d2d]" : "text-white"
+          useDarkText ? "text-[#2d2d2d]" : "text-white"
         }`}
       >
         Bamboo Valley
@@ -36,7 +43,7 @@ export default function Navigation() {
           <Link
             href="/our-story"
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
-              scrolled ? "text-[#2d2d2d]" : "text-white"
+              useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             Our Story
@@ -46,7 +53,7 @@ export default function Navigation() {
           <Link
             href="/programs"
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
-              scrolled ? "text-[#2d2d2d]" : "text-white"
+              useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             Programs
@@ -56,7 +63,7 @@ export default function Navigation() {
           <Link
             href="/science"
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
-              scrolled ? "text-[#2d2d2d]" : "text-white"
+              useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             The Science
@@ -66,7 +73,7 @@ export default function Navigation() {
           <Link
             href="/contact"
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
-              scrolled ? "text-[#2d2d2d]" : "text-white"
+              useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             Visit Us
@@ -89,7 +96,7 @@ export default function Navigation() {
         aria-label="Toggle menu"
       >
         <svg
-          className={`w-6 h-6 ${scrolled ? "text-[#2d2d2d]" : "text-white"}`}
+          className={`w-6 h-6 ${useDarkText ? "text-[#2d2d2d]" : "text-white"}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
