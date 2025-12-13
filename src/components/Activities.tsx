@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 const activities = [
@@ -60,6 +61,13 @@ const activities = [
 ];
 
 export default function Activities() {
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    // Toggle: if same card clicked, close it; otherwise open clicked card
+    setActiveCard(activeCard === index ? null : index);
+  };
+
   return (
     <section id="programs" className="py-28 md:py-32 px-6 md:px-12 bg-[#FAF9F6]">
       <div className="text-center max-w-[600px] mx-auto mb-16">
@@ -72,10 +80,15 @@ export default function Activities() {
         {activities.map((activity, index) => (
           <div
             key={index}
-            className="activity-card relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
+            onClick={() => handleCardClick(index)}
+            className={`activity-card relative aspect-square rounded-lg overflow-hidden cursor-pointer group ${
+              activeCard === index ? "is-active" : ""
+            }`}
           >
             {/* Image */}
-            <div className="card-image absolute inset-0 transition-transform duration-400">
+            <div className={`card-image absolute inset-0 transition-transform duration-400 ${
+              activeCard === index ? "scale-105" : ""
+            }`}>
               <Image
                 src={activity.image}
                 alt={activity.title}
@@ -93,8 +106,10 @@ export default function Activities() {
               <p className="text-sm opacity-80">{activity.subtitle}</p>
             </div>
 
-            {/* Hover Content */}
-            <div className="hover-content absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-[#BED7AF] text-[#2d2d2d] z-[3]">
+            {/* Detail Content - shown on hover (desktop) or tap (mobile) */}
+            <div className={`hover-content absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-[#BED7AF] text-[#2d2d2d] z-[3] ${
+              activeCard === index ? "!translate-y-0" : ""
+            }`}>
               <h3 className="font-serif text-2xl font-medium mb-3 text-[#2d2d2d]">
                 {activity.title}
               </h3>
