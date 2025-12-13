@@ -235,7 +235,7 @@ const researchSections = [
 export default function SciencePage() {
   return (
     <>
-      <Navigation />
+      <Navigation variant="light" />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#BED7AF] to-[#d4e5c9] py-24 md:py-32 px-6 text-center min-h-[60vh] flex flex-col justify-center items-center">

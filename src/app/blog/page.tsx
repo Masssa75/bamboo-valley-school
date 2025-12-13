@@ -36,7 +36,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
-      <Navigation />
+      <Navigation variant="light" />
 
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
