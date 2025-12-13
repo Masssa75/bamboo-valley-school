@@ -41,7 +41,7 @@ export default function ProgramsSubNav() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 120; // Account for fixed nav heights
+      const offset = 160; // Account for main nav (~72px) + sub-nav (~56px) + padding
       const elementPosition = element.offsetTop - offset;
       window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }

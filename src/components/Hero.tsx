@@ -50,7 +50,7 @@ export default function Hero() {
         />
 
         {/* Tagline */}
-        <div className="font-serif text-lg tracking-[3px] uppercase mb-8 opacity-90">
+        <div className="font-serif text-lg font-medium tracking-[3px] uppercase mb-8 opacity-95">
           natural learning community
         </div>
 
