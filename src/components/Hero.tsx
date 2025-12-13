@@ -24,6 +24,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        poster="/images/hero-bg.jpg"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
