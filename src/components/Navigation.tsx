@@ -68,62 +68,82 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           </Link>
           {programsOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
-              <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-5 min-w-[420px]">
-                {/* View All Link */}
+              <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
+                {/* All Programs */}
                 <Link
                   href="/programs"
-                  className="block text-sm font-medium text-[#8fb07a] hover:text-[#6d9b5a] mb-4 transition-colors"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
                 >
-                  View All Programs →
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📋</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">All Programs</div>
+                    <div className="text-xs text-[#888]">Overview & details</div>
+                  </div>
                 </Link>
 
-                <div className="grid grid-cols-2 gap-6">
-                  {/* Full-Day Programs */}
-                  <div>
-                    <p className="text-xs font-medium text-[#999] uppercase tracking-wider mb-2">Full-Day</p>
-                    <div className="space-y-1">
-                      <Link href="/programs#nursery" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">Nursery</span>
-                        <span className="text-[#888] ml-1">2–4 yrs</span>
-                      </Link>
-                      <Link href="/programs#kindergarten" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">Kindergarten</span>
-                        <span className="text-[#888] ml-1">3–6 yrs</span>
-                      </Link>
-                      <Link href="/programs#primary" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">Primary</span>
-                        <span className="text-[#888] ml-1">6–9 yrs</span>
-                      </Link>
-                    </div>
-                  </div>
+                <div className="border-t border-gray-100 my-2"></div>
 
-                  {/* Additional Programs */}
+                {/* Nursery */}
+                <Link
+                  href="/programs#nursery"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🌱</span>
                   <div>
-                    <p className="text-xs font-medium text-[#999] uppercase tracking-wider mb-2">Additional</p>
-                    <div className="space-y-1">
-                      <Link href="/programs#toddler" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">Parent & Toddler</span>
-                      </Link>
-                      <Link href="/programs#after-school" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">After School</span>
-                      </Link>
-                      <Link href="/programs#camps" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
-                        <span className="font-medium">Holiday Camps</span>
-                      </Link>
-                    </div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Nursery</div>
+                    <div className="text-xs text-[#888]">Ages 2–4</div>
                   </div>
-                </div>
+                </Link>
+
+                {/* Kindergarten */}
+                <Link
+                  href="/programs#kindergarten"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🎨</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Kindergarten</div>
+                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                  </div>
+                </Link>
+
+                {/* Primary */}
+                <Link
+                  href="/programs#primary"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📚</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Primary</div>
+                    <div className="text-xs text-[#888]">Ages 6–9</div>
+                  </div>
+                </Link>
+
+                <div className="border-t border-gray-100 my-2"></div>
+
+                {/* Holiday Camps */}
+                <Link
+                  href="/programs#camps"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🏕️</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Holiday Camps</div>
+                    <div className="text-xs text-[#888]">Ages 3–12</div>
+                  </div>
+                </Link>
 
                 {/* Child Wellbeing */}
-                <div className="border-t border-gray-100 mt-4 pt-4">
-                  <Link
-                    href="/child-wellbeing"
-                    className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors"
-                  >
-                    <span className="font-medium">Child Wellbeing</span>
-                    <span className="text-[#888] ml-1">— How we support every child</span>
-                  </Link>
-                </div>
+                <Link
+                  href="/child-wellbeing"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">💚</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Child Wellbeing</div>
+                    <div className="text-xs text-[#888]">How we support every child</div>
+                  </div>
+                </Link>
               </div>
             </div>
           )}
