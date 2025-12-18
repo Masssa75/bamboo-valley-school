@@ -10,6 +10,7 @@ interface NavigationProps {
 export default function Navigation({ variant = "dark" }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,15 +50,40 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
             Our Story
           </Link>
         </li>
-        <li>
+        <li
+          className="relative"
+          onMouseEnter={() => setProgramsOpen(true)}
+          onMouseLeave={() => setProgramsOpen(false)}
+        >
           <Link
             href="/programs"
-            className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
+            className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             Programs
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
           </Link>
+          {programsOpen && (
+            <div className="absolute top-full left-0 pt-2">
+              <div className="bg-white rounded-lg shadow-xl py-2 min-w-[180px] border border-gray-100">
+                <Link
+                  href="/programs"
+                  className="block px-4 py-2 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  Our Programs
+                </Link>
+                <Link
+                  href="/child-wellbeing"
+                  className="block px-4 py-2 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  Child Wellbeing
+                </Link>
+              </div>
+            </div>
+          )}
         </li>
         <li>
           <Link
@@ -115,6 +141,7 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           <div className="flex flex-col py-4">
             <Link href="/our-story" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Our Story</Link>
             <Link href="/programs" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
+            <Link href="/child-wellbeing" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Child Wellbeing</Link>
             <Link href="/science" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>The Science</Link>
             <Link href="/contact" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Visit Us</Link>
             <div className="px-6 py-3">
