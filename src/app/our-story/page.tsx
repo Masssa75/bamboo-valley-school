@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -11,18 +12,27 @@ export const metadata: Metadata = {
 export default function OurStoryPage() {
   return (
     <>
-      <Navigation variant="light" />
+      <Navigation />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
-        <div className="max-w-[800px] mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-normal mb-4 text-[#2d2d2d]">
+      {/* Hero with Background Image */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+        <Image
+          src="/images/founders-family-bamboo-valley-phuket.jpeg"
+          alt="Bamboo Valley founders with their children at the outdoor school in Phuket"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative max-w-[800px] mx-auto text-center">
+          <h1 className="font-serif text-4xl md:text-5xl font-normal mb-4 text-white">
             Building Schools for the Life We Actually Want
           </h1>
-          <p className="text-lg text-[#666] mb-2">
+          <p className="text-lg text-white/90 mb-2">
             This is for parents who want nothing less than extraordinary lives for their children.
           </p>
-          <p className="text-[#999] italic">By Nutthanit and Marc Schwyn</p>
+          <p className="text-white/70 italic">By Nutthanit and Marc Schwyn</p>
         </div>
       </section>
 
@@ -47,7 +57,7 @@ export default function OurStoryPage() {
           <h2 className="font-serif text-3xl font-normal mt-16 mb-6 text-[#2d2d2d]">Moving to Phuket</h2>
 
           <p className="text-[#444] leading-relaxed mb-6">
-            Five years ago, we decided the city wasn't working for us. We couldn't find the right school, kids were trapped indoors, traffic and pollution made it hard to go anywhere, and we barely had time together as a family. So we moved to a beach in Phuket, hoping for more space, more nature, and more time with our children.
+            Five years ago, we decided the city wasn't working for us. We couldn't find the right school, children were trapped indoors, traffic and pollution made it hard to go anywhere, and we barely had time together as a family. So we moved to a beach in Phuket, hoping for more space, more nature, and more time with our children.
           </p>
 
           <p className="text-[#444] leading-relaxed mb-6">
@@ -85,7 +95,7 @@ export default function OurStoryPage() {
           </p>
 
           <p className="text-[#444] leading-relaxed mb-6">
-            Then difficult times hit. Work demanded more. We were away more. And we watched our daughter transform - but not in a good way. She became difficult, naggy, bossy, rebellious. She absorbed negative influences from other kids, from screens. She stopped listening to us. It broke our hearts.
+            Then difficult times hit. Work demanded more. We were away more. And we watched our daughter transform - but not in a good way. She became difficult, naggy, bossy, rebellious. She absorbed negative influences from other children, from screens. She stopped listening to us. It broke our hearts.
           </p>
 
           <p className="text-[#444] leading-relaxed mb-6">
@@ -101,7 +111,7 @@ export default function OurStoryPage() {
           </p>
 
           <p className="text-[#444] leading-relaxed mb-12">
-            But here's the deeper magic: <strong>Children learn by copying.</strong> When you're absent, they copy whoever is there - other kids, screens, anyone. When you're present, they copy YOU. They mirror your mannerisms, your interests, your values. They spontaneously say "I love you." They ask to learn what you know. They want to help with whatever you're doing.
+            But here's the deeper magic: <strong>Children learn by copying.</strong> When you're absent, they copy whoever is there - other children, screens, anyone. When you're present, they copy YOU. They mirror your mannerisms, your interests, your values. They spontaneously say "I love you." They ask to learn what you know. They want to help with whatever you're doing.
           </p>
 
           {/* Why Nature Matters */}

@@ -4,6 +4,18 @@ export default function Camps() {
   return (
     <section className="py-28 md:py-32 px-6 md:px-12 bg-white">
       <div className="max-w-[900px] mx-auto">
+        {/* Title & Description */}
+        <div className="text-center max-w-[700px] mx-auto mb-12">
+          <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d] mb-6">
+            Holiday Camps
+          </h2>
+          <p className="text-lg text-[#666] max-w-[650px] mx-auto leading-relaxed">
+            Experience Bamboo Valley during school holidays. Our camps offer the same
+            nature-immersed, child-led learning—perfect for families wanting to try
+            our approach before enrolling, or simply give their children an extraordinary break.
+          </p>
+        </div>
+
         {/* Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div className="text-center">
@@ -32,18 +44,8 @@ export default function Camps() {
           </div>
         </div>
 
-        {/* Content */}
-        <div className="text-center max-w-[700px] mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d] mb-6">
-            Holiday Camps
-          </h2>
-
-          <p className="text-lg text-[#666] max-w-[650px] mx-auto mb-10 leading-relaxed">
-            Experience Bamboo Valley during school holidays. Our camps offer the same
-            nature-immersed, child-led learning—perfect for families wanting to try
-            our approach before enrolling, or simply give their children an extraordinary break.
-          </p>
-
+        {/* CTA */}
+        <div className="text-center">
           <a
             href="https://phuketcamp.com"
             target="_blank"

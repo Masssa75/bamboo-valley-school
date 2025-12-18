@@ -8,14 +8,22 @@ export const metadata: Metadata = {
   description: "Research-backed insights on child development, nature-based education, and parenting strategies from Bamboo Valley's educators.",
 };
 
-// Placeholder for future blog posts - will be replaced with MDX/content layer
 const posts = [
+  {
+    slug: "homework-myth",
+    title: "Homework Doesn't Help Children Under 10: 35 Years of Research",
+    excerpt: "A meta-analysis of 35 studies found no benefit from homework for elementary students. For third graders, more homework meant lower achievement. Here's what actually works.",
+    date: "December 16, 2024",
+    category: "Research",
+    isPublished: true,
+  },
   {
     slug: "forest-play-immunity",
     title: "How Forest Play Builds Immunity",
     excerpt: "Research shows children who play in natural environments develop stronger immune systems. Here's the science behind mud play.",
     date: "Coming Soon",
     category: "Health",
+    isPublished: false,
   },
   {
     slug: "curiosity-vs-rewards",
@@ -23,13 +31,7 @@ const posts = [
     excerpt: "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     date: "Coming Soon",
     category: "Learning",
-  },
-  {
-    slug: "screen-time-alternatives",
-    title: "Screen-Free Activities That Actually Work",
-    excerpt: "Practical alternatives to screens that engage children's natural curiosity and creativity.",
-    date: "Coming Soon",
-    category: "Parenting",
+    isPublished: false,
   },
 ];
 
@@ -56,26 +58,46 @@ export default function BlogPage() {
         <div className="max-w-[1000px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <article
-                key={post.slug}
-                className="bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                {/* Placeholder image */}
-                <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a]" />
-
-                <div className="p-6">
-                  <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
-                    {post.category}
-                  </span>
-                  <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d]">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm text-[#666] mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <span className="text-xs text-[#999]">{post.date}</span>
-                </div>
-              </article>
+              post.isPublished ? (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="block bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
+                >
+                  <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a] group-hover:from-[#a5c495] group-hover:to-[#7a9a68] transition-colors" />
+                  <div className="p-6">
+                    <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                    <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d] group-hover:text-[#8fb07a] transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-[#666] mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <span className="text-xs text-[#999]">{post.date}</span>
+                  </div>
+                </Link>
+              ) : (
+                <article
+                  key={post.slug}
+                  className="bg-[#FAF9F6] rounded-lg overflow-hidden opacity-70"
+                >
+                  <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a]" />
+                  <div className="p-6">
+                    <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
+                      {post.category}
+                    </span>
+                    <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d]">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-[#666] mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <span className="text-xs text-[#999]">{post.date}</span>
+                  </div>
+                </article>
+              )
             ))}
           </div>
 
