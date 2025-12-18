@@ -121,6 +121,42 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
 
                 <div className="border-t border-gray-100 my-2"></div>
 
+                {/* Parent & Toddler */}
+                <Link
+                  href="/programs#toddler"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">👶</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Parent & Toddler</div>
+                    <div className="text-xs text-[#888]">Ages 1–3 with parent</div>
+                  </div>
+                </Link>
+
+                {/* After School */}
+                <Link
+                  href="/programs#after-school"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🎭</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">After School</div>
+                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                  </div>
+                </Link>
+
+                {/* Saturday Workshop */}
+                <Link
+                  href="/programs#saturday"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🪴</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Saturday Workshop</div>
+                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                  </div>
+                </Link>
+
                 {/* Holiday Camps */}
                 <Link
                   href="/programs#camps"
@@ -132,6 +168,8 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
                     <div className="text-xs text-[#888]">Ages 3–12</div>
                   </div>
                 </Link>
+
+                <div className="border-t border-gray-100 my-2"></div>
 
                 {/* Child Wellbeing */}
                 <Link
