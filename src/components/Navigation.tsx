@@ -67,20 +67,63 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
             </svg>
           </Link>
           {programsOpen && (
-            <div className="absolute top-full left-0 pt-2">
-              <div className="bg-white rounded-lg shadow-xl py-2 min-w-[180px] border border-gray-100">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+              <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-5 min-w-[420px]">
+                {/* View All Link */}
                 <Link
                   href="/programs"
-                  className="block px-4 py-2 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 transition-colors"
+                  className="block text-sm font-medium text-[#8fb07a] hover:text-[#6d9b5a] mb-4 transition-colors"
                 >
-                  Our Programs
+                  View All Programs →
                 </Link>
-                <Link
-                  href="/child-wellbeing"
-                  className="block px-4 py-2 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 transition-colors"
-                >
-                  Child Wellbeing
-                </Link>
+
+                <div className="grid grid-cols-2 gap-6">
+                  {/* Full-Day Programs */}
+                  <div>
+                    <p className="text-xs font-medium text-[#999] uppercase tracking-wider mb-2">Full-Day</p>
+                    <div className="space-y-1">
+                      <Link href="/programs#nursery" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">Nursery</span>
+                        <span className="text-[#888] ml-1">2–4 yrs</span>
+                      </Link>
+                      <Link href="/programs#kindergarten" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">Kindergarten</span>
+                        <span className="text-[#888] ml-1">3–6 yrs</span>
+                      </Link>
+                      <Link href="/programs#primary" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">Primary</span>
+                        <span className="text-[#888] ml-1">6–9 yrs</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Additional Programs */}
+                  <div>
+                    <p className="text-xs font-medium text-[#999] uppercase tracking-wider mb-2">Additional</p>
+                    <div className="space-y-1">
+                      <Link href="/programs#toddler" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">Parent & Toddler</span>
+                      </Link>
+                      <Link href="/programs#after-school" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">After School</span>
+                      </Link>
+                      <Link href="/programs#camps" className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors">
+                        <span className="font-medium">Holiday Camps</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Child Wellbeing */}
+                <div className="border-t border-gray-100 mt-4 pt-4">
+                  <Link
+                    href="/child-wellbeing"
+                    className="block px-2 py-1.5 text-sm text-[#2d2d2d] hover:bg-[#BED7AF]/20 rounded transition-colors"
+                  >
+                    <span className="font-medium">Child Wellbeing</span>
+                    <span className="text-[#888] ml-1">— How we support every child</span>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
@@ -140,7 +183,11 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="flex flex-col py-4">
             <Link href="/our-story" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Our Story</Link>
-            <Link href="/programs" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
+            <Link href="/programs" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
+            <Link href="/programs#nursery" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Nursery <span className="text-[#999]">2–4 yrs</span></Link>
+            <Link href="/programs#kindergarten" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Kindergarten <span className="text-[#999]">3–6 yrs</span></Link>
+            <Link href="/programs#primary" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Primary <span className="text-[#999]">6–9 yrs</span></Link>
+            <Link href="/programs#camps" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Holiday Camps</Link>
             <Link href="/child-wellbeing" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Child Wellbeing</Link>
             <Link href="/science" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>The Science</Link>
             <Link href="/contact" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Visit Us</Link>
