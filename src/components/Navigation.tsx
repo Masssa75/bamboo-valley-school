@@ -11,6 +11,7 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [wellbeingOpen, setWellbeingOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,7 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
             Our Story
           </Link>
         </li>
+        {/* Programs Dropdown */}
         <li
           className="relative"
           onMouseEnter={() => setProgramsOpen(true)}
@@ -168,33 +170,108 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
                     <div className="text-xs text-[#888]">Ages 3–12</div>
                   </div>
                 </Link>
-
-                <div className="border-t border-gray-100 my-2"></div>
-
-                {/* Child Wellbeing */}
+              </div>
+            </div>
+          )}
+        </li>
+        {/* Child Wellbeing Dropdown */}
+        <li
+          className="relative"
+          onMouseEnter={() => setWellbeingOpen(true)}
+          onMouseLeave={() => setWellbeingOpen(false)}
+        >
+          <Link
+            href="/child-wellbeing"
+            className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
+              useDarkText ? "text-[#2d2d2d]" : "text-white"
+            }`}
+          >
+            Child Wellbeing
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </Link>
+          {wellbeingOpen && (
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+              <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
+                {/* Overview */}
                 <Link
                   href="/child-wellbeing"
                   className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
                 >
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">💚</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Child Wellbeing</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Overview</div>
                     <div className="text-xs text-[#888]">How we support every child</div>
+                  </div>
+                </Link>
+
+                <div className="border-t border-gray-100 my-2"></div>
+
+                {/* Our Approach */}
+                <Link
+                  href="/child-wellbeing/our-approach"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🤝</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Our Approach</div>
+                    <div className="text-xs text-[#888]">Collaborative problem-solving</div>
+                  </div>
+                </Link>
+
+                {/* Understanding Your Child */}
+                <Link
+                  href="/child-wellbeing/understanding"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🔍</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Understanding Your Child</div>
+                    <div className="text-xs text-[#888]">Finding the root cause</div>
+                  </div>
+                </Link>
+
+                {/* Behavior Support */}
+                <Link
+                  href="/child-wellbeing/behavior-support"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📋</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Behavior Support</div>
+                    <div className="text-xs text-[#888]">Our 3-tier response system</div>
+                  </div>
+                </Link>
+
+                {/* Separation Anxiety */}
+                <Link
+                  href="/child-wellbeing/separation-anxiety"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🫂</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">Separation Anxiety</div>
+                    <div className="text-xs text-[#888]">Helping with goodbyes</div>
+                  </div>
+                </Link>
+
+                <div className="border-t border-gray-100 my-2"></div>
+
+                {/* The Research */}
+                <Link
+                  href="/science"
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
+                >
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🔬</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">The Research</div>
+                    <div className="text-xs text-[#888]">Science behind our approach</div>
                   </div>
                 </Link>
               </div>
             </div>
           )}
-        </li>
-        <li>
-          <Link
-            href="/science"
-            className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
-              useDarkText ? "text-[#2d2d2d]" : "text-white"
-            }`}
-          >
-            The Science
-          </Link>
         </li>
         <li>
           <Link
@@ -246,8 +323,12 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
             <Link href="/programs#kindergarten" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Kindergarten <span className="text-[#999]">3–6 yrs</span></Link>
             <Link href="/programs#primary" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Primary <span className="text-[#999]">6–9 yrs</span></Link>
             <Link href="/programs#camps" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Holiday Camps</Link>
-            <Link href="/child-wellbeing" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Child Wellbeing</Link>
-            <Link href="/science" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>The Science</Link>
+            <Link href="/child-wellbeing" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>Child Wellbeing</Link>
+            <Link href="/child-wellbeing/our-approach" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Our Approach</Link>
+            <Link href="/child-wellbeing/understanding" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Understanding Your Child</Link>
+            <Link href="/child-wellbeing/behavior-support" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Behavior Support</Link>
+            <Link href="/child-wellbeing/separation-anxiety" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Separation Anxiety</Link>
+            <Link href="/science" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>The Research</Link>
             <Link href="/contact" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Visit Us</Link>
             <div className="px-6 py-3">
               <Link href="/contact" className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>Enquire</Link>
