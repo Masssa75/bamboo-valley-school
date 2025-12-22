@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -9,15 +11,22 @@ export const metadata: Metadata = {
   keywords: ["behavior policy", "school discipline", "positive behavior support", "child behavior"],
 };
 
-export default function BehaviorSupportPage() {
+export default async function BehaviorSupportPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation variant="light" />
+      <Navigation variant="light" locale={locale as Locale} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
         <div className="max-w-[800px] mx-auto text-center">
-          <Link href="/child-wellbeing" className="text-sm text-[#8fb07a] hover:text-[#6d9b5a] mb-4 inline-block">
+          <Link href={`/${locale}/child-wellbeing`} className="text-sm text-[#8fb07a] hover:text-[#6d9b5a] mb-4 inline-block">
             ← Child Wellbeing
           </Link>
           <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-[#2d2d2d]">
@@ -208,7 +217,7 @@ export default function BehaviorSupportPage() {
 
           <div className="bg-white border-2 border-[#BED7AF] rounded-lg p-6 mb-12">
             <p className="text-[#444] leading-relaxed">
-              <strong>Learn more:</strong> Our <Link href="/child-wellbeing/understanding" className="text-[#8fb07a] hover:text-[#6d9b5a]">Understanding Your Child</Link> page explains how we identify what's really going on when a child struggles. Our <Link href="/child-wellbeing/our-approach" className="text-[#8fb07a] hover:text-[#6d9b5a]">Our Approach</Link> page covers the philosophy behind working with children collaboratively.
+              <strong>Learn more:</strong> Our <Link href={`/${locale}/child-wellbeing/understanding`} className="text-[#8fb07a] hover:text-[#6d9b5a]">Understanding Your Child</Link> page explains how we identify what's really going on when a child struggles. Our <Link href={`/${locale}/child-wellbeing/our-approach`} className="text-[#8fb07a] hover:text-[#6d9b5a]">Our Approach</Link> page covers the philosophy behind working with children collaboratively.
             </p>
           </div>
 
@@ -250,7 +259,7 @@ export default function BehaviorSupportPage() {
           <div className="bg-[#FAF9F6] p-8 rounded-xl text-center">
             <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">Questions?</h3>
             <p className="text-[#666] mb-6">We're happy to discuss our behavior support approach in more detail.</p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href={`/${locale}/contact`} className="btn btn-primary">
               Contact Us
             </Link>
           </div>
@@ -258,7 +267,7 @@ export default function BehaviorSupportPage() {
         </div>
       </article>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

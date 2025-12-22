@@ -1,3 +1,5 @@
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhatWeAre from "@/components/WhatWeAre";
@@ -10,10 +12,17 @@ import Insights from "@/components/Insights";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation />
+      <Navigation locale={locale as Locale} />
       <Hero />
       <WhatWeAre />
       <Activities />
@@ -23,7 +32,7 @@ export default function Home() {
       <Testimonials />
       <Insights />
       <CTA />
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

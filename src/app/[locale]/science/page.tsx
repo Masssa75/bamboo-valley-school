@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -232,10 +234,17 @@ const researchSections = [
   },
 ];
 
-export default function SciencePage() {
+export default async function SciencePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation variant="light" />
+      <Navigation variant="light" locale={locale as Locale} />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#BED7AF] to-[#d4e5c9] py-24 md:py-32 px-6 text-center min-h-[60vh] flex flex-col justify-center items-center">
@@ -311,14 +320,14 @@ export default function SciencePage() {
           The research points one direction. Come see what it looks like in practice.
         </p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-block bg-[#BED7AF] text-[#2d2d2d] px-10 py-5 rounded-full font-semibold text-base hover:-translate-y-1 hover:shadow-lg transition-all"
         >
           Book a Visit
         </Link>
       </section>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

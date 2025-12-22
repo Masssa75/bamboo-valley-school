@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -9,10 +11,17 @@ export const metadata: Metadata = {
   keywords: ["child wellbeing", "behavior support", "collaborative proactive solutions", "Waldorf school Phuket", "child psychology"],
 };
 
-export default function ChildWellbeingPage() {
+export default async function ChildWellbeingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation />
+      <Navigation locale={locale as Locale} />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#BED7AF] to-[#a8c99a] pt-32 pb-20 md:pt-40 md:pb-24 px-6 text-center">
@@ -103,22 +112,22 @@ export default function ChildWellbeingPage() {
               {
                 title: "Our Approach",
                 description: "The philosophy behind how we see and respond to challenging behavior. Working with children, not against them.",
-                href: "/child-wellbeing/our-approach"
+                href: `/${locale}/child-wellbeing/our-approach`
               },
               {
                 title: "Understanding Your Child",
                 description: "How we identify what's really going on when a child struggles — looking at lagging skills, not \"bad behavior.\"",
-                href: "/child-wellbeing/understanding"
+                href: `/${locale}/child-wellbeing/understanding`
               },
               {
                 title: "Behavior Support",
                 description: "Our clear, fair, 3-tier response system. What happens when issues arise, and how we work toward solutions.",
-                href: "/child-wellbeing/behavior-support"
+                href: `/${locale}/child-wellbeing/behavior-support`
               },
               {
                 title: "Separation Anxiety",
                 description: "A common challenge with clear solutions. What we do at school and what you can do at home.",
-                href: "/child-wellbeing/separation-anxiety"
+                href: `/${locale}/child-wellbeing/separation-anxiety`
               }
             ].map((card, i) => (
               <Link
@@ -167,7 +176,7 @@ export default function ChildWellbeingPage() {
           <div className="bg-white p-10 rounded-xl text-center">
             <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">Questions?</h3>
             <p className="text-[#666] mb-6">We're always happy to discuss our approach. Reach out anytime.</p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href={`/${locale}/contact`} className="btn btn-primary">
               Contact Us
             </Link>
           </div>
@@ -175,7 +184,7 @@ export default function ChildWellbeingPage() {
         </div>
       </article>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

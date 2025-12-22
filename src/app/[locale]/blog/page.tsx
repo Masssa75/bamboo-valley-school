@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -35,10 +37,17 @@ const posts = [
   },
 ];
 
-export default function BlogPage() {
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation variant="light" />
+      <Navigation variant="light" locale={locale as Locale} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
@@ -61,7 +70,7 @@ export default function BlogPage() {
               post.isPublished ? (
                 <Link
                   key={post.slug}
-                  href={`/blog/${post.slug}`}
+                  href={`/${locale}/blog/${post.slug}`}
                   className="block bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
                 >
                   <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a] group-hover:from-[#a5c495] group-hover:to-[#7a9a68] transition-colors" />
@@ -124,7 +133,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -8,10 +10,17 @@ export const metadata: Metadata = {
   description: "Visit Bamboo Valley, a natural learning community in Phuket. Book a tour, ask questions, or schedule enrollment for your child.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation />
+      <Navigation locale={locale as Locale} />
 
       {/* Hero */}
       <section
@@ -126,7 +135,7 @@ export default function ContactPage() {
         />
       </section>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

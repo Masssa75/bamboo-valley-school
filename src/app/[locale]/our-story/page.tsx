@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -9,10 +11,17 @@ export const metadata: Metadata = {
   description: "How two parents transformed their frustration with traditional education into a nature-based school in Phuket. The story of Bamboo Valley by Nutthanit and Marc Schwyn.",
 };
 
-export default function OurStoryPage() {
+export default async function OurStoryPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation />
+      <Navigation locale={locale as Locale} />
 
       {/* Hero with Background Image */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
@@ -174,7 +183,7 @@ export default function OurStoryPage() {
           </p>
 
           <div className="my-8">
-            <Link href="/programs" className="inline-flex items-center gap-2 text-[#8fb07a] hover:text-[#6d9b5a] font-medium">
+            <Link href={`/${locale}/programs`} className="inline-flex items-center gap-2 text-[#8fb07a] hover:text-[#6d9b5a] font-medium">
               Explore our programs in detail
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -188,7 +197,7 @@ export default function OurStoryPage() {
             <p className="text-[#666] mb-6">
               The best way to understand Bamboo Valley is to experience it. Join us for a campus tour.
             </p>
-            <Link href="/contact" className="btn btn-primary">
+            <Link href={`/${locale}/contact`} className="btn btn-primary">
               Book a Visit
             </Link>
           </div>
@@ -196,7 +205,7 @@ export default function OurStoryPage() {
         </div>
       </article>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

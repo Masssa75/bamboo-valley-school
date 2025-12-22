@@ -1,0 +1,138 @@
+{
+  "common": {
+    "brandName": "Bamboo Valley",
+    "tagline": "自然学习社区",
+    "chatWithUs": "与我们聊天",
+    "programs": "课程项目",
+    "enquire": "咨询",
+    "learnMore": "了解更多",
+    "exploreCamps": "探索营地",
+    "scheduleVisit": "预约参观",
+    "chatOnWhatsApp": "WhatsApp 联系"
+  },
+  "nav": {
+    "ourStory": "我们的故事",
+    "programs": "课程项目",
+    "childWellbeing": "儿童身心健康",
+    "visitUs": "参观我们",
+    "allPrograms": "所有项目",
+    "overviewDetails": "概览与详情",
+    "nursery": "托儿班",
+    "nurseryAges": "2-4岁",
+    "kindergarten": "幼儿园",
+    "kindergartenAges": "3-6岁",
+    "primary": "小学",
+    "primaryAges": "6-9岁",
+    "parentToddler": "亲子班",
+    "parentToddlerAges": "1-3岁 需家长陪同",
+    "afterSchool": "课后班",
+    "afterSchoolAges": "3-6岁",
+    "saturdayWorkshop": "周六工作坊",
+    "saturdayWorkshopAges": "3-6岁",
+    "holidayCamps": "假期营",
+    "holidayCampsAges": "3-12岁",
+    "overview": "概览",
+    "howWeSupport": "我们如何支持每个孩子",
+    "ourApproach": "我们的方法",
+    "collaborativeProblemSolving": "协作解决问题",
+    "understandingYourChild": "了解您的孩子",
+    "findingRootCause": "寻找根本原因",
+    "behaviorSupport": "行为支持",
+    "tierResponse": "我们的三级响应系统",
+    "separationAnxiety": "分离焦虑",
+    "helpingWithGoodbyes": "帮助孩子说再见",
+    "theResearch": "科学研究",
+    "scienceBehindApproach": "我们方法背后的科学"
+  },
+  "hero": {
+    "freeMinded": "自由思想",
+    "curious": "充满好奇",
+    "capable": "能力出众",
+    "freeDescription": "掌控自己的身体、思想和世界。一条属于他们自己的道路。",
+    "curiousDescription": "爱因斯坦称之为他唯一的真正天赋。探索、好奇、发现、创造的动力。",
+    "capableDescription": "尝试的自由。失败的许可。成长的动力。成为无所不能的人。"
+  },
+  "whatWeAre": {
+    "line1": "爱。关注。探索的空间。",
+    "line2": "脚下的泥土。头顶的天空。",
+    "line3": "一千个选择，由他们做出。",
+    "conclusion": "这就是孩子们变得非凡的方式。",
+    "scienceLink": "非凡背后的科学"
+  },
+  "activities": {
+    "title": "在 Bamboo Valley 的一天",
+    "freePlay": {
+      "title": "自由游戏",
+      "subtitle": "培养创造力和解决问题的能力",
+      "science": "在支持自主的环境中，孩子们表现出更高的创造力、更深入的学习和更强的内在动机，优于奖励导向的环境。"
+    },
+    "animalCare": {
+      "title": "照顾动物",
+      "subtitle": "培养同理心和责任感",
+      "science": "照顾动物的孩子会发展出更强的同理心，这种同理心会延伸到人类身上。对另一个生命负责可以培养道德推理能力。"
+    },
+    "mudPlay": {
+      "title": "玩泥巴",
+      "subtitle": "增强免疫力和感官",
+      "science": "一个月内，在森林土壤中玩耍的孩子表现出更好的免疫反应。一克土壤含有100亿个微生物，可以训练免疫系统。"
+    },
+    "baking": {
+      "title": "烘焙",
+      "subtitle": "教授数学和顺序思维",
+      "science": "烘焙自然地教授数学概念，如测量、分数和顺序。孩子们培养耐心，遵循多步骤说明，并体验创造有形事物的回报。"
+    },
+    "yoga": {
+      "title": "瑜伽、冥想和声音疗愈",
+      "subtitle": "提高专注力和自我调节能力",
+      "science": "儿童正念练习可以提高注意力、情绪调节能力并减少焦虑。即使是简短的冥想也能增强专注力和自我意识。"
+    },
+    "storytelling": {
+      "title": "讲故事",
+      "subtitle": "提升记忆力和词汇量",
+      "science": "故事将内容与情感联系起来，将记忆存储在大脑的更多位置。孩子们能更好地保留学习内容并将其应用到现实生活中。"
+    },
+    "gardening": {
+      "title": "园艺",
+      "subtitle": "培养耐心和科学技能",
+      "science": "对50项研究的荟萃分析表明，基于花园的学习可以提高学业成绩，尤其是数学。孩子们还能培养责任感和团队合作能力。"
+    },
+    "phonics": {
+      "title": "趣味拼读",
+      "subtitle": "阅读的基础",
+      "science": "基于游戏的拼读教学比机械训练方法建立更强的基础。孩子们通过歌曲、游戏和讲故事自然地发展音素意识。"
+    },
+    "art": {
+      "title": "艺术",
+      "subtitle": "建立自信和精细运动技能",
+      "science": "艺术活动发展精细运动技能、情感表达和创造性思维。注重过程的艺术在没有评判的情况下建立自信和自我表达。"
+    }
+  },
+  "camps": {
+    "title": "假期营",
+    "description": "在学校假期期间体验 Bamboo Valley。我们的营地提供同样沉浸于自然、以儿童为主导的学习方式——非常适合想在入学前尝试我们方法的家庭，或只是想给孩子一个非凡的假期。",
+    "youngAges": "3-6岁",
+    "youngDescription": "游戏、创意和温和的冒险",
+    "olderAges": "7-12岁",
+    "olderDescription": "实地考察、海滩日和探索"
+  },
+  "community": {
+    "title": "一个社区，不只是一所学校",
+    "description": "每月聚会。季节性庆祝活动。成为朋友的家长。成为家人的老师。一个共同养育孩子的村庄。"
+  },
+  "cta": {
+    "title": "有问题？尽管问。",
+    "description": "我们喜欢与家长交流。没有压力，只有真诚的回答。",
+    "or": "或"
+  },
+  "footer": {
+    "about": "关于我们",
+    "programs": "课程项目",
+    "contact": "联系方式",
+    "instagram": "Instagram",
+    "address": "地址",
+    "addressValue": "泰国普吉岛他朗区Cherngtalay 3/74 Moo 4, 83110",
+    "phone": "电话 / WhatsApp",
+    "email": "电子邮件",
+    "copyright": "© {year} Bamboo Valley 版权所有。"
+  }
+}

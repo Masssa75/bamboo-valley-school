@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
@@ -42,7 +44,15 @@ const jsonLd = {
   dateModified: "2024-12-16",
 };
 
-export default function HomeworkMythPost() {
+export default async function HomeworkMythPost({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const localePath = (path: string) => `/${locale}${path}`;
+
   return (
     <>
       <Script
@@ -50,7 +60,7 @@ export default function HomeworkMythPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navigation />
+      <Navigation locale={locale as Locale} />
 
       {/* Hero with Background Image */}
       <header className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6">
@@ -65,7 +75,7 @@ export default function HomeworkMythPost() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative max-w-[720px] mx-auto">
           <Link
-            href="/blog"
+            href={localePath("/blog")}
             className="text-sm text-white/80 hover:text-white mb-6 inline-block"
           >
             ← Back to Insights
@@ -348,7 +358,7 @@ export default function HomeworkMythPost() {
         </div>
       </article>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

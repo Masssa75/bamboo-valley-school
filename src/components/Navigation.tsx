@@ -2,16 +2,21 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { type Locale } from "@/i18n/config";
 
 interface NavigationProps {
-  variant?: "dark" | "light"; // dark = white text on transparent (for dark heroes), light = dark text (for light backgrounds)
+  variant?: "dark" | "light";
+  locale: Locale;
 }
 
-export default function Navigation({ variant = "dark" }: NavigationProps) {
+export default function Navigation({ variant = "dark", locale }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [wellbeingOpen, setWellbeingOpen] = useState(false);
+  const t = useTranslations("nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +26,10 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Use dark text styling if variant is "light" OR if user has scrolled
   const useDarkText = variant === "light" || scrolled;
+
+  // Helper to create locale-aware links
+  const localePath = (path: string) => `/${locale}${path}`;
 
   return (
     <nav
@@ -31,7 +38,7 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
       }`}
     >
       <Link
-        href="/"
+        href={localePath("/")}
         className={`font-serif text-2xl font-semibold transition-colors ${
           useDarkText ? "text-[#2d2d2d]" : "text-white"
         }`}
@@ -40,15 +47,15 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
       </Link>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-10 items-center list-none">
+      <ul className="hidden md:flex gap-8 items-center list-none">
         <li>
           <Link
-            href="/our-story"
+            href={localePath("/our-story")}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            Our Story
+            {t("ourStory")}
           </Link>
         </li>
         {/* Programs Dropdown */}
@@ -58,12 +65,12 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           onMouseLeave={() => setProgramsOpen(false)}
         >
           <Link
-            href="/programs"
+            href={localePath("/programs")}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            Programs
+            {t("programs")}
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -71,103 +78,74 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           {programsOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
               <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
-                {/* All Programs */}
                 <Link
-                  href="/programs"
+                  href={localePath("/programs")}
                   className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
                 >
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📋</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">All Programs</div>
-                    <div className="text-xs text-[#888]">Overview & details</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("allPrograms")}</div>
+                    <div className="text-xs text-[#888]">{t("overviewDetails")}</div>
                   </div>
                 </Link>
 
                 <div className="border-t border-gray-100 my-2"></div>
 
-                {/* Nursery */}
-                <Link
-                  href="/programs#nursery"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#nursery")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🌱</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Nursery</div>
-                    <div className="text-xs text-[#888]">Ages 2–4</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("nursery")}</div>
+                    <div className="text-xs text-[#888]">{t("nurseryAges")}</div>
                   </div>
                 </Link>
 
-                {/* Kindergarten */}
-                <Link
-                  href="/programs#kindergarten"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#kindergarten")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🎨</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Kindergarten</div>
-                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("kindergarten")}</div>
+                    <div className="text-xs text-[#888]">{t("kindergartenAges")}</div>
                   </div>
                 </Link>
 
-                {/* Primary */}
-                <Link
-                  href="/programs#primary"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#primary")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📚</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Primary</div>
-                    <div className="text-xs text-[#888]">Ages 6–9</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("primary")}</div>
+                    <div className="text-xs text-[#888]">{t("primaryAges")}</div>
                   </div>
                 </Link>
 
                 <div className="border-t border-gray-100 my-2"></div>
 
-                {/* Parent & Toddler */}
-                <Link
-                  href="/programs#toddler"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#toddler")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">👶</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Parent & Toddler</div>
-                    <div className="text-xs text-[#888]">Ages 1–3 with parent</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("parentToddler")}</div>
+                    <div className="text-xs text-[#888]">{t("parentToddlerAges")}</div>
                   </div>
                 </Link>
 
-                {/* After School */}
-                <Link
-                  href="/programs#after-school"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#after-school")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🎭</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">After School</div>
-                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("afterSchool")}</div>
+                    <div className="text-xs text-[#888]">{t("afterSchoolAges")}</div>
                   </div>
                 </Link>
 
-                {/* Saturday Workshop */}
-                <Link
-                  href="/programs#saturday"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#saturday")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🪴</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Saturday Workshop</div>
-                    <div className="text-xs text-[#888]">Ages 3–6</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("saturdayWorkshop")}</div>
+                    <div className="text-xs text-[#888]">{t("saturdayWorkshopAges")}</div>
                   </div>
                 </Link>
 
-                {/* Holiday Camps */}
-                <Link
-                  href="/programs#camps"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/programs#camps")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🏕️</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Holiday Camps</div>
-                    <div className="text-xs text-[#888]">Ages 3–12</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("holidayCamps")}</div>
+                    <div className="text-xs text-[#888]">{t("holidayCampsAges")}</div>
                   </div>
                 </Link>
               </div>
@@ -181,12 +159,12 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           onMouseLeave={() => setWellbeingOpen(false)}
         >
           <Link
-            href="/child-wellbeing"
+            href={localePath("/child-wellbeing")}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            Child Wellbeing
+            {t("childWellbeing")}
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -194,79 +172,55 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
           {wellbeingOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
               <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
-                {/* Overview */}
-                <Link
-                  href="/child-wellbeing"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/child-wellbeing")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">💚</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Overview</div>
-                    <div className="text-xs text-[#888]">How we support every child</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("overview")}</div>
+                    <div className="text-xs text-[#888]">{t("howWeSupport")}</div>
                   </div>
                 </Link>
 
                 <div className="border-t border-gray-100 my-2"></div>
 
-                {/* Our Approach */}
-                <Link
-                  href="/child-wellbeing/our-approach"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/child-wellbeing/our-approach")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🤝</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Our Approach</div>
-                    <div className="text-xs text-[#888]">Collaborative problem-solving</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("ourApproach")}</div>
+                    <div className="text-xs text-[#888]">{t("collaborativeProblemSolving")}</div>
                   </div>
                 </Link>
 
-                {/* Understanding Your Child */}
-                <Link
-                  href="/child-wellbeing/understanding"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/child-wellbeing/understanding")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🔍</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Understanding Your Child</div>
-                    <div className="text-xs text-[#888]">Finding the root cause</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("understandingYourChild")}</div>
+                    <div className="text-xs text-[#888]">{t("findingRootCause")}</div>
                   </div>
                 </Link>
 
-                {/* Behavior Support */}
-                <Link
-                  href="/child-wellbeing/behavior-support"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/child-wellbeing/behavior-support")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📋</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Behavior Support</div>
-                    <div className="text-xs text-[#888]">Our 3-tier response system</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("behaviorSupport")}</div>
+                    <div className="text-xs text-[#888]">{t("tierResponse")}</div>
                   </div>
                 </Link>
 
-                {/* Separation Anxiety */}
-                <Link
-                  href="/child-wellbeing/separation-anxiety"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/child-wellbeing/separation-anxiety")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🫂</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">Separation Anxiety</div>
-                    <div className="text-xs text-[#888]">Helping with goodbyes</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("separationAnxiety")}</div>
+                    <div className="text-xs text-[#888]">{t("helpingWithGoodbyes")}</div>
                   </div>
                 </Link>
 
                 <div className="border-t border-gray-100 my-2"></div>
 
-                {/* The Research */}
-                <Link
-                  href="/science"
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors"
-                >
+                <Link href={localePath("/science")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🔬</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">The Research</div>
-                    <div className="text-xs text-[#888]">Science behind our approach</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("theResearch")}</div>
+                    <div className="text-xs text-[#888]">{t("scienceBehindApproach")}</div>
                   </div>
                 </Link>
               </div>
@@ -275,17 +229,20 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
         </li>
         <li>
           <Link
-            href="/contact"
+            href={localePath("/contact")}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            Visit Us
+            {t("visitUs")}
           </Link>
         </li>
         <li>
+          <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} />
+        </li>
+        <li>
           <Link
-            href="/contact"
+            href={localePath("/contact")}
             className="bg-[#BED7AF] text-[#2d2d2d] px-6 py-2.5 rounded text-sm font-medium hover:bg-[#8fb07a] transition-colors"
           >
             Enquire
@@ -294,44 +251,47 @@ export default function Navigation({ variant = "dark" }: NavigationProps) {
       </ul>
 
       {/* Mobile Menu Button */}
-      <button
-        className="md:hidden p-2"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        aria-label="Toggle menu"
-      >
-        <svg
-          className={`w-6 h-6 ${useDarkText ? "text-[#2d2d2d]" : "text-white"}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <div className="md:hidden flex items-center gap-2">
+        <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} />
+        <button
+          className="p-2"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          )}
-        </svg>
-      </button>
+          <svg
+            className={`w-6 h-6 ${useDarkText ? "text-[#2d2d2d]" : "text-white"}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
           <div className="flex flex-col py-4">
-            <Link href="/our-story" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Our Story</Link>
-            <Link href="/programs" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>Programs</Link>
-            <Link href="/programs#nursery" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Nursery <span className="text-[#999]">2–4 yrs</span></Link>
-            <Link href="/programs#kindergarten" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Kindergarten <span className="text-[#999]">3–6 yrs</span></Link>
-            <Link href="/programs#primary" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Primary <span className="text-[#999]">6–9 yrs</span></Link>
-            <Link href="/programs#camps" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Holiday Camps</Link>
-            <Link href="/child-wellbeing" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>Child Wellbeing</Link>
-            <Link href="/child-wellbeing/our-approach" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Our Approach</Link>
-            <Link href="/child-wellbeing/understanding" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Understanding Your Child</Link>
-            <Link href="/child-wellbeing/behavior-support" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Behavior Support</Link>
-            <Link href="/child-wellbeing/separation-anxiety" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>Separation Anxiety</Link>
-            <Link href="/science" className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>The Research</Link>
-            <Link href="/contact" className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>Visit Us</Link>
+            <Link href={localePath("/our-story")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>{t("ourStory")}</Link>
+            <Link href={localePath("/programs")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>{t("programs")}</Link>
+            <Link href={localePath("/programs#nursery")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("nursery")} <span className="text-[#999]">2–4</span></Link>
+            <Link href={localePath("/programs#kindergarten")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("kindergarten")} <span className="text-[#999]">3–6</span></Link>
+            <Link href={localePath("/programs#primary")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("primary")} <span className="text-[#999]">6–9</span></Link>
+            <Link href={localePath("/programs#camps")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("holidayCamps")}</Link>
+            <Link href={localePath("/child-wellbeing")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>{t("childWellbeing")}</Link>
+            <Link href={localePath("/child-wellbeing/our-approach")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("ourApproach")}</Link>
+            <Link href={localePath("/child-wellbeing/understanding")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("understandingYourChild")}</Link>
+            <Link href={localePath("/child-wellbeing/behavior-support")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("behaviorSupport")}</Link>
+            <Link href={localePath("/child-wellbeing/separation-anxiety")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("separationAnxiety")}</Link>
+            <Link href={localePath("/science")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("theResearch")}</Link>
+            <Link href={localePath("/contact")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>{t("visitUs")}</Link>
             <div className="px-6 py-3">
-              <Link href="/contact" className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>Enquire</Link>
+              <Link href={localePath("/contact")} className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>Enquire</Link>
             </div>
           </div>
         </div>

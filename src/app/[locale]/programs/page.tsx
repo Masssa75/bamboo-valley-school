@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import ProgramsSubNav from "@/components/ProgramsSubNav";
 import Footer from "@/components/Footer";
@@ -9,10 +11,17 @@ export const metadata: Metadata = {
   description: "Explore our nature-based programs for ages 1-9: Nursery, Kindergarten, Primary school, plus after-school enrichment, Saturday workshops, and holiday camps.",
 };
 
-export default function ProgramsPage() {
+export default async function ProgramsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Navigation variant="light" />
+      <Navigation variant="light" locale={locale as Locale} />
 
       {/* Hero */}
       <section className="pt-32 pb-8 md:pt-40 md:pb-12 px-6 bg-[#FAF9F6]">
@@ -232,7 +241,7 @@ export default function ProgramsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="bg-[#2d2d2d] text-white px-8 py-3 rounded font-medium hover:bg-[#1a1a1a] transition-colors"
             >
               Book a Visit
@@ -252,7 +261,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer locale={locale as Locale} />
     </>
   );
 }

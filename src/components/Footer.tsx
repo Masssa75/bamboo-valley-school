@@ -1,6 +1,17 @@
-import Link from "next/link";
+"use client";
 
-export default function Footer() {
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { type Locale } from "@/i18n/config";
+
+interface FooterProps {
+  locale: Locale;
+}
+
+export default function Footer({ locale }: FooterProps) {
+  const t = useTranslations("footer");
+  const localePath = (path: string) => `/${locale}${path}`;
+
   return (
     <footer className="py-16 px-6 md:px-12 bg-[#2d2d2d] text-white">
       <div className="max-w-[1200px] mx-auto">
@@ -10,14 +21,14 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-8">
-            <Link href="#about" className="text-sm opacity-70 hover:opacity-100 transition-opacity">
-              About
+            <Link href={localePath("/#about")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+              {t("about")}
             </Link>
-            <Link href="#programs" className="text-sm opacity-70 hover:opacity-100 transition-opacity">
-              Programs
+            <Link href={localePath("/programs")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+              {t("programs")}
             </Link>
-            <Link href="/contact" className="text-sm opacity-70 hover:opacity-100 transition-opacity">
-              Contact
+            <Link href={localePath("/contact")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+              {t("contact")}
             </Link>
             <a
               href="https://www.instagram.com/bamboovalleyphuket/"
@@ -25,7 +36,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-sm opacity-70 hover:opacity-100 transition-opacity"
             >
-              Instagram
+              {t("instagram")}
             </a>
           </div>
         </div>
@@ -34,15 +45,15 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/20 text-center md:text-left">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm opacity-70">
             <div>
-              <strong className="block opacity-100 mb-1">Address</strong>
-              3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand
+              <strong className="block opacity-100 mb-1">{t("address")}</strong>
+              {t("addressValue")}
             </div>
             <div>
-              <strong className="block opacity-100 mb-1">Phone / WhatsApp</strong>
+              <strong className="block opacity-100 mb-1">{t("phone")}</strong>
               <a href="tel:+66989124218" className="hover:opacity-100">+66 98 912 4218</a>
             </div>
             <div>
-              <strong className="block opacity-100 mb-1">Email</strong>
+              <strong className="block opacity-100 mb-1">{t("email")}</strong>
               <a href="mailto:info@bamboovalleyphuket.com" className="hover:opacity-100">info@bamboovalleyphuket.com</a>
             </div>
           </div>
@@ -50,7 +61,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-sm opacity-50">
-          © {new Date().getFullYear()} Bamboo Valley. All rights reserved.
+          {t("copyright", { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

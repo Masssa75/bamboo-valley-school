@@ -1,0 +1,138 @@
+{
+  "common": {
+    "brandName": "Bamboo Valley",
+    "tagline": "natural learning community",
+    "chatWithUs": "Chat with Us",
+    "programs": "Programs",
+    "enquire": "Enquire",
+    "learnMore": "Learn More",
+    "exploreCamps": "Explore Camps",
+    "scheduleVisit": "schedule a visit",
+    "chatOnWhatsApp": "Chat on WhatsApp"
+  },
+  "nav": {
+    "ourStory": "Our Story",
+    "programs": "Programs",
+    "childWellbeing": "Child Wellbeing",
+    "visitUs": "Visit Us",
+    "allPrograms": "All Programs",
+    "overviewDetails": "Overview & details",
+    "nursery": "Nursery",
+    "nurseryAges": "Ages 2–4",
+    "kindergarten": "Kindergarten",
+    "kindergartenAges": "Ages 3–6",
+    "primary": "Primary",
+    "primaryAges": "Ages 6–9",
+    "parentToddler": "Parent & Toddler",
+    "parentToddlerAges": "Ages 1–3 with parent",
+    "afterSchool": "After School",
+    "afterSchoolAges": "Ages 3–6",
+    "saturdayWorkshop": "Saturday Workshop",
+    "saturdayWorkshopAges": "Ages 3–6",
+    "holidayCamps": "Holiday Camps",
+    "holidayCampsAges": "Ages 3–12",
+    "overview": "Overview",
+    "howWeSupport": "How we support every child",
+    "ourApproach": "Our Approach",
+    "collaborativeProblemSolving": "Collaborative problem-solving",
+    "understandingYourChild": "Understanding Your Child",
+    "findingRootCause": "Finding the root cause",
+    "behaviorSupport": "Behavior Support",
+    "tierResponse": "Our 3-tier response system",
+    "separationAnxiety": "Separation Anxiety",
+    "helpingWithGoodbyes": "Helping with goodbyes",
+    "theResearch": "The Research",
+    "scienceBehindApproach": "Science behind our approach"
+  },
+  "hero": {
+    "freeMinded": "Free-minded",
+    "curious": "Curious",
+    "capable": "Capable",
+    "freeDescription": "Mastery over their body, their mind, their world. A path that belongs to them.",
+    "curiousDescription": "What Einstein called his only real talent. The drive to inquire, wonder, discover, create.",
+    "capableDescription": "The freedom to try. The permission to fail. The drive to grow. Becoming capable of anything."
+  },
+  "whatWeAre": {
+    "line1": "Love. Attention. Space to wonder.",
+    "line2": "Mud beneath their feet. Sky above their heads.",
+    "line3": "A thousand choices, made by them.",
+    "conclusion": "This is how children become extraordinary.",
+    "scienceLink": "The Science Behind Extraordinary"
+  },
+  "activities": {
+    "title": "A Day at Bamboo Valley",
+    "freePlay": {
+      "title": "Free Play",
+      "subtitle": "Builds creativity & problem-solving",
+      "science": "Children in autonomy-supportive environments show higher creativity, deeper learning, and stronger intrinsic motivation than those in reward-based settings."
+    },
+    "animalCare": {
+      "title": "Animal Care",
+      "subtitle": "Develops empathy & responsibility",
+      "science": "Children who care for animals develop stronger empathy that transfers to humans. Having responsibility for another living being builds moral reasoning."
+    },
+    "mudPlay": {
+      "title": "Mud Play",
+      "subtitle": "Strengthens immunity & senses",
+      "science": "Within one month, children playing in forest soil show improved immune responses. One gram of soil contains 10 billion microorganisms that train the immune system."
+    },
+    "baking": {
+      "title": "Baking",
+      "subtitle": "Teaches math & sequencing",
+      "science": "Baking naturally teaches math concepts like measuring, fractions, and sequencing. Children develop patience, follow multi-step instructions, and experience the reward of creating something tangible."
+    },
+    "yoga": {
+      "title": "Yoga, Meditation & Sound Healing",
+      "subtitle": "Improves focus & self-regulation",
+      "science": "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief meditation sessions enhance focus and self-awareness."
+    },
+    "storytelling": {
+      "title": "Storytelling",
+      "subtitle": "Boosts memory & vocabulary",
+      "science": "Stories connect content with emotion, storing memories in more brain locations. Children retain learning better and transfer it to real-life contexts."
+    },
+    "gardening": {
+      "title": "Gardening",
+      "subtitle": "Grows patience & science skills",
+      "science": "A meta-analysis of 50 studies shows garden-based learning increases academic outcomes, particularly in math. Children also develop responsibility and teamwork."
+    },
+    "phonics": {
+      "title": "Playful Phonics",
+      "subtitle": "Foundations for reading",
+      "science": "Play-based phonics instruction builds stronger foundations than drill-based methods. Children develop phonemic awareness naturally through songs, games, and storytelling."
+    },
+    "art": {
+      "title": "Art",
+      "subtitle": "Builds confidence & fine motor skills",
+      "science": "Art activities develop fine motor skills, emotional expression, and creative thinking. Process-focused art builds confidence and self-expression without judgment."
+    }
+  },
+  "camps": {
+    "title": "Holiday Camps",
+    "description": "Experience Bamboo Valley during school holidays. Our camps offer the same nature-immersed, child-led learning—perfect for families wanting to try our approach before enrolling, or simply give their children an extraordinary break.",
+    "youngAges": "Ages 3–6",
+    "youngDescription": "Play, creativity & gentle adventures",
+    "olderAges": "Ages 7–12",
+    "olderDescription": "Field trips, beach days & exploration"
+  },
+  "community": {
+    "title": "A community, not just a school",
+    "description": "Monthly gatherings. Seasonal celebrations. Parents who become friends. Teachers who become family. A village raising children together."
+  },
+  "cta": {
+    "title": "Questions? Just ask.",
+    "description": "We love chatting with parents. No pressure, just honest answers.",
+    "or": "or"
+  },
+  "footer": {
+    "about": "About",
+    "programs": "Programs",
+    "contact": "Contact",
+    "instagram": "Instagram",
+    "address": "Address",
+    "addressValue": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "copyright": "© {year} Bamboo Valley. All rights reserved."
+  }
+}
