@@ -1,0 +1,241 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Bamboo Valley" [ref=e3] [cursor=pointer]:
+      - /url: /en/
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link "Our Story" [ref=e6] [cursor=pointer]:
+          - /url: /en/our-story/
+      - listitem [ref=e7]:
+        - link "Programs" [ref=e8] [cursor=pointer]:
+          - /url: /en/programs/
+          - text: Programs
+          - img [ref=e9]
+      - listitem [ref=e11]:
+        - link "Child Wellbeing" [ref=e12] [cursor=pointer]:
+          - /url: /en/child-wellbeing/
+          - text: Child Wellbeing
+          - img [ref=e13]
+      - listitem [ref=e15]:
+        - link "Visit Us" [ref=e16] [cursor=pointer]:
+          - /url: /en/contact/
+      - listitem [ref=e17]:
+        - button "Select language" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: 🇬🇧
+          - generic [ref=e21]: English
+          - img [ref=e22]
+      - listitem [ref=e24]:
+        - link "Enquire" [ref=e25] [cursor=pointer]:
+          - /url: /en/contact/
+  - generic [ref=e26]:
+    - generic [ref=e29]:
+      - img "Bamboo Valley" [ref=e30]
+      - generic [ref=e31]: natural learning community
+      - generic [ref=e32]:
+        - generic [ref=e33] [cursor=pointer]: Free-minded
+        - generic [ref=e34]: "|"
+        - generic [ref=e35] [cursor=pointer]: Curious
+        - generic [ref=e36]: "|"
+        - generic [ref=e37] [cursor=pointer]: Capable
+      - paragraph [ref=e38]: Mastery over their body, their mind, their world. A path that belongs to them.
+      - generic [ref=e39]:
+        - link "Chat with Us" [ref=e40] [cursor=pointer]:
+          - /url: https://wa.me/66989124218?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20Bamboo%20Valley.
+          - img [ref=e41]
+          - text: Chat with Us
+        - link "Programs" [ref=e43] [cursor=pointer]:
+          - /url: /programs/
+    - img [ref=e45]
+  - generic [ref=e48]:
+    - generic [ref=e49]:
+      - paragraph [ref=e50]: Love. Attention. Space to wonder.
+      - paragraph [ref=e51]: Mud beneath their feet. Sky above their heads.
+      - paragraph [ref=e52]: A thousand choices, made by them.
+    - generic [ref=e53]: This is how children become extraordinary.
+    - link "The Science Behind Extraordinary" [ref=e55] [cursor=pointer]:
+      - /url: /science/
+      - text: The Science Behind Extraordinary
+      - img [ref=e56]
+  - generic [ref=e58]:
+    - heading "A Day at Bamboo Valley" [level=2] [ref=e60]
+    - generic [ref=e61]:
+      - generic [ref=e62] [cursor=pointer]:
+        - img "Free Play" [ref=e64]
+        - generic [ref=e65]:
+          - heading "Free Play" [level=3] [ref=e66]
+          - paragraph [ref=e67]: Builds creativity & problem-solving
+        - generic [ref=e68]:
+          - heading "Free Play" [level=3] [ref=e69]
+          - paragraph [ref=e70]: Children in autonomy-supportive environments show higher creativity, deeper learning, and stronger intrinsic motivation than those in reward-based settings.
+      - generic [ref=e71] [cursor=pointer]:
+        - img "Animal Care" [ref=e73]
+        - generic [ref=e74]:
+          - heading "Animal Care" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Develops empathy & responsibility
+        - generic [ref=e77]:
+          - heading "Animal Care" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Children who care for animals develop stronger empathy that transfers to humans. Having responsibility for another living being builds moral reasoning.
+      - generic [ref=e80] [cursor=pointer]:
+        - img "Mud Play" [ref=e82]
+        - generic [ref=e83]:
+          - heading "Mud Play" [level=3] [ref=e84]
+          - paragraph [ref=e85]: Strengthens immunity & senses
+        - generic [ref=e86]:
+          - heading "Mud Play" [level=3] [ref=e87]
+          - paragraph [ref=e88]: Within one month, children playing in forest soil show improved immune responses. One gram of soil contains 10 billion microorganisms that train the immune system.
+      - generic [ref=e89] [cursor=pointer]:
+        - img "Baking" [ref=e91]
+        - generic [ref=e92]:
+          - heading "Baking" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Teaches math & sequencing
+        - generic [ref=e95]:
+          - heading "Baking" [level=3] [ref=e96]
+          - paragraph [ref=e97]: Baking naturally teaches math concepts like measuring, fractions, and sequencing. Children develop patience, follow multi-step instructions, and experience the reward of creating something tangible.
+      - generic [ref=e98] [cursor=pointer]:
+        - img "Yoga, Meditation & Sound Healing" [ref=e100]
+        - generic [ref=e101]:
+          - heading "Yoga, Meditation & Sound Healing" [level=3] [ref=e102]
+          - paragraph [ref=e103]: Improves focus & self-regulation
+        - generic [ref=e104]:
+          - heading "Yoga, Meditation & Sound Healing" [level=3] [ref=e105]
+          - paragraph [ref=e106]: Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief meditation sessions enhance focus and self-awareness.
+      - generic [ref=e107] [cursor=pointer]:
+        - img "Storytelling" [ref=e109]
+        - generic [ref=e110]:
+          - heading "Storytelling" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Boosts memory & vocabulary
+        - generic [ref=e113]:
+          - heading "Storytelling" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Stories connect content with emotion, storing memories in more brain locations. Children retain learning better and transfer it to real-life contexts.
+      - generic [ref=e116] [cursor=pointer]:
+        - img "Gardening" [ref=e118]
+        - generic [ref=e119]:
+          - heading "Gardening" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Grows patience & science skills
+        - generic [ref=e122]:
+          - heading "Gardening" [level=3] [ref=e123]
+          - paragraph [ref=e124]: A meta-analysis of 50 studies shows garden-based learning increases academic outcomes, particularly in math. Children also develop responsibility and teamwork.
+      - generic [ref=e125] [cursor=pointer]:
+        - img "Playful Phonics" [ref=e127]
+        - generic [ref=e128]:
+          - heading "Playful Phonics" [level=3] [ref=e129]
+          - paragraph [ref=e130]: Foundations for reading
+        - generic [ref=e131]:
+          - heading "Playful Phonics" [level=3] [ref=e132]
+          - paragraph [ref=e133]: Play-based phonics instruction builds stronger foundations than drill-based methods. Children develop phonemic awareness naturally through songs, games, and storytelling.
+      - generic [ref=e134] [cursor=pointer]:
+        - img "Art" [ref=e136]
+        - generic [ref=e137]:
+          - heading "Art" [level=3] [ref=e138]
+          - paragraph [ref=e139]: Builds confidence & fine motor skills
+        - generic [ref=e140]:
+          - heading "Art" [level=3] [ref=e141]
+          - paragraph [ref=e142]: Art activities develop fine motor skills, emotional expression, and creative thinking. Process-focused art builds confidence and self-expression without judgment.
+  - generic [ref=e144]:
+    - generic [ref=e145]:
+      - heading "Holiday Camps" [level=2] [ref=e146]
+      - paragraph [ref=e147]: Experience Bamboo Valley during school holidays. Our camps offer the same nature-immersed, child-led learning—perfect for families wanting to try our approach before enrolling, or simply give their children an extraordinary break.
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - img "Young children at camp" [ref=e151]
+        - heading "Ages 3–6" [level=3] [ref=e152]
+        - paragraph [ref=e153]: Play, creativity & gentle adventures
+      - generic [ref=e154]:
+        - img "Children on field trip with elephants" [ref=e156]
+        - heading "Ages 7–12" [level=3] [ref=e157]
+        - paragraph [ref=e158]: Field trips, beach days & exploration
+    - link "Explore Camps" [ref=e160] [cursor=pointer]:
+      - /url: https://phuketcamp.com
+      - text: Explore Camps
+      - img [ref=e161]
+  - paragraph [ref=e167]:
+    - text: 5,600 square meters of palm forest.
+    - text: Shade to play all day. Space to grow without limits.
+  - generic [ref=e168]:
+    - img "Bamboo Valley Community" [ref=e170]
+    - generic [ref=e171]:
+      - heading "A community, not just a school" [level=2] [ref=e172]
+      - paragraph [ref=e173]: Monthly gatherings. Seasonal celebrations. Parents who become friends. Teachers who become family. A village raising children together.
+  - generic [ref=e175]:
+    - heading "What Parents Say" [level=2] [ref=e176]
+    - paragraph [ref=e177]: Real stories from families in our community.
+    - generic [ref=e178]:
+      - img "The Kiran Family" [ref=e179]
+      - generic [ref=e181]:
+        - paragraph [ref=e182]: “Bamboo Valley has been such a wonderful and soulful experience for our family. All three of our girls thrived and genuinely loved going to school. It is a truly nurturing space—calm, intentional, and deeply respectful of each child's individuality.”
+        - generic [ref=e183]:
+          - paragraph [ref=e184]: The Kiran Family
+          - paragraph [ref=e185]: Parents of three students
+    - generic [ref=e186]:
+      - button "View testimonial 1" [ref=e187] [cursor=pointer]
+      - button "View testimonial 2" [ref=e188] [cursor=pointer]
+      - button "View testimonial 3" [ref=e189] [cursor=pointer]
+      - button "View testimonial 4" [ref=e190] [cursor=pointer]
+  - generic [ref=e192]:
+    - generic [ref=e193]:
+      - heading "Insights" [level=2] [ref=e194]
+      - paragraph [ref=e195]: Research and reflections on raising curious, capable children
+    - link "35 years of research Homework Doesn't Help Children Under 10 A meta-analysis found zero benefit from homework for elementary students. For third graders, more homework meant worse grades. Read the research → Child reading outdoors" [ref=e196] [cursor=pointer]:
+      - /url: /blog/homework-myth/
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - generic [ref=e200]: 35 years of research
+          - heading "Homework Doesn't Help Children Under 10" [level=3] [ref=e201]
+          - paragraph [ref=e202]: A meta-analysis found zero benefit from homework for elementary students. For third graders, more homework meant worse grades.
+          - generic [ref=e203]: Read the research →
+        - img "Child reading outdoors" [ref=e205]
+    - generic [ref=e206]:
+      - link "The Science Behind Our Approach Research-backed learning The Science Behind Our Approach Every activity at Bamboo Valley is grounded in educational research. Discover why play, nature, and connection outperform worksheets." [ref=e207] [cursor=pointer]:
+        - /url: /science/
+        - img "The Science Behind Our Approach" [ref=e209]
+        - generic [ref=e210]:
+          - text: Research-backed learning
+          - heading "The Science Behind Our Approach" [level=3] [ref=e211]
+          - paragraph [ref=e212]: Every activity at Bamboo Valley is grounded in educational research. Discover why play, nature, and connection outperform worksheets.
+      - link "Built by Parents, for Parents Our story Built by Parents, for Parents We couldn't find the school we wanted for our children. So we built it. Here's why we believe childhood deserves better." [ref=e213] [cursor=pointer]:
+        - /url: /our-story/
+        - img "Built by Parents, for Parents" [ref=e215]
+        - generic [ref=e216]:
+          - text: Our story
+          - heading "Built by Parents, for Parents" [level=3] [ref=e217]
+          - paragraph [ref=e218]: We couldn't find the school we wanted for our children. So we built it. Here's why we believe childhood deserves better.
+  - generic [ref=e219]:
+    - heading "Questions? Just ask." [level=2] [ref=e220]
+    - paragraph [ref=e221]: We love chatting with parents. No pressure, just honest answers.
+    - link "Chat on WhatsApp" [ref=e222] [cursor=pointer]:
+      - /url: https://wa.me/66989124218?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20Bamboo%20Valley.
+    - paragraph [ref=e223]:
+      - text: or
+      - link "schedule a visit" [ref=e224] [cursor=pointer]:
+        - /url: /contact/
+  - contentinfo [ref=e225]:
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - generic [ref=e228]: Bamboo Valley
+        - generic [ref=e229]:
+          - link "About" [ref=e230] [cursor=pointer]:
+            - /url: /en/#about
+          - link "Programs" [ref=e231] [cursor=pointer]:
+            - /url: /en/programs/
+          - link "Contact" [ref=e232] [cursor=pointer]:
+            - /url: /en/contact/
+          - link "Instagram" [ref=e233] [cursor=pointer]:
+            - /url: https://www.instagram.com/bamboovalleyphuket/
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - strong [ref=e237]: Address
+          - text: 3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand
+        - generic [ref=e238]:
+          - strong [ref=e239]: Phone / WhatsApp
+          - link "+66 98 912 4218" [ref=e240] [cursor=pointer]:
+            - /url: tel:+66989124218
+        - generic [ref=e241]:
+          - strong [ref=e242]: Email
+          - link "info@bamboovalleyphuket.com" [ref=e243] [cursor=pointer]:
+            - /url: mailto:info@bamboovalleyphuket.com
+      - generic [ref=e244]: © 2025 Bamboo Valley. All rights reserved.
+  - alert [ref=e245]
+```

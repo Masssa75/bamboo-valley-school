@@ -9,6 +9,13 @@
 [functions]
   node_bundler = "esbuild"
 
+# Redirect root to default locale (English)
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
+
 # Redirects for SEO preservation when migrating from Wix
 [[redirects]]
   from = "/copy-of-summer-camp-2024-7-12-years"
