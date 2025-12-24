@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "./LanguageSwitcher";
+// import LanguageSwitcher from "./LanguageSwitcher"; // Hidden temporarily
 import { type Locale } from "@/i18n/config";
 
 interface NavigationProps {
@@ -237,9 +237,11 @@ export default function Navigation({ variant = "dark", locale }: NavigationProps
             {t("visitUs")}
           </Link>
         </li>
+        {/* Language switcher hidden temporarily
         <li>
           <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} />
         </li>
+        */}
         <li>
           <Link
             href={localePath("/contact")}
@@ -252,7 +254,7 @@ export default function Navigation({ variant = "dark", locale }: NavigationProps
 
       {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center gap-2">
-        <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} />
+        {/* <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} /> */}
         <button
           className="p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

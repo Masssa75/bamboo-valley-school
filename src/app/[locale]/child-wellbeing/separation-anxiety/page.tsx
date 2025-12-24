@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -18,6 +18,8 @@ export default async function SeparationAnxietyPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("separationAnxiety");
+  const tCommon = await getTranslations("childWellbeing");
 
   return (
     <>
@@ -27,13 +29,13 @@ export default async function SeparationAnxietyPage({
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
         <div className="max-w-[800px] mx-auto text-center">
           <Link href={`/${locale}/child-wellbeing`} className="text-sm text-[#8fb07a] hover:text-[#6d9b5a] mb-4 inline-block">
-            ← Child Wellbeing
+            {tCommon("backToChildWellbeing")}
           </Link>
           <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-[#2d2d2d]">
-            Separation Anxiety
+            {t("heroTitle")}
           </h1>
           <p className="text-lg text-[#666] max-w-[600px] mx-auto">
-            Why tears at drop-off are actually a good sign — and how to help
+            {t("heroSubtitle")}
           </p>
         </div>
       </section>
@@ -45,59 +47,59 @@ export default async function SeparationAnxietyPage({
           {/* Good News First */}
           <div className="bg-[#f0f7ed] border-l-4 border-[#8fb07a] p-6 rounded-r-lg mb-12">
             <p className="text-[#444] text-lg leading-relaxed">
-              <strong>First, the good news:</strong> Separation anxiety is a sign of <em>healthy attachment</em>. It means your child loves deeply and trusts completely. Children who don't protest at all when caregivers leave can actually be a concern. Your child's tears show the bond is strong — now we just help them learn that goodbyes aren't forever.
+              {t("goodNews")}
             </p>
           </div>
 
           {/* Why This Happens */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">Why This Happens</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("whyHappens")}</h2>
 
           <p className="text-[#444] text-lg leading-relaxed mb-6">
-            When a young child cries at separation, their brain is doing exactly what it evolved to do: keeping the people they love close. This is the foundation of healthy human connection.
+            {t("whyHappens1")}
           </p>
 
           <p className="text-[#444] text-lg leading-relaxed mb-6">
-            The challenge isn't to eliminate this instinct — it's to help your child build <strong>trust</strong> that:
+            {t("whyHappens2")}
           </p>
 
           <ul className="text-[#444] text-lg leading-relaxed mb-8 space-y-2 ml-6">
-            <li>• You always come back</li>
-            <li>• They are safe when you're away</li>
-            <li>• The teachers can be trusted too</li>
+            {[0, 1, 2].map((i) => (
+              <li key={i}>• {t(`trustPoints.${i}`)}</li>
+            ))}
           </ul>
 
           <p className="text-[#444] text-lg leading-relaxed mb-12">
-            Research shows children with strong separation responses often develop into securely attached, emotionally healthy adults — <em>when handled correctly</em>.
+            {t("whyHappens3")}
           </p>
 
           {/* What Research Tells Us */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">What the Research Tells Us</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("researchTitle")}</h2>
 
           <div className="space-y-6 mb-12">
             <div className="bg-[#f8fbfc] border-l-4 border-[#C8DCE1] p-5 rounded-r-lg">
               <p className="text-[#444] mb-2">
-                <strong>Stress peaks during anticipation, not after you leave.</strong>
+                <strong>{t("research1Title")}</strong>
               </p>
               <p className="text-[#666] text-[0.95rem]">
-                Studies measuring cortisol (the stress hormone) found that levels spike while waiting for the parent to leave — and stay elevated during prolonged goodbyes. The uncertainty is harder than the separation itself.
+                {t("research1Desc")}
               </p>
             </div>
 
             <div className="bg-[#f8fbfc] border-l-4 border-[#C8DCE1] p-5 rounded-r-lg">
               <p className="text-[#444] mb-2">
-                <strong>Children read your emotions.</strong>
+                <strong>{t("research2Title")}</strong>
               </p>
               <p className="text-[#666] text-[0.95rem]">
-                Research shows that parents can either "buffer" or "amplify" their child's stress response. When you appear anxious or sad, your child's stress rises. When you appear calm and confident, it helps regulate theirs.
+                {t("research2Desc")}
               </p>
             </div>
 
             <div className="bg-[#f8fbfc] border-l-4 border-[#C8DCE1] p-5 rounded-r-lg">
               <p className="text-[#444] mb-2">
-                <strong>Adjustment takes about 3 months.</strong>
+                <strong>{t("research3Title")}</strong>
               </p>
               <p className="text-[#666] text-[0.95rem]">
-                Studies show that children's stress hormone levels normalize after approximately 3 months of consistent childcare — but only with predictable routines and confident goodbyes.
+                {t("research3Desc")}
               </p>
             </div>
           </div>
@@ -105,41 +107,27 @@ export default async function SeparationAnxietyPage({
           {/* The Key Insight */}
           <div className="bg-white border-2 border-[#BED7AF] rounded-lg p-6 mb-12 text-center">
             <p className="text-[#444] text-lg">
-              <strong>The bottom line:</strong> Quick, confident goodbyes aren't "cold" — they're kinder. They reduce the anticipation phase (where stress is highest) and show your child there's nothing to worry about.
+              {t("bottomLine")}
             </p>
           </div>
 
           {/* What To Do */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">What Helps at Drop-off</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("whatHelps")}</h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {/* Do */}
             <div className="bg-[#f0f7ed] border-2 border-[#8fb07a] rounded-lg overflow-hidden">
               <div className="bg-[#8fb07a] text-white px-4 py-2 font-semibold">
-                What to Do
+                {t("whatToDo")}
               </div>
               <div className="p-5">
                 <ul className="text-[#444] space-y-3 text-[0.95rem]">
-                  <li className="flex gap-2">
-                    <span className="text-[#8fb07a] font-bold">✓</span>
-                    <span><strong>Keep goodbyes under 1 minute</strong> — reduces anticipation stress</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#8fb07a] font-bold">✓</span>
-                    <span><strong>Sound confident and calm</strong> — your calm regulates their calm</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#8fb07a] font-bold">✓</span>
-                    <span><strong>Hand them to a teacher</strong> — physical transfer to a trusted adult</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#8fb07a] font-bold">✓</span>
-                    <span><strong>Walk away without looking back</strong> — hesitation signals danger</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#8fb07a] font-bold">✓</span>
-                    <span><strong>Trust the process</strong> — most children calm within 5-10 minutes</span>
-                  </li>
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-[#8fb07a] font-bold">✓</span>
+                      <span>{t(`doItems.${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -147,26 +135,16 @@ export default async function SeparationAnxietyPage({
             {/* Don't */}
             <div className="bg-[#ffebee] border-2 border-[#f44336] rounded-lg overflow-hidden">
               <div className="bg-[#f44336] text-white px-4 py-2 font-semibold">
-                What to Avoid
+                {t("whatToAvoid")}
               </div>
               <div className="p-5">
                 <ul className="text-[#444] space-y-3 text-[0.95rem]">
-                  <li className="flex gap-2">
-                    <span className="text-[#f44336] font-bold">✗</span>
-                    <span><strong>Sneaking away</strong> — breaks trust, increases vigilance next time</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#f44336] font-bold">✗</span>
-                    <span><strong>Multiple "one more hug"</strong> — prolongs the stressful anticipation</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#f44336] font-bold">✗</span>
-                    <span><strong>Coming back when you hear crying</strong> — teaches that crying brings you back</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-[#f44336] font-bold">✗</span>
-                    <span><strong>Looking worried or sad</strong> — amplifies their stress response</span>
-                  </li>
+                  {[0, 1, 2, 3].map((i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-[#f44336] font-bold">✗</span>
+                      <span>{t(`avoidItems.${i}`)}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -174,154 +152,138 @@ export default async function SeparationAnxietyPage({
 
           {/* Sample Script */}
           <div className="bg-[#FAF9F6] rounded-lg p-6 mb-12">
-            <h3 className="font-semibold text-[#2d2d2d] mb-3">A Simple Script</h3>
+            <h3 className="font-semibold text-[#2d2d2d] mb-3">{t("sampleScript")}</h3>
             <p className="text-[#444] italic text-lg mb-3">
-              "I love you! Teacher [name] will take care of you. I'll be back after [lunch/nap/outside play]. Bye bye!"
+              {t("scriptText")}
             </p>
             <p className="text-[#666] text-sm">
-              → Hug, hand to teacher, walk out confidently.
+              {t("scriptNote")}
             </p>
           </div>
 
           {/* What to Expect */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">What to Expect</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("whatToExpect")}</h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div className="bg-[#FAF9F6] rounded-lg p-4 text-center">
-              <div className="font-semibold text-[#8fb07a] mb-2">Week 1</div>
-              <p className="text-sm text-[#666]">Crying at drop-off. This is normal.</p>
-            </div>
-            <div className="bg-[#FAF9F6] rounded-lg p-4 text-center">
-              <div className="font-semibold text-[#8fb07a] mb-2">Week 2-3</div>
-              <p className="text-sm text-[#666]">Crying decreases. Calms faster. Engages sooner.</p>
-            </div>
-            <div className="bg-[#FAF9F6] rounded-lg p-4 text-center">
-              <div className="font-semibold text-[#8fb07a] mb-2">Month 2</div>
-              <p className="text-sm text-[#666]">Brief fussing. Quick recovery. Happy during day.</p>
-            </div>
-            <div className="bg-[#FAF9F6] rounded-lg p-4 text-center">
-              <div className="font-semibold text-[#8fb07a] mb-2">Month 3</div>
-              <p className="text-sm text-[#666]">Waves goodbye. Fully adjusted.</p>
-            </div>
+            {[
+              { label: t("week1"), desc: t("week1Desc") },
+              { label: t("week2"), desc: t("week2Desc") },
+              { label: t("month2"), desc: t("month2Desc") },
+              { label: t("month3"), desc: t("month3Desc") },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#FAF9F6] rounded-lg p-4 text-center">
+                <div className="font-semibold text-[#8fb07a] mb-2">{item.label}</div>
+                <p className="text-sm text-[#666]">{item.desc}</p>
+              </div>
+            ))}
           </div>
 
           {/* Gentle Start Option */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">A Gentle Start (Optional)</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("gentleStart")}</h2>
 
           <p className="text-[#444] text-lg leading-relaxed mb-6">
-            If jumping straight to full days feels too hard, you can gradually increase the separation time. The key: <strong>still do quick, confident goodbyes</strong> — just come back sooner at first.
+            {t("gentleStartDesc")}
           </p>
 
           <div className="overflow-x-auto mb-8">
             <table className="w-full text-[0.95rem]">
               <thead>
                 <tr className="bg-[#8fb07a] text-white">
-                  <th className="px-4 py-2 text-left font-semibold">Day</th>
-                  <th className="px-4 py-2 text-left font-semibold">Return After</th>
-                  <th className="px-4 py-2 text-left font-semibold">Say This</th>
+                  <th className="px-4 py-2 text-left font-semibold">{t("tableDay")}</th>
+                  <th className="px-4 py-2 text-left font-semibold">{t("tableReturn")}</th>
+                  <th className="px-4 py-2 text-left font-semibold">{t("tableSay")}</th>
                 </tr>
               </thead>
               <tbody className="text-[#444]">
                 <tr className="border-b border-gray-200">
-                  <td className="px-4 py-3">1-2</td>
-                  <td className="px-4 py-3">30 minutes</td>
-                  <td className="px-4 py-3">"I'll be back after circle time!"</td>
+                  <td className="px-4 py-3">{t("day12")}</td>
+                  <td className="px-4 py-3">{t("day12Return")}</td>
+                  <td className="px-4 py-3">{t("day12Say")}</td>
                 </tr>
                 <tr className="border-b border-gray-200 bg-[#FAF9F6]">
-                  <td className="px-4 py-3">3-4</td>
-                  <td className="px-4 py-3">45 minutes</td>
-                  <td className="px-4 py-3">"I'll be back after snack!"</td>
+                  <td className="px-4 py-3">{t("day34")}</td>
+                  <td className="px-4 py-3">{t("day34Return")}</td>
+                  <td className="px-4 py-3">{t("day34Say")}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
-                  <td className="px-4 py-3">5-6</td>
-                  <td className="px-4 py-3">1.5 hours</td>
-                  <td className="px-4 py-3">"I'll be back after outside play!"</td>
+                  <td className="px-4 py-3">{t("day56")}</td>
+                  <td className="px-4 py-3">{t("day56Return")}</td>
+                  <td className="px-4 py-3">{t("day56Say")}</td>
                 </tr>
                 <tr className="border-b border-gray-200 bg-[#FAF9F6]">
-                  <td className="px-4 py-3">7-8</td>
-                  <td className="px-4 py-3">2.5 hours</td>
-                  <td className="px-4 py-3">"I'll be back after lunch!"</td>
+                  <td className="px-4 py-3">{t("day78")}</td>
+                  <td className="px-4 py-3">{t("day78Return")}</td>
+                  <td className="px-4 py-3">{t("day78Say")}</td>
                 </tr>
                 <tr className="border-b border-gray-200">
-                  <td className="px-4 py-3">9-10</td>
-                  <td className="px-4 py-3">Half day</td>
-                  <td className="px-4 py-3">"I'll be back after nap!"</td>
+                  <td className="px-4 py-3">{t("day910")}</td>
+                  <td className="px-4 py-3">{t("day910Return")}</td>
+                  <td className="px-4 py-3">{t("day910Say")}</td>
                 </tr>
                 <tr className="bg-[#FAF9F6]">
-                  <td className="px-4 py-3">11+</td>
-                  <td className="px-4 py-3">Full day</td>
-                  <td className="px-4 py-3">"I'll be back after school!"</td>
+                  <td className="px-4 py-3">{t("day11")}</td>
+                  <td className="px-4 py-3">{t("day11Return")}</td>
+                  <td className="px-4 py-3">{t("day11Say")}</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p className="text-[#666] text-[0.95rem] mb-12 italic">
-            <strong>Tip:</strong> Use concrete markers ("after snack") not abstract time ("in 1 hour"). Young children understand routines — clocks don't mean much yet.
+            {t("tip")}
           </p>
 
           {/* What Teachers Do */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">What We Do After You Leave</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("whatTeachersDo")}</h2>
 
           <p className="text-[#444] text-lg leading-relaxed mb-6">
-            Our teachers are trained to support children through this transition:
+            {t("whatTeachersDoDesc")}
           </p>
 
           <ul className="text-[#444] text-lg leading-relaxed mb-8 space-y-3">
-            <li className="flex gap-3">
-              <span className="text-[#8fb07a]">•</span>
-              <span><strong>Warm, calm reception</strong> — we become the "borrowed calm"</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-[#8fb07a]">•</span>
-              <span><strong>Immediate redirection</strong> — engaging activities shift focus</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-[#8fb07a]">•</span>
-              <span><strong>Brief acknowledgment</strong> — "I know. Mommy always comes back."</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-[#8fb07a]">•</span>
-              <span><strong>Moving on</strong> — we don't dwell on the sadness</span>
-            </li>
+            {[0, 1, 2, 3].map((i) => (
+              <li key={i} className="flex gap-3">
+                <span className="text-[#8fb07a]">•</span>
+                <span>{t(`teacherActions.${i}`)}</span>
+              </li>
+            ))}
           </ul>
 
           <p className="text-[#444] text-lg leading-relaxed mb-12">
-            We never make a fuss over crying (which reinforces it), repeatedly discuss the absent parent (which keeps focus on the absence), or call you back (which teaches that crying brings you back).
+            {t("teachersAvoid")}
           </p>
 
           {/* Why This Works */}
           <div className="bg-[#f0f7ed] border-l-4 border-[#8fb07a] p-6 rounded-r-lg mb-12">
-            <h3 className="font-semibold text-[#2d2d2d] mb-2">Why This Works</h3>
+            <h3 className="font-semibold text-[#2d2d2d] mb-2">{t("whyWorks")}</h3>
             <p className="text-[#444] leading-relaxed">
-              Every successful goodbye teaches your child's brain: "Parent leaves, parent comes back, I survive, I'm okay." This builds the neural pathways for secure attachment — the foundation for confidence throughout life. It feels hard now, but you're giving them a gift that lasts forever.
+              {t("whyWorksDesc")}
             </p>
           </div>
 
           {/* When to Be Concerned */}
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">When to Talk to Us</h2>
+          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("whenToConcern")}</h2>
 
           <p className="text-[#444] text-lg leading-relaxed mb-6">
-            Most separation anxiety resolves within a few weeks to a couple months. Please reach out if:
+            {t("whenToConcernDesc")}
           </p>
 
           <ul className="text-[#444] text-lg leading-relaxed mb-8 space-y-2 ml-6">
-            <li>• Anxiety doesn't improve after 2-3 months</li>
-            <li>• Your child seems anxious throughout the entire day (not just drop-off)</li>
-            <li>• There's been a recent significant change (new sibling, move, family stress)</li>
-            <li>• You're struggling with the drop-off process yourself</li>
+            {[0, 1, 2, 3].map((i) => (
+              <li key={i}>• {t(`concernItems.${i}`)}</li>
+            ))}
           </ul>
 
           <p className="text-[#444] text-lg leading-relaxed mb-12">
-            We can work together to create a tailored plan. Sometimes small adjustments make a big difference.
+            {t("concernConclusion")}
           </p>
 
           {/* CTA */}
           <div className="bg-[#FAF9F6] p-8 rounded-xl text-center">
-            <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">Questions?</h3>
-            <p className="text-[#666] mb-6">We're happy to discuss your child's transition and create a plan together.</p>
+            <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">{tCommon("questions")}</h3>
+            <p className="text-[#666] mb-6">{tCommon("questionsDescription")}</p>
             <Link href={`/${locale}/contact`} className="btn btn-primary">
-              Contact Us
+              {tCommon("contactUs")}
             </Link>
           </div>
 

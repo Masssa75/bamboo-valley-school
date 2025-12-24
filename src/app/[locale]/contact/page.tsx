@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -17,6 +17,8 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("contact");
+  const tCommon = await getTranslations("common");
 
   return (
     <>
@@ -32,11 +34,10 @@ export default async function ContactPage({
 
         <div className="relative max-w-[800px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-white">
-            Come See Us
+            {t("heroTitle")}
           </h1>
           <p className="text-lg text-white/90 max-w-[600px] mx-auto">
-            The best way to understand Bamboo Valley is to experience it.
-            Schedule a visit and see what happens when children are free.
+            {t("heroDescription")}
           </p>
         </div>
       </section>
@@ -49,16 +50,16 @@ export default async function ContactPage({
             {/* Contact Info */}
             <div>
               <h2 className="font-serif text-3xl font-normal mb-8 text-[#2d2d2d]">
-                Get in Touch
+                {t("getInTouch")}
               </h2>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="font-semibold text-[#2d2d2d] mb-2">Address</h3>
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{t("address")}</h3>
                   <p className="text-[#666]">
-                    3/74 Moo 4, Cherngtalay<br />
-                    Thalang, Phuket 83110<br />
-                    Thailand
+                    {t("addressLine1")}<br />
+                    {t("addressLine2")}<br />
+                    {t("addressLine3")}
                   </p>
                   <a
                     href="https://maps.app.goo.gl/BSgZ5mBeAZqQnZEN6"
@@ -66,12 +67,12 @@ export default async function ContactPage({
                     rel="noopener noreferrer"
                     className="inline-block mt-2 text-[#8fb07a] hover:text-[#6d9b5a] font-medium text-sm"
                   >
-                    Open in Google Maps →
+                    {tCommon("openInGoogleMaps")} →
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-[#2d2d2d] mb-2">Phone / WhatsApp</h3>
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{t("phoneWhatsApp")}</h3>
                   <a
                     href="https://wa.me/66989124218"
                     className="text-[#666] hover:text-[#8fb07a] transition-colors"
@@ -79,12 +80,12 @@ export default async function ContactPage({
                     +66 98 912 4218
                   </a>
                   <p className="text-sm text-[#999] mt-1">
-                    WhatsApp is the fastest way to reach us
+                    {t("whatsAppNote")}
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-[#2d2d2d] mb-2">Email</h3>
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{t("email")}</h3>
                   <a
                     href="mailto:info@bamboovalleyphuket.com"
                     className="text-[#666] hover:text-[#8fb07a] transition-colors"
@@ -94,7 +95,7 @@ export default async function ContactPage({
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-[#2d2d2d] mb-2">Follow Us</h3>
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{t("followUs")}</h3>
                   <a
                     href="https://www.instagram.com/bamboovalleyphuket/"
                     target="_blank"
@@ -113,7 +114,7 @@ export default async function ContactPage({
             {/* Contact Form */}
             <div>
               <h2 className="font-serif text-3xl font-normal mb-8 text-[#2d2d2d]">
-                Send us a Message
+                {t("sendMessage")}
               </h2>
               <ContactForm />
             </div>

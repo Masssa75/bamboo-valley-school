@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
@@ -9,24 +9,6 @@ export const metadata: Metadata = {
   title: "The Science Behind Extraordinary | Bamboo Valley",
   description: "Four decades of research on child-led learning and nature-based education. 213,000 students studied. 200+ nature studies. The evidence is overwhelming.",
 };
-
-const stats = [
-  {
-    number: "213K",
-    label: "students studied",
-    description: "153 studies show self-driven children outperform on every measure.",
-  },
-  {
-    number: "200+",
-    label: "nature studies",
-    description: "83% show nature improves science, math, reading, writing, attention, memory, and grades.",
-  },
-  {
-    number: "1 mo",
-    label: "to transform immunity",
-    description: "Forest soil protects against allergies, autoimmune disorders, immune dysfunction.",
-  },
-];
 
 const researchSections = [
   {
@@ -241,6 +223,25 @@ export default async function SciencePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("science");
+
+  const stats = [
+    {
+      number: t("stat1Number"),
+      label: t("stat1Label"),
+      description: t("stat1Desc"),
+    },
+    {
+      number: t("stat2Number"),
+      label: t("stat2Label"),
+      description: t("stat2Desc"),
+    },
+    {
+      number: t("stat3Number"),
+      label: t("stat3Label"),
+      description: t("stat3Desc"),
+    },
+  ];
 
   return (
     <>
@@ -249,18 +250,18 @@ export default async function SciencePage({
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#BED7AF] to-[#d4e5c9] py-24 md:py-32 px-6 text-center min-h-[60vh] flex flex-col justify-center items-center">
         <div className="text-xs font-semibold tracking-[3px] uppercase text-[#4a4a4a] mb-8">
-          The Research
+          {t("heroLabel")}
         </div>
         <h1 className="font-serif text-3xl md:text-[44px] font-medium max-w-[900px] leading-tight mb-8 text-[#2d2d2d]">
-          The overwhelming science behind child-led learning and nature-based education.
+          {t("heroTitle")}
         </h1>
       </section>
 
       {/* Stats */}
       <section className="py-20 px-6 bg-[#FFFDF9]">
         <div className="text-center max-w-[700px] mx-auto mb-16">
-          <h2 className="font-serif text-4xl font-medium mb-4">The Numbers</h2>
-          <p className="text-[#4a4a4a]">Decades of research. Hundreds of studies. One consistent finding.</p>
+          <h2 className="font-serif text-4xl font-medium mb-4">{t("numbersTitle")}</h2>
+          <p className="text-[#4a4a4a]">{t("numbersSubtitle")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
           {stats.map((stat, i) => (
@@ -315,15 +316,15 @@ export default async function SciencePage({
 
       {/* CTA */}
       <section className="bg-[#2d2d2d] text-white py-24 px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-[44px] font-medium mb-5">See it for yourself</h2>
+        <h2 className="font-serif text-3xl md:text-[44px] font-medium mb-5">{t("ctaTitle")}</h2>
         <p className="text-lg text-white/70 max-w-[600px] mx-auto mb-10">
-          The research points one direction. Come see what it looks like in practice.
+          {t("ctaDesc")}
         </p>
         <Link
           href={`/${locale}/contact`}
           className="inline-block bg-[#BED7AF] text-[#2d2d2d] px-10 py-5 rounded-full font-semibold text-base hover:-translate-y-1 hover:shadow-lg transition-all"
         >
-          Book a Visit
+          {t("ctaTitle")}
         </Link>
       </section>
 

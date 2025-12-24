@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
@@ -10,33 +10,6 @@ export const metadata: Metadata = {
   description: "Research-backed insights on child development, nature-based education, and parenting strategies from Bamboo Valley's educators.",
 };
 
-const posts = [
-  {
-    slug: "homework-myth",
-    title: "Homework Doesn't Help Children Under 10: 35 Years of Research",
-    excerpt: "A meta-analysis of 35 studies found no benefit from homework for elementary students. For third graders, more homework meant lower achievement. Here's what actually works.",
-    date: "December 16, 2024",
-    category: "Research",
-    isPublished: true,
-  },
-  {
-    slug: "forest-play-immunity",
-    title: "How Forest Play Builds Immunity",
-    excerpt: "Research shows children who play in natural environments develop stronger immune systems. Here's the science behind mud play.",
-    date: "Coming Soon",
-    category: "Health",
-    isPublished: false,
-  },
-  {
-    slug: "curiosity-vs-rewards",
-    title: "Why Rewards Kill Curiosity",
-    excerpt: "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
-    date: "Coming Soon",
-    category: "Learning",
-    isPublished: false,
-  },
-];
-
 export default async function BlogPage({
   params,
 }: {
@@ -44,6 +17,34 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("blog");
+
+  const posts = [
+    {
+      slug: "homework-myth",
+      title: t("homeworkMythTitle"),
+      excerpt: t("homeworkMythExcerpt"),
+      date: t("homeworkMythDate"),
+      category: t("research"),
+      isPublished: true,
+    },
+    {
+      slug: "forest-play-immunity",
+      title: t("forestPlayTitle"),
+      excerpt: t("forestPlayExcerpt"),
+      date: t("comingSoon"),
+      category: t("health"),
+      isPublished: false,
+    },
+    {
+      slug: "curiosity-vs-rewards",
+      title: t("curiosityTitle"),
+      excerpt: t("curiosityExcerpt"),
+      date: t("comingSoon"),
+      category: t("learning"),
+      isPublished: false,
+    },
+  ];
 
   return (
     <>
@@ -53,11 +54,10 @@ export default async function BlogPage({
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 bg-[#FAF9F6]">
         <div className="max-w-[800px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-[#2d2d2d]">
-            Insights
+            {t("heroTitle")}
           </h1>
           <p className="text-lg text-[#666] max-w-[600px] mx-auto">
-            Research-backed articles on child development, education, and raising
-            free-minded, curious, capable children.
+            {t("heroSubtitle")}
           </p>
         </div>
       </section>
@@ -113,10 +113,10 @@ export default async function BlogPage({
           {/* Coming Soon Message */}
           <div className="mt-16 text-center py-12 bg-[#FAF9F6] rounded-lg">
             <h3 className="font-serif text-2xl text-[#2d2d2d] mb-4">
-              More content coming soon
+              {t("moreContentTitle")}
             </h3>
             <p className="text-[#666] mb-6">
-              Follow us on Instagram for daily insights and updates.
+              {t("moreContentDesc")}
             </p>
             <a
               href="https://www.instagram.com/bamboovalleyphuket/"

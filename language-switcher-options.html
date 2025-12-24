@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Switcher Design Options - Bamboo Valley</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+      color: #2d2d2d;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      color: #666;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .option-container {
+      margin-bottom: 60px;
+    }
+
+    .option-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .option-description {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .demo-row {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .demo-box {
+      padding: 30px 40px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .demo-box.dark {
+      background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    }
+
+    .demo-box.light {
+      background: white;
+      border: 1px solid #e0e0e0;
+    }
+
+    .demo-box.image-bg {
+      background: url('https://images.unsplash.com/photo-1518173946687-a4c036bc6c9f?w=400') center/cover;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+    }
+
+    .demo-box.image-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      border-radius: 12px;
+    }
+
+    .demo-box.image-bg > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .demo-label {
+      font-size: 0.75rem;
+      color: #999;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .demo-box.dark .demo-label {
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ========== OPTION 1: Current Design ========== */
+    .switcher-current {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .switcher-current.dark {
+      color: white;
+    }
+
+    .switcher-current.dark:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .switcher-current.light {
+      color: #2d2d2d;
+    }
+
+    .switcher-current.light:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .switcher-current .flag {
+      font-size: 18px;
+    }
+
+    .switcher-current .arrow {
+      width: 12px;
+      height: 12px;
+      opacity: 0.7;
+    }
+
+    /* ========== OPTION 2: Compact (Flag Only) ========== */
+    .switcher-compact {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 20px;
+    }
+
+    .switcher-compact.dark:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .switcher-compact.light:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .switcher-compact .arrow {
+      width: 10px;
+      height: 10px;
+      opacity: 0.5;
+    }
+
+    .switcher-compact.dark .arrow {
+      color: white;
+    }
+
+    .switcher-compact.light .arrow {
+      color: #2d2d2d;
+    }
+
+    /* ========== OPTION 3: Globe Icon ========== */
+    .switcher-globe {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .switcher-globe.dark {
+      color: white;
+    }
+
+    .switcher-globe.dark:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .switcher-globe.light {
+      color: #2d2d2d;
+    }
+
+    .switcher-globe.light:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .switcher-globe .globe {
+      width: 18px;
+      height: 18px;
+      opacity: 0.8;
+    }
+
+    .switcher-globe .arrow {
+      width: 12px;
+      height: 12px;
+      opacity: 0.7;
+    }
+
+    /* ========== OPTION 4: Pill/Badge Style ========== */
+    .switcher-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .switcher-pill.dark {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .switcher-pill.dark:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .switcher-pill.light {
+      background: #f5f5f5;
+      color: #2d2d2d;
+      border: 1px solid #e0e0e0;
+    }
+
+    .switcher-pill.light:hover {
+      background: #eee;
+    }
+
+    .switcher-pill .flag {
+      font-size: 14px;
+    }
+
+    .switcher-pill .arrow {
+      width: 10px;
+      height: 10px;
+      opacity: 0.6;
+    }
+
+    /* ========== OPTION 5: Text Code Only ========== */
+    .switcher-code {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .switcher-code.dark {
+      color: white;
+    }
+
+    .switcher-code.dark:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .switcher-code.light {
+      color: #2d2d2d;
+    }
+
+    .switcher-code.light:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .switcher-code .arrow {
+      width: 10px;
+      height: 10px;
+      opacity: 0.6;
+    }
+
+    /* ========== OPTION 6: Underline Style ========== */
+    .switcher-underline {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .switcher-underline.dark {
+      color: white;
+    }
+
+    .switcher-underline.dark:hover {
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .switcher-underline.light {
+      color: #2d2d2d;
+    }
+
+    .switcher-underline.light:hover {
+      border-color: #BED7AF;
+    }
+
+    .switcher-underline .flag {
+      font-size: 16px;
+    }
+
+    .switcher-underline .arrow {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+    /* ========== OPTION 7: Outlined Button ========== */
+    .switcher-outlined {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .switcher-outlined.dark {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .switcher-outlined.dark:hover {
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .switcher-outlined.light {
+      color: #2d2d2d;
+      border: 1px solid #ccc;
+    }
+
+    .switcher-outlined.light:hover {
+      border-color: #999;
+      background: rgba(0,0,0,0.02);
+    }
+
+    .switcher-outlined .flag {
+      font-size: 16px;
+    }
+
+    .switcher-outlined .arrow {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+    }
+
+    /* ========== OPTION 8: Minimal (Just Text) ========== */
+    .switcher-minimal {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .switcher-minimal:hover {
+      opacity: 1;
+    }
+
+    .switcher-minimal.dark {
+      color: white;
+    }
+
+    .switcher-minimal.light {
+      color: #2d2d2d;
+    }
+
+    .switcher-minimal .arrow {
+      width: 10px;
+      height: 10px;
+    }
+
+    /* Arrow SVG */
+    .arrow {
+      display: inline-block;
+    }
+
+    .pros-cons {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      display: flex;
+      gap: 20px;
+    }
+
+    .pros, .cons {
+      flex: 1;
+    }
+
+    .pros-cons strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pros strong {
+      color: #4CAF50;
+    }
+
+    .cons strong {
+      color: #f44336;
+    }
+
+    .pros-cons ul {
+      list-style: none;
+      color: #666;
+    }
+
+    .pros-cons li {
+      margin-bottom: 2px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Language Switcher Options</h1>
+  <p class="intro">Different design approaches for the language switcher. Each shown on dark background (hero/nav before scroll) and light background (nav after scroll).</p>
+
+  <!-- Option 1: Current -->
+  <div class="option-container">
+    <div class="option-title">Option 1: Current Design (Flag + Text + Arrow)</div>
+    <div class="option-description">The current implementation with flag emoji, language name, and dropdown arrow.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-current dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-current light">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-current dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Clear what it does</li><li>Easy to recognize language</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Takes more space</li><li>Emoji flags can vary by device</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 2: Compact -->
+  <div class="option-container">
+    <div class="option-title">Option 2: Compact (Flag Only)</div>
+    <div class="option-description">Just the flag with a small dropdown indicator. Minimal space usage.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-compact dark">
+          <span class="flag">🇬🇧</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-compact light">
+          <span class="flag">🇬🇧</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-compact dark">
+          <span class="flag">🇬🇧</span>
+          <svg class="arrow" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Very compact</li><li>Universal flag recognition</li><li>Clean look</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Less obvious it's clickable</li><li>Emoji rendering varies</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 3: Globe -->
+  <div class="option-container">
+    <div class="option-title">Option 3: Globe Icon + Language Code</div>
+    <div class="option-description">Uses a universal globe icon instead of country flag. More neutral, commonly used.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-globe dark">
+          <svg class="globe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-width="1.5" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-globe light">
+          <svg class="globe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-width="1.5" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-globe dark">
+          <svg class="globe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-width="1.5" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Universally understood</li><li>No emoji inconsistency</li><li>Professional look</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Less visual distinction between languages</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 4: Pill -->
+  <div class="option-container">
+    <div class="option-title">Option 4: Pill/Badge Style</div>
+    <div class="option-description">Contained in a pill-shaped badge. More prominent, clearly clickable.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-pill dark">
+          <span class="flag">🇬🇧</span>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-pill light">
+          <span class="flag">🇬🇧</span>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-pill dark">
+          <span class="flag">🇬🇧</span>
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Very clear it's interactive</li><li>Stands out nicely</li><li>Modern feel</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>More visually heavy</li><li>May compete with CTA button</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 5: Code Only -->
+  <div class="option-container">
+    <div class="option-title">Option 5: Language Code Only</div>
+    <div class="option-description">Ultra minimal - just the 2-letter language code. Very clean, Apple-style.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-code dark">
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-code light">
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-code dark">
+          <span>EN</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Extremely clean</li><li>No emoji issues</li><li>Works everywhere</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Less visually obvious</li><li>TH/RU/ZH may not be recognized by everyone</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 6: Underline -->
+  <div class="option-container">
+    <div class="option-title">Option 6: Underline Style</div>
+    <div class="option-description">No background, just underline on hover. Matches nav link style.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-underline dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-underline light">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-underline dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Consistent with nav style</li><li>Subtle, not distracting</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Less discoverable</li><li>Might look like a link</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 7: Outlined -->
+  <div class="option-container">
+    <div class="option-title">Option 7: Outlined Button</div>
+    <div class="option-description">Subtle border container. Clear button but doesn't compete with primary CTA.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-outlined dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-outlined light">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-outlined dark">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Clearly a button</li><li>Elegant, professional</li><li>Works with both backgrounds</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Takes more space</li><li>More visual weight</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Option 8: Minimal -->
+  <div class="option-container">
+    <div class="option-title">Option 8: Minimal Text Only</div>
+    <div class="option-description">Just the language name with subtle opacity. Ultra clean, disappears into nav.</div>
+    <div class="demo-row">
+      <div class="demo-box dark">
+        <div class="demo-label">Dark Background</div>
+        <div class="switcher-minimal dark">
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box light">
+        <div class="demo-label">Light Background</div>
+        <div class="switcher-minimal light">
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+      <div class="demo-box image-bg">
+        <div class="switcher-minimal dark">
+          <span>English</span>
+          <svg class="arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros"><strong>Pros</strong><ul><li>Extremely clean</li><li>Doesn't distract from content</li><li>Matches nav links</li></ul></div>
+      <div class="cons"><strong>Cons</strong><ul><li>Easy to miss</li><li>No visual distinction</li></ul></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 style="margin-top: 40px; font-family: 'Cormorant Garamond', serif;">My Recommendations</h2>
+  <div style="margin-top: 20px; color: #666; line-height: 1.7;">
+    <p><strong>For maximum clarity:</strong> Option 4 (Pill) or Option 7 (Outlined) - clearly a clickable element</p>
+    <p><strong>For clean/minimal design:</strong> Option 3 (Globe) or Option 5 (Code Only) - professional, no emoji issues</p>
+    <p><strong>For space efficiency:</strong> Option 2 (Flag Only) - minimal footprint</p>
+    <p><strong>Current implementation is good:</strong> Option 1 is clear and recognizable, just consider if the flag emojis render well on all devices</p>
+  </div>
+</body>
+</html>
