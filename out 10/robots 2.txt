@@ -1,8 +1,0 @@
-# Robots.txt for Bamboo Valley Phuket
-# https://bamboovalleyphuket.com
-
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://bamboovalleyphuket.com/sitemap.xml

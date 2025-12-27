@@ -65,17 +65,17 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
           onMouseEnter={() => setProgramsOpen(true)}
           onMouseLeave={() => setProgramsOpen(false)}
         >
-          <Link
-            href={localePath("/programs")}
+          <button
+            onClick={() => setProgramsOpen(!programsOpen)}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             {t("programs")}
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-3 h-3 transition-transform ${programsOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-          </Link>
+          </button>
           {programsOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
               <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
@@ -159,17 +159,17 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
           onMouseEnter={() => setWellbeingOpen(true)}
           onMouseLeave={() => setWellbeingOpen(false)}
         >
-          <Link
-            href={localePath("/child-wellbeing")}
+          <button
+            onClick={() => setWellbeingOpen(!wellbeingOpen)}
             className={`text-sm font-medium tracking-wide transition-colors hover:text-[#BED7AF] flex items-center gap-1 ${
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
             {t("childWellbeing")}
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-3 h-3 transition-transform ${wellbeingOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-          </Link>
+          </button>
           {wellbeingOpen && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
               <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4 min-w-[280px]">
