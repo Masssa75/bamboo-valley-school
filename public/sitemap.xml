@@ -1,69 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
   <url>
     <loc>https://www.bamboovalleyphuket.com/</loc>
-    <lastmod>2025-12-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/programs/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/th/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Programs -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/programs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/programs/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/programs/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/our-story/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/programs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/programs/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/programs/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Our Story -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/our-story/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/our-story/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/contact/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/our-story/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/our-story/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/contact/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/contact/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Child Wellbeing -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/child-wellbeing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/our-approach/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/child-wellbeing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Child Wellbeing - Our Approach -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/child-wellbeing/our-approach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/our-approach/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/our-approach/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/behavior-support/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/child-wellbeing/our-approach/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/our-approach/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/our-approach/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Child Wellbeing - Behavior Support -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/child-wellbeing/behavior-support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/behavior-support/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/behavior-support/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/understanding/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/child-wellbeing/behavior-support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/behavior-support/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/behavior-support/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Child Wellbeing - Understanding -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/child-wellbeing/understanding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/understanding/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/understanding/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/separation-anxiety/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/child-wellbeing/understanding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/understanding/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/understanding/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Child Wellbeing - Separation Anxiety -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/child-wellbeing/separation-anxiety/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/separation-anxiety/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/separation-anxiety/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/science/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/child-wellbeing/separation-anxiety/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/child-wellbeing/separation-anxiety/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/child-wellbeing/separation-anxiety/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Science -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/science/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/science/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/science/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/blog/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://www.bamboovalleyphuket.com/th/science/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/science/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/science/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/blog/"/>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/th/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/blog/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog - Homework Myth -->
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/en/blog/homework-myth/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/blog/homework-myth/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/blog/homework-myth/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.bamboovalleyphuket.com/th/blog/homework-myth/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bamboovalleyphuket.com/en/blog/homework-myth/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.bamboovalleyphuket.com/th/blog/homework-myth/"/>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>
