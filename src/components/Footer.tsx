@@ -5,12 +5,13 @@ import { useTranslations } from "next-intl";
 import { type Locale } from "@/i18n/config";
 
 interface FooterProps {
-  locale: Locale;
+  locale?: Locale;
 }
 
-export default function Footer({ locale }: FooterProps) {
+export default function Footer({ locale = "en" }: FooterProps) {
   const t = useTranslations("footer");
-  const localePath = (path: string) => `/${locale}${path}`;
+  const currentLocale = locale;
+  const localePath = (path: string) => `/${currentLocale}${path}`;
 
   return (
     <footer className="py-16 px-6 md:px-12 bg-[#2d2d2d] text-white">

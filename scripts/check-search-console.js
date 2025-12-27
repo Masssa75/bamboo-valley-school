@@ -8,7 +8,7 @@
 require('dotenv').config({ path: '.env.local' });
 const { google } = require('googleapis');
 
-const siteUrl = 'https://bamboovalleyphuket.com/';
+const siteUrl = 'https://www.bamboovalleyphuket.com/';
 
 async function main() {
   const days = parseInt(process.argv[2]) || 28;

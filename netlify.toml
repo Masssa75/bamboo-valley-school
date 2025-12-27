@@ -9,6 +9,22 @@
 [functions]
   node_bundler = "esbuild"
 
+# Branch deploy settings - enables staging workflow
+# main branch = production (bamboovalleyphuket.com)
+# staging branch = preview (staging--bamboo-valley-school.netlify.app)
+# feature branches = individual preview URLs
+[context.production]
+  command = "npm run build"
+
+[context.staging]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
 # Redirect root to default locale (English)
 [[redirects]]
   from = "/"

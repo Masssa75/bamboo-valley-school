@@ -3,20 +3,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-// import LanguageSwitcher from "./LanguageSwitcher"; // Hidden temporarily
+import LanguageSwitcher from "./LanguageSwitcher";
 import { type Locale } from "@/i18n/config";
 
 interface NavigationProps {
   variant?: "dark" | "light";
-  locale: Locale;
+  locale?: Locale;
 }
 
-export default function Navigation({ variant = "dark", locale }: NavigationProps) {
+export default function Navigation({ variant = "dark", locale = "en" }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [wellbeingOpen, setWellbeingOpen] = useState(false);
   const t = useTranslations("nav");
+  const currentLocale = locale;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +30,7 @@ export default function Navigation({ variant = "dark", locale }: NavigationProps
   const useDarkText = variant === "light" || scrolled;
 
   // Helper to create locale-aware links
-  const localePath = (path: string) => `/${locale}${path}`;
+  const localePath = (path: string) => `/${currentLocale}${path}`;
 
   return (
     <nav
@@ -237,11 +238,9 @@ export default function Navigation({ variant = "dark", locale }: NavigationProps
             {t("visitUs")}
           </Link>
         </li>
-        {/* Language switcher hidden temporarily
         <li>
-          <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} />
+          <LanguageSwitcher currentLocale={currentLocale} variant={scrolled ? "light" : variant} />
         </li>
-        */}
         <li>
           <Link
             href={localePath("/contact")}
@@ -254,7 +253,7 @@ export default function Navigation({ variant = "dark", locale }: NavigationProps
 
       {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center gap-2">
-        {/* <LanguageSwitcher currentLocale={locale} variant={scrolled ? "light" : variant} /> */}
+        <LanguageSwitcher currentLocale={currentLocale} variant={scrolled ? "light" : variant} />
         <button
           className="p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

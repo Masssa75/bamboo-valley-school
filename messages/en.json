@@ -119,7 +119,8 @@
     "youngAges": "Ages 3–6",
     "youngDescription": "Play, creativity & gentle adventures",
     "olderAges": "Ages 7–12",
-    "olderDescription": "Field trips, beach days & exploration"
+    "olderDescription": "Field trips, beach days & exploration",
+    "exploreCamps": "Explore Camps"
   },
   "community": {
     "title": "A community, not just a school",
@@ -354,9 +355,23 @@
     "coreBelief4": "This approach — known as Collaborative & Proactive Solutions — was developed by Dr. Ross Greene at Harvard Medical School and is now used in thousands of schools, hospitals, and treatment centers worldwide.",
     "inPractice": "What This Means in Practice",
     "weProvide": "We Provide",
-    "weProvideItems": ["A calm, predictable environment", "Clear, consistent expectations", "Adults who listen before reacting", "Time and space to learn from mistakes", "Individual support when needed", "Close partnership with parents"],
+    "weProvideItems": [
+      "A calm, predictable environment",
+      "Clear, consistent expectations",
+      "Adults who listen before reacting",
+      "Time and space to learn from mistakes",
+      "Individual support when needed",
+      "Close partnership with parents"
+    ],
     "weExpect": "We Expect",
-    "weExpectItems": ["Gentle hands with others", "Kind words, even when upset", "Willingness to share and take turns", "Including everyone in play", "Parents who work with us, not against us", "Honesty when problems arise"],
+    "weExpectItems": [
+      "Gentle hands with others",
+      "Kind words, even when upset",
+      "Willingness to share and take turns",
+      "Including everyone in play",
+      "Parents who work with us, not against us",
+      "Honesty when problems arise"
+    ],
     "mostChildrenThrive": "Most children thrive naturally in our environment. The combination of nature, small class sizes, calm adults, and meaningful activities gives them exactly what they need. For the few who need extra support, we have clear processes — developed with input from child psychologists and educational specialists.",
     "learnMore": "Learn More",
     "learnMoreIntro": "We believe in transparency. The guides below explain exactly how we approach different challenges. We share these openly so you know what to expect — whether your child needs extra support or you simply want peace of mind that we take these things seriously.",
@@ -398,11 +413,21 @@
     "differentWay": "A Different Way of Thinking",
     "traditionalThinking": "Traditional Thinking",
     "traditionalMotto": "\"Kids do well if they want to\"",
-    "traditionalPoints": ["Behavior is a choice", "Child needs motivation (rewards/punishments)", "If consequences are strong enough, behavior will change", "Child is being defiant or manipulative"],
+    "traditionalPoints": [
+      "Behavior is a choice",
+      "Child needs motivation (rewards/punishments)",
+      "If consequences are strong enough, behavior will change",
+      "Child is being defiant or manipulative"
+    ],
     "traditionalResult": "Result: Power struggles, temporary compliance, the problem keeps returning",
     "ourApproachLabel": "Our Approach",
     "ourApproachMotto": "\"Kids do well if they can\"",
-    "ourApproachPoints": ["Behavior signals a lagging skill", "Child needs help building skills", "Understanding the problem leads to lasting solutions", "Child is communicating \"I'm stuck\""],
+    "ourApproachPoints": [
+      "Behavior signals a lagging skill",
+      "Child needs help building skills",
+      "Understanding the problem leads to lasting solutions",
+      "Child is communicating \"I'm stuck\""
+    ],
     "ourApproachResult": "Result: Skills built, problems solved, relationship strengthened",
     "whyConsequencesDontWork": "Why Consequences Alone Don't Work",
     "consequences1": "Think about it this way: if your child could behave well just by being motivated, they would already be behaving well. No child wants to be in trouble. No child wants to disappoint their parents and teachers.",
@@ -486,7 +511,13 @@
     "gettingSpecific": "Getting Specific",
     "gettingSpecificDesc": "General labels don't help us solve problems. \"He has trouble with behavior\" is too vague. We need to identify the exact situations where the child struggles.",
     "unsolvedExamplesTitle": "Examples of Unsolved Problems",
-    "unsolvedExamples": ["\"Difficulty staying seated during story time\"", "\"Difficulty transitioning from free play to class time\"", "\"Difficulty sharing materials during art activities\"", "\"Difficulty waiting for a turn to speak during circle time\"", "\"Difficulty when activities don't go as expected\""],
+    "unsolvedExamples": [
+      "\"Difficulty staying seated during story time\"",
+      "\"Difficulty transitioning from free play to class time\"",
+      "\"Difficulty sharing materials during art activities\"",
+      "\"Difficulty waiting for a turn to speak during circle time\"",
+      "\"Difficulty when activities don't go as expected\""
+    ],
     "noJudgment": "Notice what's not in these statements: judgment, blame, or theories about motivation. Just specific situations we can work on solving.",
     "patternsTitle": "Looking for Patterns",
     "patternsIntro": "Once we've identified specific problems, we look for patterns:",
@@ -503,7 +534,13 @@
     "realExample3": "Collaborative solution: The child helped design an \"energy challenge\" — a quick circuit around the playground when they needed to move. They raise their hand, do the circuit, and return ready to focus. Problem solved, skill being built, relationship intact.",
     "parentsRole": "Your Role in This Process",
     "parentsRoleDesc": "You know your child better than anyone. When we're trying to understand what's going on, your insights are invaluable:",
-    "parentQuestions": ["What situations are hard at home?", "When do they do well?", "What strategies have worked for you?", "What do you notice about their energy, mood, or triggers?", "What are they really good at?"],
+    "parentQuestions": [
+      "What situations are hard at home?",
+      "When do they do well?",
+      "What strategies have worked for you?",
+      "What do you notice about their energy, mood, or triggers?",
+      "What are they really good at?"
+    ],
     "parentsConclusion": "When school and home work together to understand a child, we get a complete picture. And complete pictures lead to better solutions.",
     "notAboutLabeling": "This Isn't About Labeling",
     "notAboutLabelingDesc": "Identifying lagging skills isn't about diagnosing or labeling your child. It's about understanding what they need to learn and how we can help them learn it. Every child has areas where they're still developing. Our job is to support that development with patience and skill.",
@@ -528,16 +565,34 @@
     "howWeRespondDesc": "Not all incidents are the same. A child grabbing a toy is different from a child hurting someone on purpose. Our response matches the severity — clear, predictable, and fair.",
     "tier1Title": "Tier 1 — Minor Incidents",
     "tier1Examples": "Examples",
-    "tier1ExamplesList": ["Pushing or shoving (no injury)", "Grabbing toys", "Mean words or teasing", "Not sharing or waiting turn", "Excluding others from play"],
+    "tier1ExamplesList": [
+      "Pushing or shoving (no injury)",
+      "Grabbing toys",
+      "Mean words or teasing",
+      "Not sharing or waiting turn",
+      "Excluding others from play"
+    ],
     "tier1WhatHappens": "What Happens",
     "tier1Response": "Playtime pauses briefly. The child chooses a calm activity (watering plants, cleaning toys, etc.) until they're ready to rejoin. Then they get a fresh start — no lecture, no lingering consequences.",
     "tier1Communication": "Parent communication: Verbal update at pickup if notable. Written note if 3+ incidents in one week.",
     "tier2Title": "Tier 2 — Moderate Incidents",
-    "tier2ExamplesList": ["Repeated minor incidents (3+ in a week)", "Targeting a specific child", "Breaking materials on purpose", "Rough play causing minor injury", "Refusing to follow safety rules"],
+    "tier2ExamplesList": [
+      "Repeated minor incidents (3+ in a week)",
+      "Targeting a specific child",
+      "Breaking materials on purpose",
+      "Rough play causing minor injury",
+      "Refusing to follow safety rules"
+    ],
     "tier2Response": "Free play is done for the day. The child sits with a teacher doing a quiet activity for the rest of the play period. Before rejoining regular activities, they must make repair with the affected child.",
     "tier2Communication": "Parent communication: Same-day message or call. If patterns continue, we schedule a meeting.",
     "tier3Title": "Tier 3 — Serious Incidents",
-    "tier3ExamplesList": ["Physical aggression causing injury", "Using objects to hurt others", "Repeated pattern of harm", "Threatening behavior", "Behavior endangering others"],
+    "tier3ExamplesList": [
+      "Physical aggression causing injury",
+      "Using objects to hurt others",
+      "Repeated pattern of harm",
+      "Threatening behavior",
+      "Behavior endangering others"
+    ],
     "tier3Response": "The child is removed from group activities immediately and supervised 1-on-1. Management is notified. Parents are called — same-day pickup may be required.",
     "tier3Communication": "Parent communication: Immediate phone call. Incident report provided. Meeting required before child returns.",
     "escalationTitle": "If Serious Incidents Continue",
@@ -556,7 +611,13 @@
     "learnMoreLinks": "Learn more: Our Understanding Your Child page explains how we identify what's really going on when a child struggles. Our Our Approach page covers the philosophy behind working with children collaboratively.",
     "whatWeAskTitle": "What We Ask of Parents",
     "whatWeAskDesc": "This system works best when school and home are aligned. When we reach out about behavioral concerns, we ask that you:",
-    "whatWeAskItems": ["Listen with an open mind — we're sharing concerns, not accusations", "Attend meetings when requested", "Try suggested strategies at home", "Share information that might help us understand your child better", "Work with us as partners, not adversaries"],
+    "whatWeAskItems": [
+      "Listen with an open mind — we're sharing concerns, not accusations",
+      "Attend meetings when requested",
+      "Try suggested strategies at home",
+      "Share information that might help us understand your child better",
+      "Work with us as partners, not adversaries"
+    ],
     "whatWeAskConclusion": "For families who engage with us this way, the results are often remarkable. Children develop new skills. Behaviors improve. Everyone feels supported."
   },
   "separationAnxiety": {
@@ -566,7 +627,11 @@
     "whyHappens": "Why This Happens",
     "whyHappens1": "When a young child cries at separation, their brain is doing exactly what it evolved to do: keeping the people they love close. This is the foundation of healthy human connection.",
     "whyHappens2": "The challenge isn't to eliminate this instinct — it's to help your child build trust that:",
-    "trustPoints": ["You always come back", "They are safe when you're away", "The teachers can be trusted too"],
+    "trustPoints": [
+      "You always come back",
+      "They are safe when you're away",
+      "The teachers can be trusted too"
+    ],
     "whyHappens3": "Research shows children with strong separation responses often develop into securely attached, emotionally healthy adults — when handled correctly.",
     "researchTitle": "What the Research Tells Us",
     "research1Title": "Stress peaks during anticipation, not after you leave.",
@@ -578,9 +643,20 @@
     "bottomLine": "The bottom line: Quick, confident goodbyes aren't \"cold\" — they're kinder. They reduce the anticipation phase (where stress is highest) and show your child there's nothing to worry about.",
     "whatHelps": "What Helps at Drop-off",
     "whatToDo": "What to Do",
-    "doItems": ["Keep goodbyes under 1 minute — reduces anticipation stress", "Sound confident and calm — your calm regulates their calm", "Hand them to a teacher — physical transfer to a trusted adult", "Walk away without looking back — hesitation signals danger", "Trust the process — most children calm within 5-10 minutes"],
+    "doItems": [
+      "Keep goodbyes under 1 minute — reduces anticipation stress",
+      "Sound confident and calm — your calm regulates their calm",
+      "Hand them to a teacher — physical transfer to a trusted adult",
+      "Walk away without looking back — hesitation signals danger",
+      "Trust the process — most children calm within 5-10 minutes"
+    ],
     "whatToAvoid": "What to Avoid",
-    "avoidItems": ["Sneaking away — breaks trust, increases vigilance next time", "Multiple \"one more hug\" — prolongs the stressful anticipation", "Coming back when you hear crying — teaches that crying brings you back", "Looking worried or sad — amplifies their stress response"],
+    "avoidItems": [
+      "Sneaking away — breaks trust, increases vigilance next time",
+      "Multiple \"one more hug\" — prolongs the stressful anticipation",
+      "Coming back when you hear crying — teaches that crying brings you back",
+      "Looking worried or sad — amplifies their stress response"
+    ],
     "sampleScript": "A Simple Script",
     "scriptText": "\"I love you! Teacher [name] will take care of you. I'll be back after [lunch/nap/outside play]. Bye bye!\"",
     "scriptNote": "→ Hug, hand to teacher, walk out confidently.",
@@ -619,13 +695,23 @@
     "tip": "Tip: Use concrete markers (\"after snack\") not abstract time (\"in 1 hour\"). Young children understand routines — clocks don't mean much yet.",
     "whatTeachersDo": "What We Do After You Leave",
     "whatTeachersDoDesc": "Our teachers are trained to support children through this transition:",
-    "teacherActions": ["Warm, calm reception — we become the \"borrowed calm\"", "Immediate redirection — engaging activities shift focus", "Brief acknowledgment — \"I know. Mommy always comes back.\"", "Moving on — we don't dwell on the sadness"],
+    "teacherActions": [
+      "Warm, calm reception — we become the \"borrowed calm\"",
+      "Immediate redirection — engaging activities shift focus",
+      "Brief acknowledgment — \"I know. Mommy always comes back.\"",
+      "Moving on — we don't dwell on the sadness"
+    ],
     "teachersAvoid": "We never make a fuss over crying (which reinforces it), repeatedly discuss the absent parent (which keeps focus on the absence), or call you back (which teaches that crying brings you back).",
     "whyWorks": "Why This Works",
     "whyWorksDesc": "Every successful goodbye teaches your child's brain: \"Parent leaves, parent comes back, I survive, I'm okay.\" This builds the neural pathways for secure attachment — the foundation for confidence throughout life. It feels hard now, but you're giving them a gift that lasts forever.",
     "whenToConcern": "When to Talk to Us",
     "whenToConcernDesc": "Most separation anxiety resolves within a few weeks to a couple months. Please reach out if:",
-    "concernItems": ["Anxiety doesn't improve after 2-3 months", "Your child seems anxious throughout the entire day (not just drop-off)", "There's been a recent significant change (new sibling, move, family stress)", "You're struggling with the drop-off process yourself"],
+    "concernItems": [
+      "Anxiety doesn't improve after 2-3 months",
+      "Your child seems anxious throughout the entire day (not just drop-off)",
+      "There's been a recent significant change (new sibling, move, family stress)",
+      "You're struggling with the drop-off process yourself"
+    ],
     "concernConclusion": "We can work together to create a tailored plan. Sometimes small adjustments make a big difference."
   },
   "science": {

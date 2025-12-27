@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { locales, localeNames, localeFlags, type Locale } from "@/i18n/config";
+import { localeNames, localeFlags, type Locale } from "@/i18n/config";
+
+// Only show these locales in the switcher (others are not ready yet)
+const enabledLocales: Locale[] = ["en", "th"];
 
 // Short codes for pill display
 const localeCodes: Record<Locale, string> = {
@@ -73,7 +76,7 @@ export default function LanguageSwitcher({
 
           {/* Dropdown */}
           <div className="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 min-w-[140px]">
-            {locales.map((locale) => (
+            {enabledLocales.map((locale) => (
               <button
                 key={locale}
                 onClick={() => switchLocale(locale)}

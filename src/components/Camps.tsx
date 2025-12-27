@@ -1,18 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Camps() {
+  const t = useTranslations("camps");
+
   return (
     <section className="py-28 md:py-32 px-6 md:px-12 bg-white">
       <div className="max-w-[900px] mx-auto">
         {/* Title & Description */}
         <div className="text-center max-w-[700px] mx-auto mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d] mb-6">
-            Holiday Camps
+            {t("title")}
           </h2>
           <p className="text-lg text-[#666] max-w-[650px] mx-auto leading-relaxed">
-            Experience Bamboo Valley during school holidays. Our camps offer the same
-            nature-immersed, child-led learning—perfect for families wanting to try
-            our approach before enrolling, or simply give their children an extraordinary break.
+            {t("description")}
           </p>
         </div>
 
@@ -27,8 +30,8 @@ export default function Camps() {
                 className="object-cover"
               />
             </div>
-            <h3 className="font-serif text-xl text-[#2d2d2d]">Ages 3–6</h3>
-            <p className="text-sm text-[#666]">Play, creativity & gentle adventures</p>
+            <h3 className="font-serif text-xl text-[#2d2d2d]">{t("youngAges")}</h3>
+            <p className="text-sm text-[#666]">{t("youngDescription")}</p>
           </div>
           <div className="text-center">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
@@ -39,8 +42,8 @@ export default function Camps() {
                 className="object-cover"
               />
             </div>
-            <h3 className="font-serif text-xl text-[#2d2d2d]">Ages 7–12</h3>
-            <p className="text-sm text-[#666]">Field trips, beach days & exploration</p>
+            <h3 className="font-serif text-xl text-[#2d2d2d]">{t("olderAges")}</h3>
+            <p className="text-sm text-[#666]">{t("olderDescription")}</p>
           </div>
         </div>
 
@@ -52,7 +55,7 @@ export default function Camps() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Explore Camps
+            {t("exploreCamps")}
             <svg
               width="16"
               height="16"
