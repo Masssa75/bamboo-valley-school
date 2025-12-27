@@ -119,7 +119,8 @@
     "youngAges": "Возраст 3–6 лет",
     "youngDescription": "Игра, творчество и мягкие приключения",
     "olderAges": "Возраст 7–12 лет",
-    "olderDescription": "Экскурсии, пляжные дни и исследования"
+    "olderDescription": "Экскурсии, пляжные дни и исследования",
+    "exploreCamps": "Посмотреть лагеря"
   },
   "community": {
     "title": "Сообщество, а не просто школа",
@@ -664,5 +665,9 @@
     "curiosityExcerpt": "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     "questionsAboutApproach": "Questions about our approach?",
     "chatWithUsDesc": "We'd love to chat about how we do things differently."
+  },
+  "spaceVideo": {
+    "line1": "5 600 квадратных метров пальмового леса.",
+    "line2": "Тень для игр весь день. Пространство для роста без ограничений."
   }
 }

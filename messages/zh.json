@@ -119,7 +119,8 @@
     "youngAges": "3-6岁",
     "youngDescription": "游戏、创意和温和的冒险",
     "olderAges": "7-12岁",
-    "olderDescription": "实地考察、海滩日和探索"
+    "olderDescription": "实地考察、海滩日和探索",
+    "exploreCamps": "探索营地"
   },
   "community": {
     "title": "一个社区，不只是一所学校",
@@ -664,5 +665,9 @@
     "curiosityExcerpt": "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     "questionsAboutApproach": "Questions about our approach?",
     "chatWithUsDesc": "We'd love to chat about how we do things differently."
+  },
+  "spaceVideo": {
+    "line1": "5,600平方米的棕榈林。",
+    "line2": "全天遮荫玩耍。无限成长空间。"
   }
 }
