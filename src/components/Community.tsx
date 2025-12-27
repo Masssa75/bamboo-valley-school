@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Community() {
+  const t = useTranslations("community");
+
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
       {/* Image */}
@@ -17,11 +22,10 @@ export default function Community() {
       {/* Content */}
       <div className="flex flex-col justify-center px-8 md:px-20 py-12 md:py-16 bg-white">
         <h2 className="font-serif text-3xl md:text-4xl font-normal mb-6 text-[#2d2d2d]">
-          A community, not just a school
+          {t("title")}
         </h2>
         <p className="font-serif text-xl md:text-2xl leading-relaxed text-[#444]">
-          Monthly gatherings. Seasonal celebrations. Parents who become friends.
-          Teachers who become family. A village raising children together.
+          {t("description")}
         </p>
       </div>
     </section>

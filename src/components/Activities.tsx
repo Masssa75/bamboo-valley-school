@@ -2,69 +2,25 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const activities = [
-  {
-    title: "Free Play",
-    subtitle: "Builds creativity & problem-solving",
-    image: "/images/Free-Play.jpeg",
-    science: "Children in autonomy-supportive environments show higher creativity, deeper learning, and stronger intrinsic motivation than those in reward-based settings.",
-  },
-  {
-    title: "Animal Care",
-    subtitle: "Develops empathy & responsibility",
-    image: "/images/Animal-Care.jpg",
-    science: "Children who care for animals develop stronger empathy that transfers to humans. Having responsibility for another living being builds moral reasoning.",
-  },
-  {
-    title: "Mud Play",
-    subtitle: "Strengthens immunity & senses",
-    image: "/images/Mud-Play.jpg",
-    science: "Within one month, children playing in forest soil show improved immune responses. One gram of soil contains 10 billion microorganisms that train the immune system.",
-  },
-  {
-    title: "Baking",
-    subtitle: "Teaches math & sequencing",
-    image: "/images/Baking.jpeg",
-    science: "Baking naturally teaches math concepts like measuring, fractions, and sequencing. Children develop patience, follow multi-step instructions, and experience the reward of creating something tangible.",
-  },
-  {
-    title: "Yoga, Meditation & Sound Healing",
-    subtitle: "Improves focus & self-regulation",
-    image: "/images/Sound-Healing.jpg",
-    science: "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief meditation sessions enhance focus and self-awareness.",
-  },
-  {
-    title: "Storytelling",
-    subtitle: "Boosts memory & vocabulary",
-    image: "/images/Storytelling.jpeg",
-    science: "Stories connect content with emotion, storing memories in more brain locations. Children retain learning better and transfer it to real-life contexts.",
-  },
-  {
-    title: "Gardening",
-    subtitle: "Grows patience & science skills",
-    image: "/images/Gardening.jpeg",
-    science: "A meta-analysis of 50 studies shows garden-based learning increases academic outcomes, particularly in math. Children also develop responsibility and teamwork.",
-  },
-  {
-    title: "Playful Phonics",
-    subtitle: "Foundations for reading",
-    image: "/images/Playful-Phonics.JPG",
-    science: "Play-based phonics instruction builds stronger foundations than drill-based methods. Children develop phonemic awareness naturally through songs, games, and storytelling.",
-  },
-  {
-    title: "Art",
-    subtitle: "Builds confidence & fine motor skills",
-    image: "/images/Painting.jpeg",
-    science: "Art activities develop fine motor skills, emotional expression, and creative thinking. Process-focused art builds confidence and self-expression without judgment.",
-  },
+const activityKeys = [
+  { key: "freePlay", image: "/images/Free-Play.jpeg" },
+  { key: "animalCare", image: "/images/Animal-Care.jpg" },
+  { key: "mudPlay", image: "/images/Mud-Play.jpg" },
+  { key: "baking", image: "/images/Baking.jpeg" },
+  { key: "yoga", image: "/images/Sound-Healing.jpg" },
+  { key: "storytelling", image: "/images/Storytelling.jpeg" },
+  { key: "gardening", image: "/images/Gardening.jpeg" },
+  { key: "phonics", image: "/images/Playful-Phonics.JPG" },
+  { key: "art", image: "/images/Painting.jpeg" },
 ];
 
 export default function Activities() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const t = useTranslations("activities");
 
   const handleCardClick = (index: number) => {
-    // Toggle: if same card clicked, close it; otherwise open clicked card
     setActiveCard(activeCard === index ? null : index);
   };
 
@@ -72,12 +28,12 @@ export default function Activities() {
     <section id="programs" className="py-28 md:py-32 px-6 md:px-12 bg-[#FAF9F6]">
       <div className="text-center max-w-[600px] mx-auto mb-16">
         <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d]">
-          A Day at Bamboo Valley
+          {t("title")}
         </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto">
-        {activities.map((activity, index) => (
+        {activityKeys.map((activity, index) => (
           <div
             key={index}
             onClick={() => handleCardClick(index)}
@@ -91,7 +47,7 @@ export default function Activities() {
             }`}>
               <Image
                 src={activity.image}
-                alt={activity.title}
+                alt={t(`${activity.key}.title`)}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -101,9 +57,9 @@ export default function Activities() {
             {/* Base Content (always visible) */}
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white z-[2]">
               <h3 className="font-serif text-2xl md:text-3xl font-medium mb-1">
-                {activity.title}
+                {t(`${activity.key}.title`)}
               </h3>
-              <p className="text-sm opacity-80">{activity.subtitle}</p>
+              <p className="text-sm opacity-80">{t(`${activity.key}.subtitle`)}</p>
             </div>
 
             {/* Detail Content - shown on hover (desktop) or tap (mobile) */}
@@ -111,9 +67,9 @@ export default function Activities() {
               activeCard === index ? "!translate-y-0" : ""
             }`}>
               <h3 className="font-serif text-2xl font-medium mb-3 text-[#2d2d2d]">
-                {activity.title}
+                {t(`${activity.key}.title`)}
               </h3>
-              <p className="text-sm leading-relaxed">{activity.science}</p>
+              <p className="text-sm leading-relaxed">{t(`${activity.key}.science`)}</p>
             </div>
           </div>
         ))}

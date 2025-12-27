@@ -1,13 +1,24 @@
-import Link from "next/link";
+"use client";
 
-export default function CTA() {
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+interface CTAProps {
+  locale?: string;
+}
+
+export default function CTA({ locale = "en" }: CTAProps) {
+  const t = useTranslations("cta");
+  const common = useTranslations("common");
+  const localePath = (path: string) => `/${locale}${path}`;
+
   return (
     <section className="py-24 md:py-28 px-6 bg-[#BED7AF] text-center">
       <h2 className="font-serif text-4xl md:text-5xl font-normal mb-5 text-[#2d2d2d]">
-        Questions? Just ask.
+        {t("title")}
       </h2>
       <p className="text-lg text-[#2d2d2d] opacity-80 mb-10">
-        We love chatting with parents. No pressure, just honest answers.
+        {t("description")}
       </p>
       <a
         href="https://wa.me/66989124218?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20Bamboo%20Valley."
@@ -15,10 +26,10 @@ export default function CTA() {
         rel="noopener noreferrer"
         className="btn bg-[#2d2d2d] text-white hover:bg-[#1a1a1a]"
       >
-        Chat on WhatsApp
+        {common("chatOnWhatsApp")}
       </a>
       <p className="mt-6 text-sm text-[#2d2d2d] opacity-60">
-        or <Link href="/contact" className="underline hover:opacity-100">schedule a visit</Link>
+        {t("or")} <Link href={localePath("/contact")} className="underline hover:opacity-100">{common("scheduleVisit")}</Link>
       </p>
     </section>
   );

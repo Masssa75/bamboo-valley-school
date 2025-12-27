@@ -1,4 +1,10 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export default function SpaceVideo() {
+  const t = useTranslations("spaceVideo");
+
   return (
     <section className="relative h-[500px] md:h-[700px] flex items-center justify-center overflow-hidden">
       {/* Video Background */}
@@ -18,9 +24,9 @@ export default function SpaceVideo() {
       {/* Content */}
       <div className="relative z-[3] text-center text-white max-w-[800px] px-8">
         <p className="font-serif text-2xl md:text-4xl font-normal leading-relaxed">
-          5,600 square meters of palm forest.
+          {t("line1")}
           <br />
-          Shade to play all day. Space to grow without limits.
+          {t("line2")}
         </p>
       </div>
     </section>
