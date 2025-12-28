@@ -3,6 +3,9 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SpaceVideo from "@/components/SpaceVideo";
+import Activities from "@/components/Activities";
+import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -57,18 +60,9 @@ export default async function CherngtalayPage({
       longitude: "98.3179683",
     },
     areaServed: [
-      {
-        "@type": "Place",
-        name: "Cherngtalay",
-      },
-      {
-        "@type": "Place",
-        name: "Bangtao",
-      },
-      {
-        "@type": "Place",
-        name: "Laguna Phuket",
-      },
+      { "@type": "Place", name: "Cherngtalay" },
+      { "@type": "Place", name: "Bangtao" },
+      { "@type": "Place", name: "Laguna Phuket" },
     ],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -182,13 +176,31 @@ export default async function CherngtalayPage({
         </div>
       </section>
 
+      {/* Video Section - Shows the real campus */}
+      <SpaceVideo />
+
+      {/* Activities Section - Shows what children do */}
+      <Activities />
+
+      {/* Location-specific testimonials intro */}
+      <section className="py-8 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-lg text-[#666] italic">
+            Local Cherngtalay families and neighbors have discovered a different kind of school...
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials - Social proof */}
+      <Testimonials />
+
       {/* Community Section */}
       <section className="py-16 md:py-24 px-6 bg-[#f9f7f4]">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 text-[#2d2d2d] text-center">
             Part of the Cherngtalay Community
           </h2>
-          <div className="prose prose-lg max-w-none text-[#555]">
+          <div className="prose prose-lg max-w-none text-[#555] text-center">
             <p>
               Bamboo Valley has been part of the Cherngtalay community since our
               founding. We&apos;re not just a school — we&apos;re neighbors. Our families

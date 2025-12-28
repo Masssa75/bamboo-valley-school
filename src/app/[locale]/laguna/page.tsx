@@ -3,6 +3,9 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SpaceVideo from "@/components/SpaceVideo";
+import Activities from "@/components/Activities";
+import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -57,18 +60,9 @@ export default async function LagunaPage({
       longitude: "98.3179683",
     },
     areaServed: [
-      {
-        "@type": "Place",
-        name: "Laguna Phuket",
-      },
-      {
-        "@type": "Place",
-        name: "Bangtao",
-      },
-      {
-        "@type": "Place",
-        name: "Cherngtalay",
-      },
+      { "@type": "Place", name: "Laguna Phuket" },
+      { "@type": "Place", name: "Bangtao" },
+      { "@type": "Place", name: "Cherngtalay" },
     ],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -192,6 +186,24 @@ export default async function LagunaPage({
           </div>
         </div>
       </section>
+
+      {/* Video Section - Shows the real campus */}
+      <SpaceVideo />
+
+      {/* Activities Section - Shows what children do */}
+      <Activities />
+
+      {/* Location-specific testimonials intro */}
+      <section className="py-8 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-lg text-[#666] italic">
+            Families from Laguna, Bangtao, and the surrounding resort areas have discovered a different kind of school...
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials - Social proof */}
+      <Testimonials />
 
       {/* Getting Here */}
       <section className="py-16 md:py-24 px-6 bg-[#f9f7f4]">

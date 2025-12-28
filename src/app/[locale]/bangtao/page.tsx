@@ -3,6 +3,9 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SpaceVideo from "@/components/SpaceVideo";
+import Activities from "@/components/Activities";
+import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -57,18 +60,9 @@ export default async function BangtaoPage({
       longitude: "98.3179683",
     },
     areaServed: [
-      {
-        "@type": "Place",
-        name: "Bangtao Beach",
-      },
-      {
-        "@type": "Place",
-        name: "Cherngtalay",
-      },
-      {
-        "@type": "Place",
-        name: "Laguna Phuket",
-      },
+      { "@type": "Place", name: "Bangtao Beach" },
+      { "@type": "Place", name: "Cherngtalay" },
+      { "@type": "Place", name: "Laguna Phuket" },
     ],
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -180,8 +174,26 @@ export default async function BangtaoPage({
         </div>
       </section>
 
+      {/* Video Section - Shows the real campus */}
+      <SpaceVideo />
+
+      {/* Activities Section - Shows what children do */}
+      <Activities />
+
+      {/* Location-specific testimonials intro */}
+      <section className="py-8 px-6 bg-white">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-lg text-[#666] italic">
+            Families from Bangtao, Laguna, and Surin have discovered a different kind of school...
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials - Social proof */}
+      <Testimonials />
+
       {/* Directions Section */}
-      <section className="py-16 md:py-24 px-6 bg-[#f9f7f4]">
+      <section className="py-16 md:py-24 px-6 bg-white">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 text-[#2d2d2d] text-center">
             Getting Here from Bangtao
