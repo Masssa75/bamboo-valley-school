@@ -1,15 +1,41 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Separation Anxiety | Bamboo Valley - Helping Your Child with Goodbyes",
-  description: "Research-based guidance for handling separation anxiety. Why tears at drop-off are actually a good sign, and how to help your child feel confident.",
-  keywords: ["separation anxiety", "drop-off crying", "child attachment", "preschool transition", "toddler separation"],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/child-wellbeing/separation-anxiety/";
+
+  return {
+    title: "Separation Anxiety | Bamboo Valley - Helping Your Child with Goodbyes",
+    description:
+      "Research-based guidance for handling separation anxiety. Why tears at drop-off are actually a good sign, and how to help your child feel confident.",
+    keywords: [
+      "separation anxiety",
+      "drop-off crying",
+      "child attachment",
+      "preschool transition",
+      "toddler separation",
+    ],
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function SeparationAnxietyPage({
   params,

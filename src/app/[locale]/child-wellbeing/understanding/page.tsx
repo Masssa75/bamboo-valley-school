@@ -1,15 +1,41 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Understanding Your Child | Bamboo Valley - ALSUP Assessment",
-  description: "How Bamboo Valley identifies what's really going on when a child struggles. We look for lagging skills and unsolved problems, not labels or blame.",
-  keywords: ["ALSUP", "lagging skills", "unsolved problems", "child assessment", "behavior understanding"],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/child-wellbeing/understanding/";
+
+  return {
+    title: "Understanding Your Child | Bamboo Valley - ALSUP Assessment",
+    description:
+      "How Bamboo Valley identifies what's really going on when a child struggles. We look for lagging skills and unsolved problems, not labels or blame.",
+    keywords: [
+      "ALSUP",
+      "lagging skills",
+      "unsolved problems",
+      "child assessment",
+      "behavior understanding",
+    ],
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function UnderstandingPage({
   params,

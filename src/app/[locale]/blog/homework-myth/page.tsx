@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
@@ -6,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 import {
   FinlandComparison,
   WhatWorksChart,
@@ -13,17 +13,39 @@ import {
   ThirdGraderCallout,
 } from "@/components/blog/HomeworkVisualizations";
 
-export const metadata: Metadata = {
-  title: "Homework Doesn't Help Kids Under 10: 35 Years of Research | Bamboo Valley",
-  description: "A meta-analysis of 35 studies found no benefit from homework for elementary students. For third graders, more homework meant lower achievement. Here's what actually works.",
-  keywords: "homework elementary school, does homework help kids, homework research, homework benefits, alternative education",
-  openGraph: {
-    title: "Homework Doesn't Help Kids Under 10: 35 Years of Research",
-    description: "A meta-analysis of 35 studies found no benefit from homework for elementary students.",
-    type: "article",
-    publishedTime: "2024-12-16",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/blog/homework-myth/";
+
+  return {
+    title: "Homework Doesn't Help Kids Under 10: 35 Years of Research | Bamboo Valley",
+    description:
+      "A meta-analysis of 35 studies found no benefit from homework for elementary students. For third graders, more homework meant lower achievement. Here's what actually works.",
+    keywords:
+      "homework elementary school, does homework help kids, homework research, homework benefits, alternative education",
+    openGraph: {
+      title: "Homework Doesn't Help Kids Under 10: 35 Years of Research",
+      description:
+        "A meta-analysis of 35 studies found no benefit from homework for elementary students.",
+      type: "article",
+      publishedTime: "2024-12-16",
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 const jsonLd = {
   "@context": "https://schema.org",

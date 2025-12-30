@@ -1,15 +1,41 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Our Approach | Bamboo Valley - Collaborative & Proactive Solutions",
-  description: "How Bamboo Valley helps children who struggle with behavior. We use Collaborative & Proactive Solutions (CPS) - a research-backed approach that builds skills, not just compliance.",
-  keywords: ["CPS", "collaborative proactive solutions", "ross greene", "child behavior", "positive discipline"],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/child-wellbeing/our-approach/";
+
+  return {
+    title: "Our Approach | Bamboo Valley - Collaborative & Proactive Solutions",
+    description:
+      "How Bamboo Valley helps children who struggle with behavior. We use Collaborative & Proactive Solutions (CPS) - a research-backed approach that builds skills, not just compliance.",
+    keywords: [
+      "CPS",
+      "collaborative proactive solutions",
+      "ross greene",
+      "child behavior",
+      "positive discipline",
+    ],
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function OurApproachPage({
   params,

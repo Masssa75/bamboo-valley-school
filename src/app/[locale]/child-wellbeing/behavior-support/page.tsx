@@ -1,15 +1,40 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Behavior Support | Bamboo Valley - Our 3-Tier Response System",
-  description: "How Bamboo Valley responds to behavioral challenges. A clear, fair, 3-tier system that protects all children while supporting those who struggle.",
-  keywords: ["behavior policy", "school discipline", "positive behavior support", "child behavior"],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/child-wellbeing/behavior-support/";
+
+  return {
+    title: "Behavior Support | Bamboo Valley - Our 3-Tier Response System",
+    description:
+      "How Bamboo Valley responds to behavioral challenges. A clear, fair, 3-tier system that protects all children while supporting those who struggle.",
+    keywords: [
+      "behavior policy",
+      "school discipline",
+      "positive behavior support",
+      "child behavior",
+    ],
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function BehaviorSupportPage({
   params,

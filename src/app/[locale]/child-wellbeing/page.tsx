@@ -1,15 +1,41 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Child Wellbeing | Bamboo Valley - How We Support Every Child",
-  description: "Our approach to child wellbeing at Bamboo Valley. Based on Collaborative & Proactive Solutions by Dr. Ross Greene. Clear support systems, fair processes, and true partnership with families.",
-  keywords: ["child wellbeing", "behavior support", "collaborative proactive solutions", "Waldorf school Phuket", "child psychology"],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/child-wellbeing/";
+
+  return {
+    title: "Child Wellbeing | Bamboo Valley - How We Support Every Child",
+    description:
+      "Our approach to child wellbeing at Bamboo Valley. Based on Collaborative & Proactive Solutions by Dr. Ross Greene. Clear support systems, fair processes, and true partnership with families.",
+    keywords: [
+      "child wellbeing",
+      "behavior support",
+      "collaborative proactive solutions",
+      "Waldorf school Phuket",
+      "child psychology",
+    ],
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function ChildWellbeingPage({
   params,

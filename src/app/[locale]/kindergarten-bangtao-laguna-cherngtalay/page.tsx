@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
@@ -7,30 +6,51 @@ import SpaceVideo from "@/components/SpaceVideo";
 import Activities from "@/components/Activities";
 import Testimonials from "@/components/Testimonials";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley Phuket",
-  description:
-    "Nature-based kindergarten serving Bangtao, Laguna Phuket & Cherngtalay families. Waldorf-inspired education just 5-10 minutes from your home. Ages 2-9.",
-  keywords: [
-    "kindergarten bangtao",
-    "kindergarten cherngtalay",
-    "preschool laguna phuket",
-    "school near laguna phuket",
-    "nursery bangtao",
-    "daycare cherngtalay",
-    "international school bangtao",
-    "kindergarten near laguna",
-    "waldorf school phuket",
-    "nature school phuket",
-  ],
-  openGraph: {
-    title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/kindergarten-bangtao-laguna-cherngtalay/";
+  const canonical = `${baseUrl}/${locale}${path}`;
+
+  return {
+    title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley Phuket",
     description:
-      "Nature-based kindergarten serving families in Bangtao, Laguna & Cherngtalay. Just 5-10 minutes away.",
-    url: "https://bamboovalleyphuket.com/kindergarten-bangtao-laguna-cherngtalay",
-  },
-};
+      "Nature-based kindergarten serving Bangtao, Laguna Phuket & Cherngtalay families. Waldorf-inspired education just 5-10 minutes from your home. Ages 2-9.",
+    keywords: [
+      "kindergarten bangtao",
+      "kindergarten cherngtalay",
+      "preschool laguna phuket",
+      "school near laguna phuket",
+      "nursery bangtao",
+      "daycare cherngtalay",
+      "international school bangtao",
+      "kindergarten near laguna",
+      "waldorf school phuket",
+      "nature school phuket",
+    ],
+    openGraph: {
+      title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley",
+      description:
+        "Nature-based kindergarten serving families in Bangtao, Laguna & Cherngtalay. Just 5-10 minutes away.",
+      url: canonical,
+    },
+    alternates: {
+      canonical,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function LocationsPage({
   params,
