@@ -142,12 +142,20 @@ export default async function LocationsPage({
       <Navigation locale={locale as Locale} />
 
       {/* Hero Section */}
-      <section
-        className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative max-w-[900px] mx-auto text-center">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden">
+        {/* Video Background */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-bg.jpg"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50 z-[2]" />
+        <div className="relative z-[3] max-w-[900px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal mb-6 text-white">
             Kindergarten Near Bangtao, Laguna & Cherngtalay
           </h1>
