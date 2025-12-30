@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
@@ -93,6 +94,28 @@ const localBusinessSchema = {
     ],
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const canonical = `${baseUrl}/${locale}/`;
+
+  return {
+    alternates: {
+      canonical,
+      languages: {
+        en: `${baseUrl}/en/`,
+        th: `${baseUrl}/th/`,
+        ru: `${baseUrl}/ru/`,
+        "x-default": `${baseUrl}/en/`,
+      },
+    },
+  };
+}
 
 export default async function Home({
   params,

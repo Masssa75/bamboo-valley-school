@@ -52,11 +52,6 @@ export async function generateMetadata({
       icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
       apple: "/apple-icon.png",
     },
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}`])
-      ),
-    },
     openGraph: {
       title: titles[locale] || titles.en,
       description: descriptions[locale] || descriptions.en,
@@ -90,22 +85,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        {/* Hreflang tags for SEO */}
-        {locales.map((l) => (
-          <link
-            key={l}
-            rel="alternate"
-            hrefLang={l}
-            href={`https://bamboovalleyphuket.com/${l}`}
-          />
-        ))}
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://bamboovalleyphuket.com/en"
-        />
-      </head>
       <body className={`${cormorant.variable} ${inter.variable} antialiased`}>
         {/* Google Analytics */}
         {GA_MEASUREMENT_ID && (

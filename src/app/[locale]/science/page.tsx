@@ -1,14 +1,34 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "The Science Behind Extraordinary | Bamboo Valley",
-  description: "Four decades of research on child-led learning and nature-based education. 213,000 students studied. 200+ nature studies. The evidence is overwhelming.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/science/";
+
+  return {
+    title: "The Science Behind Extraordinary | Bamboo Valley",
+    description:
+      "Four decades of research on child-led learning and nature-based education. 213,000 students studied. 200+ nature studies. The evidence is overwhelming.",
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 const researchSections = [
   {

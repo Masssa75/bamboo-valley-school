@@ -29,12 +29,91 @@
 [[redirects]]
   from = "/"
   to = "/en/"
-  status = 302
-  force = false
+  status = 301
+  force = true
 
 # Redirects for SEO preservation when migrating from Wix
+# These old URLs are getting impressions in Google Search Console (Dec 30, 2025)
+
+# High-impression pages - map to relevant new pages
+[[redirects]]
+  from = "/contact"
+  to = "/en/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/en/our-story/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-1"
+  to = "/en/our-story/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/registration"
+  to = "/en/contact/"
+  status = 301
+  force = true
+
+# Camp-related pages - redirect to phuketcamp.com
 [[redirects]]
   from = "/copy-of-summer-camp-2024-7-12-years"
-  to = "https://phuketcamp.com"
+  to = "https://phuketcamp.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/copy-of-chinese-new-year-camp-2024-7"
+  to = "https://phuketcamp.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/copy-of-summer-camp-2023"
+  to = "https://phuketcamp.com/"
+  status = 301
+  force = true
+
+# Education/program pages - redirect to programs
+[[redirects]]
+  from = "/copy-of-education"
+  to = "/en/programs/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/copy-of-about"
+  to = "/en/our-story/"
+  status = 301
+  force = true
+
+# Generic old pages - redirect to homepage
+[[redirects]]
+  from = "/downloads"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/events"
+  to = "/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/general-5"
+  to = "/en/"
+  status = 301
+  force = true
+
+# Catch-all for any other copy-of pages
+[[redirects]]
+  from = "/copy-of-*"
+  to = "/en/"
   status = 301
   force = true

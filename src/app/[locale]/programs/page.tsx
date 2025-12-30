@@ -1,15 +1,35 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import ProgramsSubNav from "@/components/ProgramsSubNav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Programs | Bamboo Valley Phuket - Nursery, Kindergarten & Primary",
-  description: "Explore our nature-based programs for ages 1-9: Nursery, Kindergarten, Primary school, plus after-school enrichment, Saturday workshops, and holiday camps.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/programs/";
+
+  return {
+    title: "Programs | Bamboo Valley Phuket - Nursery, Kindergarten & Primary",
+    description:
+      "Explore our nature-based programs for ages 1-9: Nursery, Kindergarten, Primary school, plus after-school enrichment, Saturday workshops, and holiday camps.",
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function ProgramsPage({
   params,

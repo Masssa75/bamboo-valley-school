@@ -1,14 +1,34 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Bamboo Valley Phuket",
-  description: "Visit Bamboo Valley, a natural learning community in Phuket. Book a tour, ask questions, or schedule enrollment for your child.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/contact/";
+
+  return {
+    title: "Contact Us | Bamboo Valley Phuket",
+    description:
+      "Visit Bamboo Valley, a natural learning community in Phuket. Book a tour, ask questions, or schedule enrollment for your child.",
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function ContactPage({
   params,

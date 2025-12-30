@@ -1,15 +1,35 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Our Story | Bamboo Valley - Building Schools for the Life We Want",
-  description: "How two parents transformed their frustration with traditional education into a nature-based school in Phuket. The story of Bamboo Valley by Nutthanit and Marc Schwyn.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://bamboovalleyphuket.com";
+  const path = "/our-story/";
+
+  return {
+    title: "Our Story | Bamboo Valley - Building Schools for the Life We Want",
+    description:
+      "How two parents transformed their frustration with traditional education into a nature-based school in Phuket. The story of Bamboo Valley by Nutthanit and Marc Schwyn.",
+    alternates: {
+      canonical: `${baseUrl}/${locale}${path}`,
+      languages: {
+        en: `${baseUrl}/en${path}`,
+        th: `${baseUrl}/th${path}`,
+        ru: `${baseUrl}/ru${path}`,
+        "x-default": `${baseUrl}/en${path}`,
+      },
+    },
+  };
+}
 
 export default async function OurStoryPage({
   params,
