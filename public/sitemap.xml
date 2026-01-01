@@ -1,69 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.bamboovalleyphuket.com/</loc>
-    <lastmod>2025-12-19</lastmod>
+    <loc>https://bamboovalleyphuket.com/en/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/programs/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/programs/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/our-story/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/programs/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/programs/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/short-term-school-phuket/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/short-term-school-phuket/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/short-term-school-phuket/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/our-story/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/contact/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/our-story/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/ru/our-story/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/contact/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/our-approach/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/contact/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/contact/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/child-wellbeing/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/child-wellbeing/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/child-wellbeing/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/child-wellbeing/our-approach/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/behavior-support/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/child-wellbeing/our-approach/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/understanding/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/ru/child-wellbeing/our-approach/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/child-wellbeing/behavior-support/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/child-wellbeing/separation-anxiety/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/child-wellbeing/behavior-support/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/science/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <loc>https://bamboovalleyphuket.com/ru/child-wellbeing/behavior-support/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/child-wellbeing/understanding/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bamboovalleyphuket.com/blog/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://bamboovalleyphuket.com/th/child-wellbeing/understanding/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/child-wellbeing/understanding/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/child-wellbeing/separation-anxiety/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/child-wellbeing/separation-anxiety/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/child-wellbeing/separation-anxiety/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/science/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/science/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/science/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/blog/</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/blog/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/blog/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bamboovalleyphuket.com/en/blog/homework-myth/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/th/blog/homework-myth/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bamboovalleyphuket.com/ru/blog/homework-myth/</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>
