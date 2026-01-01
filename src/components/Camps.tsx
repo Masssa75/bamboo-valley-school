@@ -1,10 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-export default function Camps() {
+interface CampsProps {
+  locale?: string;
+}
+
+export default function Camps({ locale = "en" }: CampsProps) {
   const t = useTranslations("camps");
+  const localePath = (path: string) => `/${locale}${path}`;
 
   return (
     <section className="py-28 md:py-32 px-6 md:px-12 bg-white">
@@ -67,6 +73,12 @@ export default function Camps() {
               <path d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </a>
+          <p className="mt-4 text-sm text-[#666]">
+            {t("shortTermLinkLabel")}{" "}
+            <Link href={localePath("/short-term-school-phuket")} className="text-[#8fb07a] hover:text-[#6d9b5a] font-medium">
+              {t("shortTermLinkText")}
+            </Link>
+          </p>
         </div>
       </div>
     </section>

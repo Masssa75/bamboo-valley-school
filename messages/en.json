@@ -120,7 +120,9 @@
     "youngDescription": "Play, creativity & gentle adventures",
     "olderAges": "Ages 7–12",
     "olderDescription": "Field trips, beach days & exploration",
-    "exploreCamps": "Explore Camps"
+    "exploreCamps": "Explore Camps",
+    "shortTermLinkLabel": "Looking for short-term school?",
+    "shortTermLinkText": "See short-term options"
   },
   "community": {
     "title": "A community, not just a school",
@@ -259,6 +261,8 @@
   "programs": {
     "heroTitle": "Our Programs",
     "heroDescription": "From toddlers to primary school, we nurture every stage of your child's journey through nature, play, and purposeful learning.",
+    "shortTermCtaTitle": "Visiting Phuket short-term?",
+    "shortTermCtaLink": "See our short-term school options.",
     "fullDayTitle": "Full-Day Programs",
     "fullDaySchedule": "Monday to Friday, 8:45am – 3:00pm",
     "additionalTitle": "Additional Programs",
@@ -982,7 +986,9 @@
     "curiosityTitle": "Why Rewards Kill Curiosity",
     "curiosityExcerpt": "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     "questionsAboutApproach": "Questions about our approach?",
-    "chatWithUsDesc": "We'd love to chat about how we do things differently."
+    "chatWithUsDesc": "We'd love to chat about how we do things differently.",
+    "shortTermLinkLabel": "Traveling families:",
+    "shortTermLinkText": "short-term school options in Phuket"
   },
   "spaceVideo": {
     "line1": "5,600 square meters of palm forest.",

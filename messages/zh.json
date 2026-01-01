@@ -120,7 +120,9 @@
     "youngDescription": "游戏、创意和温和的冒险",
     "olderAges": "7-12岁",
     "olderDescription": "实地考察、海滩日和探索",
-    "exploreCamps": "探索营地"
+    "exploreCamps": "探索营地",
+    "shortTermLinkLabel": "Looking for short-term school?",
+    "shortTermLinkText": "See short-term options"
   },
   "community": {
     "title": "一个社区，不只是一所学校",
@@ -259,6 +261,8 @@
   "programs": {
     "heroTitle": "我们的课程",
     "heroDescription": "从幼儿到小学，我们通过自然、游戏和有目的的学习来培养孩子成长的每个阶段。",
+    "shortTermCtaTitle": "Visiting Phuket short-term?",
+    "shortTermCtaLink": "See our short-term school options.",
     "fullDayTitle": "全日制课程",
     "fullDaySchedule": "周一至周五，8:45 – 15:00",
     "additionalTitle": "附加课程",
@@ -873,7 +877,9 @@
     "curiosityTitle": "Why Rewards Kill Curiosity",
     "curiosityExcerpt": "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     "questionsAboutApproach": "Questions about our approach?",
-    "chatWithUsDesc": "We'd love to chat about how we do things differently."
+    "chatWithUsDesc": "We'd love to chat about how we do things differently.",
+    "shortTermLinkLabel": "Traveling families:",
+    "shortTermLinkText": "short-term school options in Phuket"
   },
   "spaceVideo": {
     "line1": "5,600平方米的棕榈林。",
