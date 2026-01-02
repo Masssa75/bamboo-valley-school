@@ -139,7 +139,7 @@ export default async function Home({
       <SpaceVideo />
       <Community />
       <Testimonials />
-      <Insights />
+      {/* <Insights /> */}
       <CTA />
       <Footer locale={locale as Locale} />
     </>
