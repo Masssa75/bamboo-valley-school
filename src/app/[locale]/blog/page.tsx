@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
@@ -46,6 +47,8 @@ export default async function BlogPage({
       excerpt: t("dayAtBambooExcerpt"),
       date: t("dayAtBambooDate"),
       category: t("nature"),
+      image: "/images/Free-Play.jpeg",
+      imageAlt: "Children playing freely outdoors at Bamboo Valley",
       isPublished: true,
     },
     {
@@ -54,6 +57,8 @@ export default async function BlogPage({
       excerpt: t("homeworkMythExcerpt"),
       date: t("homeworkMythDate"),
       category: t("research"),
+      image: "/images/child-reading-outdoors-natural-learning.jpeg",
+      imageAlt: "Child reading a book outdoors in natural learning environment",
       isPublished: true,
     },
     {
@@ -62,6 +67,8 @@ export default async function BlogPage({
       excerpt: t("forestPlayExcerpt"),
       date: t("comingSoon"),
       category: t("health"),
+      image: "/images/Mud-Play.jpg",
+      imageAlt: "Children playing in mud outdoors",
       isPublished: false,
     },
     {
@@ -70,6 +77,8 @@ export default async function BlogPage({
       excerpt: t("curiosityExcerpt"),
       date: t("comingSoon"),
       category: t("learning"),
+      image: "/images/Painting.jpeg",
+      imageAlt: "Child painting creatively",
       isPublished: false,
     },
   ];
@@ -101,7 +110,15 @@ export default async function BlogPage({
                   href={`/${locale}/blog/${post.slug}`}
                   className="block bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
                 >
-                  <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a] group-hover:from-[#a5c495] group-hover:to-[#7a9a68] transition-colors" />
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
                   <div className="p-6">
                     <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
                       {post.category}
@@ -120,7 +137,15 @@ export default async function BlogPage({
                   key={post.slug}
                   className="bg-[#FAF9F6] rounded-lg overflow-hidden opacity-70"
                 >
-                  <div className="h-48 bg-gradient-to-br from-[#BED7AF] to-[#8fb07a]" />
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      className="object-cover grayscale"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
                   <div className="p-6">
                     <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
                       {post.category}
