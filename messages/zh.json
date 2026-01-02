@@ -886,9 +886,9 @@
   "kindergartenLocation": {
     "meta": {
       "title": "邦涛、拉古娜与承塔莱附近的幼儿园 | Bamboo Valley Phuket",
-      "description": "面向邦涛、拉古娜普吉与承塔莱家庭的自然式幼儿园。华德福启发教育，距家仅5-10分钟。适龄2-9岁。",
+      "description": "服务邦涛、拉古娜普吉与承塔莱家庭的自然式幼儿园。华德福启发式教育，距家仅5-10分钟，适龄2-9岁。",
       "ogTitle": "邦涛、拉古娜与承塔莱附近的幼儿园 | Bamboo Valley",
-      "ogDescription": "面向邦涛、拉古娜与承塔莱家庭的自然式幼儿园，距离仅5-10分钟。"
+      "ogDescription": "服务邦涛、拉古娜与承塔莱家庭的自然式幼儿园，距离仅5-10分钟。"
     },
     "schema": {
       "name": "Bamboo Valley - 承塔莱幼儿园",
@@ -897,39 +897,39 @@
     },
     "hero": {
       "title": "邦涛、拉古娜与承塔莱附近的幼儿园",
-      "description": "服务普吉岛西北海岸家庭的自然学校。距你家仅5-10分钟。",
+      "description": "面向普吉岛西北海岸家庭的自然学校，离家仅5-10分钟。",
       "cta": "预约参观"
     },
     "areas": {
       "title": "服务区域",
-      "description": "Bamboo Valley 位于承塔莱核心区，前往邦涛、拉古娜、苏林及周边区域都非常方便。",
+      "description": "Bamboo Valley 位于承塔莱核心区，前往邦涛、拉古娜、苏林等区域都非常方便。",
       "mapCta": "在 Google 地图中打开",
       "items": [
         {
           "name": "邦涛海滩",
           "shortName": "邦涛",
-          "driveTime": "5分钟",
+          "driveTime": "约5分钟",
           "description": "沿4030公路向承塔莱村方向行驶，在承塔莱路口左转。向前约500米，我们就在右侧。",
-          "highlight": "距离校园最近的海滩区域"
+          "highlight": "离校园最近的海滩区域"
         },
         {
           "name": "拉古娜普吉",
           "shortName": "拉古娜",
-          "driveTime": "10分钟",
+          "driveTime": "约10分钟",
           "description": "从拉古娜主路驶向承塔莱，在承塔莱路口继续直行。我们在右侧，离路口约2公里。",
           "highlight": "度假区家庭的优质教育选择"
         },
         {
           "name": "承塔莱",
           "shortName": "承塔莱",
-          "driveTime": "2-5分钟",
+          "driveTime": "约2-5分钟",
           "description": "我们就在承塔莱村主路边，是你家门口的学校。",
           "highlight": "你的本地自然学校"
         },
         {
           "name": "苏林海滩",
           "shortName": "苏林",
-          "driveTime": "10-12分钟",
+          "driveTime": "约10-12分钟",
           "description": "沿海岸路北行至邦涛，再在承塔莱转入内陆。早晨交通顺畅，通勤轻松。",
           "highlight": "沿海岸路的快捷通勤"
         }
@@ -937,27 +937,27 @@
     },
     "why": {
       "title": "为什么家庭选择 Bamboo Valley",
-      "intro": "无论你住在邦涛、拉古娜普吉或承塔莱，Bamboo Valley 都能提供度假区儿童俱乐部与传统学校所没有的东西：在3.5莱棕榈园中的真实自然式教育。",
+      "intro": "无论你住在邦涛、拉古娜普吉还是承塔莱，Bamboo Valley 都能提供度假区儿童俱乐部与传统学校所没有的：在3.5莱棕榈园里进行真正的自然式教育。",
       "bangtaoTitle": "面向邦涛与拉古娜家庭",
       "bangtaoBullets": [
         {
           "title": "灵活入学",
-          "text": "按周、按月与学期选项，适应不同日程"
+          "text": "按周、按月、按学期，适合不同日程"
         },
         {
           "title": "真正的教育",
-          "text": "不是看护，而是有体系的课程与专业教师"
+          "text": "不是看护，而是完整课程与专业老师"
         },
         {
           "title": "通勤短",
-          "text": "距家仅5-10分钟"
+          "text": "车程仅5-10分钟"
         }
       ],
       "cherngtalayTitle": "面向本地承塔莱家庭",
       "cherngtalayBullets": [
         {
           "title": "家门口的学校",
-          "text": "从创办起就是社区的一部分"
+          "text": "自创办起就是社区的一部分"
         },
         {
           "title": "沉浸式自然",
@@ -974,15 +974,15 @@
       "items": [
         {
           "title": "托儿班（2-4岁）",
-          "text": "温和进入学校生活"
+          "text": "温柔进入学校生活"
         },
         {
           "title": "幼儿园（3-6岁）",
-          "text": "游戏式学习与社交发展"
+          "text": "以游戏为核心的学习与社交发展"
         },
         {
           "title": "小学（6-9岁）",
-          "text": "创意、动手的学术学习"
+          "text": "动手式学术与创造力"
         },
         {
           "title": "假期营",
@@ -994,9 +994,9 @@
       "viewPrograms": "查看课程",
       "contact": "联系我们"
     },
-    "testimonialsIntro": "来自邦涛、拉古娜、承塔莱与苏林的家庭发现了不一样的学校……",
+    "testimonialsIntro": "来自邦涛、拉古娜、承塔莱与苏林的家庭发现了另一种学校……",
     "visit": {
-      "title": "来访我们",
+      "title": "来访校园",
       "addressTitle": "地址",
       "mapCta": "在 Google 地图中打开",
       "contactTitle": "联系方式",
