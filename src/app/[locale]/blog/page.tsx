@@ -135,16 +135,22 @@ export default async function BlogPage({
               ) : (
                 <article
                   key={post.slug}
-                  className="bg-[#FAF9F6] rounded-lg overflow-hidden opacity-70"
+                  className="bg-[#FAF9F6] rounded-lg overflow-hidden"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.imageAlt}
                       fill
-                      className="object-cover grayscale"
+                      className="object-cover grayscale opacity-60"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
+                    {/* Coming Soon overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="bg-white/90 text-[#666] px-4 py-2 rounded-full text-sm font-medium shadow-sm">
+                        {t("comingSoon")}
+                      </span>
+                    </div>
                   </div>
                   <div className="p-6">
                     <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
@@ -156,7 +162,6 @@ export default async function BlogPage({
                     <p className="text-sm text-[#666] mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <span className="text-xs text-[#999]">{post.date}</span>
                   </div>
                 </article>
               )
