@@ -1,5 +1,4 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -60,7 +59,7 @@ export default async function LocationsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("kindergartenLocation");
+  const t = await getTranslations({ locale, namespace: "kindergartenLocation" });
 
   // LocalBusiness Schema with all areas served
   const localBusinessSchema = {
