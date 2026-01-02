@@ -43,43 +43,43 @@ export default async function BlogPage({
   const posts = [
     {
       slug: "day-at-bamboo-valley",
+      href: `/${locale}/blog/day-at-bamboo-valley`,
       title: t("dayAtBambooTitle"),
       excerpt: t("dayAtBambooExcerpt"),
       date: t("dayAtBambooDate"),
       category: t("nature"),
       image: "/images/Free-Play.jpeg",
       imageAlt: "Children playing freely outdoors at Bamboo Valley",
-      isPublished: true,
     },
     {
       slug: "homework-myth",
+      href: `/${locale}/blog/homework-myth`,
       title: t("homeworkMythTitle"),
       excerpt: t("homeworkMythExcerpt"),
       date: t("homeworkMythDate"),
       category: t("research"),
       image: "/images/child-reading-outdoors-natural-learning.jpeg",
       imageAlt: "Child reading a book outdoors in natural learning environment",
-      isPublished: true,
     },
     {
-      slug: "forest-play-immunity",
-      title: t("forestPlayTitle"),
-      excerpt: t("forestPlayExcerpt"),
-      date: t("comingSoon"),
-      category: t("health"),
-      image: "/images/Mud-Play.jpg",
-      imageAlt: "Children playing in mud outdoors",
-      isPublished: false,
+      slug: "science",
+      href: `/${locale}/science`,
+      title: t("scienceTitle"),
+      excerpt: t("scienceExcerpt"),
+      date: "",
+      category: t("scienceCategory"),
+      image: "/images/Gardening.jpeg",
+      imageAlt: "Children gardening and learning from nature",
     },
     {
-      slug: "curiosity-vs-rewards",
-      title: t("curiosityTitle"),
-      excerpt: t("curiosityExcerpt"),
-      date: t("comingSoon"),
-      category: t("learning"),
-      image: "/images/Painting.jpeg",
-      imageAlt: "Child painting creatively",
-      isPublished: false,
+      slug: "our-story",
+      href: `/${locale}/our-story`,
+      title: t("ourStoryTitle"),
+      excerpt: t("ourStoryExcerpt"),
+      date: "",
+      category: t("ourStoryCategory"),
+      image: "/images/founders-family-bamboo-valley-phuket.jpeg",
+      imageAlt: "Bamboo Valley founders with their family",
     },
   ];
 
@@ -104,67 +104,35 @@ export default async function BlogPage({
         <div className="max-w-[1000px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              post.isPublished ? (
-                <Link
-                  key={post.slug}
-                  href={`/${locale}/blog/${post.slug}`}
-                  className="block bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.imageAlt}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
-                      {post.category}
-                    </span>
-                    <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d] group-hover:text-[#8fb07a] transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-sm text-[#666] mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
+              <Link
+                key={post.slug}
+                href={post.href}
+                className="block bg-[#FAF9F6] rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
+                    {post.category}
+                  </span>
+                  <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d] group-hover:text-[#8fb07a] transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-[#666] mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  {post.date && (
                     <span className="text-xs text-[#999]">{post.date}</span>
-                  </div>
-                </Link>
-              ) : (
-                <article
-                  key={post.slug}
-                  className="bg-[#FAF9F6] rounded-lg overflow-hidden"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.imageAlt}
-                      fill
-                      className="object-cover grayscale opacity-60"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    {/* Coming Soon overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="bg-white/90 text-[#666] px-4 py-2 rounded-full text-sm font-medium shadow-sm">
-                        {t("comingSoon")}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <span className="text-xs font-semibold text-[#8fb07a] uppercase tracking-wide">
-                      {post.category}
-                    </span>
-                    <h2 className="font-serif text-xl font-medium mt-2 mb-3 text-[#2d2d2d]">
-                      {post.title}
-                    </h2>
-                    <p className="text-sm text-[#666] mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                  </div>
-                </article>
-              )
+                  )}
+                </div>
+              </Link>
             ))}
           </div>
 
