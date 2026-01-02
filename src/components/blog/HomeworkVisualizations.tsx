@@ -3,7 +3,19 @@
 import { useEffect, useState, useRef } from "react";
 
 // Finland vs USA Comparison
-export function FinlandComparison() {
+export function FinlandComparison({
+  finlandLabel,
+  usaLabel,
+  minutesLabel,
+  hoursLabel,
+  caption,
+}: {
+  finlandLabel: string;
+  usaLabel: string;
+  minutesLabel: string;
+  hoursLabel: string;
+  caption: string;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -31,32 +43,42 @@ export function FinlandComparison() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <div className="text-sm uppercase tracking-wide opacity-80 mb-2">Finland</div>
+        <div className="text-sm uppercase tracking-wide opacity-80 mb-2">{finlandLabel}</div>
         <div className="text-4xl md:text-5xl font-bold mb-1">30</div>
-        <div className="text-lg opacity-90">min/day</div>
+        <div className="text-lg opacity-90">{minutesLabel}</div>
       </div>
       <div
         className={`bg-[#dc6b5a] text-white p-6 rounded-lg text-center transition-all duration-700 delay-200 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <div className="text-sm uppercase tracking-wide opacity-80 mb-2">USA</div>
+        <div className="text-sm uppercase tracking-wide opacity-80 mb-2">{usaLabel}</div>
         <div className="text-4xl md:text-5xl font-bold mb-1">2-3</div>
-        <div className="text-lg opacity-90">hrs/day</div>
+        <div className="text-lg opacity-90">{hoursLabel}</div>
       </div>
       <div
         className={`col-span-2 text-center mt-2 text-[#666] transition-all duration-500 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="text-lg font-medium">Same test scores. Happier children.</p>
+        <p className="text-lg font-medium">{caption}</p>
       </div>
     </div>
   );
 }
 
 // What Actually Works Chart
-export function WhatWorksChart() {
+export function WhatWorksChart({
+  title,
+  items,
+  source,
+  monthSuffix,
+}: {
+  title: string;
+  items: Array<{ label: string; months: number; color: string }>;
+  source: string;
+  monthSuffix: string;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -77,19 +99,12 @@ export function WhatWorksChart() {
     return () => observer.disconnect();
   }, []);
 
-  const items = [
-    { label: "Metacognition", months: 8, color: "#2d5a3d" },
-    { label: "Quality feedback", months: 8, color: "#3d7a4d" },
-    { label: "Conversation", months: 6, color: "#8fb07a" },
-    { label: "Homework (elementary)", months: 0, color: "#ccc" },
-  ];
-
   const maxMonths = 8;
 
   return (
     <div ref={ref} className="my-12 bg-[#FAF9F6] p-6 md:p-8 rounded-lg">
       <h3 className="font-serif text-xl font-medium text-[#2d2d2d] mb-6">
-        What actually helps children learn?
+        {title}
       </h3>
       <div className="space-y-4">
         {items.map((item, index) => (
@@ -107,24 +122,36 @@ export function WhatWorksChart() {
                   backgroundColor: item.color,
                   transitionDelay: `${index * 150}ms`,
                 }}
-              >
-                <span className="text-white text-sm font-medium">
-                  {item.months > 0 ? `+${item.months} mo` : "0"}
-                </span>
+                >
+                  <span className="text-white text-sm font-medium">
+                  {item.months > 0 ? `+${item.months} ${monthSuffix}` : "0"}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
         ))}
       </div>
       <p className="text-xs text-[#999] mt-4">
-        Source: Education Endowment Foundation Teaching & Learning Toolkit
+        {source}
       </p>
     </div>
   );
 }
 
 // Dinner Table Words Comparison
-export function DinnerTableWords() {
+export function DinnerTableWords({
+  title,
+  leftLabel,
+  rightLabel,
+  caption,
+  source,
+}: {
+  title: string;
+  leftLabel: string;
+  rightLabel: string;
+  caption: string;
+  source: string;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [count1, setCount1] = useState(0);
@@ -175,7 +202,7 @@ export function DinnerTableWords() {
   return (
     <div ref={ref} className="my-12 bg-[#2d5a3d] text-white p-8 rounded-lg">
       <h3 className="text-center text-lg opacity-80 mb-6">
-        Words children learn from...
+        {title}
       </h3>
       <div className="grid grid-cols-2 gap-8 text-center">
         <div>
@@ -183,7 +210,12 @@ export function DinnerTableWords() {
             {count1.toLocaleString()}
           </div>
           <div className="text-sm opacity-80">
-            Family dinner<br />conversations
+            {leftLabel.split("\n").map((line, index) => (
+              <span key={line}>
+                {index > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </div>
         </div>
         <div>
@@ -191,30 +223,48 @@ export function DinnerTableWords() {
             {count2}
           </div>
           <div className="text-sm opacity-80">
-            Being read<br />storybooks
+            {rightLabel.split("\n").map((line, index) => (
+              <span key={line}>
+                {index > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </div>
         </div>
       </div>
       <p className="text-center mt-6 text-lg font-medium">
-        Talk to your children.
+        {caption}
       </p>
       <p className="text-xs text-center opacity-60 mt-4">
-        Source: Dr. Catherine Snow, Harvard Graduate School of Education
+        {source}
       </p>
     </div>
   );
 }
 
 // Third Grader Shocker Callout
-export function ThirdGraderCallout() {
+export function ThirdGraderCallout({
+  title,
+  main,
+  subPrefix,
+  subEmphasis,
+  subSuffix,
+}: {
+  title: string;
+  main: string;
+  subPrefix: string;
+  subEmphasis: string;
+  subSuffix: string;
+}) {
   return (
     <div className="my-12 bg-[#dc6b5a] text-white p-8 rounded-lg text-center">
-      <div className="text-lg opacity-80 mb-2">For 3rd graders?</div>
+      <div className="text-lg opacity-80 mb-2">{title}</div>
       <div className="text-2xl md:text-3xl font-bold mb-4">
-        MORE homework = WORSE grades
+        {main}
       </div>
       <div className="text-lg opacity-90">
-        The correlation was <span className="font-bold">negative</span>.
+        {subPrefix} <span className="font-bold">{subEmphasis}</span>
+        {subSuffix}
       </div>
     </div>
   );

@@ -41,6 +41,14 @@ export default async function BlogPage({
 
   const posts = [
     {
+      slug: "day-at-bamboo-valley",
+      title: t("dayAtBambooTitle"),
+      excerpt: t("dayAtBambooExcerpt"),
+      date: t("dayAtBambooDate"),
+      category: t("nature"),
+      isPublished: true,
+    },
+    {
       slug: "homework-myth",
       title: t("homeworkMythTitle"),
       excerpt: t("homeworkMythExcerpt"),

@@ -1100,6 +1100,251 @@
     },
     "mapTitle": "Bamboo Valley Location - Serving Bangtao, Laguna & Cherngtalay"
   },
+  "blogHomeworkMyth": {
+    "meta": {
+      "title": "Homework Doesn't Help Children Under 10: 35 Years of Research | Bamboo Valley",
+      "description": "A meta-analysis of 35 studies found no benefit from homework for elementary students. For third graders, more homework meant lower achievement. Here's what actually works.",
+      "keywords": "homework elementary school, does homework help children, homework research, homework benefits, alternative education",
+      "ogTitle": "Homework Doesn't Help Children Under 10: 35 Years of Research",
+      "ogDescription": "A meta-analysis of 35 studies found no benefit from homework for elementary students."
+    },
+    "hero": {
+      "backLink": "← Back to Insights",
+      "title": "Homework Doesn't Help Children Under 10: 35 Years of Research",
+      "date": "December 16, 2024 · Bamboo Valley",
+      "imageAlt": "Child reading a book outdoors in natural learning environment"
+    },
+    "featured": {
+      "title": "Does homework help elementary school children?",
+      "body": "<strong>No.</strong> A meta-analysis of 35 studies found no relationship between homework and achievement for elementary students. In 1989, researcher Harris Cooper concluded: \"There is no evidence that any amount of homework improves the academic performance of elementary students.\" For third graders specifically, more homework was associated with <em>lower</em> achievement. The research points instead to family dinner conversations, reading aloud, unstructured play, and sleep as far more effective for young children's learning."
+    },
+    "intro": {
+      "p1": "It's 7pm. Your eight-year-old is crying over a worksheet. You're exhausted from work. Dinner is cold. The evening you hoped to spend together as a family has turned into another battle over long division.",
+      "p2": "Sound familiar?",
+      "p3": "<strong>Research has shown for over 35 years that homework doesn't improve academic performance for elementary school children.</strong>",
+      "p4": "Not \"minimal benefit.\" Not \"depends on the child.\" The correlation for young children is zero. And for some? It's negative."
+    },
+    "studies": {
+      "title": "What 35 Studies Actually Found",
+      "p1": "In 1989, Harris Cooper at Duke University published a comprehensive analysis of homework research. His conclusion was unambiguous:",
+      "quote": "\"There is no evidence that any amount of homework improves the academic performance of elementary students.\"",
+      "p2": "That wasn't a fringe finding. It's been replicated repeatedly. A meta-analysis of 35 correlational studies found essentially no relationship between homework and achievement for elementary school students.",
+      "p3": "<strong>For third graders, the correlation was negative. More homework was associated with lower achievement.</strong>",
+      "p4": "Read that again. The children doing more homework performed worse."
+    },
+    "thirdGrade": {
+      "title": "For 3rd graders?",
+      "main": "MORE homework = WORSE grades",
+      "subPrefix": "The correlation was ",
+      "subEmphasis": "negative",
+      "subSuffix": "."
+    },
+    "why": {
+      "title": "Why doesn't homework work for young children?",
+      "intro": "The research offers some explanations:",
+      "items": [
+        {
+          "title": "Young children can't tune out distractions.",
+          "text": "The developing brain struggles to focus in a home environment full of siblings, screens, and stimulation. The same child who concentrates in a structured classroom falls apart at the kitchen table."
+        },
+        {
+          "title": "They haven't developed effective study habits.",
+          "text": "Homework assumes children know how to learn independently. Most eight-year-olds don't. They need guidance, not worksheets to complete alone."
+        },
+        {
+          "title": "It crowds out what actually matters.",
+          "text": "Every hour spent on homework is an hour not spent on play, family conversation, unstructured exploration—activities that research shows are far more valuable for young children's development."
+        }
+      ]
+    },
+    "finland": {
+      "title": "How much homework do Finnish students get?",
+      "paragraphs": [
+        "Whenever homework comes up, someone mentions Finland. There's a reason.",
+        "Finnish students average 30 minutes of homework per day. Primary school children often get just 10-20 minutes, if any.",
+        "Students in Singapore, Hong Kong, and many American schools? 2-3 hours per day.",
+        "Finland consistently ranks in the top 10 on international assessments. They have one standardized test—at the end of high school. Their school days are shorter. They mandate outdoor play breaks throughout the day.",
+        "Same results. Fraction of the homework. Happier children."
+      ]
+    },
+    "visuals": {
+      "finland": {
+        "finlandLabel": "Finland",
+        "usaLabel": "USA",
+        "minutesLabel": "min/day",
+        "hoursLabel": "hrs/day",
+        "caption": "Same test scores. Happier children."
+      },
+      "whatWorks": {
+        "title": "What actually helps children learn?",
+        "source": "Source: Education Endowment Foundation Teaching & Learning Toolkit",
+        "monthSuffix": "mo",
+        "items": ["Metacognition", "Quality feedback", "Conversation", "Homework (elementary)"]
+      },
+      "dinner": {
+        "title": "Words children learn from...",
+        "leftLabel": "Family dinner\\nconversations",
+        "rightLabel": "Being read\\nstorybooks",
+        "caption": "Talk to your children.",
+        "source": "Source: Dr. Catherine Snow, Harvard Graduate School of Education"
+      }
+    },
+    "whatHelps": {
+      "title": "What helps children learn instead of homework?",
+      "intro": "If homework doesn't help young children, what does? The Education Endowment Foundation analyzed hundreds of studies to find out:",
+      "pattern": "Notice a pattern? The most effective approaches involve <strong>connection</strong>, not compliance. They require <strong>thinking</strong>, not filling in blanks. They happen through <strong>relationship</strong>, not assignments."
+    },
+    "cost": {
+      "title": "The Real Cost of Homework",
+      "intro": "Beyond the academic non-benefit, consider what homework does to families:",
+      "items": [
+        {
+          "title": "Stress and conflict.",
+          "text": "Homework is the number one source of family arguments in many households."
+        },
+        {
+          "title": "Lost childhood.",
+          "text": "Hours spent on worksheets are hours not spent climbing trees, building forts, getting bored and figuring out what to do about it."
+        },
+        {
+          "title": "Damaged relationships.",
+          "text": "When parents become homework enforcers, something precious is lost. You become the compliance officer instead of the curious adult who explores the world alongside your child."
+        },
+        {
+          "title": "False lessons.",
+          "text": "Homework teaches children that learning is a chore to be completed, not a joy to be pursued."
+        }
+      ]
+    },
+    "parents": {
+      "title": "What Parents Can Do",
+      "intro": "If your child's school assigns homework, you're not powerless. Here are specific strategies that work.",
+      "step1": {
+        "title": "1. Talk to the Teacher (The Right Way)",
+        "p1": "Request a face-to-face meeting. Email doesn't work for this conversation.",
+        "p2": "The key is framing: <strong>focus on your child, not their teaching.</strong> Don't say \"You're giving too much homework.\" Instead:",
+        "quote": "\"My child is spending over an hour on work that should take 20 minutes. She often ends up in tears. I want to understand what's happening and find a solution together.\"",
+        "questionsIntro": "Questions that actually help:",
+        "questions": [
+          "\"What's the maximum time children should spend on homework each night?\"",
+          "\"Can I sign off on unfinished work if she's given her best effort for 30 minutes?\"",
+          "\"Are there other ways she can show understanding besides worksheets?\""
+        ],
+        "p3": "Most teachers don't want your evenings destroyed either. They're often following school policy, not personal conviction."
+      },
+      "step2": {
+        "title": "2. Set a Time Limit and Stop",
+        "p1": "Many education experts suggest a simple rule: <strong>10 minutes per grade level, maximum.</strong> A second grader gets 20 minutes. A fifth grader gets 50. After that, stop.",
+        "p2": "Write a note: \"Alex worked for 30 minutes and completed what he could.\" A reasonable teacher will accept this. If they don't, that's useful information about the school."
+      },
+      "step3": {
+        "title": "3. Replace Homework Time with What Actually Works",
+        "p1": "Here's a twist: <strong>parental help with homework has no effect on elementary students' math and reading achievement.</strong> Why? Parents often just give the answer, which eliminates the cognitive benefit of struggling through problems. Helping can actually undermine children's sense of autonomy.",
+        "p2": "So what should parents do instead? Research points to activities that are more powerful—and more pleasant.",
+        "items": [
+          {
+            "title": "Family dinner conversations.",
+            "text": "For school-age children, regular family dinners are a more powerful predictor of high achievement than time in school, homework, sports, or art combined."
+          },
+          {
+            "title": "Have high expectations—and communicate them.",
+            "text": "Parental expectations are the single strongest family-level predictor of student achievement. This isn't about pressure. It's about conveying that you believe in your child and that education matters."
+          },
+          {
+            "title": "Read aloud—even to older children.",
+            "text": "Reading aloud significantly improves language, comprehension, and vocabulary at any age. The key: read texts 2-3 grades above their level. They can comprehend far more than they can decode."
+          },
+          {
+            "title": "Protect unstructured play.",
+            "text": "Children who spend more time in less structured activities have better self-directed executive function. Free play isn't a break from learning. It's where children develop the capacity to set goals, manage attention, and regulate behavior."
+          },
+          {
+            "title": "Get them outside.",
+            "text": "Preschoolers who play outdoors for more than 3 hours per day show advantages in early learning, self-regulation, and social-emotional development."
+          },
+          {
+            "title": "Prioritize sleep.",
+            "text": "Sleep quality, duration, and consistency account for nearly 25% of the variance in academic performance. Homework is a leading thief of children's sleep."
+          }
+        ]
+      },
+      "step4": {
+        "title": "4. Consider Opting Out Entirely",
+        "p1": "This is more possible than most parents realize. A respectful letter to the teacher establishing your family's approach can work:",
+        "quote": "\"We value a balanced life that includes family time, play, and rest. We've reviewed the research on homework for young children and have decided that school assignments not completed during school hours will not be completed at home. We expect our child to give full effort during class time, and we ask that incomplete homework not affect her grades or social standing.\"",
+        "p2": "Most schools—especially public schools—cannot legally require work outside school hours. The enforcement is social pressure, not policy."
+      },
+      "step5": {
+        "title": "5. Find Your People",
+        "p1": "You're not alone. Other parents in your community share your concerns. Talk about it. When multiple families raise the issue together, schools listen differently than when one \"difficult parent\" complains."
+      }
+    },
+    "approach": {
+      "title": "A Different Approach",
+      "p1": "At our school, we don't assign homework to young children. Not because we're lazy. Because we've read the research.",
+      "p2": "We focus on what actually works: thinking skills, quality feedback, conversation, play, and time in nature. We trust that children who spend their days deeply engaged don't need worksheets to take home.",
+      "p3": "And we give families their evenings back."
+    },
+    "sources": {
+      "title": "Sources",
+      "homeworkTitle": "Homework research:",
+      "homeworkItems": [
+        {
+          "text": "Cooper, H. (1989, 2006). Homework meta-analyses, Duke University.",
+          "linkText": "SEDL summary",
+          "linkUrl": "https://sedl.org/pubs/sedl-letter/v20n02/homework.html"
+        },
+        {
+          "text": "Education Endowment Foundation. Teaching and Learning Toolkit.",
+          "linkText": "EEF Toolkit",
+          "linkUrl": "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit"
+        }
+      ],
+      "parentTitle": "Parent activities research:",
+      "parentItems": [
+        {
+          "text": "Penn State University. Study on parental homework help.",
+          "linkText": "Penn State News",
+          "linkUrl": "https://www.psu.edu/news/education/story/study-finds-parental-help-homework-has-no-impact-student-achievement"
+        },
+        {
+          "text": "Snow, C. Harvard Graduate School of Education. Family dinner vocabulary research.",
+          "linkText": "Harvard EdCast",
+          "linkUrl": "https://www.gse.harvard.edu/ideas/edcast/20/04/benefit-family-mealtime"
+        },
+        {
+          "text": "Parental expectations meta-analyses.",
+          "linkText": "Educational Psychology Review",
+          "linkUrl": "https://link.springer.com/article/10.1007/s10648-010-9121-z"
+        },
+        {
+          "text": "Free play and executive function.",
+          "linkText": "Frontiers in Psychology / PMC",
+          "linkUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4060299/"
+        },
+        {
+          "text": "Sleep and academic performance.",
+          "linkText": "npj Science of Learning",
+          "linkUrl": "https://www.nature.com/articles/s41539-019-0055-z"
+        },
+        {
+          "text": "Seattle school start times study.",
+          "linkText": "University of Washington",
+          "linkUrl": "https://www.washington.edu/news/2018/12/12/high-school-start-times-study/"
+        }
+      ],
+      "finlandTitle": "Finland data:",
+      "finlandItems": [
+        "OECD PISA results and comparative education data"
+      ]
+    },
+    "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We believe childhood should include more climbing and less crying over worksheets.",
+    "cta": {
+      "title": "Questions about our approach?",
+      "description": "We'd love to chat about how we do things differently.",
+      "button": "Chat with Us"
+    }
+  },
   "blog": {
     "heroTitle": "บทความ",
     "heroSubtitle": "บทความที่มีงานวิจัยรองรับเกี่ยวกับพัฒนาการเด็ก การศึกษา และการเลี้ยงดูเด็กที่มีจิตใจเสรี อยากรู้อยากเห็น และมีความสามารถ",
@@ -1110,9 +1355,13 @@
     "research": "งานวิจัย",
     "health": "สุขภาพ",
     "learning": "การเรียนรู้",
+    "nature": "ธรรมชาติ",
     "homeworkMythTitle": "การบ้านไม่ช่วยเด็กอายุต่ำกว่า 10 ปี: งานวิจัย 35 ปี",
     "homeworkMythExcerpt": "การวิเคราะห์อภิมานของ 35 การศึกษาพบว่าไม่มีประโยชน์จากการบ้านสำหรับนักเรียนประถม สำหรับนักเรียน ป.3 การบ้านมากขึ้นหมายถึงความสำเร็จต่ำกว่า นี่คือสิ่งที่ได้ผลจริงๆ",
     "homeworkMythDate": "16 ธันวาคม 2567",
+    "dayAtBambooTitle": "หนึ่งวันที่ Bamboo Valley: การเรียนรู้ตามธรรมชาติเป็นอย่างไร",
+    "dayAtBambooExcerpt": "ตั้งแต่มาถึงเวลา 8:30 น. จนรับกลับเวลา 15:00 น. ติดตามเด็กๆ ตลอดวันธรรมดาที่โรงเรียนธรรมชาติของเรา — เล่นโคลน ดูแลสัตว์ อบขนม เล่านิทาน และสิ่งที่ทำให้การเรียนรู้กลางแจ้งแตกต่าง",
+    "dayAtBambooDate": "2 มกราคม 2568",
     "forestPlayTitle": "การเล่นป่าสร้างภูมิคุ้มกันอย่างไร",
     "forestPlayExcerpt": "งานวิจัยแสดงว่าเด็กที่เล่นในสภาพแวดล้อมธรรมชาติพัฒนาระบบภูมิคุ้มกันที่แข็งแกร่งกว่า นี่คือวิทยาศาสตร์เบื้องหลังการเล่นโคลน",
     "curiosityTitle": "ทำไมรางวัลฆ่าความอยากรู้",
@@ -1125,5 +1374,129 @@
   "spaceVideo": {
     "line1": "พื้นที่สวนปาล์ม 5,600 ตารางเมตร",
     "line2": "ร่มเงาให้เล่นทั้งวัน พื้นที่ให้เติบโตไร้ขีดจำกัด"
+  },
+  "blogDayAtBamboo": {
+    "meta": {
+      "title": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like | Phuket",
+      "description": "Follow a typical day at our nature school in Phuket. From morning animal care to afternoon mud play, discover what makes outdoor kindergarten different.",
+      "keywords": "nature kids activities phuket, outdoor kindergarten phuket, nature school phuket, forest school thailand, waldorf phuket",
+      "ogTitle": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like",
+      "ogDescription": "From 8:30am arrival to 3pm pickup. What actually happens at a nature school in Phuket."
+    },
+    "hero": {
+      "backLink": "← Back to Insights",
+      "title": "A Day at Bamboo Valley",
+      "subtitle": "What Nature-Based Learning Actually Looks Like",
+      "date": "January 2025 · Bamboo Valley",
+      "imageAlt": "Children playing outdoors at nature school Phuket"
+    },
+    "intro": {
+      "p1": "Parents often ask: \"What does a typical day look like at Bamboo Valley?\"",
+      "p2": "It's a fair question. \"Nature-based learning\" can sound vague. What does it actually mean? What do children actually do all day?",
+      "p3": "Here's a walk through a real day at our school. From morning arrival to afternoon pickup — what happens, why it matters, and what you'd see if you were here."
+    },
+    "timeline": {
+      "arrival": {
+        "time": "8:30am",
+        "title": "Morning Arrival",
+        "p1": "The morning starts under the palm trees. Children arrive and immediately scatter — some to check on the chickens, others to see what's growing in the vegetable garden, a few straight to the sandbox.",
+        "p2": "There's no rush to get inside. There is no inside.",
+        "p3": "Our 3.5-rai palm plantation is the classroom. Nearly 100 palm trees provide shade all day. Children greet the teachers, drop their bags in the covered area, and begin exploring.",
+        "p4": "A boy crouches by the chicken coop. \"She laid three eggs yesterday,\" he tells a friend arriving behind him. \"Come see.\""
+      },
+      "circle": {
+        "time": "9:00am",
+        "title": "Morning Circle",
+        "p1": "The children gather on the grass under the old mango tree. Morning circle is simple: a song, a story, a conversation about what day it is and what we'll do.",
+        "p2": "Today's story involves a farmer and a stubborn goat. The children laugh at the goat's antics. They don't realize they're learning about problem-solving and persistence.",
+        "p3": "Circle time ends with movement — shaking out the wiggles, stretching toward the sky, breathing deeply. Then the real learning begins."
+      },
+      "freePlay": {
+        "time": "9:30am",
+        "title": "Free Play & Exploration",
+        "p1": "This is the heart of our approach. For the next hour, children choose what to do.",
+        "p2": "Some build an elaborate dam in the water play area, discovering physics without knowing the word. Others dig for worms, sorting them by size — math in disguise. A group of girls has claimed the wooden climbing structure as their \"ship\" and is sailing to an island only they can see.",
+        "p3": "Teachers don't direct. They observe. They ask questions. \"What do you think will happen if you make that wall taller?\" \"Where do you think the worms come from?\"",
+        "p4": "A child who struggled with sharing yesterday is practicing — offering the shovel to a friend, waiting for a turn on the swing. These social skills can't be taught from a worksheet. They're learned in the moment, in real situations, with patient adults nearby.",
+        "quote": "Research on self-directed play shows that children develop stronger problem-solving skills and emotional regulation when given autonomy over their activities."
+      },
+      "snack": {
+        "time": "10:30am",
+        "title": "Snack Time",
+        "p1": "Snack happens on the grass. Fresh fruit, rice crackers, water from their own bottles.",
+        "p2": "There's no rush. Children chat about bugs they found, plans they're making, things they noticed. A teacher sits with them, part of the conversation, not supervising from above.",
+        "p3": "\"Look at that cloud,\" someone says, pointing up. \"It looks like a dragon.\" Soon they're all looking, finding shapes, arguing good-naturedly about what they see.",
+        "p4": "This is vocabulary building. This is observation skills. This is just... being children."
+      },
+      "learning": {
+        "time": "11:00am",
+        "title": "Learning Activities",
+        "p1": "Mid-morning brings more structured activities — but not worksheets. Never worksheets.",
+        "p2": "Today one group is baking bread. They measure flour, count spoonfuls of yeast, knead dough with small hands. Math, science, patience, sequencing — all wrapped in the joy of making something real.",
+        "p3": "Another group works in the vegetable garden. They're checking what's ready to harvest, pulling weeds, watering seedlings. One child discovers a caterpillar and everyone crowds around to look. The lesson plan changes. That's okay. The caterpillar becomes the lesson.",
+        "p4": "The older children gather for playful phonics — songs that build letter sounds, games that develop reading readiness. No pressure, no grades. Just the foundation being laid, gently, at each child's pace.",
+        "bakingQuote": "Baking teaches children math and sequencing naturally — measuring, counting, following steps — while developing patience and the satisfaction of creating something tangible.",
+        "gardenQuote": "Garden-based learning improves academic outcomes, particularly in math. Children develop responsibility, patience, and a connection to nature that stays with them."
+      },
+      "lunch": {
+        "time": "12:00pm",
+        "title": "Lunch Together",
+        "p1": "We eat together. Real food, prepared fresh. Children help set out plates, pour water, pass dishes.",
+        "p2": "The conversation flows. A teacher asks what everyone's favorite part of the morning was. Stories tumble out. The caterpillar. The bread rising. The cloud that looked like a dragon but maybe was actually a fish.",
+        "p3": "Family-style meals build community. They teach social skills — waiting your turn, saying please, listening to others. Research shows children who eat with adults develop larger vocabularies. At Bamboo Valley, every meal is a learning opportunity hiding as lunch."
+      },
+      "quiet": {
+        "time": "12:30pm",
+        "title": "Storytelling & Rest",
+        "p1": "After lunch comes quiet time. Not forced napping — just a slower pace.",
+        "p2": "Younger children rest on mats under the shade. Older ones listen to a longer story, or do quiet activities like drawing or puzzles.",
+        "p3": "The story today is about a child who got lost in a forest and found their way home by paying attention to the trees. The children listen intently. Stories teach more than facts — they teach empathy, consequence, possibility.",
+        "quote": "Stories connect content with emotion, helping children store memories in more brain locations. They retain learning better and transfer it to real-life contexts."
+      },
+      "afternoon": {
+        "time": "1:30pm",
+        "title": "Afternoon Activities",
+        "p1": "Energy returns. The afternoon brings more choice — and often, more mess.",
+        "p2": "Today the mud kitchen is open. Children mix \"soup\" from mud, leaves, flowers, and water. They pour, stir, serve imaginary customers. Their hands are filthy. Their immune systems are getting stronger with every handful of soil.",
+        "p3": "Others choose art. Today it's watercolors, painting whatever they see or imagine. No \"draw a house.\" No \"color inside the lines.\" Just exploration with color and brush.",
+        "p4": "A small group practices with rhythm instruments — drums, shakers, bells. They're making a \"song\" together, learning to listen, to follow, to lead.",
+        "mudQuote": "Within one month, children playing in forest soil show improved immune responses. Mud play isn't just fun — it's building resilience against allergies and illness.",
+        "artQuote": "Process-focused art develops fine motor skills, emotional expression, and creative thinking without the pressure of judgment or \"getting it right.\""
+      },
+      "yoga": {
+        "time": "2:30pm",
+        "title": "Yoga & Wind-Down",
+        "p1": "As the afternoon wanes, we gather again. Time to slow down.",
+        "p2": "Yoga for children looks nothing like an adult class. They become trees, swaying in the wind. Cats, stretching after a nap. Mountains, standing tall and steady.",
+        "p3": "A few minutes of simple breathing. Eyes closed, hands on bellies, feeling the breath go in and out.",
+        "p4": "\"Notice how your body feels,\" the teacher says quietly. \"You worked hard today. Your body helped you do so many things.\"",
+        "p5": "This is mindfulness. This is emotional regulation. These are skills they'll use for the rest of their lives.",
+        "quote": "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief sessions enhance focus and self-awareness."
+      },
+      "pickup": {
+        "time": "3:00pm",
+        "title": "Pickup",
+        "p1": "Parents arrive to children who are tired in the right way. Not depleted from sitting still. Not stressed from tests or homework threats. Just... satisfied.",
+        "p2": "\"Mama! We made bread and I saw a caterpillar with LOTS of legs!\"",
+        "p3": "Stories pour out on the way to the car. What they built. What they found. Who they played with.",
+        "p4": "The mud washes off in the bath. The memories don't.",
+        "p5": "Tomorrow, they'll ask to come back."
+      }
+    },
+    "why": {
+      "title": "Why This Matters",
+      "p1": "What you've just read isn't a special day. It's every day.",
+      "p2": "No screens. No worksheets. No sitting at desks for hours. No pressure to perform, compete, or conform.",
+      "p3": "Instead: movement, nature, play, real experiences, and adults who see each child as an individual.",
+      "p4": "Research consistently shows that children who learn this way develop stronger problem-solving skills, better emotional regulation, more robust immune systems, and a lifelong love of learning.",
+      "p5": "They don't just learn facts. They learn how to learn. They don't just follow rules. They develop judgment. They don't just pass tests. They become capable, confident, curious humans."
+    },
+    "cta": {
+      "title": "Come see for yourself",
+      "p1": "Words and photos can only show so much. The best way to understand Bamboo Valley is to visit.",
+      "p2": "Watch the children play under the palm trees. See the chickens. Feel the calm. Ask us anything.",
+      "button": "Schedule a Visit"
+    },
+    "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We offer weekly, monthly, and term enrollment for local and traveling families."
   }
 }
