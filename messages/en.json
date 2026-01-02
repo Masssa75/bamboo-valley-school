@@ -120,7 +120,9 @@
     "youngDescription": "Play, creativity & gentle adventures",
     "olderAges": "Ages 7–12",
     "olderDescription": "Field trips, beach days & exploration",
-    "exploreCamps": "Explore Camps"
+    "exploreCamps": "Explore Camps",
+    "shortTermLinkLabel": "Looking for short-term school?",
+    "shortTermLinkText": "See short-term options"
   },
   "community": {
     "title": "A community, not just a school",
@@ -259,6 +261,8 @@
   "programs": {
     "heroTitle": "Our Programs",
     "heroDescription": "From toddlers to primary school, we nurture every stage of your child's journey through nature, play, and purposeful learning.",
+    "shortTermCtaTitle": "Visiting Phuket short-term?",
+    "shortTermCtaLink": "See our short-term school options.",
     "fullDayTitle": "Full-Day Programs",
     "fullDaySchedule": "Monday to Friday, 8:45am – 3:00pm",
     "additionalTitle": "Additional Programs",
@@ -755,6 +759,215 @@
     "section8Title": "Whole-child education works",
     "section8Subtitle": "Head, heart, and hands - together."
   },
+  "shortTermSchool": {
+    "hero": {
+      "title": "Short-Term Education & Holiday Camps in Phuket",
+      "description": "Flexible enrollment for traveling families. Stay a week, a month, or longer - your children will thrive in our nature-based learning environment.",
+      "badges": {
+        "weekly": "Weekly Enrollment",
+        "noCommitment": "No Long-Term Commitment",
+        "ages": "Ages 2-9",
+        "hours": "9am-3pm (until 4:30pm with after-program)"
+      },
+      "cta": "Enquire About Availability"
+    },
+    "photoStrip": {
+      "alt1": "Children playing outdoors at nature school Phuket",
+      "alt2": "Kids gardening at kindergarten Phuket",
+      "alt3": "Art activities at Waldorf school Phuket",
+      "alt4": "Animal care at nature kindergarten",
+      "alt5": "Outdoor play at forest school Phuket"
+    },
+    "flexible": {
+      "title": "Flexible Enrollment Options",
+      "description": "Unlike most education programs in Phuket that require year-long commitments, Bamboo Valley welcomes short-term children. Whether you're here for a two-week holiday or a three-month stay, your children can join our program."
+    },
+    "options": {
+      "weekly": {
+        "title": "Weekly Enrollment",
+        "subtitle": "Minimum 1 week",
+        "description": "Perfect for families on holiday who want more than a kids club. Full curriculum experience.",
+        "bullets": {
+          "one": "Join any Monday",
+          "two": "9am-3pm (4:30pm with after-program)",
+          "three": "All activities included",
+          "four": "Lunch & snacks provided"
+        },
+        "alt": "Young children at short-term school in Phuket"
+      },
+      "monthly": {
+        "title": "Monthly Enrollment",
+        "subtitle": "1-3 months",
+        "description": "Ideal for digital nomad families or extended stays. Your child becomes part of the community.",
+        "bullets": {
+          "one": "Better value per week",
+          "two": "Progress tracking",
+          "three": "Parent-teacher updates",
+          "four": "Occasional enrichment activities"
+        },
+        "alt": "Storytelling at Waldorf kindergarten Phuket"
+      },
+      "longTerm": {
+        "title": "Long-Term Enrollment",
+        "subtitle": "3-4 months or more",
+        "description": "For families staying a full season. Complete immersion in our Waldorf-inspired program.",
+        "bullets": {
+          "one": "Best value",
+          "two": "Full curriculum progression",
+          "three": "Community events",
+          "four": "Detailed progress reports"
+        },
+        "alt": "Children learning at Bamboo Valley kindergarten Phuket"
+      }
+    },
+    "fullWidth": {
+      "title": "Learning Happens Outdoors",
+      "description": "Our 3.5-rai palm plantation campus gives children space to explore, discover, and grow naturally.",
+      "alt": "Bamboo Valley outdoor kindergarten campus Phuket"
+    },
+    "whoFor": {
+      "title": "Who This Is For",
+      "description": "We've welcomed families from all over the world with different travel styles and needs.",
+      "cards": {
+        "digitalNomads": {
+          "title": "Digital Nomads",
+          "description": "Working remotely from Phuket? Your kids get a proper education program while you focus on work.",
+          "alt": "International community at Bamboo Valley school"
+        },
+        "worldschooling": {
+          "title": "Worldschooling Families",
+          "description": "Supplement your travel education with structured learning, socialization, and local experiences.",
+          "alt": "Child reading outdoors worldschooling Phuket"
+        },
+        "extendedHoliday": {
+          "title": "Extended Holiday Families",
+          "description": "Here for 4 weeks or more? Your children can join a real learning community instead of a hotel kids club.",
+          "alt": "Baking activities at holiday camp Phuket"
+        },
+        "relocatingFamilies": {
+          "title": "Relocating Families",
+          "description": "Testing out Phuket before committing? Start with a short enrollment to see if we're the right fit.",
+          "alt": "Mindfulness activities at nature school"
+        }
+      }
+    },
+    "holidayCamps": {
+      "title": "Holiday Camps",
+      "description": "During holidays, we run special camp programs. Same great outdoor environment, with extra activities and adventures.",
+      "camps": {
+        "winter": {
+          "dates": "Jan 19 - Mar 6, 2026",
+          "title": "Winter Camp",
+          "alt": "Winter camp Phuket children with animals"
+        },
+        "songkran": {
+          "dates": "Apr 6-10, 2026",
+          "title": "Easter/Songkran Camp",
+          "alt": "Water play activities Phuket kids camp Songkran"
+        },
+        "summer": {
+          "dates": "Jun 29 - Aug 14, 2026",
+          "title": "Summer Camp",
+          "alt": "Summer camp activities Phuket"
+        },
+        "christmas": {
+          "dates": "Dec 2026",
+          "title": "Christmas Camp",
+          "alt": "Christmas camp Phuket children nature"
+        }
+      },
+      "note": "Camp programs run 9am-3pm daily (extended to 4:30pm available) and include all activities, meals, and field trips."
+    },
+    "video": {
+      "title": "See Our Campus",
+      "description": "Take a flyover tour of our 3.5-rai palm plantation campus"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "Getting started is simple. We've designed our enrollment process for busy traveling families.",
+      "steps": {
+        "step1": {
+          "title": "Enquire",
+          "desc": "Tell us your dates and your children's ages. We'll confirm availability within 24 hours."
+        },
+        "step2": {
+          "title": "Quick Registration",
+          "desc": "Simple online form. No lengthy applications or waiting periods."
+        },
+        "step3": {
+          "title": "Visit (Optional)",
+          "desc": "Come see our campus and meet the teachers before your child's first day."
+        },
+        "step4": {
+          "title": "Start Any Monday",
+          "desc": "Your child joins the group. We handle the transition smoothly."
+        }
+      }
+    },
+    "founders": {
+      "title": "Built by Parents, For Parents",
+      "description1": "We're Marc and Nutthanit Schwyn, and our own children attend Bamboo Valley every day. We built this program because we couldn't find what we were looking for - a place where kids could learn naturally, play freely, and develop at their own pace.",
+      "description2": "We understand what traveling families need because we've lived it. Flexibility, quality, and a genuine community where your children feel at home from day one.",
+      "signature": "- Marc & Nutthanit",
+      "alt": "Marc and Nutthanit Schwyn founders of Bamboo Valley school Phuket"
+    },
+    "why": {
+      "title": "Why Families Choose Bamboo Valley",
+      "features": {
+        "campus": {
+          "title": "3.5-Rai Palm Plantation Campus",
+          "desc": "100+ palm trees, farm animals, gardens. Learning happens outdoors in nature."
+        },
+        "waldorf": {
+          "title": "Waldorf-Inspired Education",
+          "desc": "Play-based learning, arts, crafts, music, movement. No screens, no worksheets, no homework."
+        },
+        "parents": {
+          "title": "Built by Parents, For Parents",
+          "desc": "Founded by parents who couldn't find what they wanted. Our own kids are here every day."
+        },
+        "community": {
+          "title": "International Community",
+          "desc": "Children from 15+ countries. Your kids make friends from around the world."
+        },
+        "hours": {
+          "title": "9am-3pm (up to 4:30pm)",
+          "desc": "Drop off in the morning, pick up in the afternoon. Extended hours available."
+        },
+        "location": {
+          "title": "Bangtao/Laguna Location",
+          "desc": "Central location near hotels, villas, and condos popular with traveling families."
+        }
+      }
+    },
+    "otherOptions": {
+      "title": "Other Short-Term Options in Phuket",
+      "description": "We believe in helping families find the right fit. Here are other programs in Phuket that accept short-term enrollment:",
+      "items": {
+        "lighthouse": {
+          "name": "Lighthouse International",
+          "location": "Chalong/Rawai",
+          "description": "British curriculum, accepts short-term children. Good option for families in the south."
+        },
+        "mhp": {
+          "name": "MHP Montessori",
+          "location": "Chalong",
+          "description": "Montessori method, welcomes short stays. A true Montessori program in Phuket."
+        },
+        "abc": {
+          "name": "ABC Nursery",
+          "location": "Rawai",
+          "description": "For younger children (0-4). Flexible enrollment, popular with expat families."
+        }
+      },
+      "note": "Note: Most education programs in Phuket require year-long commitments. If you need true flexibility, your options are limited - which is exactly why we designed Bamboo Valley this way."
+    },
+    "finalCta": {
+      "title": "Ready to Learn More?",
+      "description": "Tell us your dates and we'll confirm availability. No commitment required.",
+      "button": "Contact Us"
+    }
+  },
   "blog": {
     "heroTitle": "Insights",
     "heroSubtitle": "Research-backed articles on child development, education, and raising free-minded, curious, capable children.",
@@ -773,7 +986,9 @@
     "curiosityTitle": "Why Rewards Kill Curiosity",
     "curiosityExcerpt": "The surprising research on how external rewards actually decrease children's intrinsic motivation and creativity.",
     "questionsAboutApproach": "Questions about our approach?",
-    "chatWithUsDesc": "We'd love to chat about how we do things differently."
+    "chatWithUsDesc": "We'd love to chat about how we do things differently.",
+    "shortTermLinkLabel": "Traveling families:",
+    "shortTermLinkText": "short-term school options in Phuket"
   },
   "spaceVideo": {
     "line1": "5,600 square meters of palm forest.",

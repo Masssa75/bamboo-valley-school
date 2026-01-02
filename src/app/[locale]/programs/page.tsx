@@ -57,6 +57,20 @@ export default async function ProgramsPage({
         </div>
       </section>
 
+      <section className="px-6 pb-10 bg-[#FAF9F6]">
+        <div className="max-w-[800px] mx-auto text-center">
+          <p className="text-sm text-[#666]">
+            {t("shortTermCtaTitle")}{" "}
+            <Link
+              href={`/${locale}/short-term-school-phuket`}
+              className="text-[#8fb07a] hover:text-[#6d9b5a] font-medium"
+            >
+              {t("shortTermCtaLink")}
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* Sticky Sub-Navigation */}
       <ProgramsSubNav />
 

@@ -135,7 +135,7 @@ export default async function Home({
       <Hero />
       <WhatWeAre />
       <Activities />
-      <Camps />
+      <Camps locale={locale} />
       <SpaceVideo />
       <Community />
       <Testimonials />

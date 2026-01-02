@@ -149,6 +149,15 @@ export default async function BlogPage({
               </svg>
               @bamboovalleyphuket
             </a>
+            <p className="mt-6 text-sm text-[#666]">
+              {t("shortTermLinkLabel")}{" "}
+              <Link
+                href={`/${locale}/short-term-school-phuket`}
+                className="text-[#8fb07a] hover:text-[#6d9b5a] font-medium"
+              >
+                {t("shortTermLinkText")}
+              </Link>
+            </p>
           </div>
         </div>
       </section>

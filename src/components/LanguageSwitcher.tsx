@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { localeNames, localeFlags, type Locale } from "@/i18n/config";
 
 // Only show these locales in the switcher (others are not ready yet)
-const enabledLocales: Locale[] = ["en", "th", "ru"];
+const enabledLocales: Locale[] = ["en", "th", "ru", "zh"];
 
 // Short codes for pill display
 const localeCodes: Record<Locale, string> = {
