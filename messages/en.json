@@ -968,6 +968,138 @@
       "button": "Contact Us"
     }
   },
+  "kindergartenLocation": {
+    "meta": {
+      "title": "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley Phuket",
+      "description": "Nature-based kindergarten serving Bangtao, Laguna Phuket & Cherngtalay families. Waldorf-inspired education just 5-10 minutes from your home. Ages 2-9.",
+      "ogTitle": "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley",
+      "ogDescription": "Nature-based kindergarten serving families in Bangtao, Laguna & Cherngtalay. Just 5-10 minutes away."
+    },
+    "schema": {
+      "name": "Bamboo Valley - Kindergarten in Cherngtalay",
+      "description": "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 3.5-rai palm plantation for children ages 2-9.",
+      "areaServed": [
+        "Bangtao Beach",
+        "Bangtao",
+        "Laguna Phuket",
+        "Cherngtalay",
+        "Surin Beach",
+        "Thalang",
+        "Layan"
+      ]
+    },
+    "hero": {
+      "title": "Kindergarten Near Bangtao, Laguna & Cherngtalay",
+      "description": "A nature school serving families across Phuket's northwest coast. Just 5-10 minutes from your home.",
+      "cta": "Schedule a Visit"
+    },
+    "areas": {
+      "title": "Areas We Serve",
+      "description": "Located in the heart of Cherngtalay, Bamboo Valley is easily accessible from Bangtao, Laguna, Surin, and surrounding areas.",
+      "mapCta": "Open in Google Maps",
+      "items": [
+        {
+          "name": "Bangtao Beach",
+          "shortName": "Bangtao",
+          "driveTime": "5 minutes",
+          "description": "Head east on the 4030 road toward Cherngtalay village. Turn left at the Cherngtalay intersection. We're on the right after 500 meters.",
+          "highlight": "Closest beach area to our campus"
+        },
+        {
+          "name": "Laguna Phuket",
+          "shortName": "Laguna",
+          "driveTime": "10 minutes",
+          "description": "Exit Laguna toward Cherngtalay on the main road. At the Cherngtalay intersection, continue straight. We're on the right, about 2km from the intersection.",
+          "highlight": "Perfect for resort residents seeking real education"
+        },
+        {
+          "name": "Cherngtalay",
+          "shortName": "Cherngtalay",
+          "driveTime": "2-5 minutes",
+          "description": "We're located right in Cherngtalay village on the main road, making us your neighborhood school.",
+          "highlight": "Your local nature school"
+        },
+        {
+          "name": "Surin Beach",
+          "shortName": "Surin",
+          "driveTime": "10-12 minutes",
+          "description": "Take the coastal road north toward Bangtao, then turn inland at Cherngtalay. Easy morning commute with light traffic.",
+          "highlight": "Quick commute via coastal road"
+        }
+      ]
+    },
+    "why": {
+      "title": "Why Families Choose Bamboo Valley",
+      "intro": "Whether you live in Bangtao, Laguna Phuket, or Cherngtalay, Bamboo Valley offers something you won't find in resort kids clubs or traditional schools: genuine nature-based education on a 3.5-rai palm plantation.",
+      "bangtaoTitle": "For Bangtao & Laguna Families",
+      "bangtaoBullets": [
+        {
+          "title": "Flexible enrollment",
+          "text": "Weekly, monthly, and term options for variable schedules"
+        },
+        {
+          "title": "Real education",
+          "text": "Not babysitting. Proper curriculum with dedicated teachers"
+        },
+        {
+          "title": "Short commute",
+          "text": "Just 5-10 minutes from your door"
+        }
+      ],
+      "cherngtalayTitle": "For Local Cherngtalay Families",
+      "cherngtalayBullets": [
+        {
+          "title": "Your neighborhood school",
+          "text": "Part of the community since founding"
+        },
+        {
+          "title": "Nature immersion",
+          "text": "3.5 rai with nearly 100 palm trees"
+        },
+        {
+          "title": "International community",
+          "text": "Families from around the world"
+        }
+      ]
+    },
+    "programs": {
+      "title": "Programs for All Ages (2-9)",
+      "items": [
+        {
+          "title": "Nursery (Ages 2-4)",
+          "text": "Gentle introduction to school life"
+        },
+        {
+          "title": "Kindergarten (Ages 3-6)",
+          "text": "Play-based learning and social development"
+        },
+        {
+          "title": "Primary (Ages 6-9)",
+          "text": "Creative, hands-on academics"
+        },
+        {
+          "title": "Holiday Camps",
+          "text": "Christmas, Easter, and Summer camps"
+        }
+      ]
+    },
+    "cta": {
+      "viewPrograms": "View Programs",
+      "contact": "Contact Us"
+    },
+    "testimonialsIntro": "Families from Bangtao, Laguna, Cherngtalay, and Surin have discovered a different kind of school...",
+    "visit": {
+      "title": "Visit Us",
+      "addressTitle": "Address",
+      "mapCta": "Open in Google Maps",
+      "contactTitle": "Contact",
+      "phoneLabel": "Phone/WhatsApp:",
+      "emailLabel": "Email:",
+      "hoursLabel": "School Hours:",
+      "hoursValue": "Monday - Friday: 8:00am - 3:30pm"
+    },
+    "mapTitle": "Bamboo Valley Location - Serving Bangtao, Laguna & Cherngtalay"
+  },
   "blog": {
     "heroTitle": "Insights",
     "heroSubtitle": "Research-backed articles on child development, education, and raising free-minded, curious, capable children.",

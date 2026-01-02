@@ -1,4 +1,5 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -17,11 +18,11 @@ export async function generateMetadata({
   const baseUrl = "https://bamboovalleyphuket.com";
   const path = "/kindergarten-bangtao-laguna-cherngtalay/";
   const canonical = `${baseUrl}/${locale}${path}`;
+  const t = await getTranslations({ locale, namespace: "kindergartenLocation.meta" });
 
   return {
-    title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley Phuket",
-    description:
-      "Nature-based kindergarten serving Bangtao, Laguna Phuket & Cherngtalay families. Waldorf-inspired education just 5-10 minutes from your home. Ages 2-9.",
+    title: t("title"),
+    description: t("description"),
     keywords: [
       "kindergarten bangtao",
       "kindergarten cherngtalay",
@@ -35,9 +36,8 @@ export async function generateMetadata({
       "nature school phuket",
     ],
     openGraph: {
-      title: "Kindergarten Near Bangtao, Laguna & Cherngtalay | Bamboo Valley",
-      description:
-        "Nature-based kindergarten serving families in Bangtao, Laguna & Cherngtalay. Just 5-10 minutes away.",
+      title: t("ogTitle"),
+      description: t("ogDescription"),
       url: canonical,
     },
     alternates: {
@@ -46,6 +46,7 @@ export async function generateMetadata({
         en: `${baseUrl}/en${path}`,
         th: `${baseUrl}/th${path}`,
         ru: `${baseUrl}/ru${path}`,
+        zh: `${baseUrl}/zh${path}`,
         "x-default": `${baseUrl}/en${path}`,
       },
     },
@@ -59,14 +60,14 @@ export default async function LocationsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = useTranslations("kindergartenLocation");
 
   // LocalBusiness Schema with all areas served
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ChildCare",
-    name: "Bamboo Valley - Kindergarten in Cherngtalay",
-    description:
-      "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 3.5-rai palm plantation for children ages 2-9.",
+    name: t("schema.name"),
+    description: t("schema.description"),
     url: "https://bamboovalleyphuket.com/kindergarten-bangtao-laguna-cherngtalay",
     telephone: "+66989124218",
     email: "info@bamboovalleyphuket.com",
@@ -83,15 +84,10 @@ export default async function LocationsPage({
       latitude: "8.0042192",
       longitude: "98.3179683",
     },
-    areaServed: [
-      { "@type": "Place", name: "Bangtao Beach" },
-      { "@type": "Place", name: "Bangtao" },
-      { "@type": "Place", name: "Laguna Phuket" },
-      { "@type": "Place", name: "Cherngtalay" },
-      { "@type": "Place", name: "Surin Beach" },
-      { "@type": "Place", name: "Thalang" },
-      { "@type": "Place", name: "Layan" },
-    ],
+    areaServed: (t.raw("schema.areaServed") as string[]).map((name) => ({
+      "@type": "Place",
+      name,
+    })),
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -102,36 +98,19 @@ export default async function LocationsPage({
     image: "https://bamboovalleyphuket.com/images/hero-bg.jpg",
   };
 
-  const areas = [
-    {
-      name: "Bangtao Beach",
-      shortName: "Bangtao",
-      driveTime: "5 minutes",
-      description: "Head east on the 4030 road toward Cherngtalay village. Turn left at the Cherngtalay intersection. We're on the right after 500 meters.",
-      highlight: "Closest beach area to our campus",
-    },
-    {
-      name: "Laguna Phuket",
-      shortName: "Laguna",
-      driveTime: "10 minutes",
-      description: "Exit Laguna toward Cherngtalay on the main road. At the Cherngtalay intersection, continue straight. We're on the right, about 2km from the intersection.",
-      highlight: "Perfect for resort residents seeking real education",
-    },
-    {
-      name: "Cherngtalay",
-      shortName: "Cherngtalay",
-      driveTime: "2-5 minutes",
-      description: "We're located right in Cherngtalay village on the main road, making us your neighborhood school.",
-      highlight: "Your local nature school",
-    },
-    {
-      name: "Surin Beach",
-      shortName: "Surin",
-      driveTime: "10-12 minutes",
-      description: "Take the coastal road north toward Bangtao, then turn inland at Cherngtalay. Easy morning commute with light traffic.",
-      highlight: "Quick commute via coastal road",
-    },
-  ];
+  const areas = t.raw("areas.items") as Array<{
+    name: string;
+    shortName: string;
+    driveTime: string;
+    description: string;
+    highlight: string;
+  }>;
+  const bangtaoBullets = t.raw("why.bangtaoBullets") as Array<{ title: string; text: string }>;
+  const cherngtalayBullets = t.raw("why.cherngtalayBullets") as Array<{
+    title: string;
+    text: string;
+  }>;
+  const programs = t.raw("programs.items") as Array<{ title: string; text: string }>;
 
   return (
     <>
@@ -157,17 +136,16 @@ export default async function LocationsPage({
         <div className="absolute inset-0 bg-black/50 z-[2]" />
         <div className="relative z-[3] max-w-[900px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal mb-6 text-white">
-            Kindergarten Near Bangtao, Laguna & Cherngtalay
+            {t("hero.title")}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-[700px] mx-auto">
-            A nature school serving families across Phuket's northwest coast.
-            Just 5-10 minutes from your home.
+            {t("hero.description")}
           </p>
           <a
             href="https://wa.me/66989124218?text=Hi!%20I%27m%20interested%20in%20Bamboo%20Valley.%20I%20live%20near%20"
             className="inline-block bg-[#8fb07a] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#7a9a65] transition-colors"
           >
-            Schedule a Visit
+            {t("hero.cta")}
           </a>
         </div>
       </section>
@@ -176,11 +154,10 @@ export default async function LocationsPage({
       <section className="py-16 md:py-24 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-4 text-[#2d2d2d] text-center">
-            Areas We Serve
+            {t("areas.title")}
           </h2>
           <p className="text-lg text-[#666] text-center mb-12 max-w-[700px] mx-auto">
-            Located in the heart of Cherngtalay, Bamboo Valley is easily accessible
-            from Bangtao, Laguna, Surin, and surrounding areas.
+            {t("areas.description")}
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -208,7 +185,7 @@ export default async function LocationsPage({
               rel="noopener noreferrer"
               className="inline-block text-[#8fb07a] hover:text-[#6d9b5a] font-medium"
             >
-              Open in Google Maps →
+              {t("areas.mapCta")} →
             </a>
           </div>
         </div>
@@ -218,59 +195,51 @@ export default async function LocationsPage({
       <section className="py-16 md:py-24 px-6 bg-[#f9f7f4]">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 text-[#2d2d2d] text-center">
-            Why Families Choose Bamboo Valley
+            {t("why.title")}
           </h2>
           <div className="prose prose-lg max-w-none text-[#555]">
             <p>
-              Whether you live in <strong>Bangtao</strong>, <strong>Laguna Phuket</strong>,
-              or <strong>Cherngtalay</strong>, Bamboo Valley offers something you won't find
-              in resort kids clubs or traditional schools: genuine nature-based education
-              on a 3.5-rai palm plantation.
+              {t("why.intro")}
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mt-8 not-prose">
               <div>
-                <h3 className="font-serif text-xl mb-4 text-[#2d2d2d]">For Bangtao & Laguna Families</h3>
+                <h3 className="font-serif text-xl mb-4 text-[#2d2d2d]">{t("why.bangtaoTitle")}</h3>
                 <ul className="space-y-3 text-[#555]">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>Flexible enrollment</strong> — Weekly, monthly, and term options for variable schedules</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>Real education</strong> — Not babysitting. Proper curriculum with dedicated teachers</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>Short commute</strong> — Just 5-10 minutes from your door</span>
-                  </li>
+                  {bangtaoBullets.map((bullet) => (
+                    <li key={bullet.title} className="flex items-start gap-2">
+                      <span className="text-[#8fb07a] mt-1">✓</span>
+                      <span>
+                        <strong>{bullet.title}</strong> — {bullet.text}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h3 className="font-serif text-xl mb-4 text-[#2d2d2d]">For Local Cherngtalay Families</h3>
+                <h3 className="font-serif text-xl mb-4 text-[#2d2d2d]">
+                  {t("why.cherngtalayTitle")}
+                </h3>
                 <ul className="space-y-3 text-[#555]">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>Your neighborhood school</strong> — Part of the community since founding</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>Nature immersion</strong> — 3.5 rai with nearly 100 palm trees</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#8fb07a] mt-1">✓</span>
-                    <span><strong>International community</strong> — Families from around the world</span>
-                  </li>
+                  {cherngtalayBullets.map((bullet) => (
+                    <li key={bullet.title} className="flex items-start gap-2">
+                      <span className="text-[#8fb07a] mt-1">✓</span>
+                      <span>
+                        <strong>{bullet.title}</strong> — {bullet.text}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
 
-            <h3 className="font-serif text-2xl mt-12 mb-4">Programs for All Ages (2-9)</h3>
+            <h3 className="font-serif text-2xl mt-12 mb-4">{t("programs.title")}</h3>
             <ul>
-              <li><strong>Nursery</strong> (Ages 2-4) — Gentle introduction to school life</li>
-              <li><strong>Kindergarten</strong> (Ages 3-6) — Play-based learning and social development</li>
-              <li><strong>Primary</strong> (Ages 6-9) — Creative, hands-on academics</li>
-              <li><strong>Holiday Camps</strong> — Christmas, Easter, and Summer camps</li>
+              {programs.map((program) => (
+                <li key={program.title}>
+                  <strong>{program.title}</strong> — {program.text}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -279,13 +248,13 @@ export default async function LocationsPage({
               href="/programs"
               className="inline-block bg-[#8fb07a] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#7a9a65] transition-colors mr-4"
             >
-              View Programs
+              {t("cta.viewPrograms")}
             </Link>
             <Link
               href="/contact"
               className="inline-block border-2 border-[#8fb07a] text-[#8fb07a] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#8fb07a] hover:text-white transition-colors"
             >
-              Contact Us
+              {t("cta.contact")}
             </Link>
           </div>
         </div>
@@ -301,8 +270,7 @@ export default async function LocationsPage({
       <section className="py-8 px-6 bg-white">
         <div className="max-w-[800px] mx-auto text-center">
           <p className="text-lg text-[#666] italic">
-            Families from Bangtao, Laguna, Cherngtalay, and Surin have discovered
-            a different kind of school...
+            {t("testimonialsIntro")}
           </p>
         </div>
       </section>
@@ -314,11 +282,11 @@ export default async function LocationsPage({
       <section className="py-16 md:py-24 px-6 bg-[#f9f7f4]">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 text-[#2d2d2d] text-center">
-            Visit Us
+            {t("visit.title")}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-lg mb-4">Address</h3>
+              <h3 className="font-semibold text-lg mb-4">{t("visit.addressTitle")}</h3>
               <p className="text-[#555]">
                 Bamboo Valley<br />
                 3/74 Moo 4, Cherngtalay<br />
@@ -331,26 +299,27 @@ export default async function LocationsPage({
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-[#8fb07a] hover:text-[#6d9b5a] font-medium"
               >
-                Open in Google Maps →
+                {t("visit.mapCta")} →
               </a>
             </div>
             <div>
-              <h3 className="font-semibold text-lg mb-4">Contact</h3>
+              <h3 className="font-semibold text-lg mb-4">{t("visit.contactTitle")}</h3>
               <p className="text-[#555]">
-                <strong>Phone/WhatsApp:</strong>{" "}
+                <strong>{t("visit.phoneLabel")}</strong>{" "}
                 <a href="tel:+66989124218" className="text-[#8fb07a]">
                   +66 98 912 4218
                 </a>
               </p>
               <p className="text-[#555] mt-2">
-                <strong>Email:</strong>{" "}
+                <strong>{t("visit.emailLabel")}</strong>{" "}
                 <a href="mailto:info@bamboovalleyphuket.com" className="text-[#8fb07a]">
                   info@bamboovalleyphuket.com
                 </a>
               </p>
               <p className="text-[#555] mt-4">
-                <strong>School Hours:</strong><br />
-                Monday - Friday: 8:00am - 3:30pm
+                <strong>{t("visit.hoursLabel")}</strong>
+                <br />
+                {t("visit.hoursValue")}
               </p>
             </div>
           </div>
@@ -367,7 +336,7 @@ export default async function LocationsPage({
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Bamboo Valley Location - Serving Bangtao, Laguna & Cherngtalay"
+          title={t("mapTitle")}
         />
       </section>
 
