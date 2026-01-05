@@ -2,9 +2,18 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
+  const pathname = usePathname();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,6 +22,9 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Extract locale from pathname (e.g., /en/contact -> en)
+  const locale = pathname.split("/")[1] || "en";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,6 +42,12 @@ export default function ContactForm() {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
       }
+
+      // Track conversion in GA4
+      window.gtag?.("event", "contact_form_submit", {
+        event_category: "engagement",
+        event_label: locale,
+      });
 
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
