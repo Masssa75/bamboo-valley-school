@@ -4,13 +4,6 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-// Declare gtag for TypeScript
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
 export default function ContactForm() {
   const t = useTranslations("contact.form");
   const pathname = usePathname();
