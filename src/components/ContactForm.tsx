@@ -17,6 +17,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -50,7 +51,7 @@ export default function ContactForm() {
       });
 
       setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch (error) {
       setStatus("error");
       setErrorMessage(error instanceof Error ? error.message : "Something went wrong");
@@ -108,6 +109,21 @@ export default function ContactForm() {
             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#BED7AF] focus:ring-2 focus:ring-[#BED7AF]/20 outline-none transition-colors"
             placeholder={t("emailPlaceholder")}
           />
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-[#2d2d2d] mb-1">
+            {t("phone")}
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#BED7AF] focus:ring-2 focus:ring-[#BED7AF]/20 outline-none transition-colors"
+            placeholder={t("phonePlaceholder")}
+          />
+          <p className="text-xs text-[#999] mt-1">{t("phoneHelper")}</p>
         </div>
 
         <div>

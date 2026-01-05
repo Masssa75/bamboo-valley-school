@@ -1,0 +1,1 @@
+ALTER TABLE school_enquiries ADD COLUMN IF NOT EXISTS phone TEXT;

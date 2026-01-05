@@ -44,7 +44,7 @@ export const handler: Handler = async (event) => {
   };
 
   try {
-    const { name, email, subject, message } = JSON.parse(event.body || "{}");
+    const { name, email, phone, subject, message } = JSON.parse(event.body || "{}");
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -58,7 +58,7 @@ export const handler: Handler = async (event) => {
     // Save to Supabase
     const { data, error } = await supabase
       .from("school_enquiries")
-      .insert([{ name, email, subject, message }])
+      .insert([{ name, email, phone: phone || null, subject, message }])
       .select()
       .single();
 
@@ -77,7 +77,7 @@ export const handler: Handler = async (event) => {
 
 <b>Name:</b> ${name}
 <b>Email:</b> ${email}
-${subject ? `<b>Subject:</b> ${subject}\n` : ""}
+${phone ? `<b>Phone:</b> ${phone}\n` : ""}${subject ? `<b>Subject:</b> ${subject}\n` : ""}
 <b>Message:</b>
 ${message}
 
