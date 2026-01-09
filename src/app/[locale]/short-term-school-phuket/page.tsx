@@ -95,10 +95,6 @@ export default async function ShortTermSchoolPage({
       key: "summer",
       image: "/images/Gardening.jpeg",
     },
-    {
-      key: "christmas",
-      image: "/images/camp-elephants.jpg",
-    },
   ];
 
   const howItWorksSteps = [

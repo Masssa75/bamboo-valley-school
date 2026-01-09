@@ -142,6 +142,11 @@ export default async function ChildWellbeingPage({
                 title: t("separationAnxietyCard.title"),
                 description: t("separationAnxietyCard.description"),
                 href: `/${locale}/child-wellbeing/separation-anxiety`
+              },
+              {
+                title: t("codeOfConductCard.title"),
+                description: t("codeOfConductCard.description"),
+                href: `/${locale}/child-wellbeing/code-of-conduct`
               }
             ].map((card, i) => (
               <Link

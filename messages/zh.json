@@ -47,6 +47,8 @@
     "tierResponse": "我们的三级响应系统",
     "separationAnxiety": "分离焦虑",
     "helpingWithGoodbyes": "帮助孩子说再见",
+    "codeOfConduct": "行为准则",
+    "staffVolunteerGuidelines": "员工与志愿者指南",
     "theResearch": "科学研究",
     "scienceBehindApproach": "我们方法背后的科学"
   },
@@ -329,10 +331,6 @@
       "ages": "3-12岁",
       "title": "假期营",
       "description": "充满发现、友谊和探索的主题季节营。",
-      "october": "十月营：",
-      "octoberDates": "2025年10月13-17日",
-      "christmas": "圣诞营：",
-      "christmasDates": "2025年12月15-26日",
       "winter": "冬令营：",
       "winterDates": "2026年1月19日 – 3月6日",
       "songkran": "宋干节营：",
@@ -384,6 +382,10 @@
       "title": "分离焦虑",
       "description": "一个常见挑战，方法明确。学校会做什么，你在家可以做什么。"
     },
+    "codeOfConductCard": {
+      "title": "行为准则",
+      "description": "所有团队成员的标准：儿童安全、专业边界，以及我们对 Bamboo Valley 每个人的期望。"
+    },
     "challengesTitle": "当挑战出现时",
     "challenges1": "有些孩子需要更多支持，这很正常，没有必要羞愧。关键在于当我们联系家长时，家庭如何回应。",
     "challenges2": "我们在 Bamboo Valley 建立的是一个特别的社区——孩子真正蓬勃成长的地方。这需要学校与家庭的伙伴关系。当我们发现问题，会坦诚与你沟通，提出可行的方法，并提供资源与支持。",
@@ -395,6 +397,107 @@
     "questionsDescription": "我们随时愿意讨论我们的方式，欢迎联系。",
     "contactUs": "联系我们",
     "backToChildWellbeing": "← 返回儿童身心健康"
+  },
+  "codeOfConduct": {
+    "heroTitle": "行为准则",
+    "heroSubtitle": "Bamboo Valley 所有团队成员的指南——员工和志愿者",
+    "welcomeTitle": "欢迎加入 Bamboo Valley 团队！",
+    "welcomeText": "这些指南帮助我们营造安全、专业的环境，让孩子自在成长，也让每个人对自己的角色有信心。我们的目标是帮助您顺利开展工作，同时保持家庭对 Bamboo Valley 的高标准期待。",
+    "section1Title": "1. 儿童安全与互动",
+    "section1Intro": "儿童安全是我们的首要任务。这些指南同时保护儿童和员工。",
+    "coreSafetyRules": "核心安全规则",
+    "coreSafetyItems": [
+      "永远不要与孩子单独相处：始终保持在其他团队成员可见范围内",
+      "适当的身体接触：击掌、活动中帮忙牵手可以。避免长时间拥抱、坐在腿上或单独的身体接触",
+      "卫生间监督：只有受过培训的老师可以协助如厕，非教学员工在外等候",
+      "摄影：未经校长明确许可，不得用个人设备拍摄儿童",
+      "立即报告：如发现任何令人担忧的情况（受伤、冲突、行为问题），请立刻告知老师或校长"
+    ],
+    "positiveInteraction": "积极互动",
+    "positiveItems": [
+      "在游戏和活动中跟随孩子的节奏",
+      "使用鼓励、积极的语言",
+      "尊重孩子的身体界限",
+      "帮助引导，而不是指挥活动"
+    ],
+    "section2Title": "2. 与家长的边界",
+    "section2Intro": "您的角色是支持学校的使命，而不是在上课时间或活动期间与家长建立个人社交关系。",
+    "professionalComm": "专业沟通",
+    "professionalCommItems": [
+      "对话聚焦学校事务：孩子的活动、当天情况、学校活动",
+      "适当转介复杂问题：如果家长询问课程、政策或超出您职责范围的问题，请引导他们联系教学人员或管理层",
+      "避免私人社交：不要与家长约外出、喝酒或安排校外计划",
+      "保持友好的专业态度：热情且平易近人，但请记住您代表学校"
+    ],
+    "exampleScenarioLabel": "示例场景：",
+    "exampleScenario": "如果您有兴趣探索普吉岛或结识新朋友，这些对话应发生在您学校角色之外——不要在接送期间或代表 Bamboo Valley 的学校活动中谈起。",
+    "section3Title": "3. 保密与专业精神",
+    "section3Intro": "您在学校观察到的事情应留在学校。",
+    "keepPrivate": "保密以下内容：",
+    "keepPrivateItems": [
+      "儿童的行为、发展或挑战",
+      "家庭情况或个人信息",
+      "家长与员工之间的对话",
+      "正在制定的学校政策",
+      "您观察到的任何事件或冲突"
+    ],
+    "professionalBoundaries": "专业边界：",
+    "professionalBoundariesItems": [
+      "未经许可不要在社交媒体上发布学校活动",
+      "不要分享包含可识别儿童的学校照片",
+      "不要在公共场所讨论学校事务",
+      "即使在社交媒体上也保持工作关系的专业性"
+    ],
+    "section4Title": "4. 沟通与问题",
+    "section4Intro": "清晰的沟通让每个人保持一致，帮助您感到被支持。",
+    "whoToAsk": "有问题时问谁：",
+    "whoToAskItems": [
+      "日常活动/时间表：当天的主班老师",
+      "政策问题：校长或管理员",
+      "安全问题：立即联系任何老师，再跟进校长",
+      "个人问题/时间安排：直接联系校长"
+    ],
+    "whenParentsAsk": "当家长问您问题时：",
+    "whenParentsAskItems": [
+      "关于孩子的一天：一般观察可以（\"他们今天真的很喜欢玩泥巴！\"）",
+      "关于课程/政策：\"这是个好问题，老师可以给您更多详细信息\"",
+      "关于事件/问题：\"我会请老师就此事与您联系\""
+    ],
+    "section5Title": "5. 专业着装",
+    "section5Intro": "作为与儿童一起工作的团队成员，您的外表应体现专业性，并适合活跃的户外工作。",
+    "doWear": "应该穿着",
+    "doWearItems": [
+      "遮盖肩膀和胸部的上衣",
+      "可以弯腰、坐下和玩耍的舒适衣服",
+      "耐用且可以弄脏的衣服"
+    ],
+    "dontWear": "不应该穿着",
+    "dontWearItems": [
+      "抹胸、细肩带或无肩带上衣",
+      "非常短的短裤或裙子",
+      "暴露或紧身的衣服",
+      "带有不当信息的衣服"
+    ],
+    "whyMattersLabel": "为什么这很重要：",
+    "whyMatters": "家长需要信任校园内的每个人都保持专业边界。孩子也会模仿他们观察到的行为，适当的着装树立重要标准。",
+    "quickReference": "快速参考清单",
+    "quickReferenceItems": [
+      "肩膀和胸部遮盖，长度适当",
+      "永远不要与孩子单独相处——始终保持可见",
+      "与家长的对话保持以学校为中心和专业",
+      "将复杂问题转介给老师或校长",
+      "立即向教学人员报告任何问题",
+      "学校发生的事情要保密",
+      "不要用个人设备拍摄儿童",
+      "有疑问时，问老师！"
+    ],
+    "acknowledgmentTitle": "确认书",
+    "acknowledgmentText": "我已阅读并理解 Bamboo Valley 学校的行为准则。我同意在 Bamboo Valley 期间遵守这些指南，并理解不遵守可能导致解雇。",
+    "acknowledgmentCheckbox": "我确认已阅读、理解并同意遵守本文件中列出的所有指南。",
+    "fullName": "全名：",
+    "date": "日期：",
+    "signature": "签名：",
+    "printButton": "打印或保存为 PDF"
   },
   "ourApproach": {
     "heroTitle": "我们的方法",
@@ -787,11 +890,6 @@
           "dates": "2026年6月29日 - 8月14日",
           "title": "夏令营",
           "alt": "普吉岛夏令营活动"
-        },
-        "christmas": {
-          "dates": "2026年12月",
-          "title": "圣诞营",
-          "alt": "普吉岛圣诞营的自然活动"
         }
       },
       "note": "营地每天9:00-15:00（可延至16:30），包含所有活动、餐食和外出行程。"

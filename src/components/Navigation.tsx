@@ -215,6 +215,14 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
                   </div>
                 </Link>
 
+                <Link href={localePath("/child-wellbeing/code-of-conduct")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📜</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("codeOfConduct")}</div>
+                    <div className="text-xs text-[#888]">{t("staffVolunteerGuidelines")}</div>
+                  </div>
+                </Link>
+
                 <div className="border-t border-gray-100 my-2"></div>
 
                 <Link href={localePath("/science")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
@@ -289,6 +297,7 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
             <Link href={localePath("/child-wellbeing/understanding")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("understandingYourChild")}</Link>
             <Link href={localePath("/child-wellbeing/behavior-support")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("behaviorSupport")}</Link>
             <Link href={localePath("/child-wellbeing/separation-anxiety")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("separationAnxiety")}</Link>
+            <Link href={localePath("/child-wellbeing/code-of-conduct")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("codeOfConduct")}</Link>
             <Link href={localePath("/science")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("theResearch")}</Link>
             <Link href={localePath("/contact")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>{t("visitUs")}</Link>
             <div className="px-6 py-3">

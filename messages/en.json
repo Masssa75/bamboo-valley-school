@@ -47,6 +47,8 @@
     "tierResponse": "Our 3-tier response system",
     "separationAnxiety": "Separation Anxiety",
     "helpingWithGoodbyes": "Helping with goodbyes",
+    "codeOfConduct": "Code of Conduct",
+    "staffVolunteerGuidelines": "Staff & volunteer guidelines",
     "theResearch": "The Research",
     "scienceBehindApproach": "Science behind our approach"
   },
@@ -329,10 +331,6 @@
       "ages": "Ages 3–12",
       "title": "Holiday Camps",
       "description": "Themed seasonal camps filled with discovery, friendship, and exploration. Activities include gardening, animal care, arts and crafts, baking, yoga, Muay Thai, and exciting field trips.",
-      "october": "October Camp:",
-      "octoberDates": "Oct 13–17, 2025",
-      "christmas": "Christmas Camp:",
-      "christmasDates": "Dec 15–26, 2025",
       "winter": "Winter Camp:",
       "winterDates": "Jan 19 – Mar 6, 2026",
       "songkran": "Songkran Camp:",
@@ -398,6 +396,10 @@
       "title": "Separation Anxiety",
       "description": "A common challenge with clear solutions. What we do at school and what you can do at home."
     },
+    "codeOfConductCard": {
+      "title": "Code of Conduct",
+      "description": "Standards for all team members. Child safety, professional boundaries, and what we expect from everyone at Bamboo Valley."
+    },
     "challengesTitle": "When Challenges Arise",
     "challenges1": "Some children need more support than others. This is completely normal and nothing to be ashamed of. What matters is how families respond when we reach out.",
     "challenges2": "We're building something special at Bamboo Valley — a community where children genuinely thrive. This requires partnership between school and home. When we identify concerns, we'll share them honestly with you. We'll suggest approaches that work. We'll give you resources and support.",
@@ -409,6 +411,107 @@
     "questionsDescription": "We're always happy to discuss our approach. Reach out anytime.",
     "contactUs": "Contact Us",
     "backToChildWellbeing": "← Child Wellbeing"
+  },
+  "codeOfConduct": {
+    "heroTitle": "Code of Conduct",
+    "heroSubtitle": "Guidelines for all Bamboo Valley team members — staff and volunteers",
+    "welcomeTitle": "Welcome to the Bamboo Valley team!",
+    "welcomeText": "These guidelines help ensure a safe, professional environment where children thrive and everyone feels confident in their role. Our goal is to set you up for success while maintaining the high standards families expect from Bamboo Valley.",
+    "section1Title": "1. Child Safety & Interaction",
+    "section1Intro": "Children's safety is our absolute priority. These guidelines protect both children and staff.",
+    "coreSafetyRules": "Core Safety Rules",
+    "coreSafetyItems": [
+      "Never be alone with a child: Always maintain visibility to other team members",
+      "Appropriate physical contact: High-fives, helping hands during activities are fine. Avoid extended hugging, lap-sitting, or isolated physical contact",
+      "Bathroom supervision: Only trained teachers handle bathroom assistance. Non-teaching staff wait outside",
+      "Photography: Do not take photos of children on personal devices without explicit permission from school director",
+      "Report concerns immediately: If you observe anything concerning (injury, conflict, behavioral issue), inform a teacher or director right away"
+    ],
+    "positiveInteraction": "Positive Interaction",
+    "positiveItems": [
+      "Follow children's lead in play and activities",
+      "Use encouraging, positive language",
+      "Respect children's physical boundaries",
+      "Help facilitate rather than direct activities"
+    ],
+    "section2Title": "2. Boundaries with Parents",
+    "section2Intro": "Your role is to support the school's mission, not to build personal social relationships with parents during school hours or events.",
+    "professionalComm": "Professional Communication",
+    "professionalCommItems": [
+      "Keep conversations school-focused: Child's activities, questions about the day, school events",
+      "Refer complex questions appropriately: If a parent asks about curriculum, policies, or concerns beyond your scope, direct them to teaching staff or administration",
+      "Avoid personal socializing: Don't ask parents about going out, getting drinks, or making plans outside school context",
+      "Maintain friendly professionalism: Be warm and approachable, but remember you're representing the school"
+    ],
+    "exampleScenarioLabel": "Example scenario:",
+    "exampleScenario": "If you're interested in exploring Phuket or meeting new people, those conversations should happen outside your role at school — not during drop-off/pick-up or school events where you're representing Bamboo Valley.",
+    "section3Title": "3. Confidentiality & Professionalism",
+    "section3Intro": "What you observe at school stays at school.",
+    "keepPrivate": "Keep Private:",
+    "keepPrivateItems": [
+      "Children's behavior, development, or challenges",
+      "Family situations or personal information",
+      "Conversations between parents and staff",
+      "School policies under development",
+      "Any incidents or conflicts you observe"
+    ],
+    "professionalBoundaries": "Professional Boundaries:",
+    "professionalBoundariesItems": [
+      "Don't post about school activities on social media without permission",
+      "Don't share school photos that include identifiable children",
+      "Don't discuss school matters in public places",
+      "Keep work relationships professional, even on social media"
+    ],
+    "section4Title": "4. Communication & Questions",
+    "section4Intro": "Clear communication keeps everyone on the same page and helps you feel supported.",
+    "whoToAsk": "Who to Ask When You Have Questions:",
+    "whoToAskItems": [
+      "Daily activities/schedules: Lead teacher for that day",
+      "Policy questions: School director or administrator",
+      "Safety concerns: Any teacher immediately, then follow up with director",
+      "Personal issues/scheduling: School director directly"
+    ],
+    "whenParentsAsk": "When Parents Ask You Questions:",
+    "whenParentsAskItems": [
+      "About their child's day: General observations are fine (\"They really enjoyed the mud play today!\")",
+      "About curriculum/policies: \"That's a great question for the teachers — they can give you more detail\"",
+      "About incidents/concerns: \"I'll make sure a teacher follows up with you about that\""
+    ],
+    "section5Title": "5. Professional Appearance",
+    "section5Intro": "As a team member working with children, your appearance should reflect professionalism and be practical for active, outdoor work.",
+    "doWear": "DO Wear",
+    "doWearItems": [
+      "Tops that cover your shoulders and chest",
+      "Comfortable clothes you can bend, sit, and play in",
+      "Clothes that are durable and can get dirty"
+    ],
+    "dontWear": "DON'T Wear",
+    "dontWearItems": [
+      "Tube tops, spaghetti straps, or strapless tops",
+      "Very short shorts or skirts",
+      "Revealing or tight-fitting clothing",
+      "Clothing with inappropriate messages"
+    ],
+    "whyMattersLabel": "Why this matters:",
+    "whyMatters": "Parents need to trust that everyone on campus maintains professional boundaries. Children also model behavior they observe, and appropriate dress sets important standards.",
+    "quickReference": "Quick Reference Checklist",
+    "quickReferenceItems": [
+      "Shoulders and chest covered, appropriate length",
+      "Never alone with a child — always maintain visibility",
+      "Keep parent conversations school-focused and professional",
+      "Refer complex questions to teachers or director",
+      "Report any concerns immediately to teaching staff",
+      "What happens at school stays confidential",
+      "No personal photos of children on your devices",
+      "When in doubt, ask a teacher!"
+    ],
+    "acknowledgmentTitle": "Acknowledgment",
+    "acknowledgmentText": "I have read and understand the Code of Conduct for Bamboo Valley School. I agree to follow these guidelines during my time at Bamboo Valley and understand that failure to do so may result in dismissal.",
+    "acknowledgmentCheckbox": "I acknowledge that I have read, understood, and agree to follow all guidelines outlined in this document.",
+    "fullName": "Full Name:",
+    "date": "Date:",
+    "signature": "Signature:",
+    "printButton": "Print or Save as PDF"
   },
   "ourApproach": {
     "heroTitle": "Our Approach",
@@ -872,11 +975,6 @@
           "dates": "Jun 29 - Aug 14, 2026",
           "title": "Summer Camp",
           "alt": "Summer camp activities Phuket"
-        },
-        "christmas": {
-          "dates": "Dec 2026",
-          "title": "Christmas Camp",
-          "alt": "Christmas camp Phuket children nature"
         }
       },
       "note": "Camp programs run 9am-3pm daily (extended to 4:30pm available) and include all activities, meals, and field trips."

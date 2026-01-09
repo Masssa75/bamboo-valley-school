@@ -247,8 +247,6 @@ export default async function ProgramsPage({
                 {t("holidayCamps.description")}
               </p>
               <div className="text-sm text-[#666] space-y-1 border-t border-gray-100 pt-4">
-                <p><span className="font-medium">{t("holidayCamps.october")}</span> {t("holidayCamps.octoberDates")}</p>
-                <p><span className="font-medium">{t("holidayCamps.christmas")}</span> {t("holidayCamps.christmasDates")}</p>
                 <p><span className="font-medium">{t("holidayCamps.winter")}</span> {t("holidayCamps.winterDates")}</p>
                 <p><span className="font-medium">{t("holidayCamps.songkran")}</span> {t("holidayCamps.songkranDates")}</p>
                 <p><span className="font-medium">{t("holidayCamps.summer")}</span> {t("holidayCamps.summerDates")}</p>

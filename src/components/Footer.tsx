@@ -22,7 +22,7 @@ export default function Footer({ locale = "en" }: FooterProps) {
 
           {/* Links */}
           <div className="flex flex-wrap justify-center gap-8">
-            <Link href={localePath("/#about")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+            <Link href={localePath("/our-story")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
               {t("about")}
             </Link>
             <Link href={localePath("/programs")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
