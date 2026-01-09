@@ -241,7 +241,7 @@ export default async function ShortTermSchoolPage({
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section data-track-section="short-term-hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <video
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
             autoPlay
@@ -292,7 +292,7 @@ export default async function ShortTermSchoolPage({
         </div>
 
         {/* Flexible Options */}
-        <section className="py-20 px-5 max-w-[1000px] mx-auto">
+        <section data-track-section="enrollment-options" className="py-20 px-5 max-w-[1000px] mx-auto">
           <h2 className="text-3xl font-bold text-[#2d5016] mb-6">{t("flexible.title")}</h2>
           <p className="text-lg text-gray-600 mb-10">
             {t("flexible.description")}
@@ -367,7 +367,7 @@ export default async function ShortTermSchoolPage({
         </section>
 
         {/* Who This Is For */}
-        <section className="bg-[#DCEBE1] py-20 px-5">
+        <section data-track-section="who-for" className="bg-[#DCEBE1] py-20 px-5">
           <div className="max-w-[1000px] mx-auto">
             <h2 className="text-3xl font-bold text-[#2d5016] mb-6">{t("whoFor.title")}</h2>
             <p className="text-lg text-gray-600 mb-10">
@@ -398,7 +398,7 @@ export default async function ShortTermSchoolPage({
         </section>
 
         {/* Holiday Camps */}
-        <section className="bg-[#FAD7AA] py-20 px-5">
+        <section data-track-section="holiday-camps" className="bg-[#FAD7AA] py-20 px-5">
           <div className="max-w-[1000px] mx-auto">
             <h2 className="text-3xl font-bold text-[#8b5a2b] mb-6">{t("holidayCamps.title")}</h2>
             <p className="text-lg text-[#8b5a2b]/80 mb-10">
@@ -437,7 +437,7 @@ export default async function ShortTermSchoolPage({
         </section>
 
         {/* How It Works */}
-        <section className="py-20 px-5 max-w-[1000px] mx-auto">
+        <section data-track-section="how-it-works" className="py-20 px-5 max-w-[1000px] mx-auto">
           <h2 className="text-3xl font-bold text-[#2d5016] mb-6">{t("howItWorks.title")}</h2>
           <p className="text-lg text-gray-600 mb-10">
             {t("howItWorks.description")}
@@ -472,7 +472,7 @@ export default async function ShortTermSchoolPage({
         </section>
 
         {/* Why Bamboo Valley */}
-        <section className="bg-[#C8DCE1] py-20 px-5">
+        <section data-track-section="why-bamboo-valley" className="bg-[#C8DCE1] py-20 px-5">
           <div className="max-w-[1000px] mx-auto">
             <h2 className="text-3xl font-bold text-[#2d5a6b] mb-10">{t("why.title")}</h2>
 
@@ -515,7 +515,7 @@ export default async function ShortTermSchoolPage({
         </section>
 
         {/* Final CTA */}
-        <section className="bg-gradient-to-br from-[#5a7a2b] to-[#7a9a3b] py-24 px-5 text-center">
+        <section data-track-section="short-term-cta" className="bg-gradient-to-br from-[#5a7a2b] to-[#7a9a3b] py-24 px-5 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("finalCta.title")}</h2>
           <p className="text-xl text-white/90 mb-10">
             {t("finalCta.description")}
