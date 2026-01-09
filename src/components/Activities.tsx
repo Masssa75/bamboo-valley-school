@@ -25,7 +25,7 @@ export default function Activities() {
   };
 
   return (
-    <section id="programs" className="py-28 md:py-32 px-6 md:px-12 bg-[#FAF9F6]">
+    <section id="programs" data-track-section="activities" className="py-28 md:py-32 px-6 md:px-12 bg-[#FAF9F6]">
       <div className="text-center max-w-[600px] mx-auto mb-16">
         <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d]">
           {t("title")}

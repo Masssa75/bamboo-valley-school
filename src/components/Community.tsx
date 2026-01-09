@@ -7,7 +7,7 @@ export default function Community() {
   const t = useTranslations("community");
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+    <section data-track-section="community" className="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
       {/* Image */}
       <div className="relative h-[350px] md:h-auto">
         <Image

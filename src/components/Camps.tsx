@@ -13,7 +13,7 @@ export default function Camps({ locale = "en" }: CampsProps) {
   const localePath = (path: string) => `/${locale}${path}`;
 
   return (
-    <section className="py-28 md:py-32 px-6 md:px-12 bg-white">
+    <section data-track-section="camps" className="py-28 md:py-32 px-6 md:px-12 bg-white">
       <div className="max-w-[900px] mx-auto">
         {/* Title & Description */}
         <div className="text-center max-w-[700px] mx-auto mb-12">

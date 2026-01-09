@@ -28,7 +28,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-[#FAF9F6]">
+    <section data-track-section="testimonials" className="py-20 md:py-28 px-6 bg-[#FAF9F6]">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="font-serif text-3xl md:text-4xl font-normal text-center mb-4 text-[#2d2d2d]">
           {t("title")}

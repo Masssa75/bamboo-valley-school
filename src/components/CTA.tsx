@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { trackCTAClick, trackRegisterClick } from "@/lib/gtag";
 
 interface CTAProps {
   locale?: string;
@@ -12,8 +13,18 @@ export default function CTA({ locale = "en" }: CTAProps) {
   const common = useTranslations("common");
   const localePath = (path: string) => `/${locale}${path}`;
 
+  const handleWhatsAppClick = () => {
+    trackCTAClick("Chat on WhatsApp", `/${locale}`, "cta");
+    trackRegisterClick(`/${locale}`, "whatsapp");
+  };
+
+  const handleContactClick = () => {
+    trackCTAClick("Schedule a Visit", `/${locale}`, "cta");
+    trackRegisterClick(`/${locale}`, "contact-page");
+  };
+
   return (
-    <section className="py-24 md:py-28 px-6 bg-[#BED7AF] text-center">
+    <section data-track-section="cta" className="py-24 md:py-28 px-6 bg-[#BED7AF] text-center">
       <h2 className="font-serif text-4xl md:text-5xl font-normal mb-5 text-[#2d2d2d]">
         {t("title")}
       </h2>
@@ -25,11 +36,12 @@ export default function CTA({ locale = "en" }: CTAProps) {
         target="_blank"
         rel="noopener noreferrer"
         className="btn bg-[#2d2d2d] text-white hover:bg-[#1a1a1a]"
+        onClick={handleWhatsAppClick}
       >
         {common("chatOnWhatsApp")}
       </a>
       <p className="mt-6 text-sm text-[#2d2d2d] opacity-60">
-        {t("or")} <Link href={localePath("/contact")} className="underline hover:opacity-100">{common("scheduleVisit")}</Link>
+        {t("or")} <Link href={localePath("/contact")} className="underline hover:opacity-100" onClick={handleContactClick}>{common("scheduleVisit")}</Link>
       </p>
     </section>
   );

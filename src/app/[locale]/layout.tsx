@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { locales, type Locale, localeNames } from "@/i18n/config";
 import { GA_MEASUREMENT_ID } from "@/lib/gtag";
+import { EngagementTracker } from "@/components/EngagementTracker";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -110,6 +111,7 @@ export default async function LocaleLayout({
           </>
         )}
         <NextIntlClientProvider messages={messages}>
+          <EngagementTracker />
           {children}
         </NextIntlClientProvider>
       </body>

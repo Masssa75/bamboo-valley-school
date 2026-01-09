@@ -57,3 +57,50 @@ export const trackVideoComplete = () => {
     label: 'Hero Video',
   })
 }
+
+// Track Register/Enquire button clicks with destination
+export const trackRegisterClick = (page: string, destination: string) => {
+  event({
+    action: 'register_click',
+    category: 'Conversion',
+    label: `${page} → ${destination}`,
+  })
+}
+
+// Track CTA button clicks
+export const trackCTAClick = (buttonText: string, page: string, section: string) => {
+  event({
+    action: 'cta_click',
+    category: 'Engagement',
+    label: `${buttonText} | ${page} | ${section}`,
+  })
+}
+
+// Track scroll depth milestones (25%, 50%, 75%, 100%)
+export const trackScrollDepth = (depth: number, page: string) => {
+  event({
+    action: 'scroll_depth',
+    category: 'Engagement',
+    label: page,
+    value: depth,
+  })
+}
+
+// Track section visibility (when user scrolls section into view)
+export const trackSectionView = (sectionName: string, page: string) => {
+  event({
+    action: 'section_view',
+    category: 'Engagement',
+    label: `${sectionName} | ${page}`,
+  })
+}
+
+// Track how long user spent on a section
+export const trackSectionEngagement = (sectionName: string, page: string, timeSpent: number) => {
+  event({
+    action: 'section_engagement',
+    category: 'Engagement',
+    label: `${sectionName} | ${page}`,
+    value: timeSpent, // seconds
+  })
+}

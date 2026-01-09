@@ -12,7 +12,7 @@ export default function WhatWeAre({ locale = "en" }: WhatWeAreProps) {
   const localePath = (path: string) => `/${locale}${path}`;
 
   return (
-    <section id="about" className="py-28 md:py-32 px-6 md:px-12 bg-white">
+    <section id="about" data-track-section="what-we-are" className="py-28 md:py-32 px-6 md:px-12 bg-white">
       <div className="max-w-[600px] mx-auto text-left">
         <div className="font-serif text-2xl md:text-3xl font-normal leading-relaxed text-[#2d2d2d]">
           <p className="mb-2">{t("line1")}</p>
