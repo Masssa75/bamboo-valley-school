@@ -1463,6 +1463,10 @@
     "dayAtBambooTitle": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like",
     "dayAtBambooExcerpt": "From 8:30am arrival to 3pm pickup. Follow children through a typical day at our nature school — mud play, animal care, baking, storytelling, and what makes outdoor learning different.",
     "dayAtBambooDate": "January 2, 2025",
+    "joinTeamTitle": "Join Our Team: Teaching at a Nature School in Phuket",
+    "joinTeamExcerpt": "An invitation to educators who believe learning should be natural, joyful, and free. We're not posting a job listing — we're looking for people who want to help build something different.",
+    "joinTeamDate": "January 9, 2025",
+    "joinTeamCategory": "Careers",
     "scienceTitle": "The Science Behind Our Approach",
     "scienceExcerpt": "Research-backed learning: why play builds stronger brains, how nature boosts immunity, and what 50 years of studies tell us about childhood.",
     "scienceCategory": "Research",
@@ -1601,5 +1605,140 @@
       "button": "Schedule a Visit"
     },
     "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We offer weekly, monthly, and term enrollment for local and traveling families."
+  },
+  "blogJoinTeam": {
+    "meta": {
+      "title": "Join Our Team: Teaching at a Nature School in Phuket | Bamboo Valley",
+      "description": "An invitation to educators who believe learning should be natural, joyful, and free. We're building something different at Bamboo Valley — and we're looking for people who want to help.",
+      "keywords": "teaching jobs phuket, alternative education teacher thailand, nature school teacher, waldorf teacher phuket, international teaching thailand, outdoor classroom teacher",
+      "ogTitle": "Join Our Team: Teaching at a Nature School in Phuket",
+      "ogDescription": "An invitation to educators who believe learning should be natural, joyful, and free."
+    },
+    "hero": {
+      "backLink": "← Back to Insights",
+      "title": "Join Our Team",
+      "subtitle": "An invitation to educators who believe children deserve something better",
+      "date": "January 2025 · Bamboo Valley",
+      "imageAlt": "Teachers and children gardening together at Bamboo Valley nature school"
+    },
+    "featured": {
+      "title": "What we're looking for",
+      "body": "We're not posting a job listing. We're extending an invitation. If you believe education could be <strong>much, much better</strong> — if traditional schools feel unnatural to you — if you want to help build something meaningful rather than just execute a curriculum — keep reading."
+    },
+    "intro": {
+      "p1": "Finding good teachers has always been our biggest challenge. Not because good teachers don't exist — but because the ones we want are exactly the ones big international schools snap up with higher salaries.",
+      "p2": "But here's what we've realized: the teachers who come to us for the mission, not the paycheck, turn out to be better fits. They stay longer. They're more engaged. They actually want to experiment, iterate, and build something new.",
+      "p3": "If that sounds like you, this page is for you."
+    },
+    "problem": {
+      "title": "The problem with traditional teaching",
+      "p1": "You probably already feel it. The endless curriculum requirements that don't match how children actually learn. The pressure to prepare for tests that measure the wrong things. The bureaucracy. The hierarchy. The sense that you're part of a machine rather than a team.",
+      "p2": "You watch children who were born curious become students who just want the right answer. You see natural learners trained to sit still, stay quiet, and follow instructions.",
+      "quote": "What if education could work with childhood instead of against it?",
+      "p3": "That question is why we exist."
+    },
+    "different": {
+      "title": "What we're building",
+      "p1": "Bamboo Valley is a nature-based school on a 3.5-rai palm plantation in Phuket. Nearly 80 palm trees. Chickens, ducks, rabbits. A mud kitchen, outdoor classrooms, space to run and climb and explore.",
+      "p2": "We combine Waldorf-inspired education with what we call precision learning — identifying specific learning blocks and removing them collaboratively, rather than drilling harder when children struggle.",
+      "p3": "Our children don't sit at desks for hours. They learn through play, through nature, through real experiences. They care for animals. They bake bread. They get muddy. They do yoga under the trees.",
+      "p4": "And it works. Children who learn this way develop stronger problem-solving skills, better emotional regulation, and — most importantly — they stay curious. They want to keep learning."
+    },
+    "team": {
+      "title": "How our team works",
+      "p1": "We don't do hierarchy. We've learned that when someone sees themselves as \"head of\" anything, it creates friction. Our local Thai, Filipino, and Burmese staff work as a soft, collaborative team. Everyone is equal. Everyone brings their own skills.",
+      "p2": "Maybe you're an expert in phonics. Maybe you have deep experience with nature education. Maybe you're brilliant at helping children with math through play. We want people who bring something — and who want to learn from others.",
+      "p3": "This isn't a place where you'll execute someone else's curriculum. It's a place where you'll help develop new approaches, test ideas, fail sometimes, and build something together."
+    },
+    "future": {
+      "title": "The future of education",
+      "p1": "We're living through a moment when AI is changing everything. And there's a temptation to just give children tablets with AI tutors — replacing one kind of screen-based learning with another.",
+      "p2": "We believe the opposite. The more technology advances, the more children need what technology can't provide: human connection, natural experiences, the feeling of mud between their fingers and wind in their hair.",
+      "p3": "But technology can enhance how we teach. We use AI and research tools to find better ways of helping children. We share what we learn with other educators around the world. We're not just building a school — we're developing approaches that could help children everywhere."
+    },
+    "whatWeLookFor": {
+      "title": "What we look for",
+      "intro": "We care less about your credentials than your character. That said, here's what makes someone a great fit:",
+      "items": [
+        {
+          "title": "Openness.",
+          "text": "You're willing to try new things, fail, learn, and try again. You don't need everything figured out."
+        },
+        {
+          "title": "Collaboration.",
+          "text": "You see yourself as part of a team, not above it. You learn from everyone, regardless of their title or background."
+        },
+        {
+          "title": "Belief.",
+          "text": "You genuinely believe education can be much better than it is. This isn't just a job — it's something you care about."
+        },
+        {
+          "title": "Warmth.",
+          "text": "Children should feel safe and loved. You bring patience, kindness, and genuine interest in each child as an individual."
+        },
+        {
+          "title": "Skills.",
+          "text": "You bring something. Maybe it's early literacy, maybe it's outdoor education, maybe it's music or movement or science. We want people with depth."
+        }
+      ]
+    },
+    "whatYouGet": {
+      "title": "What you get",
+      "intro": "Beyond salary, here's what being part of Bamboo Valley means:",
+      "items": [
+        {
+          "title": "Autonomy.",
+          "text": "Freedom to experiment, develop your own approaches, and actually influence how things are done."
+        },
+        {
+          "title": "Environment.",
+          "text": "You'll work under palm trees, not fluorescent lights. Your commute ends at a nature sanctuary."
+        },
+        {
+          "title": "Purpose.",
+          "text": "You're not just teaching — you're helping build something that could change how education works."
+        },
+        {
+          "title": "Community.",
+          "text": "A supportive team. Monthly parent BBQs. A culture where everyone is on the same side."
+        },
+        {
+          "title": "Phuket.",
+          "text": "Beaches, mountains, Thai food, a thriving expat community. Many of our team relocated from abroad and love it here."
+        }
+      ]
+    },
+    "honestTruth": {
+      "title": "The honest truth",
+      "intro": "We believe in transparency. Here's what you should know:",
+      "items": [
+        {
+          "title": "We can't match international school salaries.",
+          "text": "If maximizing income is your priority, we're not the right fit. We offer competitive local salaries, but big corporate schools will pay more."
+        },
+        {
+          "title": "We're still building.",
+          "text": "This isn't a polished institution with everything figured out. It's a work in progress. That's exciting to some people and stressful for others."
+        },
+        {
+          "title": "We expect you to contribute, not just execute.",
+          "text": "If you want a job where you just follow instructions, this isn't it. We need people who think, suggest, and help build."
+        }
+      ],
+      "conclusion": "If you've read this far and you're still interested — that tells us something good about you."
+    },
+    "location": {
+      "title": "Relocating to Phuket",
+      "p1": "We've had many teachers relocate from other countries. Thailand makes it relatively easy with teacher visas, and Phuket offers a quality of life that's hard to match.",
+      "p2": "The cost of living is reasonable. The weather is warm year-round. The food is incredible. The beaches are beautiful. There's a strong international community.",
+      "p3": "If you're considering a move, we're happy to answer questions about what it's actually like to live and work here."
+    },
+    "cta": {
+      "title": "Let's talk",
+      "description": "If this resonates with you, reach out. Tell us about yourself — not just your CV, but what you believe about education and why you're interested in what we're building.",
+      "button": "Send us an email",
+      "note": "We read every message personally."
+    },
+    "closing": "Bamboo Valley is a nature-based school in Cherngtalay, Phuket, Thailand. We serve children ages 2-9 and their families."
   }
 }

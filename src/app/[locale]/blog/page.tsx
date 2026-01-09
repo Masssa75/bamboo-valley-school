@@ -40,7 +40,7 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations("blog");
 
-  const posts = [
+  const basePosts = [
     {
       slug: "day-at-bamboo-valley",
       href: `/${locale}/blog/day-at-bamboo-valley`,
@@ -82,6 +82,22 @@ export default async function BlogPage({
       imageAlt: "Bamboo Valley founders with their family",
     },
   ];
+
+  // English-only posts (for teacher recruitment - we need English speakers)
+  const englishOnlyPosts = locale === "en" ? [
+    {
+      slug: "join-our-team",
+      href: `/en/blog/join-our-team`,
+      title: t("joinTeamTitle"),
+      excerpt: t("joinTeamExcerpt"),
+      date: t("joinTeamDate"),
+      category: t("joinTeamCategory"),
+      image: "/images/Gardening.jpeg",
+      imageAlt: "Teachers and children at Bamboo Valley nature school",
+    },
+  ] : [];
+
+  const posts = [...englishOnlyPosts, ...basePosts];
 
   return (
     <>
