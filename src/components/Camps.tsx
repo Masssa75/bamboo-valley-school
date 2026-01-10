@@ -56,7 +56,7 @@ export default function Camps({ locale = "en" }: CampsProps) {
         {/* CTA */}
         <div className="text-center">
           <a
-            href="https://phuketcamp.com"
+            href="https://phuketcamp.com?utm_source=bamboovalleyphuket&utm_medium=referral&utm_campaign=school_site"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"

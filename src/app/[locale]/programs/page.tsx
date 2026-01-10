@@ -252,7 +252,7 @@ export default async function ProgramsPage({
                 <p><span className="font-medium">{t("holidayCamps.summer")}</span> {t("holidayCamps.summerDates")}</p>
               </div>
               <a
-                href="https://phuketcamp.com"
+                href="https://phuketcamp.com?utm_source=bamboovalleyphuket&utm_medium=referral&utm_campaign=school_site"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 text-[#8fb07a] hover:text-[#6d9b5a] font-medium text-sm"
