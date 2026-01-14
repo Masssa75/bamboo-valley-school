@@ -153,7 +153,7 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
             </div>
           )}
         </li>
-        {/* Child Wellbeing Dropdown */}
+        {/* Behavior & Wellbeing Dropdown */}
         <li
           className="relative"
           onMouseEnter={() => setWellbeingOpen(true)}
@@ -165,7 +165,7 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
               useDarkText ? "text-[#2d2d2d]" : "text-white"
             }`}
           >
-            {t("childWellbeing")}
+            {t("ourApproachNav")}
             <svg className={`w-3 h-3 transition-transform ${wellbeingOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -176,34 +176,8 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
                 <Link href={localePath("/child-wellbeing")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
                   <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">💚</span>
                   <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">{t("overview")}</div>
-                    <div className="text-xs text-[#888]">{t("howWeSupport")}</div>
-                  </div>
-                </Link>
-
-                <div className="border-t border-gray-100 my-2"></div>
-
-                <Link href={localePath("/child-wellbeing/our-approach")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
-                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🤝</span>
-                  <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">{t("ourApproach")}</div>
-                    <div className="text-xs text-[#888]">{t("collaborativeProblemSolving")}</div>
-                  </div>
-                </Link>
-
-                <Link href={localePath("/child-wellbeing/understanding")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
-                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🔍</span>
-                  <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">{t("understandingYourChild")}</div>
-                    <div className="text-xs text-[#888]">{t("findingRootCause")}</div>
-                  </div>
-                </Link>
-
-                <Link href={localePath("/child-wellbeing/behavior-support")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
-                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">📋</span>
-                  <div>
-                    <div className="text-sm font-medium text-[#2d2d2d]">{t("behaviorSupport")}</div>
-                    <div className="text-xs text-[#888]">{t("tierResponse")}</div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("childWellbeing")}</div>
+                    <div className="text-xs text-[#888]">{t("howWeSupportChildren")}</div>
                   </div>
                 </Link>
 
@@ -220,6 +194,14 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
                   <div>
                     <div className="text-sm font-medium text-[#2d2d2d]">{t("codeOfConduct")}</div>
                     <div className="text-xs text-[#888]">{t("staffVolunteerGuidelines")}</div>
+                  </div>
+                </Link>
+
+                <Link href={localePath("/child-wellbeing/health-guidelines")} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#BED7AF]/20 transition-colors">
+                  <span className="w-9 h-9 bg-[#BED7AF] rounded-lg flex items-center justify-center text-base">🩺</span>
+                  <div>
+                    <div className="text-sm font-medium text-[#2d2d2d]">{t("healthGuidelines")}</div>
+                    <div className="text-xs text-[#888]">{t("communityHealthPolicy")}</div>
                   </div>
                 </Link>
 
@@ -292,12 +274,11 @@ export default function Navigation({ variant = "dark", locale = "en" }: Navigati
             <Link href={localePath("/programs#kindergarten")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("kindergarten")} <span className="text-[#999]">3–6</span></Link>
             <Link href={localePath("/programs#primary")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("primary")} <span className="text-[#999]">6–9</span></Link>
             <Link href={localePath("/programs#camps")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("holidayCamps")}</Link>
-            <Link href={localePath("/child-wellbeing")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>{t("childWellbeing")}</Link>
-            <Link href={localePath("/child-wellbeing/our-approach")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("ourApproach")}</Link>
-            <Link href={localePath("/child-wellbeing/understanding")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("understandingYourChild")}</Link>
-            <Link href={localePath("/child-wellbeing/behavior-support")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("behaviorSupport")}</Link>
+            <Link href={localePath("/child-wellbeing")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100 font-medium" onClick={() => setMobileMenuOpen(false)}>{t("ourApproachNav")}</Link>
+            <Link href={localePath("/child-wellbeing")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("childWellbeing")}</Link>
             <Link href={localePath("/child-wellbeing/separation-anxiety")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("separationAnxiety")}</Link>
             <Link href={localePath("/child-wellbeing/code-of-conduct")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("codeOfConduct")}</Link>
+            <Link href={localePath("/child-wellbeing/health-guidelines")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("healthGuidelines")}</Link>
             <Link href={localePath("/science")} className="px-6 py-3 pl-10 text-[#666] hover:bg-gray-100 text-sm" onClick={() => setMobileMenuOpen(false)}>{t("theResearch")}</Link>
             <Link href={localePath("/contact")} className="px-6 py-3 text-[#2d2d2d] hover:bg-gray-100" onClick={() => setMobileMenuOpen(false)}>{t("visitUs")}</Link>
             <div className="px-6 py-3">

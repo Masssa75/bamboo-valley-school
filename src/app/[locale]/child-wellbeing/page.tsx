@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import BehaviorSidebar from "@/components/BehaviorSidebar";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -15,15 +16,16 @@ export async function generateMetadata({
   const path = "/child-wellbeing/";
 
   return {
-    title: "Child Wellbeing | Bamboo Valley - How We Support Every Child",
+    title: "Our Philosophy | Bamboo Valley - How We Support Every Child",
     description:
-      "Our approach to child wellbeing at Bamboo Valley. Based on Collaborative & Proactive Solutions by Dr. Ross Greene. Clear support systems, fair processes, and true partnership with families.",
+      "Our approach to child wellbeing at Bamboo Valley. Based on Collaborative & Proactive Solutions by Dr. Ross Greene. Children do well if they can.",
     keywords: [
       "child wellbeing",
-      "behavior support",
+      "CPS",
       "collaborative proactive solutions",
+      "ross greene",
       "Waldorf school Phuket",
-      "child psychology",
+      "positive discipline",
     ],
     alternates: {
       canonical: `${baseUrl}/${locale}${path}`,
@@ -45,163 +47,240 @@ export default async function ChildWellbeingPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("childWellbeing");
-  const tCommon = await getTranslations("common");
+  const tApproach = await getTranslations("ourApproach");
 
   return (
     <>
       <Navigation locale={locale as Locale} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#BED7AF] to-[#a8c99a] pt-32 pb-20 md:pt-40 md:pb-24 px-6 text-center">
-        <h1 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d] mb-4">
-          {t("heroTitle")}
-        </h1>
-        <p className="text-lg md:text-xl text-[#444] max-w-[600px] mx-auto">
-          {t("heroSubtitle")}
-        </p>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 px-6 text-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/images/wellbeing-hero.jpg)" }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10">
+          <h1 className="font-serif text-4xl md:text-5xl font-normal text-white mb-4">
+            {t("heroTitle")}
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-[600px] mx-auto">
+            {t("heroSubtitle")}
+          </p>
+        </div>
       </section>
 
-      {/* Content */}
-      <article className="py-16 px-6 bg-[#FAF9F6]">
-        <div className="max-w-[800px] mx-auto">
+      {/* Content with Sidebar */}
+      <div className="bg-[#FAF9F6] py-16 px-6">
+        <div className="max-w-[1100px] mx-auto flex gap-12">
+          <BehaviorSidebar locale={locale} />
 
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("coreBelief")}</h2>
+          <article className="flex-1 min-w-0">
+            <div className="max-w-[700px]">
 
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("coreBelief1")}
-          </p>
-
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("coreBelief2")}
-          </p>
-
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("coreBelief3")}
-          </p>
-
-          <p className="text-[#444] text-lg leading-relaxed mb-12">
-            {t("coreBelief4")}
-          </p>
-
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("inPractice")}</h2>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="font-serif text-xl font-medium text-[#2d2d2d] mb-4">{t("weProvide")}</h3>
-              <ul className="space-y-3">
-                {t.raw("weProvideItems").map((item: string, i: number) => (
-                  <li key={i} className="text-[#444] pl-6 relative before:content-['•'] before:absolute before:left-2 before:text-[#8fb07a]">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="font-serif text-xl font-medium text-[#2d2d2d] mb-4">{t("weExpect")}</h3>
-              <ul className="space-y-3">
-                {t.raw("weExpectItems").map((item: string, i: number) => (
-                  <li key={i} className="text-[#444] pl-6 relative before:content-['•'] before:absolute before:left-2 before:text-[#8fb07a]">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-[#444] text-lg leading-relaxed mb-12">
-            {t("mostChildrenThrive")}
-          </p>
-
-          {/* Separator */}
-          <div className="text-center my-12 text-[#ccc] text-2xl tracking-[8px]">• • •</div>
-
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("learnMore")}</h2>
-
-          <p className="text-[#444] text-lg leading-relaxed mb-8">
-            {t("learnMoreIntro")}
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-5 mb-12">
-            {[
-              {
-                title: t("ourApproachCard.title"),
-                description: t("ourApproachCard.description"),
-                href: `/${locale}/child-wellbeing/our-approach`
-              },
-              {
-                title: t("understandingCard.title"),
-                description: t("understandingCard.description"),
-                href: `/${locale}/child-wellbeing/understanding`
-              },
-              {
-                title: t("behaviorSupportCard.title"),
-                description: t("behaviorSupportCard.description"),
-                href: `/${locale}/child-wellbeing/behavior-support`
-              },
-              {
-                title: t("separationAnxietyCard.title"),
-                description: t("separationAnxietyCard.description"),
-                href: `/${locale}/child-wellbeing/separation-anxiety`
-              },
-              {
-                title: t("codeOfConductCard.title"),
-                description: t("codeOfConductCard.description"),
-                href: `/${locale}/child-wellbeing/code-of-conduct`
-              }
-            ].map((card, i) => (
-              <Link
-                key={i}
-                href={card.href}
-                className="bg-white p-7 rounded-lg border-2 border-transparent hover:border-[#BED7AF] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 group"
-              >
-                <h3 className="font-serif text-xl font-medium text-[#2d2d2d] mb-2 flex items-center justify-between">
-                  {card.title}
-                  <span className="text-[#8fb07a] group-hover:translate-x-1 transition-transform">→</span>
-                </h3>
-                <p className="text-[#666] text-[0.95rem] leading-relaxed">
-                  {card.description}
+              {/* Core Philosophy Callout */}
+              <div className="bg-[#f0f7ed] border-l-4 border-[#8fb07a] p-6 rounded-r-lg mb-12">
+                <p className="text-2xl font-serif text-[#2d2d2d] mb-3">
+                  {tApproach("corePhilosophy")}
                 </p>
-              </Link>
-            ))}
-          </div>
+                <p className="text-[#444] text-lg leading-relaxed">
+                  {tApproach("corePhilosophyDesc")}
+                </p>
+              </div>
 
-          <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("challengesTitle")}</h2>
+              {/* Our Core Belief */}
+              <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{t("coreBelief")}</h2>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("challenges1")}
-          </p>
+              <p className="text-[#444] text-lg leading-relaxed mb-6">
+                {t("coreBelief1")}
+              </p>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("challenges2")}
-          </p>
+              <p className="text-[#444] text-lg leading-relaxed mb-6">
+                {t("coreBelief2")}
+              </p>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("challenges3")}
-          </p>
+              <p className="text-[#444] text-lg leading-relaxed mb-6">
+                {t("coreBelief3")}
+              </p>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-6">
-            {t("challenges4")}
-          </p>
+              <p className="text-[#444] text-lg leading-relaxed mb-12">
+                {t("coreBelief4")}
+              </p>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-12">
-            {t("challenges5")}
-          </p>
+              {/* Traditional vs Our Approach */}
+              <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{tApproach("differentWay")}</h2>
 
-          <p className="text-[#444] text-lg leading-relaxed mb-12">
-            {t("challenges6")}
-          </p>
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                {/* Traditional */}
+                <div className="bg-[#ffebee] border-2 border-[#f44336] rounded-lg overflow-hidden">
+                  <div className="bg-[#f44336] text-white px-4 py-2 font-semibold text-center">
+                    {tApproach("traditionalThinking")}
+                  </div>
+                  <div className="p-5">
+                    <p className="text-[#444] font-medium mb-3">{tApproach("traditionalMotto")}</p>
+                    <ul className="text-[#666] space-y-2 text-[0.95rem]">
+                      <li>• {tApproach("traditionalPoints.0")}</li>
+                      <li>• {tApproach("traditionalPoints.1")}</li>
+                      <li>• {tApproach("traditionalPoints.2")}</li>
+                      <li>• {tApproach("traditionalPoints.3")}</li>
+                    </ul>
+                    <p className="text-sm text-[#888] mt-4 italic">
+                      {tApproach("traditionalResult")}
+                    </p>
+                  </div>
+                </div>
 
-          {/* CTA */}
-          <div className="bg-white p-10 rounded-xl text-center">
-            <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">{t("questions")}</h3>
-            <p className="text-[#666] mb-6">{t("questionsDescription")}</p>
-            <Link href={`/${locale}/contact`} className="btn btn-primary">
-              {t("contactUs")}
-            </Link>
-          </div>
+                {/* Our Approach */}
+                <div className="bg-[#f0f7ed] border-2 border-[#8fb07a] rounded-lg overflow-hidden">
+                  <div className="bg-[#8fb07a] text-white px-4 py-2 font-semibold text-center">
+                    {tApproach("ourApproachLabel")}
+                  </div>
+                  <div className="p-5">
+                    <p className="text-[#444] font-medium mb-3">{tApproach("ourApproachMotto")}</p>
+                    <ul className="text-[#666] space-y-2 text-[0.95rem]">
+                      <li>• {tApproach("ourApproachPoints.0")}</li>
+                      <li>• {tApproach("ourApproachPoints.1")}</li>
+                      <li>• {tApproach("ourApproachPoints.2")}</li>
+                      <li>• {tApproach("ourApproachPoints.3")}</li>
+                    </ul>
+                    <p className="text-sm text-[#888] mt-4 italic">
+                      {tApproach("ourApproachResult")}
+                    </p>
+                  </div>
+                </div>
+              </div>
 
+              {/* Why Consequences Alone Don't Work */}
+              <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{tApproach("whyConsequencesDontWork")}</h2>
+
+              <p className="text-[#444] text-lg leading-relaxed mb-6">
+                {tApproach("consequences1")}
+              </p>
+
+              <p className="text-[#444] text-lg leading-relaxed mb-6">
+                {tApproach("consequences2")}
+              </p>
+
+              <div className="bg-white rounded-lg p-6 mb-12 border border-[#e5e5e5]">
+                <p className="text-[#444] leading-relaxed italic">
+                  {tApproach("analogy")}
+                </p>
+              </div>
+
+              {/* The 3-Step Process */}
+              <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{tApproach("howItWorks")}</h2>
+
+              <p className="text-[#444] text-lg leading-relaxed mb-8">
+                {tApproach("howItWorksDesc")}
+              </p>
+
+              <div className="space-y-6 mb-12">
+                {/* Step 1 */}
+                <div className="border-2 border-[#C8DCE1] rounded-lg overflow-hidden">
+                  <div className="bg-[#C8DCE1] px-5 py-3 font-semibold text-[#2d2d2d] flex items-center gap-3">
+                    <span className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#2d2d2d] font-bold">1</span>
+                    {tApproach("step1Title")}
+                  </div>
+                  <div className="p-5 bg-[#f8fbfc]">
+                    <p className="text-[#444] mb-3">
+                      {tApproach("step1Desc")}
+                    </p>
+                    <div className="bg-white border-l-4 border-[#C8DCE1] pl-4 py-2 italic text-[#666]">
+                      {tApproach("step1Example")}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="border-2 border-[#C8DCE1] rounded-lg overflow-hidden">
+                  <div className="bg-[#C8DCE1] px-5 py-3 font-semibold text-[#2d2d2d] flex items-center gap-3">
+                    <span className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#2d2d2d] font-bold">2</span>
+                    {tApproach("step2Title")}
+                  </div>
+                  <div className="p-5 bg-[#f8fbfc]">
+                    <p className="text-[#444] mb-3">
+                      {tApproach("step2Desc")}
+                    </p>
+                    <div className="bg-white border-l-4 border-[#C8DCE1] pl-4 py-2 italic text-[#666]">
+                      {tApproach("step2Example")}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="border-2 border-[#C8DCE1] rounded-lg overflow-hidden">
+                  <div className="bg-[#C8DCE1] px-5 py-3 font-semibold text-[#2d2d2d] flex items-center gap-3">
+                    <span className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#2d2d2d] font-bold">3</span>
+                    {tApproach("step3Title")}
+                  </div>
+                  <div className="p-5 bg-[#f8fbfc]">
+                    <p className="text-[#444] mb-3">
+                      {tApproach("step3Desc")}
+                    </p>
+                    <div className="bg-white border-l-4 border-[#C8DCE1] pl-4 py-2 italic text-[#666]">
+                      {tApproach("step3Example")}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Why This Works */}
+              <h2 className="font-serif text-3xl font-normal text-[#2d2d2d] mb-6">{tApproach("whyThisWorks")}</h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                <div className="bg-white rounded-lg p-5 border border-[#e5e5e5]">
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{tApproach("buildsSkills")}</h3>
+                  <p className="text-[#666] text-[0.95rem]">
+                    {tApproach("buildsSkillsDesc")}
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg p-5 border border-[#e5e5e5]">
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{tApproach("solutionsLast")}</h3>
+                  <p className="text-[#666] text-[0.95rem]">
+                    {tApproach("solutionsLastDesc")}
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg p-5 border border-[#e5e5e5]">
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{tApproach("relationshipsStrengthen")}</h3>
+                  <p className="text-[#666] text-[0.95rem]">
+                    {tApproach("relationshipsStrengthenDesc")}
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg p-5 border border-[#e5e5e5]">
+                  <h3 className="font-semibold text-[#2d2d2d] mb-2">{tApproach("proactive")}</h3>
+                  <p className="text-[#666] text-[0.95rem]">
+                    {tApproach("proactiveDesc")}
+                  </p>
+                </div>
+              </div>
+
+              {/* Research */}
+              <div className="bg-white border-2 border-[#BED7AF] rounded-lg p-6 mb-12">
+                <h3 className="font-semibold text-[#2d2d2d] mb-3">{tApproach("researchTitle")}</h3>
+                <p className="text-[#444] leading-relaxed mb-4">
+                  {tApproach("research1")}
+                </p>
+                <p className="text-[#444] leading-relaxed">
+                  {tApproach("research2")}
+                </p>
+                <p className="text-sm text-[#888] mt-4">
+                  {tApproach("researchLink")}
+                </p>
+              </div>
+
+              {/* CTA */}
+              <div className="bg-white p-10 rounded-xl text-center border border-[#e5e5e5]">
+                <h3 className="font-serif text-2xl font-normal text-[#2d2d2d] mb-3">{t("questions")}</h3>
+                <p className="text-[#666] mb-6">{t("questionsDescription")}</p>
+                <Link href={`/${locale}/contact`} className="btn btn-primary">
+                  {t("contactUs")}
+                </Link>
+              </div>
+
+            </div>
+          </article>
         </div>
-      </article>
+      </div>
 
       <Footer locale={locale as Locale} />
     </>
