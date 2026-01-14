@@ -68,6 +68,7 @@ function DaySection({
   image,
   imageAlt,
   imagePosition = "wide",
+  uncropped = false,
   children,
 }: {
   time: string;
@@ -76,13 +77,14 @@ function DaySection({
   image?: string;
   imageAlt?: string;
   imagePosition?: "wide" | "offset-left" | "offset-right" | "tall";
+  uncropped?: boolean;
   children: React.ReactNode;
 }) {
   const imageClasses = {
-    wide: "w-full h-[350px] object-cover rounded-xl mb-8",
-    "offset-left": "w-[90%] mr-[10%] h-[320px] object-cover rounded-xl mb-8",
-    "offset-right": "w-[90%] ml-[10%] h-[320px] object-cover rounded-xl mb-8",
-    tall: "w-full h-[450px] object-cover rounded-xl mb-8",
+    wide: uncropped ? "w-full h-auto object-contain rounded-xl mb-8" : "w-full h-[350px] object-cover rounded-xl mb-8",
+    "offset-left": uncropped ? "w-[90%] mr-[10%] h-auto object-contain rounded-xl mb-8" : "w-[90%] mr-[10%] h-[320px] object-cover rounded-xl mb-8",
+    "offset-right": uncropped ? "w-[90%] ml-[10%] h-auto object-contain rounded-xl mb-8" : "w-[90%] ml-[10%] h-[320px] object-cover rounded-xl mb-8",
+    tall: uncropped ? "w-full h-auto object-contain rounded-xl mb-8" : "w-full h-[450px] object-cover rounded-xl mb-8",
   };
 
   return (
@@ -504,6 +506,7 @@ export default async function DayAtBambooValleyPost({
           image="/images/quiet-time.jpg"
           imageAlt={t("quietTime.imageAlt")}
           imagePosition="offset-left"
+          uncropped={true}
         >
           <QAItem question={t("quietTime.q1.question")}>
             <p>{t("quietTime.q1.answer1")}</p>
