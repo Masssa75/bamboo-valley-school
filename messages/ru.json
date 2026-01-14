@@ -1490,127 +1490,301 @@
   },
   "blogDayAtBamboo": {
     "meta": {
-      "title": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like | Phuket",
-      "description": "Follow a typical day at our nature school in Phuket. From morning animal care to afternoon mud play, discover what makes outdoor kindergarten different.",
-      "keywords": "nature kids activities phuket, outdoor kindergarten phuket, nature school phuket, forest school thailand, waldorf phuket",
-      "ogTitle": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like",
-      "ogDescription": "From 8:30am arrival to 3pm pickup. What actually happens at a nature school in Phuket."
+      "title": "День в Bamboo Valley: Как выглядит обучение на природе | Пхукет",
+      "description": "Проведите типичный день в нашей школе на природе на Пхукете. От утреннего прихода до встречи родителей — с играми, открытиями, грязью и радостью.",
+      "keywords": "детские занятия на природе пхукет, детский сад на природе пхукет, школа на природе пхукет, лесная школа таиланд, waldorf пхукет, день в детском саду, расписание детского сада пхукет",
+      "ogTitle": "День в Bamboo Valley: Как на самом деле выглядит обучение на природе",
+      "ogDescription": "Родители спрашивают: Как выглядит обычный день? Загляните за ворота — от прихода до встречи с родителями, со всеми играми, открытиями, грязью и радостью."
     },
     "hero": {
-      "backLink": "← Back to Insights",
-      "title": "A Day at Bamboo Valley",
-      "subtitle": "What Nature-Based Learning Actually Looks Like",
-      "date": "January 2025 · Bamboo Valley",
-      "imageAlt": "Children playing outdoors at nature school Phuket"
+      "backLink": "← Назад к статьям",
+      "title": "День в Bamboo Valley",
+      "subtitle": "Как на самом деле выглядит обучение на природе",
+      "date": "Январь 2025 · Bamboo Valley",
+      "imageAlt": "Дети играют на свежем воздухе в школе на природе на Пхукете"
     },
     "intro": {
-      "p1": "Parents often ask: \"What does a typical day look like at Bamboo Valley?\"",
-      "p2": "It's a fair question. \"Nature-based learning\" can sound vague. What does it actually mean? What do children actually do all day?",
-      "p3": "Here's a walk through a real day at our school. From morning arrival to afternoon pickup — what happens, why it matters, and what you'd see if you were here."
+      "lead": "Родители часто спрашивают: «Как выглядит обычный день?» Загляните за ворота — от момента прихода вашего ребенка до встречи с родителями, со всеми играми, открытиями, грязью и радостью."
     },
-    "timeline": {
-      "arrival": {
-        "time": "8:30am",
-        "title": "Morning Arrival",
-        "p1": "The morning starts under the palm trees. Children arrive and immediately scatter — some to check on the chickens, others to see what's growing in the vegetable garden, a few straight to the sandbox.",
-        "p2": "There's no rush to get inside. There is no inside.",
-        "p3": "Our 3.5-rai palm plantation is the classroom. Nearly 100 palm trees provide shade all day. Children greet the teachers, drop their bags in the covered area, and begin exploring.",
-        "p4": "A boy crouches by the chicken coop. \"She laid three eggs yesterday,\" he tells a friend arriving behind him. \"Come see.\""
+    "arrival": {
+      "time": "Приход – 10:00",
+      "title": "Приход и свободная игра",
+      "intro": "Вы провожаете ребенка до класса, обнимаете его на прощание, и он сразу убегает играть. Без ожидания, без построения в очередь. Класс готов: деревянные кубики, железная дорога, игрушечная кухня, куклы, костюмы для переодевания, столик для рисования. Дети сами выбирают, чем хотят заняться.",
+      "imageAlt": "Класс Bamboo Valley с полкой природных материалов, витражными окнами и деревянной мебелью",
+      "q1": {
+        "question": "Это просто игра или они чему-то учатся?",
+        "answer1": "И то, и другое. Когда дети сами выбирают занятие, они развивают самостоятельность, креативность и внутреннюю мотивацию.",
+        "answer2": "Кроме того, в игру органично вплетается обучение чтению (phonics) — воспитатель по очереди занимается с двумя детьми по 5-10 минут индивидуально, после чего они возвращаются к игре. Каждый ребенок, каждый день."
       },
-      "circle": {
-        "time": "9:00am",
-        "title": "Morning Circle",
-        "p1": "The children gather on the grass under the old mango tree. Morning circle is simple: a song, a story, a conversation about what day it is and what we'll do.",
-        "p2": "Today's story involves a farmer and a stubborn goat. The children laugh at the goat's antics. They don't realize they're learning about problem-solving and persistence.",
-        "p3": "Circle time ends with movement — shaking out the wiggles, stretching toward the sky, breathing deeply. Then the real learning begins."
+      "q2": {
+        "question": "Что делает воспитатель во время свободной игры?",
+        "answer1": "Наблюдает. Помогает, когда нужно. Но не руководит. Дети сами направляют процесс.",
+        "answer2": "Воспитатель смотрит, замечает, что привлекает каждого ребенка, и вмешивается только при необходимости."
       },
-      "freePlay": {
-        "time": "9:30am",
-        "title": "Free Play & Exploration",
-        "p1": "This is the heart of our approach. For the next hour, children choose what to do.",
-        "p2": "Some build an elaborate dam in the water play area, discovering physics without knowing the word. Others dig for worms, sorting them by size — math in disguise. A group of girls has claimed the wooden climbing structure as their \"ship\" and is sailing to an island only they can see.",
-        "p3": "Teachers don't direct. They observe. They ask questions. \"What do you think will happen if you make that wall taller?\" \"Where do you think the worms come from?\"",
-        "p4": "A child who struggled with sharing yesterday is practicing — offering the shovel to a friend, waiting for a turn on the swing. These social skills can't be taught from a worksheet. They're learned in the moment, in real situations, with patient adults nearby.",
-        "quote": "Research on self-directed play shows that children develop stronger problem-solving skills and emotional regulation when given autonomy over their activities."
-      },
-      "snack": {
-        "time": "10:30am",
-        "title": "Snack Time",
-        "p1": "Snack happens on the grass. Fresh fruit, rice crackers, water from their own bottles.",
-        "p2": "There's no rush. Children chat about bugs they found, plans they're making, things they noticed. A teacher sits with them, part of the conversation, not supervising from above.",
-        "p3": "\"Look at that cloud,\" someone says, pointing up. \"It looks like a dragon.\" Soon they're all looking, finding shapes, arguing good-naturedly about what they see.",
-        "p4": "This is vocabulary building. This is observation skills. This is just... being children."
-      },
-      "learning": {
-        "time": "11:00am",
-        "title": "Learning Activities",
-        "p1": "Mid-morning brings more structured activities — but not worksheets. Never worksheets.",
-        "p2": "Today one group is baking bread. They measure flour, count spoonfuls of yeast, knead dough with small hands. Math, science, patience, sequencing — all wrapped in the joy of making something real.",
-        "p3": "Another group works in the vegetable garden. They're checking what's ready to harvest, pulling weeds, watering seedlings. One child discovers a caterpillar and everyone crowds around to look. The lesson plan changes. That's okay. The caterpillar becomes the lesson.",
-        "p4": "The older children gather for playful phonics — songs that build letter sounds, games that develop reading readiness. No pressure, no grades. Just the foundation being laid, gently, at each child's pace.",
-        "bakingQuote": "Baking teaches children math and sequencing naturally — measuring, counting, following steps — while developing patience and the satisfaction of creating something tangible.",
-        "gardenQuote": "Garden-based learning improves academic outcomes, particularly in math. Children develop responsibility, patience, and a connection to nature that stays with them."
-      },
-      "lunch": {
-        "time": "12:00pm",
-        "title": "Lunch Together",
-        "p1": "We eat together. Real food, prepared fresh. Children help set out plates, pour water, pass dishes.",
-        "p2": "The conversation flows. A teacher asks what everyone's favorite part of the morning was. Stories tumble out. The caterpillar. The bread rising. The cloud that looked like a dragon but maybe was actually a fish.",
-        "p3": "Family-style meals build community. They teach social skills — waiting your turn, saying please, listening to others. Research shows children who eat with adults develop larger vocabularies. At Bamboo Valley, every meal is a learning opportunity hiding as lunch."
-      },
-      "quiet": {
-        "time": "12:30pm",
-        "title": "Storytelling & Rest",
-        "p1": "After lunch comes quiet time. Not forced napping — just a slower pace.",
-        "p2": "Younger children rest on mats under the shade. Older ones listen to a longer story, or do quiet activities like drawing or puzzles.",
-        "p3": "The story today is about a child who got lost in a forest and found their way home by paying attention to the trees. The children listen intently. Stories teach more than facts — they teach empathy, consequence, possibility.",
-        "quote": "Stories connect content with emotion, helping children store memories in more brain locations. They retain learning better and transfer it to real-life contexts."
-      },
-      "afternoon": {
-        "time": "1:30pm",
-        "title": "Afternoon Activities",
-        "p1": "Energy returns. The afternoon brings more choice — and often, more mess.",
-        "p2": "Today the mud kitchen is open. Children mix \"soup\" from mud, leaves, flowers, and water. They pour, stir, serve imaginary customers. Their hands are filthy. Their immune systems are getting stronger with every handful of soil.",
-        "p3": "Others choose art. Today it's watercolors, painting whatever they see or imagine. No \"draw a house.\" No \"color inside the lines.\" Just exploration with color and brush.",
-        "p4": "A small group practices with rhythm instruments — drums, shakers, bells. They're making a \"song\" together, learning to listen, to follow, to lead.",
-        "mudQuote": "Within one month, children playing in forest soil show improved immune responses. Mud play isn't just fun — it's building resilience against allergies and illness.",
-        "artQuote": "Process-focused art develops fine motor skills, emotional expression, and creative thinking without the pressure of judgment or \"getting it right.\""
-      },
-      "yoga": {
-        "time": "2:30pm",
-        "title": "Yoga & Wind-Down",
-        "p1": "As the afternoon wanes, we gather again. Time to slow down.",
-        "p2": "Yoga for children looks nothing like an adult class. They become trees, swaying in the wind. Cats, stretching after a nap. Mountains, standing tall and steady.",
-        "p3": "A few minutes of simple breathing. Eyes closed, hands on bellies, feeling the breath go in and out.",
-        "p4": "\"Notice how your body feels,\" the teacher says quietly. \"You worked hard today. Your body helped you do so many things.\"",
-        "p5": "This is mindfulness. This is emotional regulation. These are skills they'll use for the rest of their lives.",
-        "quote": "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief sessions enhance focus and self-awareness."
-      },
-      "pickup": {
-        "time": "3:00pm",
-        "title": "Pickup",
-        "p1": "Parents arrive to children who are tired in the right way. Not depleted from sitting still. Not stressed from tests or homework threats. Just... satisfied.",
-        "p2": "\"Mama! We made bread and I saw a caterpillar with LOTS of legs!\"",
-        "p3": "Stories pour out on the way to the car. What they built. What they found. Who they played with.",
-        "p4": "The mud washes off in the bath. The memories don't.",
-        "p5": "Tomorrow, they'll ask to come back."
+      "q3": {
+        "question": "А если мой ребенок предпочитает играть один?",
+        "answer1": "Это нормально. Некоторые дети любят играть вместе — устраивают воображаемые рестораны, строят что-то. Другие предпочитают рисовать за столиком или тихо собирать железную дорогу.",
+        "answer2": "Оба варианта приветствуются. Оба ценны."
       }
     },
-    "why": {
-      "title": "Why This Matters",
-      "p1": "What you've just read isn't a special day. It's every day.",
-      "p2": "No screens. No worksheets. No sitting at desks for hours. No pressure to perform, compete, or conform.",
-      "p3": "Instead: movement, nature, play, real experiences, and adults who see each child as an individual.",
-      "p4": "Research consistently shows that children who learn this way develop stronger problem-solving skills, better emotional regulation, more robust immune systems, and a lifelong love of learning.",
-      "p5": "They don't just learn facts. They learn how to learn. They don't just follow rules. They develop judgment. They don't just pass tests. They become capable, confident, curious humans."
+    "circleTime": {
+      "time": "Утренний круг – ~10:00",
+      "title": "Утренний круг",
+      "intro": "Воспитатель звонит в маленький колокольчик и начинает петь. Дети знают песенку уборки наизусть — они медленно раскладывают игрушки по местам, пьют воду и собираются на круглом коврике. Утренний круг начинается одинаково каждый день: та же приветственная песенка, тот же спокойный ритм.",
+      "imageAlt": "Воспитатель разговаривает с детьми во время утреннего круга в Bamboo Valley",
+      "q1": {
+        "question": "Почему одни и те же песни каждый день?",
+        "answer1": "Повторение — это осознанный выбор. Когда дети знают, что будет дальше, они чувствуют себя в безопасности. Песни меняются со сменой сезонов — летние песни, песни сезона дождей — но ритм остается постоянным.",
+        "answer2": "Песни с движениями помогают координации (в вальдорфской педагогике это называется эвритмия), развивают концентрацию внимания."
+      },
+      "q2": {
+        "question": "Что такое передача свечи?",
+        "answer1": "Дети осторожно передают свечу по кругу. Это способ прочувствовать доброту — момент передачи и получения несет в себе тепло.",
+        "answer2": "Повторяя это снова и снова, доброта становится частью их натуры. Не то, о чем им рассказывают, а то, что они чувствуют."
+      },
+      "q3": {
+        "question": "Как адаптируются новые дети?",
+        "answer1": "Благодаря постоянному ритму нам практически не нужно объяснять правила — дети естественным образом вливаются в процесс.",
+        "answer2": "Первый день может показаться странным. Мы даем им осмотреться, посидеть, послушать. На второй-третий день они понемногу начинают участвовать. Через 2-3 дня они знают песни и с удовольствием присоединяются."
+      },
+      "q4": {
+        "question": "А если ребенок не готов присоединиться?",
+        "answer1": "Мы никогда не заставляем. Если ребенок не готов, он сидит рядом с воспитателем и ждет, пока будет готов.",
+        "answer2": "Когда он будет готов, он присоединится сам. Без давления, без спешки."
+      }
+    },
+    "snackTime": {
+      "time": "Перекус – ~10:15",
+      "title": "Время перекуса",
+      "intro": "После утреннего круга дети берутся за руки и становятся «змейкой». Они вместе поют песенку змейки, извиваясь по дороге на кухню — длинная цепочка малышей, смеющихся и шагающих в ритм. Перекус уже ждет их на столе.",
+      "imageAlt": "Дети и воспитатель едят вместе под пальмами в Bamboo Valley",
+      "q1": {
+        "question": "Почему они поют по дороге к перекусу?",
+        "answer1": "Переходы могут быть хаотичными. Песенка змейки превращает путь на кухню в игру — все держатся за руки, идут вместе и приходят спокойными и готовыми есть.",
+        "answer2": "Это мелочь, но она многое меняет."
+      },
+      "q2": {
+        "question": "Что они едят?",
+        "answer": "Свежие фрукты, нарезанные прямо при них, чтобы они могли видеть и пробовать. Иногда печенье или крекер на десерт — но без лишнего сахара. Только полезные варианты."
+      },
+      "q3": {
+        "question": "Что за песня благодарности?",
+        "answer1": "Перед едой все поют песенку «Спасибо Матушке-Земле» — выражая благодарность за еду.",
+        "answer2": "Это момент, чтобы остановиться, оценить и вместе начать трапезу."
+      }
+    },
+    "midMorning": {
+      "time": "После перекуса",
+      "title": "Занятия середины дня",
+      "intro": "После перекуса каждый день приносит что-то новое. В какие-то дни это выпечка хлеба. В другие — рисование одним цветом. Или знакомство с музыкальными инструментами. Ритм недели дает детям что-то предвкушать.",
+      "activities": {
+        "tuesday": {
+          "day": "Вторник",
+          "title": "Выпечка",
+          "description": "Замешивание теста, формование хлеба, изучение математики через измерения и счет."
+        },
+        "thursday": {
+          "day": "Четверг",
+          "title": "Вальдорфская живопись",
+          "description": "Один цвет за раз. Медитативно, сосредоточенно, открывая, как работают цвета."
+        },
+        "friday": {
+          "day": "Пятница",
+          "title": "Музыка",
+          "description": "Свободное исследование инструментов — струнных, ударных, духовых. Совместное пение."
+        },
+        "other": {
+          "day": "Другие дни",
+          "title": "Свободная игра на улице",
+          "description": "Батут, турник, грязевая кухня, копание, игры с песком."
+        }
+      },
+      "slider": {
+        "baking": {
+          "caption": "День выпечки — превращаем тесто в единорогов, пончики и мечты",
+          "alt": "Ребенок занимается выпечкой в Bamboo Valley"
+        },
+        "painting": {
+          "caption": "Вальдорфская живопись — один цвет за раз, открываем желтый",
+          "alt": "Ребенок рисует акварелью в вальдорфском стиле"
+        },
+        "music": {
+          "caption": "Музыка — исследуем инструменты, поем вместе",
+          "alt": "Музыкальный уголок в Bamboo Valley"
+        }
+      },
+      "q1": {
+        "question": "Почему выпечка?",
+        "answer1": "Выпечка — это вальдорфская традиция. Маленькие ручки, месящие тесто, развивают мелкую моторику. Нарезание, подсчет кусочков, сравнение размеров — математика происходит естественно.",
+        "answer2": "Дети создают фигурки: единорогов, пончики, что угодно из воображения. Даже если получается не идеально, они так гордятся — потому что это их творение."
+      },
+      "q2": {
+        "question": "Почему только один цвет при рисовании?",
+        "answer1": "Вальдорфская живопись отличается от обычной. Дети работают с одним цветом целый месяц — желтый каждый четверг, потом красный, потом синий. Сначала только основные цвета.",
+        "answer2": "После того как они исследовали каждый цвет, им дают два цвета одновременно, и они открывают волшебство смешивания. Воспитатель играет на глюкофоне — это медитативно, тихо, умиротворяюще."
+      },
+      "q3": {
+        "question": "Что происходит во время музыкальных занятий?",
+        "answer1": "Дети свободно исследуют разные инструменты — струнные, ударные, духовые. Они поют песни вместе, иногда в помещении, иногда на улице.",
+        "answer2": "Воспитатель играет на укулеле или гитаре, пока они поют детские песенки."
+      }
+    },
+    "outdoorPlay": {
+      "time": "Позднее утро",
+      "title": "Свободная игра на улице",
+      "intro": "Именно тогда происходит что-то волшебное. Дети выходят на улицу к батуту, турнику, грязевой кухне, месту для копания, песочнице. Нет программы. Нет занятий под руководством взрослых. Они сами выбирают, чем хотят заняться — и полностью погружаются в это.",
+      "slider": {
+        "climbing": {
+          "caption": "Лазание, качание, висение вниз головой — физическая активность развивает уверенность",
+          "alt": "Дети на лазательном комплексе в Bamboo Valley"
+        },
+        "digging": {
+          "caption": "Копание в земле — иногда по 45 минут подряд",
+          "alt": "Ребенок копает в тропическом саду"
+        },
+        "mud": {
+          "caption": "Грязевая кухня — сенсорная игра, творчество и восхитительно грязные руки",
+          "alt": "Дети лепят шарики из грязи"
+        }
+      },
+      "q1": {
+        "question": "Что такое «состояние потока» и почему это важно?",
+        "answer1": "Состояние потока — это глубокое погружение, которое вы видите, когда ребенок полностью поглощен своим занятием. Время исчезает. Ему не скучно, он не тревожится — просто полностью присутствует.",
+        "answer2": "Именно тогда происходит самое глубокое обучение. Не через инструкции, а через полное вовлечение в выбранную деятельность."
+      },
+      "q2": {
+        "question": "Чем на самом деле занимаются дети во время свободной игры на улице?",
+        "answer1": "Всем. Прыгают на батуте. Висят на турнике. Копают ямы и строят сооружения. Готовят пирожки из грязи в грязевой кухне. Собирают листья и палочки.",
+        "answer2": "Некоторые дети проводят 45 минут просто копая. Другие переходят от одного занятия к другому. Оба варианта совершенно правильны для этого ребенка в этот момент."
+      },
+      "q3": {
+        "question": "Почему неструктурированное время так важно?",
+        "answer1": "Когда взрослые не руководят, дети развивают инициативу. Они принимают решения, решают проблемы, договариваются со сверстниками. Они учатся занимать себя — навык, с которым многие взрослые испытывают трудности.",
+        "answer2": "У современных детей часто расписана каждая минута. Здесь они заново открывают искусство просто играть."
+      },
+      "q4": {
+        "question": "Безопасно ли лазание и активные игры?",
+        "answer1": "Воспитатели всегда рядом, наблюдают. Но не нависают над детьми. Детям нужно самим оценивать риск — «Дотянусь ли я до той ветки?» «Не слишком ли высоко?»",
+        "answer2": "Небольшие шишки и царапины — часть обучения. Мы обеспечиваем безопасность детей, позволяя им при этом быть смелыми."
+      }
+    },
+    "cleanupStoryTime": {
+      "time": "Перед обедом",
+      "title": "Уборка и сказка",
+      "intro": "После игры на улице снова звенит колокольчик. Дети помогают убрать вещи — не потому что им велят, а потому что это часть ритма. Затем они собираются на коврике для сказки. Воспитатель не читает из книги. Она рассказывает — глядя им в глаза, используя руки, оживляя персонажей.",
+      "imageAlt": "Дети собрались на сказку в вальдорфском классе",
+      "q1": {
+        "question": "Почему дети помогают с уборкой?",
+        "answer1": "Это не обязанность — это часть процесса. Когда у всего есть свое место и дети знают порядок, уборка происходит естественно. Они гордятся тем, что заботятся о своем пространстве.",
+        "answer2": "Так воспитывается ответственность без лекций об ответственности."
+      },
+      "q2": {
+        "question": "Почему сказки рассказывают, а не читают?",
+        "answer1": "Когда воспитатель рассказывает сказку без книги, что-то меняется. Есть зрительный контакт. Темп подстраивается под реакции детей. Сказка оживает в комнате.",
+        "answer2": "Воображение детей создает картинки — это гораздо сильнее любой иллюстрации."
+      },
+      "q3": {
+        "question": "Какие сказки они слушают?",
+        "answer": "Волшебные сказки, истории о природе, сезонные рассказы. Истории с яркими образами и мягким ритмом. Часто одну и ту же сказку рассказывают целую неделю — дети любят знакомое и замечают новые детали каждый раз."
+      }
+    },
+    "lunch": {
+      "time": "Полдень",
+      "title": "Обед",
+      "intro": "Дети приносят обед из дома или едят то, что готовит школа — простую, полезную тайскую еду. Они сидят вместе за низкими столами, воспитатели рядом. Без спешки. Без давления «доесть все с тарелки». Просто спокойная, совместная трапеза.",
+      "imageAlt": "Полезный обед со свежими овощами в Bamboo Valley",
+      "q1": {
+        "question": "Что дети едят на обед?",
+        "answer": "Простую, полезную еду. Рис с мягкими тайскими блюдами, овощи, фрукты. Ничего переработанного, ничего слишком острого. Если родители присылают обед, мы рекомендуем полезные варианты — без конфет и сладких напитков."
+      },
+      "q2": {
+        "question": "А если мой ребенок привередлив в еде?",
+        "answer1": "Мы не заставляем. Мы предлагаем. Дети видят, как их друзья пробуют новую еду, и постепенно начинают интересоваться. Без борьбы, без подкупа — просто мягкое знакомство со временем.",
+        "answer2": "Многие родители удивляются, когда их ребенок начинает есть овощи, от которых отказывался дома."
+      },
+      "q3": {
+        "question": "Воспитатели едят вместе с детьми?",
+        "answer": "Да. Воспитатели сидят за столом и едят ту же еду. Это показывает пример здорового питания и превращает обед в семейную трапезу, а не в кормление по расписанию."
+      }
+    },
+    "quietTime": {
+      "time": "После обеда",
+      "title": "Тихий час",
+      "intro": "После обеда энергия меняется. Младшие дети ложатся на мягкие коврики с одеялами, и многие засыпают. Старшие дети, которые не спят, проводят тихое время — рисуют, рассматривают книжки с картинками или просто отдыхают. В комнате тихо и спокойно.",
+      "imageAlt": "Тихий отдых в детском саду Bamboo Valley",
+      "q1": {
+        "question": "Все дети должны спать?",
+        "answer1": "Нет. Младшим детям (2-4 года) обычно нужен сон, и мы поощряем отдых. Старшие дети, которые уже переросли дневной сон, занимаются тихими делами — но у всех есть время отдохнуть.",
+        "answer2": "Тело и ум нуждаются в этой паузе, даже если сон не приходит."
+      },
+      "q2": {
+        "question": "А если мой ребенок не будет спать в школе?",
+        "answer1": "Это нормально. Некоторым детям нужны недели, чтобы почувствовать себя достаточно комфортно для сна в новом месте. Мы не заставляем — мы просто создаем условия для отдыха. Темная комната, тихая музыка, нежное поглаживание по спинке.",
+        "answer2": "Со временем большинство детей привыкают к ритму."
+      },
+      "q3": {
+        "question": "Сколько длится тихий час?",
+        "answer": "Около часа. Достаточно для настоящего отдыха, но не настолько долго, чтобы нарушить ночной сон. Дети, которые просыпаются раньше, могут тихо рассматривать книги, пока все не будут готовы."
+      }
+    },
+    "afternoonActivities": {
+      "time": "После полудня",
+      "title": "Дневные занятия",
+      "intro": "Дети мягко просыпаются после отдыха и плавно возвращаются к активности. Вторая половина дня спокойнее утра — кормление животных, полив сада, легкая йога или поделки из природных материалов. Энергия естественно снижается по мере приближения времени встречи с родителями.",
+      "imageAlt": "Дети кормят кролика в Bamboo Valley",
+      "q1": {
+        "question": "С какими животными общаются дети?",
+        "answer": "У нас на территории живут кролики, козы и курицы. Дети помогают их кормить, наливать воду и учатся обращаться с ними бережно. Это учит ответственности и заботе — и есть что-то очень успокаивающее в том, чтобы погладить кролика после отдыха."
+      },
+      "q2": {
+        "question": "Зачем садоводство?",
+        "answer": "Посадка семян, полив, наблюдение за ростом — это наука, терпение и удивление в одном. Дети узнают, откуда берется еда. И нет ничего лучше, чем съесть помидор, который ты вырастил сам."
+      },
+      "q3": {
+        "question": "Вторая половина дня очень структурирована?",
+        "answer": "Меньше, чем утро. После насыщенного дня детям нужен более мягкий ритм. Иногда это групповое занятие вроде йоги. В другие дни дети выбирают между станциями — животные, сад, стол для творчества или просто еще больше игр на улице."
+      }
+    },
+    "pickup": {
+      "time": "15:00",
+      "title": "Встреча с родителями",
+      "intro": "Родители приходят, и дети бегут их встречать — иногда посреди игры, иногда в грязи или краске. Воспитатели коротко рассказывают о дне. Прощальная песенка, взмах рукой, и они уходят — уставшие, счастливые и полные историй, которыми хочется поделиться.",
+      "imageAlt": "Родители и дети в классе во время встречи",
+      "q1": {
+        "question": "Что воспитатели рассказывают родителям при встрече?",
+        "answer1": "Короткое главное — чем им понравилось заниматься, с кем играли, что-то примечательное. Не формальный отчет, просто момент связи, чтобы родители чувствовали себя частью дня.",
+        "answer2": "Если что-то требует более длительного разговора, мы договариваемся о времени поговорить отдельно."
+      }
+    },
+    "afterSchool": {
+      "time": "15:30 - 16:30",
+      "title": "Программа продленного дня",
+      "intro": "Для семей, которым нужно забрать ребенка позже, наша программа продленного дня работает до 16:30. Дети 3-6 лет исследуют творчество и культуру через практические занятия — тайская кулинария, поделки из природных материалов, музыка и обучение чтению (phonics) — пока остальные одноклассники уходят домой.",
+      "imageAlt": "Занятия природным творчеством в программе продленного дня",
+      "q1": {
+        "question": "Какие занятия предлагаются?",
+        "answer": "Каждый день — новое направление: тайская кулинария в понедельник, природное творчество во вторник, музыка и звуки в среду, обучение чтению (phonics) в пятницу. Это развивающие занятия, а не просто присмотр."
+      },
+      "q2": {
+        "question": "Это то же самое, что просто остаться подольше?",
+        "answer": "Нет — это отдельная программа с особыми занятиями и меньшими группами. Дети, которые остаются, не просто ждут; они учатся чему-то новому."
+      },
+      "q3": {
+        "question": "Можно записаться на отдельные дни?",
+        "answer": "Да. Вы можете выбрать дни, которые подходят вашей семье. Некоторые дети приходят каждый день, другие — раз или два в неделю."
+      }
+    },
+    "closing": {
+      "title": "Приходите посмотреть сами",
+      "p1": "Вот так выглядит день в Bamboo Valley — от прихода до встречи с родителями, от грязи до музыки, от сказок до тишины. Нет двух одинаковых дней, но ритм остается прежним. Дети знают, чего ожидать, и в этой структуре они свободны исследовать, творить и просто быть детьми.",
+      "p2": "Слова и фотографии могут показать только часть. Лучший способ понять, что мы делаем — пройти через ворота, почувствовать тень пальм и посмотреть, как играют дети.",
+      "imageAlt": "Вечернее общественное собрание в Bamboo Valley"
     },
     "cta": {
-      "title": "Come see for yourself",
-      "p1": "Words and photos can only show so much. The best way to understand Bamboo Valley is to visit.",
-      "p2": "Watch the children play under the palm trees. See the chickens. Feel the calm. Ask us anything.",
-      "button": "Schedule a Visit"
-    },
-    "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We offer weekly, monthly, and term enrollment for local and traveling families."
+      "title": "Мы с радостью покажем вам всё",
+      "description": "Запишитесь на визит, чтобы познакомиться с нашими воспитателями, увидеть территорию и почувствовать ритм нашего дня.",
+      "button": "Записаться на визит"
+    }
   },
   "healthGuidelines": {
     "heroTitle": "Правила здоровья",

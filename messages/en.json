@@ -1569,126 +1569,300 @@
   "blogDayAtBamboo": {
     "meta": {
       "title": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like | Phuket",
-      "description": "Follow a typical day at our nature school in Phuket. From morning animal care to afternoon mud play, discover what makes outdoor kindergarten different.",
-      "keywords": "nature kids activities phuket, outdoor kindergarten phuket, nature school phuket, forest school thailand, waldorf phuket",
-      "ogTitle": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like",
-      "ogDescription": "From 8:30am arrival to 3pm pickup. What actually happens at a nature school in Phuket."
+      "description": "Follow a typical day at our nature school in Phuket. From morning arrival to pickup, with all the play, wonder, mud, and joy in between. See what actually happens at a Waldorf-inspired kindergarten.",
+      "keywords": "nature kids activities phuket, outdoor kindergarten phuket, nature school phuket, forest school thailand, waldorf phuket, day at kindergarten, preschool schedule phuket",
+      "ogTitle": "A Day at Bamboo Valley: What Nature-Based Learning Actually Looks Like",
+      "ogDescription": "Parents ask: What does a typical day look like? Here's a peek behind the gate — from arrival to pickup, with all the play, wonder, mud, and joy in between."
     },
     "hero": {
       "backLink": "← Back to Insights",
       "title": "A Day at Bamboo Valley",
-      "subtitle": "What Nature-Based Learning Actually Looks Like",
+      "subtitle": "What nature-based learning actually looks like",
       "date": "January 2025 · Bamboo Valley",
       "imageAlt": "Children playing outdoors at nature school Phuket"
     },
     "intro": {
-      "p1": "Parents often ask: \"What does a typical day look like at Bamboo Valley?\"",
-      "p2": "It's a fair question. \"Nature-based learning\" can sound vague. What does it actually mean? What do children actually do all day?",
-      "p3": "Here's a walk through a real day at our school. From morning arrival to afternoon pickup — what happens, why it matters, and what you'd see if you were here."
+      "lead": "Parents often ask: \"What does a typical day look like?\" Here's a peek behind the gate — from the moment your child arrives until pickup, with all the play, wonder, mud, and joy in between."
     },
-    "timeline": {
-      "arrival": {
-        "time": "8:30am",
-        "title": "Morning Arrival",
-        "p1": "The morning starts under the palm trees. Children arrive and immediately scatter — some to check on the chickens, others to see what's growing in the vegetable garden, a few straight to the sandbox.",
-        "p2": "There's no rush to get inside. There is no inside.",
-        "p3": "Our 3.5-rai palm plantation is the classroom. Nearly 100 palm trees provide shade all day. Children greet the teachers, drop their bags in the covered area, and begin exploring.",
-        "p4": "A boy crouches by the chicken coop. \"She laid three eggs yesterday,\" he tells a friend arriving behind him. \"Come see.\""
+    "arrival": {
+      "time": "Arrival – 10:00am",
+      "title": "Arrival & Free Play",
+      "intro": "You walk your child to the classroom, share a quick hug, and they're off. They drop their bag and go straight into free play. No waiting, no lining up. The classroom is ready: wooden blocks, train tracks, a play kitchen, puppets, dress-up clothes, a drawing table. They choose what they want to do.",
+      "imageAlt": "Bamboo Valley classroom with nature shelf, stained glass windows, and wooden furniture",
+      "q1": {
+        "question": "Is it just playing, or are they learning?",
+        "answer1": "Both. When children choose their own activity, they develop independence, creativity, and intrinsic motivation.",
+        "answer2": "And phonics is woven in — the teacher quietly pulls two children at a time for 5-10 minutes of one-on-one work, then they return to play. Every child, every day."
       },
-      "circle": {
-        "time": "9:00am",
-        "title": "Morning Circle",
-        "p1": "The children gather on the grass under the old mango tree. Morning circle is simple: a song, a story, a conversation about what day it is and what we'll do.",
-        "p2": "Today's story involves a farmer and a stubborn goat. The children laugh at the goat's antics. They don't realize they're learning about problem-solving and persistence.",
-        "p3": "Circle time ends with movement — shaking out the wiggles, stretching toward the sky, breathing deeply. Then the real learning begins."
+      "q2": {
+        "question": "What does the teacher do during free play?",
+        "answer1": "Observes. Supports when needed. But doesn't direct. The children lead.",
+        "answer2": "The teacher watches, learns what each child gravitates toward, and steps in only when necessary."
       },
-      "freePlay": {
-        "time": "9:30am",
-        "title": "Free Play & Exploration",
-        "p1": "This is the heart of our approach. For the next hour, children choose what to do.",
-        "p2": "Some build an elaborate dam in the water play area, discovering physics without knowing the word. Others dig for worms, sorting them by size — math in disguise. A group of girls has claimed the wooden climbing structure as their \"ship\" and is sailing to an island only they can see.",
-        "p3": "Teachers don't direct. They observe. They ask questions. \"What do you think will happen if you make that wall taller?\" \"Where do you think the worms come from?\"",
-        "p4": "A child who struggled with sharing yesterday is practicing — offering the shovel to a friend, waiting for a turn on the swing. These social skills can't be taught from a worksheet. They're learned in the moment, in real situations, with patient adults nearby.",
-        "quote": "Research on self-directed play shows that children develop stronger problem-solving skills and emotional regulation when given autonomy over their activities."
-      },
-      "snack": {
-        "time": "10:30am",
-        "title": "Snack Time",
-        "p1": "Snack happens on the grass. Fresh fruit, rice crackers, water from their own bottles.",
-        "p2": "There's no rush. Children chat about bugs they found, plans they're making, things they noticed. A teacher sits with them, part of the conversation, not supervising from above.",
-        "p3": "\"Look at that cloud,\" someone says, pointing up. \"It looks like a dragon.\" Soon they're all looking, finding shapes, arguing good-naturedly about what they see.",
-        "p4": "This is vocabulary building. This is observation skills. This is just... being children."
-      },
-      "learning": {
-        "time": "11:00am",
-        "title": "Learning Activities",
-        "p1": "Mid-morning brings more structured activities — but not worksheets. Never worksheets.",
-        "p2": "Today one group is baking bread. They measure flour, count spoonfuls of yeast, knead dough with small hands. Math, science, patience, sequencing — all wrapped in the joy of making something real.",
-        "p3": "Another group works in the vegetable garden. They're checking what's ready to harvest, pulling weeds, watering seedlings. One child discovers a caterpillar and everyone crowds around to look. The lesson plan changes. That's okay. The caterpillar becomes the lesson.",
-        "p4": "The older children gather for playful phonics — songs that build letter sounds, games that develop reading readiness. No pressure, no grades. Just the foundation being laid, gently, at each child's pace.",
-        "bakingQuote": "Baking teaches children math and sequencing naturally — measuring, counting, following steps — while developing patience and the satisfaction of creating something tangible.",
-        "gardenQuote": "Garden-based learning improves academic outcomes, particularly in math. Children develop responsibility, patience, and a connection to nature that stays with them."
-      },
-      "lunch": {
-        "time": "12:00pm",
-        "title": "Lunch Together",
-        "p1": "We eat together. Real food, prepared fresh. Children help set out plates, pour water, pass dishes.",
-        "p2": "The conversation flows. A teacher asks what everyone's favorite part of the morning was. Stories tumble out. The caterpillar. The bread rising. The cloud that looked like a dragon but maybe was actually a fish.",
-        "p3": "Family-style meals build community. They teach social skills — waiting your turn, saying please, listening to others. Research shows children who eat with adults develop larger vocabularies. At Bamboo Valley, every meal is a learning opportunity hiding as lunch."
-      },
-      "quiet": {
-        "time": "12:30pm",
-        "title": "Storytelling & Rest",
-        "p1": "After lunch comes quiet time. Not forced napping — just a slower pace.",
-        "p2": "Younger children rest on mats under the shade. Older ones listen to a longer story, or do quiet activities like drawing or puzzles.",
-        "p3": "The story today is about a child who got lost in a forest and found their way home by paying attention to the trees. The children listen intently. Stories teach more than facts — they teach empathy, consequence, possibility.",
-        "quote": "Stories connect content with emotion, helping children store memories in more brain locations. They retain learning better and transfer it to real-life contexts."
-      },
-      "afternoon": {
-        "time": "1:30pm",
-        "title": "Afternoon Activities",
-        "p1": "Energy returns. The afternoon brings more choice — and often, more mess.",
-        "p2": "Today the mud kitchen is open. Children mix \"soup\" from mud, leaves, flowers, and water. They pour, stir, serve imaginary customers. Their hands are filthy. Their immune systems are getting stronger with every handful of soil.",
-        "p3": "Others choose art. Today it's watercolors, painting whatever they see or imagine. No \"draw a house.\" No \"color inside the lines.\" Just exploration with color and brush.",
-        "p4": "A small group practices with rhythm instruments — drums, shakers, bells. They're making a \"song\" together, learning to listen, to follow, to lead.",
-        "mudQuote": "Within one month, children playing in forest soil show improved immune responses. Mud play isn't just fun — it's building resilience against allergies and illness.",
-        "artQuote": "Process-focused art develops fine motor skills, emotional expression, and creative thinking without the pressure of judgment or \"getting it right.\""
-      },
-      "yoga": {
-        "time": "2:30pm",
-        "title": "Yoga & Wind-Down",
-        "p1": "As the afternoon wanes, we gather again. Time to slow down.",
-        "p2": "Yoga for children looks nothing like an adult class. They become trees, swaying in the wind. Cats, stretching after a nap. Mountains, standing tall and steady.",
-        "p3": "A few minutes of simple breathing. Eyes closed, hands on bellies, feeling the breath go in and out.",
-        "p4": "\"Notice how your body feels,\" the teacher says quietly. \"You worked hard today. Your body helped you do so many things.\"",
-        "p5": "This is mindfulness. This is emotional regulation. These are skills they'll use for the rest of their lives.",
-        "quote": "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief sessions enhance focus and self-awareness."
-      },
-      "pickup": {
-        "time": "3:00pm",
-        "title": "Pickup",
-        "p1": "Parents arrive to children who are tired in the right way. Not depleted from sitting still. Not stressed from tests or homework threats. Just... satisfied.",
-        "p2": "\"Mama! We made bread and I saw a caterpillar with LOTS of legs!\"",
-        "p3": "Stories pour out on the way to the car. What they built. What they found. Who they played with.",
-        "p4": "The mud washes off in the bath. The memories don't.",
-        "p5": "Tomorrow, they'll ask to come back."
+      "q3": {
+        "question": "What if my child prefers to play alone?",
+        "answer1": "That's fine. Some children love collaborating — running pretend restaurants, building together. Others prefer solo time at the drawing table or quietly building train tracks.",
+        "answer2": "Both are welcome. Both are valuable."
       }
     },
-    "why": {
-      "title": "Why This Matters",
-      "p1": "What you've just read isn't a special day. It's every day.",
-      "p2": "No screens. No worksheets. No sitting at desks for hours. No pressure to perform, compete, or conform.",
-      "p3": "Instead: movement, nature, play, real experiences, and adults who see each child as an individual.",
-      "p4": "Research consistently shows that children who learn this way develop stronger problem-solving skills, better emotional regulation, more robust immune systems, and a lifelong love of learning.",
-      "p5": "They don't just learn facts. They learn how to learn. They don't just follow rules. They develop judgment. They don't just pass tests. They become capable, confident, curious humans."
+    "circleTime": {
+      "time": "Circle Time – ~10:00am",
+      "title": "Circle Time",
+      "intro": "The teacher rings a small bell and begins to sing. Children know the tidy-up song by heart — they put toys away slowly, take a water break, and gather on the round rug. Circle time begins the same way every day: the same greeting song, the same gentle rhythm.",
+      "imageAlt": "Teacher speaking to children during circle time at Bamboo Valley",
+      "q1": {
+        "question": "Why the same songs every day?",
+        "answer1": "Repetition is intentional. When children know what's coming, they feel secure. The songs change with the seasons — summer songs, rainy season songs — but the rhythm stays constant.",
+        "answer2": "Movement songs help with crossing the midline (a Waldorf concept called eurythmy), building coordination and focus."
+      },
+      "q2": {
+        "question": "What's the candle passing?",
+        "answer1": "Children pass a candle carefully around the circle. It's about experiencing kindness — that moment of giving and receiving has a warmth to it.",
+        "answer2": "By doing this over and over, kindness starts to become part of their nature. Not something they're told, but something they feel."
+      },
+      "q3": {
+        "question": "How do new children adapt?",
+        "answer1": "Because of the consistent rhythm, we don't really need to explain the rules — children naturally get absorbed into the flow.",
+        "answer2": "Day one might feel strange. We let them explore, sit, and listen. Day two, day three, they slowly start participating. After 2-3 days, they know the songs and enjoy joining in."
+      },
+      "q4": {
+        "question": "What if a child isn't ready to join?",
+        "answer1": "We never force. If a child isn't ready, they sit somewhere nearby with a teacher and wait until they're ready.",
+        "answer2": "When they're ready, they come and join naturally. No pressure, no rush."
+      }
+    },
+    "snackTime": {
+      "time": "Snack Time – ~10:15am",
+      "title": "Snack Time",
+      "intro": "After circle time, children hold hands and become a snake. They sing the snake song together as they wind their way to the kitchen — one long line of little ones, laughing and stepping in rhythm. Snacks are already waiting on the table.",
+      "imageAlt": "Children and teacher eating together under palm trees at Bamboo Valley",
+      "q1": {
+        "question": "Why do they sing on the way to snack?",
+        "answer1": "Transitions can be chaotic. The snake song turns walking to the kitchen into a game — everyone holds hands, stays together, and arrives calm and ready to eat.",
+        "answer2": "It's a small thing, but it makes a big difference."
+      },
+      "q2": {
+        "question": "What do they eat?",
+        "answer": "Fresh fruit, sliced right in front of them so they can see and experience it. Sometimes a cookie or biscuit afterward — but never too sweet. Just healthy options."
+      },
+      "q3": {
+        "question": "What's the gratitude song?",
+        "answer1": "Before eating, everyone sings a \"Thank You to Mother Earth\" song — expressing gratitude for the food.",
+        "answer2": "It's a moment to pause, appreciate, and begin the meal together."
+      }
+    },
+    "midMorning": {
+      "time": "After Snack",
+      "title": "Mid-Morning Activities",
+      "intro": "After snack, each day brings something different. Some days it's baking bread. Others it's painting with just one color. Or exploring instruments. The rhythm of the week gives children something to anticipate.",
+      "activities": {
+        "tuesday": {
+          "day": "Tuesday",
+          "title": "Baking",
+          "description": "Kneading dough, shaping bread, learning math through measuring and counting."
+        },
+        "thursday": {
+          "day": "Thursday",
+          "title": "Waldorf Painting",
+          "description": "One color at a time. Meditative, focused, discovering how colors work."
+        },
+        "friday": {
+          "day": "Friday",
+          "title": "Music",
+          "description": "Freely exploring instruments — strings, percussion, wind. Singing together."
+        },
+        "other": {
+          "day": "Other Days",
+          "title": "Outdoor Free Play",
+          "description": "Trampoline, monkey bars, mud kitchen, digging, sand play."
+        }
+      },
+      "slider": {
+        "baking": {
+          "caption": "Baking Day — shaping dough into unicorns, donuts, and dreams",
+          "alt": "Child baking at Bamboo Valley"
+        },
+        "painting": {
+          "caption": "Waldorf Painting — one color at a time, discovering yellow",
+          "alt": "Child doing Waldorf watercolor painting"
+        },
+        "music": {
+          "caption": "Music — exploring instruments, singing together",
+          "alt": "Music corner at Bamboo Valley"
+        }
+      },
+      "q1": {
+        "question": "Why baking?",
+        "answer1": "Baking is a Waldorf tradition. Small hands kneading dough strengthens fine motor skills. Cutting, counting pieces, comparing sizes — math happens naturally.",
+        "answer2": "Children create shapes: unicorns, donuts, whatever they imagine. Even when it doesn't turn out perfectly, they're so proud — because it's their creation."
+      },
+      "q2": {
+        "question": "Why only one color when painting?",
+        "answer1": "Waldorf painting is different. Children work with one color for a whole month — yellow every Thursday, then red, then blue. Only primary colors at first.",
+        "answer2": "After they've explored each one, they get two colors at a time and discover the magic of mixing. The teacher plays a tongue drum — it's meditative, quiet, peaceful."
+      },
+      "q3": {
+        "question": "What happens during music time?",
+        "answer1": "Children freely explore different instruments — strings, percussion, wind instruments. They sing songs together, sometimes indoors, sometimes outside.",
+        "answer2": "The teacher plays ukulele or guitar while they sing kindergarten songs together."
+      }
+    },
+    "outdoorPlay": {
+      "time": "Late Morning",
+      "title": "Outdoor Free Play",
+      "intro": "This is when something magical happens. Children head outside to the trampoline, monkey bars, mud kitchen, digging area, sand pit. There's no agenda. No adult-directed activity. They choose what they want to do — and they lose themselves in it completely.",
+      "slider": {
+        "climbing": {
+          "caption": "Climbing, swinging, hanging upside down — physical play builds confidence",
+          "alt": "Children on climbing frame at Bamboo Valley"
+        },
+        "digging": {
+          "caption": "Digging in soil — sometimes for 45 minutes straight",
+          "alt": "Child digging in tropical garden"
+        },
+        "mud": {
+          "caption": "Mud kitchen — sensory play, creativity, and gloriously messy hands",
+          "alt": "Children making mud balls"
+        }
+      },
+      "q1": {
+        "question": "What is \"flow state\" and why does it matter?",
+        "answer1": "Flow state is that deep absorption you see when a child is completely lost in what they're doing. Time disappears. They're not bored, not anxious — just fully present.",
+        "answer2": "This is when the deepest learning happens. Not from instruction, but from complete engagement with their own chosen activity."
+      },
+      "q2": {
+        "question": "What do children actually do during outdoor free play?",
+        "answer1": "Everything. Bouncing on the trampoline. Swinging from monkey bars. Digging holes and building structures. Creating mud pies in the mud kitchen. Collecting leaves and sticks.",
+        "answer2": "Some children spend 45 minutes just digging. Others run between activities. Both are exactly right for that child in that moment."
+      },
+      "q3": {
+        "question": "Why is unstructured time so important?",
+        "answer1": "When adults aren't directing, children develop initiative. They make decisions, solve problems, negotiate with peers. They learn to occupy themselves — a skill many adults struggle with.",
+        "answer2": "Modern children often have every minute scheduled. Here, they rediscover the art of simply playing."
+      },
+      "q4": {
+        "question": "Is it safe with climbing and physical play?",
+        "answer1": "Teachers are always present, observing. But they don't hover. Children need to assess risk themselves — \"Can I reach that branch?\" \"Is this too high?\"",
+        "answer2": "Small bumps and scrapes are part of learning. We keep children safe while still letting them be brave."
+      }
+    },
+    "cleanupStoryTime": {
+      "time": "Before Lunch",
+      "title": "Cleanup & Story Time",
+      "intro": "After outdoor play, the bell rings again. Children help put things away — not because they're told to, but because it's part of the rhythm. Then they gather on the rug for a story. The teacher doesn't read from a book. She tells it — looking into their eyes, using her hands, bringing characters to life.",
+      "imageAlt": "Children gathered for story time in Waldorf classroom",
+      "q1": {
+        "question": "Why do children help with cleanup?",
+        "answer1": "It's not a chore — it's part of the flow. When everything has a place and children know the routine, cleanup happens naturally. They take pride in caring for their space.",
+        "answer2": "This builds responsibility without lectures about responsibility."
+      },
+      "q2": {
+        "question": "Why tell stories instead of reading books?",
+        "answer1": "When a teacher tells a story without a book, something changes. There's eye contact. The pace adjusts to the children's reactions. The story becomes alive in the room.",
+        "answer2": "Children's imaginations do the work of creating the pictures — far more powerful than any illustration."
+      },
+      "q3": {
+        "question": "What kinds of stories do they hear?",
+        "answer": "Fairy tales, nature stories, seasonal tales. Stories with clear images and gentle rhythms. Often the same story is told for a whole week — children love the familiarity and notice new details each time."
+      }
+    },
+    "lunch": {
+      "time": "Noon",
+      "title": "Lunch",
+      "intro": "Children bring lunch from home or eat what the school provides — simple, healthy Thai food. They sit together at low tables, teachers beside them. No rushing. No \"finish your plate\" pressure. Just a calm, communal meal.",
+      "imageAlt": "Healthy lunch with fresh vegetables at Bamboo Valley",
+      "q1": {
+        "question": "What do children eat for lunch?",
+        "answer": "Simple, wholesome food. Rice with mild Thai dishes, vegetables, fruit. Nothing processed, nothing too spicy. If parents send lunch, we encourage healthy options — no candy or sugary drinks."
+      },
+      "q2": {
+        "question": "What if my child is a picky eater?",
+        "answer1": "We don't force. We offer. Children see their friends trying new foods, and slowly, they get curious. No battles, no bribes — just gentle exposure over time.",
+        "answer2": "Many parents are surprised when their child starts eating vegetables they refused at home."
+      },
+      "q3": {
+        "question": "Do teachers eat with the children?",
+        "answer": "Yes. Teachers sit at the table and eat the same food. This models healthy eating and makes lunch feel like a family meal rather than an institutional feeding time."
+      }
+    },
+    "quietTime": {
+      "time": "After Lunch",
+      "title": "Quiet Time",
+      "intro": "After lunch, the energy shifts. Younger children lie down on soft mats with blankets, and many drift off to sleep. Older children who don't nap have quiet time — drawing, looking at picture books, or simply resting. The room stays dim and peaceful.",
+      "imageAlt": "Quiet rest time at Bamboo Valley kindergarten",
+      "q1": {
+        "question": "Do all children have to nap?",
+        "answer1": "No. Younger children (2-4) usually need sleep and are encouraged to rest. Older children who've outgrown naps have quiet activities instead — but everyone has downtime.",
+        "answer2": "The body and mind need this pause, even if sleep doesn't come."
+      },
+      "q2": {
+        "question": "What if my child won't sleep at school?",
+        "answer1": "That's okay. Some children take weeks to feel comfortable enough to sleep in a new place. We don't force it — we just create the conditions for rest. A dark room, soft music, a gentle back rub.",
+        "answer2": "Eventually, most children relax into the rhythm."
+      },
+      "q3": {
+        "question": "How long is quiet time?",
+        "answer": "About an hour. Long enough for real rest, but not so long that it disrupts nighttime sleep. Children who wake early can quietly look at books until everyone is ready."
+      }
+    },
+    "afternoonActivities": {
+      "time": "Afternoon",
+      "title": "Afternoon Activities",
+      "intro": "Children wake gently from rest and ease back into the day. The afternoon is calmer than the morning — feeding the animals, watering the garden, gentle yoga, or nature crafts. The energy winds down naturally as pickup time approaches.",
+      "imageAlt": "Children feeding rabbit at Bamboo Valley",
+      "q1": {
+        "question": "What kind of animals do children interact with?",
+        "answer": "We have rabbits, goats, and chickens on campus. Children help feed them, refill water, and learn to handle them gently. It teaches responsibility and care — and there's something deeply calming about petting a rabbit after rest time."
+      },
+      "q2": {
+        "question": "Why gardening?",
+        "answer": "Planting seeds, watering, watching things grow — it's science, patience, and wonder all in one. Children connect to where food comes from. And there's nothing like eating a tomato you grew yourself."
+      },
+      "q3": {
+        "question": "Is the afternoon very structured?",
+        "answer": "Less than the morning. After a full day, children need gentler rhythms. Some days it's a group activity like yoga. Other days, children choose between stations — animals, garden, art table, or simply more outdoor play."
+      }
+    },
+    "pickup": {
+      "time": "3:00pm",
+      "title": "Pickup",
+      "intro": "Parents arrive and children run to greet them — sometimes mid-game, sometimes covered in mud or paint. Teachers share a quick word about the day. There's a goodbye song, a wave, and off they go — tired, happy, and full of stories to tell.",
+      "imageAlt": "Parents and children in classroom at pickup time",
+      "q1": {
+        "question": "What do teachers tell parents at pickup?",
+        "answer1": "A quick highlight — what they enjoyed, who they played with, anything noteworthy. Not a formal report, just a moment of connection so parents feel part of the day.",
+        "answer2": "If something needs a longer conversation, we schedule time to talk properly."
+      }
+    },
+    "afterSchool": {
+      "time": "3:30 - 4:30pm",
+      "title": "After-School Program",
+      "intro": "For families who need a later pickup, our After-School Enrichment Program runs until 4:30pm. Children ages 3-6 explore creativity and culture through hands-on activities — Thai cooking, nature crafts, music, and phonics — while the rest of their classmates head home.",
+      "imageAlt": "Nature art activities in after-school program",
+      "q1": {
+        "question": "What activities are offered?",
+        "answer": "Each day has a different focus: Thai Cooking on Monday, Nature Art & Craft on Tuesday, Music & Sound on Wednesday, and Phonics on Friday. It's enrichment, not just extended care."
+      },
+      "q2": {
+        "question": "Is it the same as staying longer at school?",
+        "answer": "No — this is a separate program with dedicated activities and smaller groups. Children who stay aren't just waiting around; they're learning something new."
+      },
+      "q3": {
+        "question": "Can I sign up for specific days?",
+        "answer": "Yes. You can choose which days work for your family's schedule. Some children come every day, others just once or twice a week."
+      }
+    },
+    "closing": {
+      "title": "Come See for Yourself",
+      "p1": "That's a day at Bamboo Valley — arrival to pickup, mud to music, stories to silence. No two days are exactly alike, but the rhythm stays the same. Children know what to expect, and within that structure, they're free to explore, create, and simply be children.",
+      "p2": "Words and photos can only show so much. The best way to understand what we do is to walk through the gate, feel the shade of the palms, and watch the children play.",
+      "imageAlt": "Evening community gathering at Bamboo Valley"
     },
     "cta": {
-      "title": "Come see for yourself",
-      "p1": "Words and photos can only show so much. The best way to understand Bamboo Valley is to visit.",
-      "p2": "Watch the children play under the palm trees. See the chickens. Feel the calm. Ask us anything.",
-      "button": "Schedule a Visit"
-    },
-    "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We offer weekly, monthly, and term enrollment for local and traveling families."
+      "title": "We'd love to show you around",
+      "description": "Schedule a visit to meet our teachers, see the campus, and feel the rhythm of our day.",
+      "button": "Book a Visit"
+    }
   },
   "blogJoinTeam": {
     "meta": {

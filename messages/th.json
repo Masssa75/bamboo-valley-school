@@ -1490,127 +1490,301 @@
   },
   "blogDayAtBamboo": {
     "meta": {
-      "title": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like | Phuket",
-      "description": "Follow a typical day at our nature school in Phuket. From morning animal care to afternoon mud play, discover what makes outdoor kindergarten different.",
-      "keywords": "nature kids activities phuket, outdoor kindergarten phuket, nature school phuket, forest school thailand, waldorf phuket",
-      "ogTitle": "A Day at Bamboo Valley: What Nature-Based Learning Looks Like",
-      "ogDescription": "From 8:30am arrival to 3pm pickup. What actually happens at a nature school in Phuket."
+      "title": "หนึ่งวันที่ Bamboo Valley: การเรียนรู้จากธรรมชาติเป็นอย่างไร | ภูเก็ต",
+      "description": "ติดตามหนึ่งวันปกติที่โรงเรียนธรรมชาติของเราในภูเก็ต ตั้งแต่เช้าจนถึงเวลารับกลับ พร้อมการเล่น ความมหัศจรรย์ โคลน และความสุขที่เกิดขึ้นระหว่างทาง มาดูกันว่าอนุบาล Waldorf เป็นอย่างไร",
+      "keywords": "กิจกรรมเด็กธรรมชาติภูเก็ต, อนุบาลกลางแจ้งภูเก็ต, โรงเรียนธรรมชาติภูเก็ต, โรงเรียนป่าประเทศไทย, waldorf ภูเก็ต, หนึ่งวันที่อนุบาล, ตารางเรียนอนุบาลภูเก็ต",
+      "ogTitle": "หนึ่งวันที่ Bamboo Valley: การเรียนรู้จากธรรมชาติเป็นอย่างไรจริงๆ",
+      "ogDescription": "ผู้ปกครองมักถาม: หนึ่งวันปกติเป็นอย่างไร? นี่คือการเปิดประตูให้คุณเห็น ตั้งแต่มาถึงจนรับกลับ พร้อมการเล่น ความมหัศจรรย์ โคลน และความสุขที่เกิดขึ้นระหว่างทาง"
     },
     "hero": {
-      "backLink": "← Back to Insights",
-      "title": "A Day at Bamboo Valley",
-      "subtitle": "What Nature-Based Learning Actually Looks Like",
-      "date": "January 2025 · Bamboo Valley",
-      "imageAlt": "Children playing outdoors at nature school Phuket"
+      "backLink": "← กลับไปยังบทความ",
+      "title": "หนึ่งวันที่ Bamboo Valley",
+      "subtitle": "การเรียนรู้จากธรรมชาติเป็นอย่างไรจริงๆ",
+      "date": "มกราคม 2025 · Bamboo Valley",
+      "imageAlt": "เด็กๆ เล่นกลางแจ้งที่โรงเรียนธรรมชาติภูเก็ต"
     },
     "intro": {
-      "p1": "Parents often ask: \"What does a typical day look like at Bamboo Valley?\"",
-      "p2": "It's a fair question. \"Nature-based learning\" can sound vague. What does it actually mean? What do children actually do all day?",
-      "p3": "Here's a walk through a real day at our school. From morning arrival to afternoon pickup — what happens, why it matters, and what you'd see if you were here."
+      "lead": "ผู้ปกครองมักถามว่า: \"หนึ่งวันปกติที่นี่เป็นอย่างไร?\" นี่คือการเปิดประตูให้คุณเห็น ตั้งแต่ลูกของคุณมาถึงจนกระทั่งรับกลับ พร้อมการเล่น ความมหัศจรรย์ โคลน และความสุขที่เกิดขึ้นระหว่างทาง"
     },
-    "timeline": {
-      "arrival": {
-        "time": "8:30am",
-        "title": "Morning Arrival",
-        "p1": "The morning starts under the palm trees. Children arrive and immediately scatter — some to check on the chickens, others to see what's growing in the vegetable garden, a few straight to the sandbox.",
-        "p2": "There's no rush to get inside. There is no inside.",
-        "p3": "Our 3.5-rai palm plantation is the classroom. Nearly 100 palm trees provide shade all day. Children greet the teachers, drop their bags in the covered area, and begin exploring.",
-        "p4": "A boy crouches by the chicken coop. \"She laid three eggs yesterday,\" he tells a friend arriving behind him. \"Come see.\""
+    "arrival": {
+      "time": "มาถึง – 10:00น.",
+      "title": "มาถึงและเล่นอิสระ",
+      "intro": "คุณพาลูกเดินไปที่ห้องเรียน กอดสั้นๆ แล้วเขาก็วิ่งไป วางกระเป๋าแล้วเข้าสู่เวลาเล่นอิสระทันที ไม่ต้องรอ ไม่ต้องเข้าแถว ห้องเรียนพร้อมแล้ว: บล็อกไม้ รางรถไฟ ครัวจำลอง หุ่นมือ ชุดแต่งตัว โต๊ะวาดรูป เด็กๆ เลือกเองว่าจะทำอะไร",
+      "imageAlt": "ห้องเรียน Bamboo Valley พร้อมชั้นธรรมชาติ หน้าต่างกระจกสี และเฟอร์นิเจอร์ไม้",
+      "q1": {
+        "question": "แค่เล่นหรือกำลังเรียนรู้?",
+        "answer1": "ทั้งสองอย่าง เมื่อเด็กๆ เลือกกิจกรรมเอง พวกเขาพัฒนาความเป็นตัวของตัวเอง ความคิดสร้างสรรค์ และแรงจูงใจจากภายใน",
+        "answer2": "และการเรียน phonics (การออกเสียง) ก็แทรกอยู่ในนั้น คุณครูจะเรียกเด็กๆ ทีละสองคนออกไปฝึกตัวต่อตัว 5-10 นาที แล้วกลับมาเล่นต่อ ทุกคน ทุกวัน"
       },
-      "circle": {
-        "time": "9:00am",
-        "title": "Morning Circle",
-        "p1": "The children gather on the grass under the old mango tree. Morning circle is simple: a song, a story, a conversation about what day it is and what we'll do.",
-        "p2": "Today's story involves a farmer and a stubborn goat. The children laugh at the goat's antics. They don't realize they're learning about problem-solving and persistence.",
-        "p3": "Circle time ends with movement — shaking out the wiggles, stretching toward the sky, breathing deeply. Then the real learning begins."
+      "q2": {
+        "question": "คุณครูทำอะไรระหว่างเวลาเล่นอิสระ?",
+        "answer1": "สังเกต ช่วยเหลือเมื่อจำเป็น แต่ไม่ชี้นำ เด็กๆ เป็นผู้นำ",
+        "answer2": "คุณครูเฝ้าดู เรียนรู้ว่าเด็กแต่ละคนชอบอะไร และเข้าช่วยเมื่อจำเป็นเท่านั้น"
       },
-      "freePlay": {
-        "time": "9:30am",
-        "title": "Free Play & Exploration",
-        "p1": "This is the heart of our approach. For the next hour, children choose what to do.",
-        "p2": "Some build an elaborate dam in the water play area, discovering physics without knowing the word. Others dig for worms, sorting them by size — math in disguise. A group of girls has claimed the wooden climbing structure as their \"ship\" and is sailing to an island only they can see.",
-        "p3": "Teachers don't direct. They observe. They ask questions. \"What do you think will happen if you make that wall taller?\" \"Where do you think the worms come from?\"",
-        "p4": "A child who struggled with sharing yesterday is practicing — offering the shovel to a friend, waiting for a turn on the swing. These social skills can't be taught from a worksheet. They're learned in the moment, in real situations, with patient adults nearby.",
-        "quote": "Research on self-directed play shows that children develop stronger problem-solving skills and emotional regulation when given autonomy over their activities."
-      },
-      "snack": {
-        "time": "10:30am",
-        "title": "Snack Time",
-        "p1": "Snack happens on the grass. Fresh fruit, rice crackers, water from their own bottles.",
-        "p2": "There's no rush. Children chat about bugs they found, plans they're making, things they noticed. A teacher sits with them, part of the conversation, not supervising from above.",
-        "p3": "\"Look at that cloud,\" someone says, pointing up. \"It looks like a dragon.\" Soon they're all looking, finding shapes, arguing good-naturedly about what they see.",
-        "p4": "This is vocabulary building. This is observation skills. This is just... being children."
-      },
-      "learning": {
-        "time": "11:00am",
-        "title": "Learning Activities",
-        "p1": "Mid-morning brings more structured activities — but not worksheets. Never worksheets.",
-        "p2": "Today one group is baking bread. They measure flour, count spoonfuls of yeast, knead dough with small hands. Math, science, patience, sequencing — all wrapped in the joy of making something real.",
-        "p3": "Another group works in the vegetable garden. They're checking what's ready to harvest, pulling weeds, watering seedlings. One child discovers a caterpillar and everyone crowds around to look. The lesson plan changes. That's okay. The caterpillar becomes the lesson.",
-        "p4": "The older children gather for playful phonics — songs that build letter sounds, games that develop reading readiness. No pressure, no grades. Just the foundation being laid, gently, at each child's pace.",
-        "bakingQuote": "Baking teaches children math and sequencing naturally — measuring, counting, following steps — while developing patience and the satisfaction of creating something tangible.",
-        "gardenQuote": "Garden-based learning improves academic outcomes, particularly in math. Children develop responsibility, patience, and a connection to nature that stays with them."
-      },
-      "lunch": {
-        "time": "12:00pm",
-        "title": "Lunch Together",
-        "p1": "We eat together. Real food, prepared fresh. Children help set out plates, pour water, pass dishes.",
-        "p2": "The conversation flows. A teacher asks what everyone's favorite part of the morning was. Stories tumble out. The caterpillar. The bread rising. The cloud that looked like a dragon but maybe was actually a fish.",
-        "p3": "Family-style meals build community. They teach social skills — waiting your turn, saying please, listening to others. Research shows children who eat with adults develop larger vocabularies. At Bamboo Valley, every meal is a learning opportunity hiding as lunch."
-      },
-      "quiet": {
-        "time": "12:30pm",
-        "title": "Storytelling & Rest",
-        "p1": "After lunch comes quiet time. Not forced napping — just a slower pace.",
-        "p2": "Younger children rest on mats under the shade. Older ones listen to a longer story, or do quiet activities like drawing or puzzles.",
-        "p3": "The story today is about a child who got lost in a forest and found their way home by paying attention to the trees. The children listen intently. Stories teach more than facts — they teach empathy, consequence, possibility.",
-        "quote": "Stories connect content with emotion, helping children store memories in more brain locations. They retain learning better and transfer it to real-life contexts."
-      },
-      "afternoon": {
-        "time": "1:30pm",
-        "title": "Afternoon Activities",
-        "p1": "Energy returns. The afternoon brings more choice — and often, more mess.",
-        "p2": "Today the mud kitchen is open. Children mix \"soup\" from mud, leaves, flowers, and water. They pour, stir, serve imaginary customers. Their hands are filthy. Their immune systems are getting stronger with every handful of soil.",
-        "p3": "Others choose art. Today it's watercolors, painting whatever they see or imagine. No \"draw a house.\" No \"color inside the lines.\" Just exploration with color and brush.",
-        "p4": "A small group practices with rhythm instruments — drums, shakers, bells. They're making a \"song\" together, learning to listen, to follow, to lead.",
-        "mudQuote": "Within one month, children playing in forest soil show improved immune responses. Mud play isn't just fun — it's building resilience against allergies and illness.",
-        "artQuote": "Process-focused art develops fine motor skills, emotional expression, and creative thinking without the pressure of judgment or \"getting it right.\""
-      },
-      "yoga": {
-        "time": "2:30pm",
-        "title": "Yoga & Wind-Down",
-        "p1": "As the afternoon wanes, we gather again. Time to slow down.",
-        "p2": "Yoga for children looks nothing like an adult class. They become trees, swaying in the wind. Cats, stretching after a nap. Mountains, standing tall and steady.",
-        "p3": "A few minutes of simple breathing. Eyes closed, hands on bellies, feeling the breath go in and out.",
-        "p4": "\"Notice how your body feels,\" the teacher says quietly. \"You worked hard today. Your body helped you do so many things.\"",
-        "p5": "This is mindfulness. This is emotional regulation. These are skills they'll use for the rest of their lives.",
-        "quote": "Mindfulness practices in children improve attention, emotional regulation, and reduce anxiety. Even brief sessions enhance focus and self-awareness."
-      },
-      "pickup": {
-        "time": "3:00pm",
-        "title": "Pickup",
-        "p1": "Parents arrive to children who are tired in the right way. Not depleted from sitting still. Not stressed from tests or homework threats. Just... satisfied.",
-        "p2": "\"Mama! We made bread and I saw a caterpillar with LOTS of legs!\"",
-        "p3": "Stories pour out on the way to the car. What they built. What they found. Who they played with.",
-        "p4": "The mud washes off in the bath. The memories don't.",
-        "p5": "Tomorrow, they'll ask to come back."
+      "q3": {
+        "question": "ถ้าลูกชอบเล่นคนเดียวล่ะ?",
+        "answer1": "ไม่เป็นไร เด็กบางคนชอบทำกิจกรรมร่วมกัน เช่น เปิดร้านอาหารจำลอง สร้างสิ่งต่างๆ ด้วยกัน บางคนชอบใช้เวลาคนเดียวที่โต๊ะวาดรูปหรือต่อรางรถไฟเงียบๆ",
+        "answer2": "ทั้งสองแบบยินดีต้อนรับ ทั้งสองแบบมีคุณค่า"
       }
     },
-    "why": {
-      "title": "Why This Matters",
-      "p1": "What you've just read isn't a special day. It's every day.",
-      "p2": "No screens. No worksheets. No sitting at desks for hours. No pressure to perform, compete, or conform.",
-      "p3": "Instead: movement, nature, play, real experiences, and adults who see each child as an individual.",
-      "p4": "Research consistently shows that children who learn this way develop stronger problem-solving skills, better emotional regulation, more robust immune systems, and a lifelong love of learning.",
-      "p5": "They don't just learn facts. They learn how to learn. They don't just follow rules. They develop judgment. They don't just pass tests. They become capable, confident, curious humans."
+    "circleTime": {
+      "time": "Circle Time – ~10:00น.",
+      "title": "Circle Time (เวลารวมกลุ่ม)",
+      "intro": "คุณครูเขย่ากระดิ่งเล็กๆ และเริ่มร้องเพลง เด็กๆ รู้เพลงเก็บของหมด พวกเขาเก็บของเล่นช้าๆ ดื่มน้ำ แล้วมารวมกันบนพรมกลม Circle time เริ่มต้นเหมือนกันทุกวัน: เพลงทักทายเหมือนกัน จังหวะอ่อนโยนเหมือนกัน",
+      "imageAlt": "คุณครูพูดกับเด็กๆ ระหว่าง circle time ที่ Bamboo Valley",
+      "q1": {
+        "question": "ทำไมต้องเพลงเดิมทุกวัน?",
+        "answer1": "การทำซ้ำเป็นสิ่งตั้งใจ เมื่อเด็กๆ รู้ว่าอะไรจะเกิดขึ้น พวกเขารู้สึกปลอดภัย เพลงจะเปลี่ยนตามฤดูกาล เพลงฤดูร้อน เพลงฤดูฝน แต่จังหวะคงที่",
+        "answer2": "เพลงเคลื่อนไหวช่วยเรื่องการข้ามเส้นกลางลำตัว (แนวคิด Waldorf เรียกว่า eurythmy) สร้างการประสานงานและสมาธิ"
+      },
+      "q2": {
+        "question": "การส่งต่อเทียนคืออะไร?",
+        "answer1": "เด็กๆ ส่งต่อเทียนอย่างระมัดระวังรอบวง มันเป็นเรื่องของการสัมผัสความเมตตา ช่วงเวลาของการให้และรับมีความอบอุ่นในนั้น",
+        "answer2": "การทำซ้ำๆ แบบนี้ ความเมตตาเริ่มกลายเป็นส่วนหนึ่งของธรรมชาติของเด็ก ไม่ใช่สิ่งที่ถูกบอก แต่เป็นสิ่งที่รู้สึก"
+      },
+      "q3": {
+        "question": "เด็กใหม่ปรับตัวอย่างไร?",
+        "answer1": "เพราะจังหวะที่สม่ำเสมอ เราไม่ต้องอธิบายกฎ เด็กๆ จะซึมซับเข้าสู่กระแสโดยธรรมชาติ",
+        "answer2": "วันแรกอาจรู้สึกแปลก เราปล่อยให้พวกเขาสำรวจ นั่ง และฟัง วันที่สอง วันที่สาม พวกเขาเริ่มเข้าร่วมทีละน้อย หลัง 2-3 วัน พวกเขารู้เพลงและสนุกกับการร่วมร้อง"
+      },
+      "q4": {
+        "question": "ถ้าเด็กยังไม่พร้อมเข้าร่วมล่ะ?",
+        "answer1": "เราไม่เคยบังคับ ถ้าเด็กยังไม่พร้อม พวกเขานั่งใกล้ๆ กับคุณครูและรอจนกว่าจะพร้อม",
+        "answer2": "เมื่อพร้อมแล้ว พวกเขาจะมาร่วมเองตามธรรมชาติ ไม่มีแรงกดดัน ไม่รีบร้อน"
+      }
+    },
+    "snackTime": {
+      "time": "เวลาอาหารว่าง – ~10:15น.",
+      "title": "เวลาอาหารว่าง",
+      "intro": "หลัง circle time เด็กๆ จับมือกันกลายเป็นงู พวกเขาร้องเพลงงูด้วยกันขณะเดินคดเคี้ยวไปห้องครัว แถวยาวของเด็กน้อยๆ หัวเราะและเดินเป็นจังหวะ อาหารว่างรออยู่บนโต๊ะแล้ว",
+      "imageAlt": "เด็กๆ และคุณครูกินอาหารด้วยกันใต้ต้นปาล์มที่ Bamboo Valley",
+      "q1": {
+        "question": "ทำไมต้องร้องเพลงระหว่างทางไปกินอาหารว่าง?",
+        "answer1": "การเปลี่ยนกิจกรรมอาจวุ่นวายได้ เพลงงูเปลี่ยนการเดินไปห้องครัวให้เป็นเกม ทุกคนจับมือ อยู่ด้วยกัน และมาถึงอย่างสงบพร้อมกินอาหาร",
+        "answer2": "เป็นเรื่องเล็กน้อย แต่สร้างความแตกต่างมาก"
+      },
+      "q2": {
+        "question": "เด็กๆ กินอะไร?",
+        "answer": "ผลไม้สด หั่นต่อหน้าเพื่อให้เด็กๆ ได้เห็นและสัมผัส บางทีก็มีคุกกี้หรือบิสกิตตามมา แต่ไม่หวานเกินไป เป็นตัวเลือกที่ดีต่อสุขภาพเท่านั้น"
+      },
+      "q3": {
+        "question": "เพลงขอบคุณคืออะไร?",
+        "answer1": "ก่อนกินอาหาร ทุกคนร้องเพลง \"ขอบคุณแม่พระธรณี\" แสดงความขอบคุณสำหรับอาหาร",
+        "answer2": "เป็นช่วงเวลาหยุดพัก ซาบซึ้ง และเริ่มมื้ออาหารด้วยกัน"
+      }
+    },
+    "midMorning": {
+      "time": "หลังอาหารว่าง",
+      "title": "กิจกรรมช่วงสาย",
+      "intro": "หลังอาหารว่าง แต่ละวันมีกิจกรรมต่างกัน บางวันอบขนมปัง บางวันวาดรูปด้วยสีเดียว บางวันสำรวจเครื่องดนตรี จังหวะของสัปดาห์ให้เด็กๆ มีสิ่งที่รอคอย",
+      "activities": {
+        "tuesday": {
+          "day": "วันอังคาร",
+          "title": "อบขนม",
+          "description": "นวดแป้ง ปั้นขนมปัง เรียนคณิตศาสตร์ผ่านการตวงและนับ"
+        },
+        "thursday": {
+          "day": "วันพฤหัสบดี",
+          "title": "Waldorf Painting (การระบายสี Waldorf)",
+          "description": "ทีละสีเดียว สงบ มีสมาธิ ค้นพบว่าสีทำงานอย่างไร"
+        },
+        "friday": {
+          "day": "วันศุกร์",
+          "title": "ดนตรี",
+          "description": "สำรวจเครื่องดนตรีอย่างอิสระ เครื่องสาย เครื่องเคาะ เครื่องเป่า ร้องเพลงด้วยกัน"
+        },
+        "other": {
+          "day": "วันอื่นๆ",
+          "title": "เล่นกลางแจ้งอิสระ",
+          "description": "แทรมโพลีน บาร์โหน ครัวโคลน ขุดดิน เล่นทราย"
+        }
+      },
+      "slider": {
+        "baking": {
+          "caption": "วันอบขนม — ปั้นแป้งเป็นยูนิคอร์น โดนัท และความฝัน",
+          "alt": "เด็กอบขนมที่ Bamboo Valley"
+        },
+        "painting": {
+          "caption": "Waldorf Painting — ทีละสีเดียว ค้นพบสีเหลือง",
+          "alt": "เด็กระบายสีน้ำแบบ Waldorf"
+        },
+        "music": {
+          "caption": "ดนตรี — สำรวจเครื่องดนตรี ร้องเพลงด้วยกัน",
+          "alt": "มุมดนตรีที่ Bamboo Valley"
+        }
+      },
+      "q1": {
+        "question": "ทำไมต้องอบขนม?",
+        "answer1": "การอบขนมเป็นประเพณี Waldorf มือเล็กๆ นวดแป้งช่วยเสริมสร้างกล้ามเนื้อมัดเล็ก การตัด นับชิ้น เปรียบเทียบขนาด คณิตศาสตร์เกิดขึ้นเองตามธรรมชาติ",
+        "answer2": "เด็กๆ สร้างรูปทรง: ยูนิคอร์น โดนัท อะไรก็ตามที่จินตนาการ แม้มันออกมาไม่สมบูรณ์แบบ พวกเขาก็ภูมิใจมาก เพราะมันเป็นผลงานของพวกเขาเอง"
+      },
+      "q2": {
+        "question": "ทำไมต้องวาดทีละสีเดียว?",
+        "answer1": "การระบายสี Waldorf แตกต่างออกไป เด็กๆ ทำงานกับสีเดียวทั้งเดือน สีเหลืองทุกวันพฤหัสบดี แล้วก็แดง แล้วก็น้ำเงิน เริ่มจากสีหลักก่อน",
+        "answer2": "หลังจากสำรวจแต่ละสีแล้ว พวกเขาจะได้สองสีพร้อมกันและค้นพบความมหัศจรรย์ของการผสมสี คุณครูเล่นกลองลิ้น บรรยากาศสงบ เงียบ สันติ"
+      },
+      "q3": {
+        "question": "เกิดอะไรขึ้นในช่วงเวลาดนตรี?",
+        "answer1": "เด็กๆ สำรวจเครื่องดนตรีต่างๆ อย่างอิสระ เครื่องสาย เครื่องเคาะ เครื่องเป่า พวกเขาร้องเพลงด้วยกัน บางทีในร่ม บางทีข้างนอก",
+        "answer2": "คุณครูเล่นอูคูเลเล่หรือกีตาร์ขณะที่เด็กๆ ร้องเพลงอนุบาลด้วยกัน"
+      }
+    },
+    "outdoorPlay": {
+      "time": "ช่วงสายๆ",
+      "title": "เล่นกลางแจ้งอิสระ",
+      "intro": "นี่คือช่วงเวลาที่เกิดสิ่งมหัศจรรย์ เด็กๆ ออกไปข้างนอกไปที่แทรมโพลีน บาร์โหน ครัวโคลน พื้นที่ขุด บ่อทราย ไม่มีกำหนดการ ไม่มีกิจกรรมที่ผู้ใหญ่ชี้นำ พวกเขาเลือกเองว่าจะทำอะไร และจมดิ่งไปกับมันอย่างเต็มที่",
+      "slider": {
+        "climbing": {
+          "caption": "ปีน แกว่ง ห้อยหัว การเล่นทางกายภาพสร้างความมั่นใจ",
+          "alt": "เด็กๆ บนโครงปีนที่ Bamboo Valley"
+        },
+        "digging": {
+          "caption": "ขุดดิน บางทีต่อเนื่อง 45 นาทีเต็ม",
+          "alt": "เด็กขุดดินในสวนเขตร้อน"
+        },
+        "mud": {
+          "caption": "ครัวโคลน การเล่นสัมผัส ความคิดสร้างสรรค์ และมือเปื้อนโคลนอย่างสนุกสนาน",
+          "alt": "เด็กๆ ปั้นก้อนโคลน"
+        }
+      },
+      "q1": {
+        "question": "\"สภาวะลื่นไหล\" คืออะไรและทำไมถึงสำคัญ?",
+        "answer1": "สภาวะลื่นไหล (Flow state) คือการดูดซึมอย่างลึกซึ้งที่คุณเห็นเมื่อเด็กจมดิ่งไปกับสิ่งที่กำลังทำอย่างเต็มที่ เวลาหายไป พวกเขาไม่เบื่อ ไม่วิตกกังวล แค่อยู่กับปัจจุบันเต็มที่",
+        "answer2": "นี่คือช่วงที่การเรียนรู้ลึกซึ้งที่สุดเกิดขึ้น ไม่ใช่จากการสอน แต่จากการมีส่วนร่วมอย่างเต็มที่กับกิจกรรมที่พวกเขาเลือกเอง"
+      },
+      "q2": {
+        "question": "เด็กๆ ทำอะไรจริงๆ ระหว่างเล่นกลางแจ้งอิสระ?",
+        "answer1": "ทุกอย่าง กระโดดบนแทรมโพลีน แกว่งบาร์โหน ขุดหลุมและสร้างโครงสร้าง ทำพายโคลนในครัวโคลน เก็บใบไม้และกิ่งไม้",
+        "answer2": "เด็กบางคนใช้เวลา 45 นาทีแค่ขุดดิน บางคนวิ่งไปมาระหว่างกิจกรรม ทั้งสองแบบถูกต้องสำหรับเด็กคนนั้นในช่วงเวลานั้น"
+      },
+      "q3": {
+        "question": "ทำไมเวลาที่ไม่มีโครงสร้างถึงสำคัญ?",
+        "answer1": "เมื่อผู้ใหญ่ไม่ได้ชี้นำ เด็กๆ พัฒนาความคิดริเริ่ม พวกเขาตัดสินใจ แก้ปัญหา เจรจากับเพื่อน พวกเขาเรียนรู้ที่จะใช้เวลาของตัวเอง ทักษะที่ผู้ใหญ่หลายคนยังทำได้ยาก",
+        "answer2": "เด็กสมัยใหม่มักมีทุกนาทีถูกจัดตารางไว้ ที่นี่ พวกเขาค้นพบศิลปะของการเล่นอย่างแท้จริงอีกครั้ง"
+      },
+      "q4": {
+        "question": "ปลอดภัยไหมกับการปีนและเล่นทางกายภาพ?",
+        "answer1": "คุณครูอยู่ตลอด คอยสังเกต แต่ไม่วนเวียนใกล้เกินไป เด็กๆ ต้องประเมินความเสี่ยงเอง \"ฉันเอื้อมถึงกิ่งนั้นไหม?\" \"สูงเกินไปไหม?\"",
+        "answer2": "รอยช้ำและถลอกเล็กน้อยเป็นส่วนหนึ่งของการเรียนรู้ เรารักษาความปลอดภัยของเด็กๆ ในขณะที่ยังปล่อยให้พวกเขากล้าหาญ"
+      }
+    },
+    "cleanupStoryTime": {
+      "time": "ก่อนอาหารกลางวัน",
+      "title": "เก็บของและเวลานิทาน",
+      "intro": "หลังเล่นกลางแจ้ง กระดิ่งดังอีกครั้ง เด็กๆ ช่วยเก็บของ ไม่ใช่เพราะถูกบอก แต่เพราะมันเป็นส่วนหนึ่งของจังหวะ จากนั้นพวกเขารวมกันบนพรมฟังนิทาน คุณครูไม่อ่านจากหนังสือ เธอเล่า มองเข้าไปในดวงตาเด็กๆ ใช้มือ ทำให้ตัวละครมีชีวิต",
+      "imageAlt": "เด็กๆ รวมกันฟังนิทานในห้องเรียน Waldorf",
+      "q1": {
+        "question": "ทำไมเด็กๆ ช่วยเก็บของ?",
+        "answer1": "มันไม่ใช่งานบ้าน มันเป็นส่วนหนึ่งของกระแส เมื่อทุกอย่างมีที่และเด็กๆ รู้จังหวะ การเก็บของเกิดขึ้นเองตามธรรมชาติ พวกเขาภูมิใจที่ดูแลพื้นที่ของตัวเอง",
+        "answer2": "สิ่งนี้สร้างความรับผิดชอบโดยไม่ต้องบรรยายเรื่องความรับผิดชอบ"
+      },
+      "q2": {
+        "question": "ทำไมเล่านิทานแทนที่จะอ่านหนังสือ?",
+        "answer1": "เมื่อคุณครูเล่านิทานโดยไม่มีหนังสือ บางอย่างเปลี่ยนไป มีการสบตา จังหวะปรับตามปฏิกิริยาของเด็กๆ นิทานมีชีวิตขึ้นมาในห้อง",
+        "answer2": "จินตนาการของเด็กๆ ทำหน้าที่สร้างภาพ ทรงพลังกว่าภาพประกอบใดๆ มากนัก"
+      },
+      "q3": {
+        "question": "เด็กๆ ฟังนิทานประเภทไหน?",
+        "answer": "นิทานเทพนิยาย เรื่องธรรมชาติ นิทานตามฤดูกาล เรื่องที่มีภาพชัดเจนและจังหวะอ่อนโยน มักจะเล่านิทานเดิมทั้งสัปดาห์ เด็กๆ ชอบความคุ้นเคยและสังเกตรายละเอียดใหม่ๆ ทุกครั้ง"
+      }
+    },
+    "lunch": {
+      "time": "เที่ยง",
+      "title": "อาหารกลางวัน",
+      "intro": "เด็กๆ นำอาหารกลางวันมาจากบ้านหรือกินที่โรงเรียนจัดให้ อาหารไทยธรรมดา ดีต่อสุขภาพ พวกเขานั่งด้วยกันที่โต๊ะเตี้ย คุณครูนั่งข้างๆ ไม่รีบร้อน ไม่มีแรงกดดัน \"กินให้หมดจาน\" แค่มื้ออาหารที่สงบและเป็นชุมชน",
+      "imageAlt": "อาหารกลางวันเพื่อสุขภาพพร้อมผักสดที่ Bamboo Valley",
+      "q1": {
+        "question": "เด็กๆ กินอะไรเป็นอาหารกลางวัน?",
+        "answer": "อาหารธรรมดา สมบูรณ์ ข้าวกับอาหารไทยรสอ่อน ผัก ผลไม้ ไม่มีอาหารแปรรูป ไม่เผ็ดเกินไป ถ้าผู้ปกครองส่งอาหารมา เราแนะนำตัวเลือกเพื่อสุขภาพ ไม่มีขนม ไม่มีเครื่องดื่มหวาน"
+      },
+      "q2": {
+        "question": "ถ้าลูกเลือกกินล่ะ?",
+        "answer1": "เราไม่บังคับ เราเสนอ เด็กๆ เห็นเพื่อนลองอาหารใหม่ แล้วช้าๆ พวกเขาก็อยากรู้อยากเห็น ไม่มีการทะเลาะ ไม่มีการต่อรอง แค่ค่อยๆ เปิดรับตามเวลา",
+        "answer2": "ผู้ปกครองหลายคนแปลกใจเมื่อลูกเริ่มกินผักที่เคยปฏิเสธที่บ้าน"
+      },
+      "q3": {
+        "question": "คุณครูกินกับเด็กๆ ไหม?",
+        "answer": "ใช่ คุณครูนั่งที่โต๊ะและกินอาหารเดียวกัน นี่เป็นแบบอย่างการกินเพื่อสุขภาพและทำให้อาหารกลางวันรู้สึกเหมือนมื้ออาหารครอบครัว มากกว่าเวลาให้อาหารแบบสถาบัน"
+      }
+    },
+    "quietTime": {
+      "time": "หลังอาหารกลางวัน",
+      "title": "เวลาพักผ่อน",
+      "intro": "หลังอาหารกลางวัน พลังงานเปลี่ยนไป เด็กเล็กนอนบนเบาะนุ่มพร้อมผ้าห่ม หลายคนเคลิ้มหลับ เด็กโตที่ไม่นอนมีเวลาเงียบๆ วาดรูป ดูหนังสือภาพ หรือแค่พักผ่อน ห้องมืดและสงบ",
+      "imageAlt": "เวลาพักผ่อนเงียบๆ ที่อนุบาล Bamboo Valley",
+      "q1": {
+        "question": "เด็กทุกคนต้องนอนกลางวันไหม?",
+        "answer1": "ไม่ เด็กเล็ก (2-4 ปี) มักต้องการนอนและได้รับการสนับสนุนให้พักผ่อน เด็กโตที่ไม่นอนแล้วมีกิจกรรมเงียบๆ แทน แต่ทุกคนมีเวลาพักผ่อน",
+        "answer2": "ร่างกายและจิตใจต้องการการหยุดพักนี้ แม้จะไม่หลับก็ตาม"
+      },
+      "q2": {
+        "question": "ถ้าลูกไม่ยอมนอนที่โรงเรียนล่ะ?",
+        "answer1": "ไม่เป็นไร เด็กบางคนใช้เวลาหลายสัปดาห์กว่าจะรู้สึกสบายพอที่จะนอนในที่ใหม่ เราไม่บังคับ แค่สร้างเงื่อนไขสำหรับการพักผ่อน ห้องมืด เพลงเบาๆ ลูบหลังเบาๆ",
+        "answer2": "ในที่สุด เด็กส่วนใหญ่จะผ่อนคลายเข้าสู่จังหวะ"
+      },
+      "q3": {
+        "question": "เวลาพักผ่อนนานแค่ไหน?",
+        "answer": "ประมาณหนึ่งชั่วโมง นานพอสำหรับการพักผ่อนจริงๆ แต่ไม่นานจนรบกวนการนอนตอนกลางคืน เด็กที่ตื่นเร็วสามารถดูหนังสือเงียบๆ จนกว่าทุกคนจะพร้อม"
+      }
+    },
+    "afternoonActivities": {
+      "time": "บ่าย",
+      "title": "กิจกรรมช่วงบ่าย",
+      "intro": "เด็กๆ ตื่นจากการพักผ่อนอย่างอ่อนโยนและค่อยๆ กลับสู่วัน ช่วงบ่ายเงียบกว่าช่วงเช้า ให้อาหารสัตว์ รดน้ำสวน โยคะเบาๆ หรืองานฝีมือธรรมชาติ พลังงานค่อยๆ ลดลงตามธรรมชาติเมื่อใกล้เวลารับกลับ",
+      "imageAlt": "เด็กๆ ให้อาหารกระต่ายที่ Bamboo Valley",
+      "q1": {
+        "question": "เด็กๆ เล่นกับสัตว์อะไรบ้าง?",
+        "answer": "เรามีกระต่าย แพะ และไก่ในบริเวณโรงเรียน เด็กๆ ช่วยให้อาหาร เติมน้ำ และเรียนรู้ที่จะจับอย่างอ่อนโยน มันสอนความรับผิดชอบและการดูแล และมีบางอย่างที่สงบอย่างลึกซึ้งในการลูบกระต่ายหลังเวลาพักผ่อน"
+      },
+      "q2": {
+        "question": "ทำไมต้องทำสวน?",
+        "answer": "ปลูกเมล็ด รดน้ำ ดูสิ่งต่างๆ เติบโต มันคือวิทยาศาสตร์ ความอดทน และความมหัศจรรย์ในหนึ่งเดียว เด็กๆ เชื่อมต่อกับที่มาของอาหาร และไม่มีอะไรเหมือนการกินมะเขือเทศที่ปลูกเอง"
+      },
+      "q3": {
+        "question": "ช่วงบ่ายมีโครงสร้างมากไหม?",
+        "answer": "น้อยกว่าช่วงเช้า หลังจากวันเต็มๆ เด็กๆ ต้องการจังหวะอ่อนโยนกว่า บางวันเป็นกิจกรรมกลุ่มเช่นโยคะ วันอื่นๆ เด็กๆ เลือกระหว่างสถานี สัตว์ สวน โต๊ะศิลปะ หรือเล่นกลางแจ้งต่อ"
+      }
+    },
+    "pickup": {
+      "time": "15:00น.",
+      "title": "เวลารับกลับ",
+      "intro": "ผู้ปกครองมาถึงและเด็กๆ วิ่งไปทักทาย บางทีกำลังเล่นอยู่กลางทาง บางทีเปื้อนโคลนหรือสี คุณครูเล่าเรื่องวันนี้สั้นๆ มีเพลงลาก่อน โบกมือ แล้วก็ไป เหนื่อย มีความสุข และเต็มไปด้วยเรื่องเล่า",
+      "imageAlt": "ผู้ปกครองและเด็กๆ ในห้องเรียนตอนรับกลับ",
+      "q1": {
+        "question": "คุณครูบอกผู้ปกครองอะไรตอนรับกลับ?",
+        "answer1": "ไฮไลท์สั้นๆ สิ่งที่พวกเขาชอบ เล่นกับใคร อะไรน่าสนใจ ไม่ใช่รายงานทางการ แค่ช่วงเวลาเชื่อมต่อเพื่อให้ผู้ปกครองรู้สึกเป็นส่วนหนึ่งของวัน",
+        "answer2": "ถ้ามีอะไรต้องพูดคุยยาวขึ้น เราจะนัดเวลาคุยกัน"
+      }
+    },
+    "afterSchool": {
+      "time": "15:30 - 16:30น.",
+      "title": "โปรแกรมหลังเลิกเรียน",
+      "intro": "สำหรับครอบครัวที่ต้องการรับกลับช้ากว่า โปรแกรมเสริมศึกษาหลังเลิกเรียนเปิดถึง 16:30น. เด็กอายุ 3-6 ปีสำรวจความคิดสร้างสรรค์และวัฒนธรรมผ่านกิจกรรมลงมือทำ ทำอาหารไทย งานฝีมือธรรมชาติ ดนตรี และ phonics ในขณะที่เพื่อนร่วมชั้นกลับบ้าน",
+      "imageAlt": "กิจกรรมศิลปะธรรมชาติในโปรแกรมหลังเลิกเรียน",
+      "q1": {
+        "question": "มีกิจกรรมอะไรบ้าง?",
+        "answer": "แต่ละวันมีจุดเน้นต่างกัน: ทำอาหารไทยวันจันทร์ ศิลปะและงานฝีมือธรรมชาติวันอังคาร ดนตรีและเสียงวันพุธ และ phonics วันศุกร์ เป็นการเสริมศึกษา ไม่ใช่แค่การดูแลต่อเนื่อง"
+      },
+      "q2": {
+        "question": "เหมือนกับอยู่โรงเรียนนานขึ้นไหม?",
+        "answer": "ไม่ นี่เป็นโปรแกรมแยกต่างหากพร้อมกิจกรรมเฉพาะและกลุ่มเล็กลง เด็กที่อยู่ไม่ได้แค่รอ พวกเขาเรียนรู้สิ่งใหม่"
+      },
+      "q3": {
+        "question": "สามารถลงทะเบียนเฉพาะบางวันได้ไหม?",
+        "answer": "ได้ คุณสามารถเลือกวันที่เหมาะกับตารางครอบครัว เด็กบางคนมาทุกวัน บางคนแค่สัปดาห์ละครั้งหรือสองครั้ง"
+      }
+    },
+    "closing": {
+      "title": "มาดูด้วยตัวเอง",
+      "p1": "นี่คือหนึ่งวันที่ Bamboo Valley จากมาถึงจนรับกลับ จากโคลนถึงดนตรี จากนิทานถึงความเงียบ ไม่มีสองวันที่เหมือนกันทีเดียว แต่จังหวะคงเดิม เด็กๆ รู้ว่าอะไรจะเกิดขึ้น และภายในโครงสร้างนั้น พวกเขาอิสระที่จะสำรวจ สร้างสรรค์ และเป็นเด็กๆ อย่างแท้จริง",
+      "p2": "คำพูดและรูปภาพแสดงได้แค่บางส่วน วิธีที่ดีที่สุดในการเข้าใจสิ่งที่เราทำคือเดินผ่านประตู สัมผัสร่มเงาของต้นปาล์ม และดูเด็กๆ เล่น",
+      "imageAlt": "การรวมตัวชุมชนยามเย็นที่ Bamboo Valley"
     },
     "cta": {
-      "title": "Come see for yourself",
-      "p1": "Words and photos can only show so much. The best way to understand Bamboo Valley is to visit.",
-      "p2": "Watch the children play under the palm trees. See the chickens. Feel the calm. Ask us anything.",
-      "button": "Schedule a Visit"
-    },
-    "closing": "Bamboo Valley is a nature-based school in Phuket, Thailand for children ages 2-9. We offer weekly, monthly, and term enrollment for local and traveling families."
+      "title": "เรายินดีพาคุณชมรอบๆ",
+      "description": "นัดเวลามาเยี่ยมเพื่อพบคุณครูของเรา ดูบริเวณโรงเรียน และสัมผัสจังหวะของวันเรา",
+      "button": "จองเยี่ยมชม"
+    }
   },
   "healthGuidelines": {
     "heroTitle": "แนวทางด้านสุขภาพ",
