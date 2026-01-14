@@ -737,7 +737,7 @@
     "learnMoreDesc": "The ALSUP assessment is part of Dr. Ross Greene's Collaborative & Proactive Solutions approach. You can find free resources, including a printable ALSUP form, at:"
   },
   "behaviorSupport": {
-    "heroTitle": "Behavior Support",
+    "heroTitle": "Classroom Rules",
     "heroSubtitle": "Clear rules. Fair consequences. A system that protects everyone while helping children learn.",
     "corePrinciple": "Our approach: When a child breaks a rule, we respond with calm, consistent consequences — and then we work to understand why it happened so we can prevent it next time. Consequences without understanding doesn't teach. Understanding without consequences doesn't protect.",
     "fourRulesTitle": "The 4 Rules",
@@ -1359,7 +1359,12 @@
         "title": "What actually helps children learn?",
         "source": "Source: Education Endowment Foundation Teaching & Learning Toolkit",
         "monthSuffix": "mo",
-        "items": ["Metacognition", "Quality feedback", "Conversation", "Homework (elementary)"]
+        "items": [
+          "Metacognition",
+          "Quality feedback",
+          "Conversation",
+          "Homework (elementary)"
+        ]
       },
       "dinner": {
         "title": "Words children learn from...",
