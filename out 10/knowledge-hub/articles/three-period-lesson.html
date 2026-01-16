@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Three-Period Lesson | Montessori Method</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FDF6E3;
+      color: #3d4852;
+      line-height: 1.6;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #E8A598;
+    }
+
+    h1 { color: #5C8A5A; font-size: 1.8rem; margin-bottom: 8px; }
+    .subtitle { color: #6b7c93; font-size: 1rem; }
+    .source { margin-top: 12px; font-size: 0.85rem; color: #8795a1; font-style: italic; }
+
+    .intro {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .quote {
+      background: #f8f5f0;
+      border-left: 4px solid #E8A598;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-style: italic;
+      color: #5a5a5a;
+    }
+
+    .period-card {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .period-header {
+      padding: 16px 24px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .period-1 .period-header { background: linear-gradient(135deg, #5C8A5A, #7aa878); }
+    .period-2 .period-header { background: linear-gradient(135deg, #6B8DD6, #8ba3e0); }
+    .period-3 .period-header { background: linear-gradient(135deg, #E8A598, #f0beb4); }
+
+    .period-number {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .period-title { font-size: 1.2rem; font-weight: 600; }
+    .period-subtitle { font-size: 0.9rem; opacity: 0.9; }
+
+    .period-body { padding: 20px 24px; }
+
+    .say-this {
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 1.1rem;
+      color: #2e7d32;
+    }
+
+    .error-section {
+      background: #fff3e0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-left: 4px solid #ff9800;
+    }
+
+    .error-section h3 { color: #e65100; margin-bottom: 12px; }
+
+    .do-list, .dont-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .do-item, .dont-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    .do-item { background: #e8f5e9; }
+    .dont-item { background: #ffebee; }
+
+    .check { color: #4caf50; font-weight: bold; }
+    .cross { color: #f44336; font-weight: bold; }
+
+    .key-insight {
+      background: linear-gradient(135deg, #5C8A5A, #7aa878);
+      color: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .key-insight blockquote {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .key-insight cite { font-size: 0.9rem; opacity: 0.9; }
+
+    .applications {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+
+    .applications h3 { color: #5C8A5A; margin-bottom: 16px; }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .app-item {
+      background: #f8f8f8;
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+
+    .app-item strong { color: #5C8A5A; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Three-Period Lesson</h1>
+    <p class="subtitle">The Fundamental Montessori Teaching Technique</p>
+    <p class="source">From "The Montessori Method" by Maria Montessori (1912), Chapters VI & XII</p>
+  </header>
+
+  <div class="intro">
+    <p>The Three-Period Lesson is Montessori's core technique for introducing new concepts. It comes from Seguin's work with "deficient" children, but Montessori found it even more powerful with normal children.</p>
+    <p><strong>The three qualities of every lesson:</strong> CONCISE (count your words), SIMPLE (only absolute truth), OBJECTIVE (teacher's personality disappears).</p>
+  </div>
+
+  <div class="quote">
+    "Let all thy words be counted." — Dante
+  </div>
+
+  <div class="period-card period-1">
+    <div class="period-header">
+      <div class="period-number">1</div>
+      <div>
+        <div class="period-title">Naming</div>
+        <div class="period-subtitle">Associate the perception with the name</div>
+      </div>
+    </div>
+    <div class="period-body">
+      <p>Show the object and simply name it. No explanation. No elaboration.</p>
+      <div class="say-this">
+        "Look at this."<br>
+        "This is <strong>red</strong>."<br>
+        [Show the other]<br>
+        "This is <strong>blue</strong>."
+      </div>
+      <p><em>Leave the objects under the child's eyes for a moment. Always present at least two contrasting items—never just one.</em></p>
+    </div>
+  </div>
+
+  <div class="period-card period-2">
+    <div class="period-header">
+      <div class="period-number">2</div>
+      <div>
+        <div class="period-title">Recognition</div>
+        <div class="period-subtitle">Child identifies the named object</div>
+      </div>
+    </div>
+    <div class="period-body">
+      <p>Ask the child to point to or give you the object by name.</p>
+      <div class="say-this">
+        "Give me the <strong>red</strong>."<br>
+        "Give me the <strong>blue</strong>."
+      </div>
+      <p><em>This is where learning happens. Repeat this step multiple times with varied requests.</em></p>
+    </div>
+  </div>
+
+  <div class="period-card period-3">
+    <div class="period-header">
+      <div class="period-number">3</div>
+      <div>
+        <div class="period-title">Recall</div>
+        <div class="period-subtitle">Child produces the name</div>
+      </div>
+    </div>
+    <div class="period-body">
+      <p>Point to the object and ask the child to name it.</p>
+      <div class="say-this">
+        [Point to object]<br>
+        "What is this?"
+      </div>
+      <p><em>This is the most difficult step. Only attempt after success with Period 2.</em></p>
+    </div>
+  </div>
+
+  <div class="error-section">
+    <h3>If the Child Makes a Mistake</h3>
+    <div class="dont-list">
+      <div class="dont-item"><span class="cross">✗</span> Do NOT repeat the lesson</div>
+      <div class="dont-item"><span class="cross">✗</span> Do NOT insist on the correct answer</div>
+      <div class="dont-item"><span class="cross">✗</span> Do NOT make the child feel he has made a mistake</div>
+    </div>
+    <div class="do-list">
+      <div class="do-item"><span class="check">✓</span> Smile warmly</div>
+      <div class="do-item"><span class="check">✓</span> Give a friendly caress</div>
+      <div class="do-item"><span class="check">✓</span> Take away the materials</div>
+      <div class="do-item"><span class="check">✓</span> Try again another day</div>
+    </div>
+    <p style="margin-top: 16px;"><em>The child is simply not ready. Forcing will "alter the natural state which must be used by her in making her psychological observation."</em></p>
+  </div>
+
+  <div class="key-insight">
+    <blockquote>"To give a ray of light and to go on our way."</blockquote>
+    <cite>— Maria Montessori, on the teacher's role</cite>
+  </div>
+
+  <div class="applications">
+    <h3>Apply This Technique To</h3>
+    <div class="app-grid">
+      <div class="app-item"><strong>Colors:</strong> Red/Blue, then add more</div>
+      <div class="app-item"><strong>Shapes:</strong> Circle/Square/Triangle</div>
+      <div class="app-item"><strong>Textures:</strong> Rough/Smooth</div>
+      <div class="app-item"><strong>Sizes:</strong> Big/Small/Medium</div>
+      <div class="app-item"><strong>Letters:</strong> Sandpaper letter names</div>
+      <div class="app-item"><strong>Numbers:</strong> Numeral recognition</div>
+      <div class="app-item"><strong>Vocabulary:</strong> Any new words</div>
+      <div class="app-item"><strong>At home:</strong> Everything you want to name</div>
+    </div>
+  </div>
+
+  <div class="quote" style="margin-top: 32px;">
+    "Teachers ordinarily are greatly surprised at such simplicity. They often say, 'But everybody knows how to do that!' ... but the truth is that not everyone knows how to do this simple thing."
+  </div>
+</body>
+</html>

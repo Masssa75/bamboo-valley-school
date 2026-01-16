@@ -81,12 +81,25 @@ function DaySection({
   uncropped?: boolean;
   children: React.ReactNode;
 }) {
+  // On mobile: full width for all images
+  // On md+: apply offset styling for offset-left and offset-right
   const imageClasses = {
     wide: uncropped ? "w-full h-auto object-contain rounded-xl mb-8" : "w-full h-[350px] object-cover rounded-xl mb-8",
-    "offset-left": uncropped ? "w-[90%] mr-[10%] h-auto object-contain rounded-xl mb-8" : "w-[90%] mr-[10%] h-[320px] object-cover rounded-xl mb-8",
-    "offset-right": uncropped ? "w-[90%] ml-[10%] h-auto object-contain rounded-xl mb-8" : "w-[90%] ml-[10%] h-[320px] object-cover rounded-xl mb-8",
+    "offset-left": uncropped
+      ? "w-full md:w-[90%] md:mr-[10%] h-auto object-contain rounded-xl mb-8"
+      : "w-full md:w-[90%] md:mr-[10%] h-[280px] md:h-[320px] object-cover rounded-xl mb-8",
+    "offset-right": uncropped
+      ? "w-full md:w-[90%] md:ml-[10%] h-auto object-contain rounded-xl mb-8"
+      : "w-full md:w-[90%] md:ml-[10%] h-[280px] md:h-[320px] object-cover rounded-xl mb-8",
     tall: uncropped ? "w-full h-auto object-contain rounded-xl mb-8" : "w-full h-[450px] object-cover rounded-xl mb-8",
   };
+
+  // Wrapper padding only on md+ screens
+  const wrapperClass = imagePosition === "offset-left"
+    ? "md:pr-[10%]"
+    : imagePosition === "offset-right"
+      ? "md:pl-[10%]"
+      : "";
 
   return (
     <section className="mb-20">
@@ -98,7 +111,7 @@ function DaySection({
       </h2>
       <p className="text-[17px] text-[#555] mb-6 leading-relaxed">{intro}</p>
       {image && imageAlt && (
-        <div className={imagePosition === "offset-left" ? "pr-[10%]" : imagePosition === "offset-right" ? "pl-[10%]" : ""}>
+        <div className={wrapperClass}>
           <Image
             src={image}
             alt={imageAlt}

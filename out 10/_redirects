@@ -1,0 +1,37 @@
+# Redirect old location pages to consolidated page with keywords in URL
+/en/bangtao/*    /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/en/bangtao      /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/bangtao/*    /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/bangtao      /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/bangtao/*    /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/bangtao      /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/bangtao/*    /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/bangtao      /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+
+/en/cherngtalay/*    /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/en/cherngtalay      /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/cherngtalay/*    /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/cherngtalay      /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/cherngtalay/*    /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/cherngtalay      /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/cherngtalay/*    /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/cherngtalay      /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+
+/en/laguna/*    /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/en/laguna      /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/laguna/*    /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/laguna      /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/laguna/*    /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/laguna      /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/laguna/*    /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/laguna      /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+
+# Also redirect /locations to the new URL
+/en/locations/*    /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/en/locations      /en/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/locations/*    /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/th/locations      /th/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/locations/*    /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/ru/locations      /ru/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/locations/*    /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+/zh/locations      /zh/kindergarten-bangtao-laguna-cherngtalay/    301

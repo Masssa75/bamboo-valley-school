@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whole-to-Parts Arithmetic - Waldorf Method</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FDF6E3;
+      color: #3d3d3d;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #5C8A5A;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #E8A598;
+      padding-bottom: 0.5rem;
+    }
+    .source {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 1.5rem;
+    }
+    .principle {
+      background: #fff;
+      border-left: 4px solid #5C8A5A;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.4rem;
+      margin: 2rem 0 1rem;
+      border-bottom: 2px solid #E8A598;
+      padding-bottom: 0.3rem;
+    }
+    .contrast {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .wrong, .right {
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .wrong {
+      background: #fce4ec;
+      border-left: 4px solid #c62828;
+    }
+    .right {
+      background: #e8f5e9;
+      border-left: 4px solid #5C8A5A;
+    }
+    .wrong-title, .right-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .wrong-title { color: #c62828; }
+    .right-title { color: #5C8A5A; }
+    .operation {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .operation-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #5C8A5A;
+      margin-bottom: 0.75rem;
+    }
+    .example {
+      background: #f9f6f0;
+      border: 1px dashed #E8A598;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 0.75rem 0;
+    }
+    .example-title {
+      font-weight: 600;
+      color: #E8A598;
+      margin-bottom: 0.5rem;
+    }
+    .quote {
+      font-style: italic;
+      color: #555;
+      border-left: 3px solid #ccc;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    ul { margin-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .math-display {
+      font-family: monospace;
+      font-size: 1.2rem;
+      background: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    .key-insight {
+      background: #e8f5e9;
+      border-left: 4px solid #5C8A5A;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    @media (max-width: 600px) {
+      .contrast { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { padding: 1rem; }
+      .operation { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Whole-to-Parts Arithmetic</h1>
+  <p class="source">From "The Kingdom of Childhood" by Rudolf Steiner (1924), Lecture 5</p>
+
+  <div class="principle">
+    <strong>Core Principle:</strong> Always start from the WHOLE and divide into parts. Never build from parts to reach a whole. The ONE contains the TWO, THREE, etc. - like a cake contains its slices. Numbers derive from the body (fingers, hands), not abstract counters.
+  </div>
+
+  <h2>The Reversal of Standard Arithmetic</h2>
+
+  <div class="contrast">
+    <div class="wrong">
+      <div class="wrong-title">Standard Method (Wrong)</div>
+      <p>"2 + 2 = ?"</p>
+      <p>Start with parts, build to whole.</p>
+      <p><em>Child must construct something from nothing.</em></p>
+    </div>
+    <div class="right">
+      <div class="right-title">Waldorf Method (Right)</div>
+      <p>"Here is 4. What parts make it?"</p>
+      <p>Start with whole, find the parts.</p>
+      <p><em>Child divides something that exists.</em></p>
+    </div>
+  </div>
+
+  <div class="quote">"I do not say: two and two is four. No, I say: there is a four and what I have here is divided into two and two."</div>
+
+  <h2>Deriving Numbers from Life</h2>
+
+  <div class="operation">
+    <div class="operation-title">Teaching "One"</div>
+    <p>The child itself is ONE - a unity that cannot be cut in half like a piece of wood.</p>
+    <div class="example">
+      <div class="example-title">Script</div>
+      <p>"You are one person. You cannot be cut in half and still be you. ONE is complete, whole, indivisible."</p>
+    </div>
+  </div>
+
+  <div class="operation">
+    <div class="operation-title">Teaching "Two"</div>
+    <p>Two hands can touch each other. Two children can meet.</p>
+    <div class="example">
+      <div class="example-title">Script</div>
+      <p>"Bring your hands together. See how they meet? That's TWO - things that can come together."</p>
+    </div>
+  </div>
+
+  <div class="operation">
+    <div class="operation-title">Teaching "Three" and Beyond</div>
+    <p>Three children meeting. Roman numeral V = hand with spread fingers.</p>
+    <div class="example">
+      <div class="example-title">Script</div>
+      <p>"Hold up your hand with fingers spread. See the V shape? That's FIVE - the Romans drew it just like your hand!"</p>
+    </div>
+  </div>
+
+  <h2>The Four Operations</h2>
+
+  <div class="operation">
+    <div class="operation-title">Addition: Start with the Sum</div>
+    <div class="math-display">12 = ? + ? + ?</div>
+    <p><strong>Question:</strong> "Here are 12 apples. How can we divide them among three children?"</p>
+    <p>The SUM (whole) is given. Find the ADDENDA (parts).</p>
+    <div class="example">
+      <div class="example-title">Wrong vs Right</div>
+      <p><strong>Wrong:</strong> "3 + 4 + 5 = ?" (building from parts)</p>
+      <p><strong>Right:</strong> "12 is divided into what parts? 3 + 4 + 5" (dividing the whole)</p>
+    </div>
+  </div>
+
+  <div class="operation">
+    <div class="operation-title">Subtraction: Mary's Apple Story</div>
+    <div class="math-display">8 - ? = 3</div>
+    <p><strong>Story:</strong> "Mary had 8 apples. Now she has 3. How many did she give away?"</p>
+    <p>The MINUEND (8) and REMAINDER (3) are known. Find the SUBTRAHEND (what was taken).</p>
+    <div class="example">
+      <div class="example-title">Wrong vs Right</div>
+      <p><strong>Wrong:</strong> "8 - 5 = ?" (taking away a known amount)</p>
+      <p><strong>Right:</strong> "8 became 3. What happened?" (finding what was lost)</p>
+    </div>
+  </div>
+
+  <div class="operation">
+    <div class="operation-title">Multiplication: Start with Product</div>
+    <div class="math-display">24 = 6 x ?</div>
+    <p><strong>Question:</strong> "Here are 24 cookies. If we put 6 on each plate, how many plates?"</p>
+    <p>The PRODUCT (whole) is given. Find how many times a factor is contained.</p>
+  </div>
+
+  <div class="operation">
+    <div class="operation-title">Division: Two Kinds</div>
+    <p><strong>Separation into parts:</strong> "24 divided into 4 groups - how many in each?"</p>
+    <p><strong>Measurement:</strong> "How many 6s are contained in 24?"</p>
+    <p>Both start from the whole (24) and find what's inside it.</p>
+  </div>
+
+  <h2>Why This Matters</h2>
+
+  <div class="key-insight">
+    <strong>The Body Does Mathematics</strong>
+    <div class="quote" style="margin-top:0.5rem;">"The body is always doing mathematics, the whole of mathematics is in the body... Out of this body-mathematics the brain-mathematics must arise."</div>
+    <p style="margin-top:0.75rem;">The head is just a "spectator" - it observes what the body already knows. Counting on fingers isn't primitive; it's connecting to the body's inherent mathematics. Abstract counters (abacus, beads) bypass this connection.</p>
+  </div>
+
+  <h2>The Pythagorean Theorem Example</h2>
+  <p>Teach it visually by cutting squares on the sides of a right triangle. Let children see that the two smaller squares, rearranged, fill the larger square.</p>
+  <p><strong>Then let them forget it.</strong> Let them rediscover it later. The wonder must remain.</p>
+  <div class="quote">"The best thing about the theorem of Pythagoras is that 'one has always known it'... We should know things in such a way that we feel that we have always known them."</div>
+
+</body>
+</html>
