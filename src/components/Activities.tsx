@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 const activityKeys = [
   { key: "freePlay", image: "/images/Free-Play.jpeg" },
@@ -19,6 +21,7 @@ const activityKeys = [
 export default function Activities() {
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const t = useTranslations("activities");
+  const locale = useLocale();
 
   const handleCardClick = (index: number) => {
     setActiveCard(activeCard === index ? null : index);
@@ -27,9 +30,21 @@ export default function Activities() {
   return (
     <section id="programs" data-track-section="activities" className="py-28 md:py-32 px-6 md:px-12 bg-[#FAF9F6]">
       <div className="text-center max-w-[600px] mx-auto mb-16">
-        <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d]">
+        <h2 className="font-serif text-4xl md:text-5xl font-normal text-[#2d2d2d] mb-4">
           {t("title")}
         </h2>
+        <p className="text-lg text-[#5a5a5a] mb-4">
+          {t("subtitle")}
+        </p>
+        <Link
+          href={`/${locale}/blog/day-at-bamboo-valley`}
+          className="inline-flex items-center gap-2 text-[#5a7a5a] hover:text-[#4a6a4a] font-medium transition-colors"
+        >
+          {t("readMore")}
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto">

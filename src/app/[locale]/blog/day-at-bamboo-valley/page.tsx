@@ -5,6 +5,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageSlider from "@/components/ImageSlider";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -129,42 +130,6 @@ function ActivityCard({
       </span>
       <h4 className="text-lg mb-2 text-[#2d2d2d] font-medium">{title}</h4>
       <p className="text-sm text-[#666]">{description}</p>
-    </div>
-  );
-}
-
-// Image slider component (client-side interactivity handled via CSS)
-function ImageSlider({
-  images,
-}: {
-  images: Array<{ src: string; alt: string; caption: string }>;
-}) {
-  return (
-    <div className="mb-8">
-      <div className="relative rounded-xl overflow-hidden">
-        <Image
-          src={images[0].src}
-          alt={images[0].alt}
-          width={800}
-          height={420}
-          className="w-full h-[420px] object-cover"
-        />
-      </div>
-      <p className="text-center mt-3 text-[15px] text-[#666] italic">
-        {images[0].caption}
-      </p>
-      {images.length > 1 && (
-        <div className="flex justify-center gap-2 mt-3">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`w-2.5 h-2.5 rounded-full ${
-                i === 0 ? "bg-[#BED7AF] scale-110" : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 }
@@ -424,7 +389,7 @@ export default async function DayAtBambooValleyPost({
                 caption: t("outdoorPlay.slider.digging.caption"),
               },
               {
-                src: "/images/Mud-Play.png",
+                src: "/images/Mud-Play.jpg",
                 alt: t("outdoorPlay.slider.mud.alt"),
                 caption: t("outdoorPlay.slider.mud.caption"),
               },
