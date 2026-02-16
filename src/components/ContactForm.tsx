@@ -16,6 +16,8 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [loadedAt] = useState(() => Date.now());
 
   // Extract locale from pathname (e.g., /en/contact -> en)
   const locale = pathname.split("/")[1] || "en";
@@ -29,7 +31,7 @@ export default function ContactForm() {
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, website: honeypot, _t: loadedAt }),
       });
 
       if (!response.ok) {
@@ -74,6 +76,19 @@ export default function ContactForm() {
   return (
     <div className="bg-[#FAF9F6] p-8 rounded-lg">
       <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Honeypot - hidden from real users, bots auto-fill it */}
+        <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
+          <label htmlFor="website">Website</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-[#2d2d2d] mb-1">
             {t("name")} <span className="text-red-500">*</span>

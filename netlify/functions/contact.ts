@@ -44,7 +44,26 @@ export const handler: Handler = async (event) => {
   };
 
   try {
-    const { name, email, phone, subject, message } = JSON.parse(event.body || "{}");
+    const { name, email, phone, subject, message, website, _t } = JSON.parse(event.body || "{}");
+
+    // Honeypot check - real users never fill this hidden field
+    if (website) {
+      // Return 200 so bots think it worked
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ success: true, id: "ok" }),
+      };
+    }
+
+    // Timing check - reject submissions faster than 3 seconds
+    if (_t && Date.now() - Number(_t) < 3000) {
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({ success: true, id: "ok" }),
+      };
+    }
 
     // Validate required fields
     if (!name || !email || !message) {
