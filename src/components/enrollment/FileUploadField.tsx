@@ -157,6 +157,7 @@ export default function FileUploadField({
             type="file"
             accept={accept}
             onChange={handleChange}
+            onClick={(e) => e.stopPropagation()}
             className="hidden"
           />
         </div>
