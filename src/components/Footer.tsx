@@ -31,6 +31,9 @@ export default function Footer({ locale = "en" }: FooterProps) {
             <Link href={localePath("/contact")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
               {t("contact")}
             </Link>
+            <Link href={localePath("/enroll")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+              {t("apply")}
+            </Link>
             {/* Educator Program link — re-enable when needed: move drafts/educator-program.html back to public/ */}
             <a
               href="https://www.instagram.com/bamboovalleyphuket/"

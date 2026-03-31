@@ -42,6 +42,16 @@ export default async function BlogPage({
 
   const basePosts = [
     {
+      slug: "moving-to-phuket-with-children",
+      href: `/${locale}/blog/moving-to-phuket-with-children`,
+      title: t("movingToPhuketTitle"),
+      excerpt: t("movingToPhuketExcerpt"),
+      date: t("movingToPhuketDate"),
+      category: t("movingToPhuketCategory"),
+      image: "/images/families-gathering-green-lawn-palm-trees.JPG",
+      imageAlt: "Families on green lawn under palm trees at Bamboo Valley",
+    },
+    {
       slug: "day-at-bamboo-valley",
       href: `/${locale}/blog/day-at-bamboo-valley`,
       title: t("dayAtBambooTitle"),

@@ -356,6 +356,7 @@
     "addressValue": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand",
     "phone": "โทรศัพท์ / WhatsApp",
     "email": "อีเมล",
+    "apply": "Apply",
     "copyright": "© {year} Bamboo Valley สงวนลิขสิทธิ์"
   },
   "childWellbeing": {
@@ -1485,7 +1486,11 @@
     "questionsAboutApproach": "มีคำถามเกี่ยวกับแนวทางของเราหรือไม่?",
     "chatWithUsDesc": "เรายินดีพูดคุยเกี่ยวกับวิธีที่เราทำต่างออกไป",
     "shortTermLinkLabel": "ครอบครัวที่เดินทาง:",
-    "shortTermLinkText": "ตัวเลือกโรงเรียนระยะสั้นในภูเก็ต"
+    "shortTermLinkText": "ตัวเลือกโรงเรียนระยะสั้นในภูเก็ต",
+    "movingToPhuketTitle": "Moving to Phuket with Young Children",
+    "movingToPhuketExcerpt": "A parent's honest guide to relocating with young children. Schools, costs, neighborhoods, and what we wish someone had told us.",
+    "movingToPhuketDate": "March 21, 2026",
+    "movingToPhuketCategory": "Guide"
   },
   "spaceVideo": {
     "line1": "พื้นที่สวนปาล์ม 5,600 ตารางเมตร",
@@ -1854,5 +1859,400 @@
     "community1": "เรารู้ว่ามันไม่สะดวกเมื่อลูกของคุณไม่สามารถมาโรงเรียนได้ เรารู้ว่าการรักษาต้องใช้เวลาและความพยายาม เราขอบคุณทุกครอบครัวที่ตอบสนองอย่างรวดเร็วเมื่อเกิดปัญหาเหล่านี้",
     "community2": "นี่คือความหมายของชุมชน: บางครั้งเราเสียสละเล็กน้อยเพื่อกันและกัน เมื่อทุกคนทำหน้าที่ของตน การระบาดจะจบลงอย่างรวดเร็วและเด็กๆ สามารถกลับมาเรียนรู้ด้วยกัน",
     "questionsDesc": "หากคุณมีคำถามเกี่ยวกับแนวทางด้านสุขภาพของเราหรือต้องการพูดคุยเกี่ยวกับทางเลือก เรายินดีพูดคุยเสมอ"
+  },
+  "blogMovingToPhuket": {
+    "meta": {
+      "title": "Moving to Phuket with Young Children: A Parent's Guide | Bamboo Valley",
+      "description": "We moved to Phuket and built a school. Here's our honest guide to relocating with young children — schools, costs, neighborhoods, and what surprised us most.",
+      "keywords": "moving to phuket with kids, relocating to phuket family, phuket schools for expats, kindergarten phuket, international school phuket cost, expat family phuket, living in phuket with children, phuket for families, moving from dubai to phuket",
+      "ogTitle": "Moving to Phuket with Young Children: A Parent's Guide",
+      "ogDescription": "We moved to Phuket and built a school for our own children. Here's everything we wish someone had told us about relocating with a young family."
+    },
+    "hero": {
+      "title": "Moving to Phuket with Young Children?",
+      "subtitle": "We did it. Then we built a school. Here's what we learned.",
+      "imageAlt": "Families gathering on the green lawn under palm trees at Bamboo Valley School Phuket",
+      "badges": {
+        "ages": "Ages 2–9",
+        "campus": "Nature Campus",
+        "flexible": "Flexible Enrollment"
+      }
+    },
+    "founders": {
+      "title": "We Were in Your Shoes",
+      "imageAlt": "Marc and Nutthanit Schwyn with their children at Bamboo Valley School",
+      "p1": "In 2020, we moved to Phuket with our daughters. We looked at every school on the island. Some were too rigid, some too expensive, and none of them felt like the childhood we wanted for our children. So we built one ourselves.",
+      "p2": "Bamboo Valley started with our own family and a handful of others who shared the same vision: children learning outdoors, surrounded by nature, free to explore at their own pace. Four years later, we have families from over 15 countries — and a green campus under palm trees that still takes our breath away.",
+      "signature": "— Marc & Nutthanit Schwyn, Co-founders"
+    },
+    "whyPhuket": {
+      "title": "Why Phuket for Families?",
+      "intro": "Phuket is not just a holiday island. For families willing to look beyond the tourist strips, it offers a rare combination of safety, affordability, nature, and international community.",
+      "cards": {
+        "safety": {
+          "title": "Safe & Welcoming",
+          "desc": "Thailand consistently ranks as one of the safest countries in Southeast Asia for families. Phuket has excellent hospitals, a strong expat community, and locals who genuinely love children."
+        },
+        "cost": {
+          "title": "Affordable Quality of Life",
+          "desc": "A family of four can live comfortably on $2,500–4,000/month including rent. International school fees range from $3,000–20,000/year — a fraction of Dubai, Singapore, or Hong Kong."
+        },
+        "lifestyle": {
+          "title": "Beach & Mountain Lifestyle",
+          "desc": "Weekend beach trips, jungle hikes, island-hopping, night markets. Children grow up outdoors here, not in shopping malls. The lifestyle itself becomes education."
+        },
+        "nature": {
+          "title": "Nature Everywhere",
+          "desc": "Tropical forests, mangroves, coral reefs, and wildlife. Children who grow up in Phuket develop a deep connection with the natural world that stays with them for life."
+        },
+        "community": {
+          "title": "International Community",
+          "desc": "A large, active expat community with parent groups, sports clubs, and cultural events. You will find your people faster than you expect."
+        },
+        "weather": {
+          "title": "Year-Round Warmth",
+          "desc": "No winter coats, no heating bills. Tropical weather means children can be outdoors every single day. Even the rainy season brings warm showers, not cold grey days."
+        }
+      }
+    },
+    "campus": {
+      "title": "Our Campus",
+      "intro": "A 3.5-rai palm plantation in Cherngtalay with lush green lawns, nearly 100 palm trees, bamboo play structures, animal areas, and wooden classrooms with glass walls that open onto the garden.",
+      "slider": {
+        "panorama": {
+          "alt": "Panoramic view of Bamboo Valley campus with families on green lawn under palm trees",
+          "caption": "Our 3.5-rai campus — where lessons happen under palm trees"
+        },
+        "classrooms": {
+          "alt": "Wooden classrooms with colorful prayer flags surrounded by palm trees",
+          "caption": "Handcrafted wooden classrooms with glass walls opening onto nature"
+        },
+        "buildings": {
+          "alt": "Two classroom buildings with bunting and glass walls among palm trees",
+          "caption": "Indoor and outdoor learning blend seamlessly"
+        },
+        "sunny": {
+          "alt": "Campus building on sunny day with green grass and palm trees",
+          "caption": "Where every day feels like the first day of summer"
+        },
+        "freeplay": {
+          "alt": "Children running freely on green grass under palm trees",
+          "caption": "Room to run, climb, and be children"
+        }
+      },
+      "stats": {
+        "palms": "Nearly 100 palm trees",
+        "campus": "3.5 rai (5,600 m²) campus",
+        "outdoor": "80% learning happens outdoors"
+      }
+    },
+    "dayOutdoors": {
+      "title": "What a Day Looks Like",
+      "intro": "Most learning at Bamboo Valley happens outdoors — on the grass, under the trees, in the garden. Here is what your children will experience.",
+      "slider": {
+        "reading": {
+          "alt": "Teacher reading to children outdoors under palm trees on green grass",
+          "caption": "Story time under the palms — no walls, no ceiling, just imagination"
+        },
+        "music": {
+          "alt": "Music circle with guitar on green grass under palm trees",
+          "caption": "Music circle on the lawn — guitar, singing, and movement"
+        },
+        "ukulele": {
+          "alt": "Teacher and child one-on-one ukulele lesson on grass",
+          "caption": "One-on-one moments — every child is seen and heard"
+        },
+        "sewing": {
+          "alt": "Boy sewing felt craft on mat on green grass",
+          "caption": "Waldorf handwork outdoors — sewing, weaving, creating"
+        },
+        "explore": {
+          "alt": "Child exploring nature beside tree trunk",
+          "caption": "Nature discovery — every tree and bug is a lesson"
+        },
+        "dance": {
+          "alt": "Teacher leading ring dance on green grass with children",
+          "caption": "Ring dances and movement games on the open lawn"
+        }
+      }
+    },
+    "schools": {
+      "title": "Schools in Phuket — Finding the Right Fit",
+      "intro": "Phuket has about 15 international schools, mostly following British or IB curricula. Fees range from around $3,000/year at smaller schools to over $20,000 at premium institutions like UWC Thailand and BISP. Most are excellent — it depends on what matters most to your family.",
+      "bambooValley": "We are different. Bamboo Valley is a small, Waldorf-inspired nature school for ages 2–9. We are not trying to be an international school in the traditional sense. We are a community of families who believe young children learn best outdoors, through play, creativity, and connection with nature.",
+      "whatMakesUsDifferent": {
+        "title": "What Makes Bamboo Valley Different",
+        "items": {
+          "nature": "3.5-rai nature campus with green lawns and nearly 100 palm trees — 80% of learning happens outdoors",
+          "waldorf": "Waldorf-inspired curriculum with handwork, watercolor painting, storytelling, and music",
+          "flexible": "Flexible enrollment — weekly, monthly, or long-term. Perfect for families still figuring things out",
+          "parentBuilt": "Built by parents, for parents. Our own children attend. We are invested in this school's success in the most personal way possible",
+          "small": "Small class sizes with a 1:5 teacher-child ratio. Every child is known, not just enrolled"
+        }
+      },
+      "otherOptions": {
+        "bisp": {
+          "name": "British International School Phuket (BISP)",
+          "type": "British Curriculum · Ages 2–18",
+          "desc": "The largest and most established international school in Phuket. Elite sports programs, boarding option. Premium fees (~$15,000–20,000/year)."
+        },
+        "uwc": {
+          "name": "UWC Thailand",
+          "type": "IB Curriculum · Ages 2–18",
+          "desc": "One of only 18 United World Colleges globally. Strong focus on sustainability and global citizenship. Similar fee range to BISP."
+        },
+        "headstart": {
+          "name": "HeadStart International School",
+          "type": "British Curriculum · Ages 2–18",
+          "desc": "Good quality British curriculum at more accessible fees (~$5,000–12,000/year). Popular with expat families in Chalong area."
+        },
+        "lighthouse": {
+          "name": "Lighthouse International School",
+          "type": "Waldorf & Montessori Inspired · Ages 2–12",
+          "desc": "Alternative education approach in Chalong and Rawai. Nature-oriented with Waldorf and Montessori influences."
+        }
+      }
+    },
+    "costs": {
+      "title": "What It Actually Costs",
+      "intro": "Real numbers from a family that lives here. Phuket is significantly more affordable than Dubai, Singapore, or Hong Kong — without sacrificing quality of life.",
+      "cards": {
+        "school": {
+          "label": "International School Fees",
+          "range": "$3,000–20,000/yr",
+          "note": "Bamboo Valley is at the affordable end"
+        },
+        "rent": {
+          "label": "Family Home Rental",
+          "range": "25,000–60,000 ฿/mo",
+          "note": "2-3 bed villa or condo in Bangtao area"
+        },
+        "living": {
+          "label": "Monthly Living Costs",
+          "range": "50,000–100,000 ฿/mo",
+          "note": "Family of 4, comfortable lifestyle"
+        }
+      },
+      "comparison": "For comparison: international school fees in Dubai average $14,000–27,000/year, and monthly family living costs typically start at $5,000+. In Phuket, the same quality of life costs roughly half."
+    },
+    "howItWorks": {
+      "title": "How to Get Started",
+      "intro": "Whether you have already booked your flights or are just starting to consider Phuket, here is how to take the first step.",
+      "steps": {
+        "reach": {
+          "title": "Reach Out",
+          "desc": "Send us a message. Tell us about your family, your children's ages, and when you are thinking of coming."
+        },
+        "visit": {
+          "title": "Visit the Campus",
+          "desc": "Come see us in person. Walk the grounds, meet the teachers, see how your children react to the space."
+        },
+        "enroll": {
+          "title": "Choose Your Option",
+          "desc": "Weekly, monthly, or long-term — pick what works for your family. No pressure, no long-term commitment required."
+        },
+        "start": {
+          "title": "Your Children Start",
+          "desc": "Most children settle in within a day or two. The outdoor environment, the animals, and the other children do the rest."
+        }
+      }
+    },
+    "faq": {
+      "title": "Common Questions",
+      "items": {
+        "minStay": {
+          "q": "Is there a minimum enrollment period?",
+          "a": "No. You can enroll for as little as one week. Many traveling families stay for 2–4 weeks, while relocating families often start with a month to see how their children settle before committing to a full term."
+        },
+        "curriculum": {
+          "q": "What curriculum do you follow?",
+          "a": "We follow a Waldorf-inspired approach enhanced with targeted learning techniques. This means storytelling, watercolor painting, handwork, music, and nature exploration form the core — combined with phonics, numeracy, and reading for older children. No screens, no worksheets, no homework."
+        },
+        "language": {
+          "q": "What language is used?",
+          "a": "English is the primary language of instruction. We have children from over 15 countries, so the classroom is naturally multilingual. Children who arrive speaking no English typically become conversational within weeks through immersion."
+        },
+        "ages": {
+          "q": "What ages do you accept?",
+          "a": "We serve children ages 2 to 9, across nursery (ages 2–4), kindergarten (ages 3–6), and primary (ages 6–9) programs."
+        },
+        "costs": {
+          "q": "How much does it cost?",
+          "a": "We offer competitive fees with flexible options. Weekly enrollment starts from a daily rate, while term enrollment offers the best value. Contact us for current pricing — it varies by age group and duration."
+        },
+        "visa": {
+          "q": "What about visas?",
+          "a": "Most families arrive on a tourist visa (60 days, extendable to 90). For longer stays, education visas and the Long-Term Resident (LTR) visa are options. We can point you to trusted local visa agents who help families regularly."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Explore?",
+      "description": "Whether you are planning a move or just passing through, we would love to show you what we have built. Come visit, ask questions, and see if Bamboo Valley feels right for your family.",
+      "contact": "Get in Touch",
+      "shortTerm": "Short-Term Options"
+    }
+  },
+  "enrollment": {
+    "pageTitle": "Apply to Bamboo Valley",
+    "pageSubtitle": "A simple 5-step application. Your progress is saved automatically.",
+    "stepOf": "Step {current} of {total}",
+    "step1Title": "Getting Started",
+    "step1Subtitle": "Let us know who you are so we can save your progress.",
+    "step1Short": "Start",
+    "step2Title": "Your Children",
+    "step2Subtitle": "Tell us about the children you would like to enroll.",
+    "step2Short": "Children",
+    "step3Title": "Family & Profile",
+    "step3Subtitle": "A bit more about your family and your children's personalities.",
+    "step3Short": "Family",
+    "step4Title": "Health & Learning",
+    "step4Subtitle": "Help us understand each child's health and learning needs.",
+    "step4Short": "Health",
+    "step5Title": "Finalize & Submit",
+    "step5Subtitle": "Upload documents, tell us about yourself, and review your application.",
+    "step5Short": "Submit",
+    "parentName": "Full name",
+    "parentNamePlaceholder": "Your full name",
+    "parentEmail": "Email address",
+    "parentEmailPlaceholder": "your@email.com",
+    "parentPhone": "Phone / WhatsApp",
+    "parentPhonePlaceholder": "+66 ...",
+    "phoneHelper": "We may use WhatsApp to follow up on your application.",
+    "childCount": "How many children are you enrolling?",
+    "child": "Child",
+    "addChild": "Add child",
+    "remove": "Remove",
+    "removeChildConfirm": "Remove {name}'s information? This cannot be undone.",
+    "pleaseCompleteChild": "Please complete {name}'s information before continuing.",
+    "childFullName": "Child's full name",
+    "childFullNamePlaceholder": "As on passport",
+    "preferredName": "Preferred name / nickname",
+    "preferredNamePlaceholder": "What they like to be called",
+    "preferredNameHelper": "Optional — what your child likes to be called",
+    "dateOfBirth": "Date of birth",
+    "age": "Age",
+    "gender": "Gender",
+    "selectGender": "Select...",
+    "nationality": "Nationality",
+    "nationalityPlaceholder": "e.g. Thai, British, American",
+    "program": "Program to enroll",
+    "selectProgram": "Select a program...",
+    "programSuggested": "Suggested based on age",
+    "previousSchool": "Previous school (if any)",
+    "previousSchoolPlaceholder": "Name of previous school or nursery",
+    "preferredStartDate": "Preferred start date",
+    "intendedDuration": "Intended length of enrollment",
+    "selectDuration": "Select...",
+    "childPassport": "Child's passport or birth certificate",
+    "parent1Additional": "Parent / Guardian 1",
+    "parent2Title": "Parent / Guardian 2",
+    "parent2Optional": "Optional — add a second parent or guardian",
+    "languages": "Languages spoken",
+    "languagesPlaceholder": "e.g. English, Thai",
+    "occupation": "Occupation",
+    "addressTitle": "Address",
+    "notYetInPhuket": "We are not yet in Phuket",
+    "expectedArrival": "Expected arrival date in Phuket",
+    "currentAddress": "Current address in Phuket",
+    "addressPlaceholder": "Street address, area, postcode",
+    "parentsTogether": "Are both parents/guardians living together?",
+    "yes": "Yes",
+    "no": "No",
+    "parentalStatus": "Parental status",
+    "parentalStatusPlaceholder": "e.g. Divorced, Separated, Remarried",
+    "childLivingWith": "Child currently living with",
+    "custodyArrangement": "Time / custody arrangement",
+    "hasGuardian": "Is there a legal guardian who is not a parent?",
+    "guardianName": "Guardian name",
+    "emergencyContact": "Emergency Contact",
+    "emergencyName": "Full name",
+    "emergencyRelationship": "Relationship to child",
+    "emergencyRelPlaceholder": "e.g. Grandmother, Uncle, Nanny",
+    "emergencyPhone": "Phone number",
+    "socialEmotional": "About Your Child",
+    "favoriteActivities": "What does your child love to do?",
+    "favoriteActivitiesPlaceholder": "Activities, sports, games they enjoy most",
+    "whatUpsets": "What tends to upset your child?",
+    "whatUpsetsPlaceholder": "Situations or triggers that cause distress",
+    "howExpresses": "How does your child show they are upset?",
+    "howExpressesPlaceholder": "How they typically react when upset",
+    "languageSection": "Language",
+    "homeLanguages": "Languages spoken at home",
+    "homeLanguagesPlaceholder": "e.g. Thai and English",
+    "englishLevel": "English level",
+    "selectEnglishLevel": "Select...",
+    "healthSection": "Health",
+    "lifeThreatening": "Does your child have any life-threatening conditions?",
+    "allergies": "Does your child have any allergies?",
+    "dailyMedication": "Does your child take daily medication?",
+    "peRestriction": "Any PE / sports restrictions?",
+    "pleaseDescribe": "Please describe",
+    "additionalHealth": "Any other health information we should know?",
+    "additionalHealthPlaceholder": "Optional — anything else about your child's health",
+    "hasInsurance": "Does your child have health insurance?",
+    "insuranceCompany": "Insurance company",
+    "policyNumber": "Policy number",
+    "learningSection": "Learning & Development",
+    "needsLearningSupport": "Does your child need additional learning or behavioral support?",
+    "diagnosedConditions": "Diagnosed learning differences",
+    "diagnosisDescription": "Description of diagnosis and support needed",
+    "diagnosisDescriptionPlaceholder": "Tell us about the diagnosis and any support currently in place",
+    "physicalLimitations": "Physical limitations",
+    "physicalLimitationsDetail": "Please describe the physical limitation",
+    "supportReceived": "Support currently received",
+    "classroomAccommodations": "Classroom accommodations needed",
+    "accommodationsPlaceholder": "Any specific adjustments that help your child learn",
+    "behavioralChallenges": "Has your child experienced behavioral challenges in school?",
+    "seesTherapist": "Is your child currently seeing a therapist or psychologist?",
+    "behavioralDetails": "Please tell us more",
+    "childVideo": "Introduction Video",
+    "videoTitle": "A short video of your child",
+    "videoPromptYoung": "A short video (1-3 minutes) of your child playing naturally.",
+    "videoPromptOlder": "A short video (1-3 minutes) of your child interacting with others or speaking.",
+    "videoTip": "Tip: Record in standard quality (1080p at 30fps) for best results.",
+    "uploadVideo": "Upload video",
+    "sendViaWhatsApp": "Send via WhatsApp",
+    "whatsAppInstructions": "Send the video to our WhatsApp number with your child's name and application reference.",
+    "openWhatsApp": "Open WhatsApp",
+    "parentPassports": "Parent Passport Copies",
+    "parent1Passport": "Parent / Guardian 1 passport",
+    "parent2Passport": "Parent / Guardian 2 passport (optional)",
+    "discoveryTitle": "About You",
+    "howFoundUs": "How did you find us?",
+    "howFoundUs_google_search": "Google search",
+    "howFoundUs_instagram": "Instagram",
+    "howFoundUs_facebook": "Facebook",
+    "howFoundUs_friend_referral": "Friend / referral",
+    "howFoundUs_school_visit": "School visit",
+    "howFoundUs_event": "Event",
+    "howFoundUs_tripadvisor": "TripAdvisor",
+    "howFoundUs_directory": "Online directory",
+    "howFoundUs_other": "Other",
+    "whyJoining": "Why do you want to join Bamboo Valley?",
+    "whyJoiningPlaceholder": "What attracted you to our school?",
+    "additionalInfo": "Anything else you would like us to know?",
+    "additionalInfoPlaceholder": "Optional — any other information",
+    "permissionsTitle": "Permissions & Agreements",
+    "photoPermission": "Photo and video permission",
+    "termsAcknowledge": "I acknowledge that I have read and agree to the school's terms and conditions.",
+    "allStatementsTrue": "I confirm that all information provided in this application is true and accurate.",
+    "reviewTitle": "Review your application",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    "saving": "Saving...",
+    "draftSaved": "Draft saved",
+    "saveError": "Save failed — will retry",
+    "resumeBanner": "Your progress is saved automatically. Bookmark this page to return later.",
+    "existingDraftMessage": "You have an existing application in progress for this email address. Check your email for the resume link, or start a new application.",
+    "startFresh": "Start a new application",
+    "confirmationTitle": "Application Received",
+    "confirmationMessage": "Thank you for applying to Bamboo Valley. We will review your application and be in touch soon.",
+    "referenceNumber": "Your reference number",
+    "confirmationNote": "Please save this reference number. We will contact you within a few working days to discuss next steps.",
+    "required": "This field is required",
+    "validEmailRequired": "Please enter a valid email address"
   }
 }
