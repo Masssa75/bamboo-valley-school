@@ -35,7 +35,7 @@ export const childSchema = z.object({
   program: z.string().min(1, 'Program is required'),
   previousSchool: z.string().optional(),
   preferredStartDate: z.string().optional(),
-  intendedDuration: z.enum(['one_term', 'one_year', 'long_term', 'not_sure']).optional(),
+  intendedDuration: z.enum(['short_term', 'one_term', 'one_year', 'long_term', 'not_sure']).optional(),
 
   // Social/emotional (Step 3)
   favoriteActivities: z.string().min(1, 'Required'),

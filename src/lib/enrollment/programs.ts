@@ -100,6 +100,7 @@ export const SUPPORT_RECEIVED = [
 
 // Duration options
 export const DURATION_OPTIONS = [
+  { value: 'short_term', label: 'Short-term (1-3 months)' },
   { value: 'one_term', label: 'One term' },
   { value: 'one_year', label: 'One year' },
   { value: 'long_term', label: 'Long-term' },
