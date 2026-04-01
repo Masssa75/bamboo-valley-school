@@ -120,7 +120,7 @@ export const ENGLISH_LEVELS = [
 
 // Photo permission options
 export const PHOTO_PERMISSIONS = [
-  { value: 'full', label: 'Full consent — help us share the joy of learning with other families (recommended)' },
-  { value: 'blurred_face', label: 'Blurred face — my child can appear in photos but with face obscured' },
-  { value: 'internal_only', label: 'Internal only — photos and videos used for school records only' },
+  { value: 'full', label: 'Full consent — allow Bamboo Valley Phuket to use photos across our promotional materials and social media' },
+  { value: 'blurred_face', label: 'Blur face — my child can appear in photos but with face obscured' },
+  { value: 'internal_only', label: 'Not allowed — photos and videos used for school records only' },
 ] as const;
