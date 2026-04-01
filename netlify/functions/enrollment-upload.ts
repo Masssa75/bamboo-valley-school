@@ -7,6 +7,11 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
+// Google Drive config for video uploads
+const GOOGLE_DRIVE_FOLDER_ID = process.env.GOOGLE_DRIVE_ENROLLMENT_FOLDER_ID || "0AF6v3DF-8AbsUk9PVA";
+const GOOGLE_SERVICE_ACCOUNT_EMAIL = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL!;
+const GOOGLE_PRIVATE_KEY = (process.env.GOOGLE_PRIVATE_KEY || "").replace(/\\n/g, "\n");
+
 const headers = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "Content-Type",
@@ -26,6 +31,75 @@ function getExtension(contentType: string): string {
     "video/x-msvideo": "avi",
   };
   return map[contentType] || "bin";
+}
+
+// --- Google Drive: get access token via service account JWT ---
+async function getGoogleAccessToken(): Promise<string> {
+  // Manual JWT creation (no external dependency needed)
+  const header = Buffer.from(JSON.stringify({ alg: "RS256", typ: "JWT" })).toString("base64url");
+  const now = Math.floor(Date.now() / 1000);
+  const claimSet = Buffer.from(JSON.stringify({
+    iss: GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    scope: "https://www.googleapis.com/auth/drive",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600,
+  })).toString("base64url");
+
+  const signInput = `${header}.${claimSet}`;
+
+  // Sign with RSA-SHA256 using Node.js crypto
+  const crypto = await import("crypto");
+  const sign = crypto.createSign("RSA-SHA256");
+  sign.update(signInput);
+  const signature = sign.sign(GOOGLE_PRIVATE_KEY, "base64url");
+
+  const jwt = `${signInput}.${signature}`;
+
+  // Exchange JWT for access token
+  const resp = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`,
+  });
+  const data = await resp.json();
+  if (!data.access_token) throw new Error(`Google auth failed: ${JSON.stringify(data)}`);
+  return data.access_token;
+}
+
+// --- Google Drive: initiate resumable upload ---
+async function initiateGoogleDriveResumableUpload(
+  accessToken: string,
+  fileName: string,
+  contentType: string,
+): Promise<string> {
+  const metadata = JSON.stringify({
+    name: fileName,
+    parents: [GOOGLE_DRIVE_FOLDER_ID],
+  });
+
+  const resp = await fetch(
+    "https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&supportsAllDrives=true",
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json; charset=UTF-8",
+        "X-Upload-Content-Type": contentType,
+      },
+      body: metadata,
+    }
+  );
+
+  if (!resp.ok) {
+    const err = await resp.text();
+    throw new Error(`Drive resumable init failed: ${resp.status} ${err}`);
+  }
+
+  // The resumable upload URI is in the Location header
+  const uploadUri = resp.headers.get("Location");
+  if (!uploadUri) throw new Error("No Location header in Drive resumable response");
+  return uploadUri;
 }
 
 export const handler: Handler = async (event) => {
@@ -48,16 +122,6 @@ export const handler: Handler = async (event) => {
         return { statusCode: 400, headers, body: JSON.stringify({ error: "Missing required fields" }) };
       }
 
-      // [AUDIT R2 C9 / R3 F17] Upload confirm uses read-modify-write to update form_data.
-      // The Supabase JS client doesn't support jsonb_set in .update(), so we read the
-      // current form_data, modify the specific field, and write it back.
-      // Race window: If an auto-save fires between read and write, the auto-save's changes
-      // to OTHER fields could be overwritten. The client-side debounce-and-replace pattern
-      // in scheduleRemoteSave mitigates this (the upload callback triggers a fresh save with
-      // the updated state, cancelling any pending stale save). For concurrent uploads of
-      // different children, a future improvement would use a SQL helper with jsonb_set.
-      // TODO: Create a Supabase RPC function for atomic jsonb_set if concurrent uploads
-      // become a real issue.
       const { data: appData, error: readError } = await supabase
         .from("enrollment_applications")
         .select("form_data")
@@ -85,7 +149,9 @@ export const handler: Handler = async (event) => {
         if (fileType === "passport") {
           formData.children[idx].passportUrl = filePath;
         } else {
+          // For videos, filePath is a Google Drive file ID (not a Supabase path)
           formData.children[idx].videoUrl = filePath;
+          formData.children[idx].videoSubmittedVia = "upload";
         }
       }
 
@@ -103,7 +169,7 @@ export const handler: Handler = async (event) => {
       return { statusCode: 200, headers, body: JSON.stringify({ ok: true }) };
     }
 
-    // === GENERATE SIGNED UPLOAD URL ===
+    // === GENERATE UPLOAD URL ===
     const { resumeToken, documentScope, childIndex, fileType, contentType } = body;
 
     if (!resumeToken || !documentScope || !fileType || !contentType) {
@@ -113,7 +179,7 @@ export const handler: Handler = async (event) => {
     // Verify draft exists
     const { data: app, error: appError } = await supabase
       .from("enrollment_applications")
-      .select("id, status")
+      .select("id, status, parent1_name")
       .eq("resume_token", resumeToken)
       .eq("status", "draft")
       .single();
@@ -122,9 +188,31 @@ export const handler: Handler = async (event) => {
       return { statusCode: 404, headers, body: JSON.stringify({ error: "Application not found or not a draft" }) };
     }
 
-    // Build storage path
     const ext = getExtension(contentType);
     const ts = Date.now();
+
+    // === VIDEO UPLOADS → Google Drive (resumable, no size limit) ===
+    if (fileType === "video") {
+      const parentName = (app.parent1_name || "unknown").replace(/[^a-zA-Z0-9-_ ]/g, "");
+      const fileName = `${parentName}-child${childIndex ?? 0}-video-${ts}.${ext}`;
+
+      const accessToken = await getGoogleAccessToken();
+      const uploadUri = await initiateGoogleDriveResumableUpload(accessToken, fileName, contentType);
+
+      // Return the resumable upload URI — client sends the file bytes directly to Google
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          uploadTarget: "google-drive",
+          uploadUri,           // Client PUTs file bytes directly here
+          fileName,
+          // No signedUrl/path/token — different flow from Supabase
+        }),
+      };
+    }
+
+    // === IMAGE/PASSPORT UPLOADS → Supabase Storage (small files, existing flow) ===
     let path: string;
     if (documentScope === "parent1" || documentScope === "parent2") {
       path = `enrollment/${resumeToken}/${documentScope}/passport-${ts}.${ext}`;
@@ -132,7 +220,6 @@ export const handler: Handler = async (event) => {
       path = `enrollment/${resumeToken}/child-${childIndex}/${fileType}-${ts}.${ext}`;
     }
 
-    // Create signed upload URL (no expiresIn — server default ~2 hours)
     const { data, error } = await supabase.storage
       .from("enrollment-documents")
       .createSignedUploadUrl(path);
@@ -145,7 +232,12 @@ export const handler: Handler = async (event) => {
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ signedUrl: data.signedUrl, path: data.path, token: data.token }),
+      body: JSON.stringify({
+        uploadTarget: "supabase",
+        signedUrl: data.signedUrl,
+        path: data.path,
+        token: data.token,
+      }),
     };
   } catch (err) {
     console.error("enrollment-upload error:", err);

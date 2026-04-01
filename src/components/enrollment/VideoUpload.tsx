@@ -75,7 +75,7 @@ export default function VideoUpload({
         <FileUploadField
           label=""
           accept="video/mp4,video/quicktime,video/webm,video/x-msvideo"
-          maxSizeMB={100}
+          maxSizeMB={1000}
           resumeToken={resumeToken}
           documentScope="child"
           childIndex={childIndex}

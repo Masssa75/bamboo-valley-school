@@ -30,7 +30,7 @@ export default function FileUploadField({
   onUploaded,
   required,
 }: FileUploadFieldProps) {
-  const [status, setStatus] = useState<"idle" | "uploading" | "complete" | "error">(
+  const [status, setStatus] = useState<"idle" | "compressing" | "uploading" | "complete" | "error">(
     currentUrl ? "complete" : "idle"
   );
   const [progress, setProgress] = useState(0);
@@ -38,7 +38,88 @@ export default function FileUploadField({
   const [fileName, setFileName] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleFile = async (file: File) => {
+  // Compress image via canvas — returns a smaller JPEG blob
+  const compressImage = (file: File, maxWidth = 2000, quality = 0.85): Promise<File> => {
+    return new Promise((resolve, reject) => {
+      if (!file.type.startsWith("image/") || file.size < 500 * 1024) {
+        resolve(file);
+        return;
+      }
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        let { width, height } = img;
+        if (width > maxWidth) {
+          height = Math.round((height * maxWidth) / width);
+          width = maxWidth;
+        }
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) { resolve(file); return; }
+        ctx.drawImage(img, 0, 0, width, height);
+        canvas.toBlob(
+          (blob) => {
+            if (!blob || blob.size >= file.size) {
+              resolve(file);
+            } else {
+              resolve(new File([blob], file.name.replace(/\.[^.]+$/, ".jpg"), { type: "image/jpeg" }));
+            }
+          },
+          "image/jpeg",
+          quality
+        );
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  };
+
+  // Upload to Google Drive via resumable upload URI (for videos)
+  const uploadToGoogleDrive = (uploadUri: string, file: File, onProgress: (pct: number) => void): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open("PUT", uploadUri);
+      xhr.setRequestHeader("Content-Type", file.type);
+
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          onProgress(Math.round((e.loaded / e.total) * 100));
+        }
+      };
+
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          try {
+            const data = JSON.parse(xhr.responseText);
+            resolve(data.id); // Google Drive file ID
+          } catch {
+            resolve("uploaded"); // fallback if response isn't JSON
+          }
+        } else {
+          reject(new Error(`Google Drive upload failed: ${xhr.status} ${xhr.responseText}`));
+        }
+      };
+
+      xhr.onerror = () => reject(new Error("Upload network error"));
+      xhr.send(file);
+    });
+  };
+
+  const handleFile = async (rawFile: File) => {
+    setFileName(rawFile.name);
+    setError("");
+
+    // Compress images automatically
+    let file = rawFile;
+    if (rawFile.type.startsWith("image/") && rawFile.size > 500 * 1024) {
+      setStatus("compressing");
+      file = await compressImage(rawFile);
+    }
+
+    // Check size limit
     if (file.size > maxSizeMB * 1024 * 1024) {
       setError(`File too large. Maximum ${maxSizeMB}MB.`);
       setStatus("error");
@@ -47,11 +128,9 @@ export default function FileUploadField({
 
     setStatus("uploading");
     setProgress(0);
-    setError("");
-    setFileName(file.name);
 
     try {
-      // 1. Get signed URL
+      // 1. Get upload URL from our Netlify function
       const urlResult = await getUploadUrl({
         resumeToken,
         documentScope,
@@ -60,22 +139,33 @@ export default function FileUploadField({
         contentType: file.type,
       });
 
-      if (urlResult.error || !urlResult.signedUrl) {
-        throw new Error(urlResult.error || "Failed to get upload URL");
+      if (urlResult.error) {
+        throw new Error(urlResult.error);
       }
 
-      // 2. Upload via XHR with progress
-      const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-      await uploadWithProgress(urlResult.signedUrl, anonKey, file, setProgress);
+      let storedPath: string;
 
-      // 3. Confirm upload
+      if (urlResult.uploadTarget === "google-drive" && urlResult.uploadUri) {
+        // 2a. Video → Google Drive resumable upload (no size limit)
+        const driveFileId = await uploadToGoogleDrive(urlResult.uploadUri, file, setProgress);
+        storedPath = `gdrive:${driveFileId}`; // Prefix to distinguish from Supabase paths
+      } else if (urlResult.signedUrl) {
+        // 2b. Image/passport → Supabase Storage
+        const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+        await uploadWithProgress(urlResult.signedUrl, anonKey, file, setProgress);
+        storedPath = urlResult.path!;
+      } else {
+        throw new Error("No upload URL received");
+      }
+
+      // 3. Confirm upload (updates form_data JSONB)
       const confirmResult = await confirmUpload({
         action: "confirm",
         resumeToken,
         documentScope,
         childIndex,
         fileType,
-        filePath: urlResult.path!,
+        filePath: storedPath,
       });
 
       if (confirmResult.error) {
@@ -83,7 +173,7 @@ export default function FileUploadField({
       }
 
       setStatus("complete");
-      onUploaded(urlResult.path!);
+      onUploaded(storedPath);
     } catch (err) {
       console.error("Upload error:", err);
       setError(err instanceof Error ? err.message : "Upload failed");
@@ -104,9 +194,11 @@ export default function FileUploadField({
 
   return (
     <div>
-      <p className="text-sm font-medium text-[#2d2d2d] mb-2">
-        {label} {required && <span className="text-red-500">*</span>}
-      </p>
+      {label && (
+        <p className="text-sm font-medium text-[#2d2d2d] mb-2">
+          {label} {required && <span className="text-red-500">*</span>}
+        </p>
+      )}
 
       {status === "complete" ? (
         <div className="flex items-center gap-3 p-4 rounded-lg border border-[#BED7AF] bg-[#BED7AF]/10">
@@ -124,6 +216,11 @@ export default function FileUploadField({
           >
             Replace
           </button>
+        </div>
+      ) : status === "compressing" ? (
+        <div className="p-4 rounded-lg border border-gray-200 text-center">
+          <div className="w-6 h-6 border-2 border-[#BED7AF] border-t-transparent rounded-full animate-spin mx-auto mb-2" />
+          <p className="text-sm text-[#666]">Preparing image...</p>
         </div>
       ) : status === "uploading" ? (
         <div className="p-4 rounded-lg border border-gray-200">
@@ -162,7 +259,7 @@ export default function FileUploadField({
             <p className="text-sm text-[#666]">
               <span className="md:inline hidden">Drag and drop or </span>click to select
             </p>
-            <p className="text-xs text-[#999] mt-1">Maximum {maxSizeMB}MB</p>
+            <p className="text-xs text-[#999] mt-1">Maximum {maxSizeMB >= 1000 ? `${maxSizeMB / 1000}GB` : `${maxSizeMB}MB`}</p>
           </div>
         </>
       )}

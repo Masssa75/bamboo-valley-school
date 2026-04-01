@@ -69,7 +69,12 @@ export async function getUploadUrl(params: {
   childIndex?: number;
   fileType: 'passport' | 'video';
   contentType: string;
-}): Promise<{ signedUrl?: string; path?: string; token?: string; error?: string }> {
+}): Promise<{
+  uploadTarget?: 'supabase' | 'google-drive';
+  signedUrl?: string; path?: string; token?: string;  // Supabase
+  uploadUri?: string; fileName?: string;               // Google Drive
+  error?: string;
+}> {
   const res = await fetch(`${BASE}/enrollment-upload`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
