@@ -26,21 +26,17 @@ export default function ImageSlider({ images }: { images: SliderImage[] }) {
 
   return (
     <div className="mb-8">
-      <div className="relative rounded-xl overflow-hidden group h-[420px]">
-        {/* Render all images, show only current one */}
-        {images.map((image, index) => (
-          <Image
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            width={800}
-            height={420}
-            className={`absolute inset-0 w-full h-[420px] object-cover transition-opacity duration-300 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-            priority={index === 0}
-          />
-        ))}
+      <div className="relative rounded-xl overflow-hidden group">
+        {/* Current image at natural aspect ratio */}
+        <Image
+          src={images[currentIndex].src}
+          alt={images[currentIndex].alt}
+          width={1200}
+          height={800}
+          className="w-full h-auto rounded-xl transition-opacity duration-300"
+          priority
+          sizes="(max-width: 768px) 100vw, 800px"
+        />
 
         {/* Navigation arrows */}
         {images.length > 1 && (
