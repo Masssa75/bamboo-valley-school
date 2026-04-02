@@ -2392,5 +2392,194 @@
       "description": "Come see what a day without screens looks like. Walk through our palm forest campus, meet the teachers, and watch the children play.",
       "button": "Chat with Us on WhatsApp"
     }
+  },
+  "expatSchool": {
+    "meta": {
+      "title": "Expat School in Phuket — Enroll at Bamboo Valley | Ages 2–9",
+      "description": "Nature school in Cherngtalay for expat families. Small classes, Waldorf-inspired outdoor learning on a 5,600m² palm forest campus. Simple enrollment, transparent fees. Book a visit.",
+      "keywords": "expat school phuket enroll, expat school phuket, international school phuket enrollment, nature school phuket, waldorf school phuket, outdoor school phuket, cherngtalay school, bangtao school, small school phuket toddler, alternative education phuket",
+      "ogTitle": "Expat School in Phuket — Enroll Your Child at Bamboo Valley",
+      "ogDescription": "Nature-based school in Cherngtalay for expat families with children ages 2–9. Small classes, outdoor campus, transparent fees. Schedule a visit today."
+    },
+    "hero": {
+      "title": "Expat School in Phuket — Enroll at Bamboo Valley",
+      "subtitle": "A nature school built by parents, for families who want something different for their children ages 2–9.",
+      "imageAlt": "Expat families gathering on green lawn under palm trees at Bamboo Valley school in Phuket",
+      "ctaPrimary": "Book a Campus Visit",
+      "ctaSecondary": "See How to Enroll"
+    },
+    "facts": {
+      "ages": "Ages 2–9",
+      "agesLabel": "Nursery through Primary",
+      "classSize": "Max 12",
+      "classSizeLabel": "Children per group",
+      "campus": "5,600m²",
+      "campusLabel": "Palm forest campus",
+      "location": "Cherngtalay",
+      "locationLabel": "Bangtao / Laguna area"
+    },
+    "intro": "If you're an expat family in Phuket looking to <strong>enroll your child in a school that actually feels right</strong>, you know the search isn't easy. The big international schools have the facilities but the fees are enormous and the classes are huge. The smaller options are hard to find and even harder to compare. Bamboo Valley is a nature-based school in Cherngtalay — right in the heart of Phuket's expat family area — for children ages 2 to 9. Small classes, outdoor learning, Waldorf-inspired education, and a community where you'll actually know every teacher and every family.",
+    "why": {
+      "title": "Why Expat Families Choose Bamboo Valley",
+      "items": [
+        {
+          "icon": "🌴",
+          "title": "Genuine Outdoor Learning",
+          "text": "Not a classroom with a garden attached. Our entire 5,600m² palm forest campus IS the classroom. Children learn under trees, in mud, with magnifying glasses and real tools. Rain or shine, every day."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "You'll Know Every Teacher",
+          "text": "Maximum 12 children per group. No getting lost in a system of 1,500 students. Your child's teacher knows their name, their quirks, their learning blocks, and talks to you about it regularly — not twice a year."
+        },
+        {
+          "icon": "💰",
+          "title": "Transparent Fees, No Surprises",
+          "text": "We publish our fees clearly. No hidden capital levies, no surprise technology charges, no deposits that take years to refund. You know what you're paying before you commit."
+        },
+        {
+          "icon": "🧠",
+          "title": "Waldorf-Inspired, Research-Backed",
+          "text": "We combine Waldorf's proven approach to early childhood development with precision learning — identifying specific learning blocks early and removing them collaboratively, so children progress naturally."
+        },
+        {
+          "icon": "🤝",
+          "title": "Real Parent Partnership",
+          "text": "Monthly community events, collaborative problem-solving with teachers, and a genuine open-door culture. This isn't a school that hands your child back at 3pm with a report card once a term."
+        },
+        {
+          "icon": "📍",
+          "title": "In the Heart of Expat Phuket",
+          "text": "Located in Cherngtalay — walkable and cyclable from Bangtao, Laguna, and the areas where most expat families already live. No 45-minute school commute across the island."
+        }
+      ]
+    },
+    "campus": {
+      "title": "A Day on Our Campus",
+      "subtitle": "5,600 square metres of palm forest. No screens, no air-conditioned boxes. Just grass, trees, mud, animals, and children who've learned to create their own joy."
+    },
+    "slider": {
+      "freePlay": "Free play among the palm trees — running, exploring, being children",
+      "explore": "Nature exploration with magnifying glasses — real science, real curiosity",
+      "music": "Music circle under the palms — rhythm, language, and connection",
+      "dance": "Ring dance on the green — movement, coordination, and laughter",
+      "reading": "Story time under the trees — language development through real voices",
+      "art": "Outdoor art and craft — creativity with natural materials"
+    },
+    "fees": {
+      "title": "Tuition & Fees",
+      "intro": "We believe in straightforward pricing. Here's what Bamboo Valley costs — no hidden charges, no surprise levies.",
+      "typeHeader": "Enrollment Type",
+      "feeHeader": "Fee",
+      "longTerm": "Long-term enrollment",
+      "longTermFee": "20,000 THB / month (~240,000 THB / year)",
+      "shortTerm": "Short-term enrollment",
+      "shortTermFee": "40,000 THB / month",
+      "signup": "Enrollment fee (long-term, one-time)",
+      "signupFee": "60,000 THB",
+      "camps": "Holiday camps (Easter, Summer)",
+      "campsFee": "13,000–15,000 THB / week",
+      "includesTitle": "Included: ",
+      "includesText": "Organic meals, all learning materials, outdoor activities, and a small class community where your child is known and valued.",
+      "note": "Short-term enrollment is ideal for traveling families or those wanting to try before committing. Contact us for current availability and any sibling discounts."
+    },
+    "process": {
+      "title": "How to Enroll Your Child",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Visit Our Campus",
+          "description": "Message us on WhatsApp or call to schedule a visit. Walk the grounds, meet the teachers, see the children in action. Bring your child — we love meeting them. Most families visit for about an hour."
+        },
+        {
+          "number": "2",
+          "title": "Trial Days",
+          "description": "Your child joins us for 1–3 trial days. They experience a full school day — outdoor play, circle time, meals, activities. You see how they respond, and our teachers get to know them. No commitment, no pressure."
+        },
+        {
+          "number": "3",
+          "title": "Enroll & Start",
+          "description": "If it feels right for everyone, we'll walk you through a simple enrollment form. Choose long-term or short-term. No complex applications, no entrance exams for young children. Most families start within a week of their visit."
+        }
+      ],
+      "ctaVisit": "Book a Visit on WhatsApp",
+      "ctaApply": "Apply Online Now"
+    },
+    "location": {
+      "title": "Located in Cherngtalay — Phuket's Family Hub",
+      "p1": "Bamboo Valley sits in Cherngtalay, at the center of the Bangtao–Laguna corridor — the area where most expat families with young children already live. Boat Avenue, Laguna, and Bang Tao Beach are all minutes away.",
+      "p2": "If you're living in Bangtao, Laguna, Surin, or Kamala, your child's commute is short and stress-free. No crossing the island to get to school.",
+      "addressLabel": "Address",
+      "address": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110",
+      "hoursLabel": "School Hours",
+      "hours": "Monday – Friday, 8:00am – 3:30pm",
+      "nearbyLabel": "Nearby Landmarks",
+      "nearby": "5 min from Boat Avenue, 10 min from Laguna, 3 min from Bang Tao Beach",
+      "commuteLabel": "Commute Times",
+      "commute": "Bangtao: 5 min · Laguna: 10 min · Surin: 12 min · Kamala: 15 min"
+    },
+    "visa": {
+      "title": "Visa Guide for Expat Families",
+      "intro": "Enrolling your child in Thailand is simpler than most families expect. Here are the main visa options — we'll help you navigate the process.",
+      "edTitle": "Education Visa (ED Visa) — for your child",
+      "edText": "Once enrolled, we provide the documents your child needs for an Education Visa. This gives them legal status in Thailand with 90-day stamps, renewable annually. No work permit needed — just a valid passport and enrollment confirmation.",
+      "guardianTitle": "Guardian Visa (Non-O) — for parents",
+      "guardianText": "One parent can get a Guardian Visa based on their child's ED visa. This requires a 500,000 THB deposit in a Thai bank account per child. The funds can be withdrawn after approval but must be restored before annual renewal.",
+      "otherTitle": "Already on a work or long-stay visa?",
+      "otherText": "If you already hold a Non-B (work), LTR, Thailand Elite, or Digital Nomad visa, your child can enroll as a dependent. Just bring passport copies — we handle the rest.",
+      "note": "We help families through the visa process and can accompany you to immigration if needed. Visa regulations can change — we'll advise on the latest requirements."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What ages do you accept?",
+          "a": "We accept children from age 2 through age 9. Our programs cover nursery (ages 2–4), kindergarten (ages 3–6), and primary (ages 6–9)."
+        },
+        {
+          "q": "What curriculum do you follow?",
+          "a": "Waldorf-inspired with precision learning. We combine Waldorf's proven approach to early childhood — play-based, nature-immersed, developmentally appropriate — with targeted techniques to identify and remove specific learning blocks. No formal academics forced too early."
+        },
+        {
+          "q": "What language is instruction in?",
+          "a": "English is our primary language of instruction. Thai language and culture classes are included as required by Thai education regulations. Many of our children come from bilingual or multilingual homes."
+        },
+        {
+          "q": "Can we start mid-year?",
+          "a": "Yes. We accept enrollment throughout the year, not just in August. Many expat families arrive mid-year, and our small class sizes make transitions smooth."
+        },
+        {
+          "q": "What if we're only in Phuket for a few months?",
+          "a": "Our short-term enrollment (40,000 THB/month) is designed for exactly this. No long-term commitment required. Many traveling families join for 1–6 months."
+        },
+        {
+          "q": "How many children are in each class?",
+          "a": "Maximum 12 children per group. This is non-negotiable — it's how we ensure every child gets genuine individual attention."
+        },
+        {
+          "q": "What documents do we need to enroll?",
+          "a": "Copies of parent and child passports, child's birth certificate, and any previous school records (if applicable). For children under 5, no academic assessment is needed — just a trial day. We keep it simple."
+        },
+        {
+          "q": "Do you provide lunch?",
+          "a": "Yes. We prepare fresh, organic meals daily on campus. Lunch, morning snack, and afternoon snack are all included in the fees. We accommodate dietary requirements."
+        },
+        {
+          "q": "Is there bus transport?",
+          "a": "We don't currently provide bus transport. However, our Cherngtalay location means most expat families in the Bangtao–Laguna area are within a 5–15 minute drive. Many parents cycle."
+        },
+        {
+          "q": "What are the school hours?",
+          "a": "Monday through Friday, 8:00am to 3:30pm. Drop-off from 8:00am, pickup by 3:30pm. No after-school care currently — we believe children need downtime after a full day of outdoor learning."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to See It for Yourself?",
+      "description": "The best way to understand Bamboo Valley is to visit. Walk through the palm forest, meet the teachers, and let your child explore. No sales pitch — just a real look at what we do.",
+      "whatsapp": "Book a Visit on WhatsApp",
+      "call": "Call +66 98 912 4218",
+      "response": "We typically respond within a few hours. Visits are available Monday–Friday."
+    }
   }
 }
