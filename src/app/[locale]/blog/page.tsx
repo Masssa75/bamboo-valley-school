@@ -42,6 +42,16 @@ export default async function BlogPage({
 
   const basePosts = [
     {
+      slug: "screens-and-brain-development",
+      href: `/${locale}/blog/screens-and-brain-development`,
+      title: t("screensTitle"),
+      excerpt: t("screensExcerpt"),
+      date: t("screensDate"),
+      category: t("screensCategory"),
+      image: "/images/children-free-play-running-palm-grove.JPG",
+      imageAlt: "Children running freely on grass among palm trees at Bamboo Valley",
+    },
+    {
       slug: "moving-to-phuket-with-children",
       href: `/${locale}/blog/moving-to-phuket-with-children`,
       title: t("movingToPhuketTitle"),

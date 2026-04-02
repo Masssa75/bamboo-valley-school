@@ -1490,7 +1490,11 @@
     "movingToPhuketTitle": "Moving to Phuket with Young Children",
     "movingToPhuketExcerpt": "A parent's honest guide to relocating with young children. Schools, costs, neighborhoods, and what we wish someone had told us.",
     "movingToPhuketDate": "March 21, 2026",
-    "movingToPhuketCategory": "Guide"
+    "movingToPhuketCategory": "Guide",
+    "screensTitle": "What Screens Really Do to Your Child's Developing Brain",
+    "screensExcerpt": "BBC research shows screens don't just entertain — they reshape developing brains. The biggest risk isn't screen time itself, but what it replaces: real interaction, outdoor play, and imagination.",
+    "screensDate": "April 2, 2026",
+    "screensCategory": "Research"
   },
   "spaceVideo": {
     "line1": "พื้นที่สวนปาล์ม 5,600 ตารางเมตร",
@@ -2254,5 +2258,139 @@
     "confirmationNote": "Please save this reference number. We will contact you within a few working days to discuss next steps.",
     "required": "This field is required",
     "validEmailRequired": "Please enter a valid email address"
+  },
+  "blogScreens": {
+    "meta": {
+      "title": "What Screens Really Do to Your Child's Brain | Bamboo Valley",
+      "description": "BBC research shows screens don't just entertain — they actively reshape developing brains. The biggest risk isn't screen time itself, but what it replaces: face-to-face interaction, outdoor play, and imagination.",
+      "keywords": "screen time children brain development, screens effect on kids, screen time toddler, nature vs screens, outdoor play brain development, screen free childhood, waldorf screen free, phuket nature school",
+      "ogTitle": "What Screens Really Do to Your Child's Brain Development",
+      "ogDescription": "New research shows the biggest risk isn't screen time — it's what screens replace. Here's what the science says, and what we see every day at our nature school."
+    },
+    "hero": {
+      "backLink": "← Back to Insights",
+      "title": "What Screens Really Do to Your Child's Developing Brain",
+      "subtitle": "It's not about guilt. It's about understanding what the research actually shows — and what children need instead.",
+      "date": "April 2026 · Bamboo Valley",
+      "imageAlt": "Children running freely on green grass among palm trees at Bamboo Valley nature school"
+    },
+    "featured": {
+      "title": "The Key Takeaway",
+      "body": "Screens aren't just neutral entertainment — they actively shape the developing brain. But the <strong>biggest risk isn't screen exposure itself</strong>. It's what screens displace: face-to-face conversation, outdoor play, imaginative exploration. The things that actually build the brain."
+    },
+    "intro": {
+      "p1": "You already know. That quiet feeling when your child has been watching a screen for too long and you hand them a book or suggest going outside — and they can't settle. They're restless, irritable, bored by everything that isn't a screen.",
+      "p2": "Most parents have felt this. And most parents carry a low-level guilt about it, without really knowing what the research actually says.",
+      "p3": "A recent BBC News investigation brought together neuroscientists and child development researchers to look at what screens genuinely do to young children's brains. Not the scare stories. Not the dismissals. The actual science. And the findings are worth understanding — especially if your children are still in those critical early years."
+    },
+    "video": {
+      "title": "Watch: The BBC Investigation",
+      "intro": "This 12-minute BBC News documentary brings together brain scans, developmental research, and real families to show what's actually happening inside children's brains during screen use.",
+      "caption": "\"What screens really do to your child's brain development\" — BBC News"
+    },
+    "replace": {
+      "title": "It's Not Really About Screen Time",
+      "p1": "The conversation around screens usually focuses on how many hours. But the researchers in this investigation make a different point: the real issue is what screens replace.",
+      "p2": "Every hour a young child spends passively watching fast-paced content is an hour not spent in <strong>face-to-face interaction, outdoor exploration, imaginative play, or conversation</strong>. And those activities aren't just nice-to-haves — they're the raw materials of brain development.",
+      "quote": "The problem isn't that screens are poison. It's that they crowd out the experiences young brains actually need to develop."
+    },
+    "images": {
+      "exploreAlt": "Two children exploring grass and plants with magnifying glasses at Bamboo Valley",
+      "exploreCaption": "What replaces a screen matters more than the screen itself. Real exploration builds real neural pathways.",
+      "danceAlt": "Children doing a ring dance together on green grass under palm trees",
+      "danceCaption": "Joy from shared movement, rhythm, and connection — no dopamine loop required.",
+      "readingAlt": "Teacher reading aloud to children sitting on grass under palm trees",
+      "readingCaption": "Language develops through real human voices, real stories, real conversation."
+    },
+    "brain": {
+      "title": "How Screens Reshape the Developing Brain",
+      "p1": "Young children's brains are extraordinarily sensitive to stimulation. They're building neural pathways at a pace they'll never match again. And the type of stimulation matters enormously.",
+      "p2": "Fast-paced, high-reward screen content — the kind that dominates YouTube and most children's apps — creates <strong>constant dopamine hits</strong>. The brain adapts. It starts to expect that level of stimulation. And when it doesn't get it, everything else feels slow, boring, frustrating.",
+      "p3": "This is why the child who's been watching videos can't sit with a book. It's not a character flaw. It's neuroscience. The brain has been trained to expect rapid-fire rewards, and a physical book simply can't compete."
+    },
+    "language": {
+      "title": "Language Development Needs Real Voices",
+      "p1": "One of the clearest findings in child development research: children learn language through interaction, not observation. A child watching someone talk on a screen processes language fundamentally differently than a child being spoken to by a real person.",
+      "p2": "Even the best \"educational\" screen content is <strong>far less effective than ordinary conversation</strong> for building vocabulary, comprehension, and communication skills. Storytelling, singing, answering questions, narrating daily life — these simple human interactions do what no screen can replicate."
+    },
+    "sleep": {
+      "title": "Sleep, Behaviour, and the Feedback Loop",
+      "p1": "Screen use — especially in the hours before bedtime — disrupts sleep in young children. The blue light, the stimulation, the difficulty transitioning from screen world to the quiet needed for sleep. Poor sleep leads to worse behaviour the next day: more irritability, shorter attention, lower frustration tolerance.",
+      "p2": "And here's where it becomes a cycle: a tired, irritable child is harder to engage. So the screen comes out again. It's not bad parenting — it's an understandable response to a difficult situation. But the research is clear that breaking this cycle early makes a significant difference."
+    },
+    "nuance": {
+      "title": "Not All Screen Use Is Equal",
+      "p1": "The research doesn't say all screens are equally harmful. There's a spectrum. Passive, fast-paced content where children sit and absorb — that's the worst. But co-watching a calm, story-based show with a parent and talking about it together? That's a completely different experience.",
+      "p2": "The key factors that make screen use less harmful: <strong>slower pacing, story-based content, a real person watching alongside, and active conversation about what's happening</strong>. If you're going to use screens, these choices matter."
+    },
+    "guidelines": {
+      "title": "Current Expert Guidelines",
+      "items": [
+        {
+          "age": "Under 2:",
+          "recommendation": "Ideally no screen time at all. Brains at this stage need real-world sensory input."
+        },
+        {
+          "age": "Ages 2–5:",
+          "recommendation": "Maximum 1 hour per day of high-quality content. Less is better."
+        },
+        {
+          "age": "All ages:",
+          "recommendation": "No screens in the hour before bedtime. Prioritise sleep."
+        }
+      ]
+    },
+    "bamboo": {
+      "title": "What We See Every Day",
+      "p1": "We didn't build Bamboo Valley because of a study about screens. We built it because we're parents ourselves, and we could see what our children needed: space, nature, real human connection, and time to be bored enough to become creative.",
+      "p2": "But the research confirms what we observe daily on our campus. When children spend their days outdoors — exploring grass with magnifying glasses, building in mud, climbing bamboo structures, singing in a circle under palm trees — something happens that no screen can replicate.",
+      "quote": "Move children outdoors and something magical happens: they collaborate, create, find ways to play together with natural materials. Energy that was destructive indoors becomes focused and productive.",
+      "p3": "Our campus is 5,600 square metres of palm forest. No screens. No artificial stimulation. Just grass, trees, mud, animals, and a team of teachers who believe that childhood should feel like childhood.",
+      "p4": "The children here don't need to be entertained. They've learned to entertain themselves — and each other. That's not a small thing. In a world designed to capture attention, the ability to generate your own focus, your own joy, your own ideas — that might be the most important skill we can give them."
+    },
+    "closing": {
+      "title": "This Isn't About Judgement",
+      "p1": "Every parent uses screens sometimes. Life is complicated, days are long, and perfection isn't the goal. The point of this research isn't to add to parental guilt — it's to help us make more informed choices about when, how, and how much.",
+      "p2": "If you're reading this and thinking about what your child's daily environment looks like — what fills their hours, what feeds their brain — that's already a good sign. The fact that you're asking these questions means you care deeply. And that's the most important ingredient of all."
+    },
+    "sources": {
+      "title": "Sources & Further Reading",
+      "items": [
+        {
+          "text": "BBC News (2024).",
+          "linkText": "\"What screens really do to your child's brain development\"",
+          "linkUrl": "https://www.youtube.com/watch?v=yFc4yhZKP5U"
+        },
+        {
+          "text": "World Health Organization (2019).",
+          "linkText": "Guidelines on physical activity, sedentary behaviour and sleep for children under 5",
+          "linkUrl": "https://www.who.int/publications/i/item/9789241550536"
+        },
+        {
+          "text": "American Academy of Pediatrics (2016).",
+          "linkText": "Media and Young Minds — Policy Statement",
+          "linkUrl": "https://publications.aap.org/pediatrics/article/138/5/e20162591/60503/Media-and-Young-Minds"
+        },
+        {
+          "text": "Hutton, J.S. et al. (2020). JAMA Pediatrics.",
+          "linkText": "Associations Between Screen-Based Media Use and Brain White Matter Integrity in Preschool-Aged Children",
+          "linkUrl": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/2754101"
+        }
+      ]
+    },
+    "disclaimer": "Bamboo Valley is a nature-based school in Cherngtalay, Phuket, Thailand. We serve children ages 2–9 and their families. This article reflects research available as of April 2026.",
+    "slider": {
+      "explore": "Nature exploration with magnifying glasses — real discovery, real focus",
+      "music": "Music circle under the palm trees — rhythm, language, and connection",
+      "craft": "Handwork on the grass — patience, fine motor skills, quiet concentration",
+      "play": "Free play on the green — collaboration without prompts or scripts",
+      "reading": "Storytime under the trees — language the way it's meant to be learned",
+      "climbing": "Adventure playground — physical challenge, risk assessment, resilience"
+    },
+    "cta": {
+      "title": "Curious About Screen-Free Learning?",
+      "description": "Come see what a day without screens looks like. Walk through our palm forest campus, meet the teachers, and watch the children play.",
+      "button": "Chat with Us on WhatsApp"
+    }
   }
 }
