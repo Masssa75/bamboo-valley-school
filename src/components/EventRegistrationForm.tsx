@@ -187,17 +187,15 @@ export default function EventRegistrationForm({
       </div>
 
       {showMondayWorkshopQuestion && (
-        <div className="bg-[#FAD7AA]/30 border border-[#FAD7AA] rounded-lg p-4">
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={mondayInterest}
-              onChange={e => setMondayInterest(e.target.checked)}
-              className="mt-1 w-5 h-5 accent-[#8fb07a]"
-            />
-            <span className="text-sm text-[#2d2d2d]">{mondayWorkshopLabel}</span>
-          </label>
-        </div>
+        <label className="flex items-center gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={mondayInterest}
+            onChange={e => setMondayInterest(e.target.checked)}
+            className="w-5 h-5 accent-[#8fb07a]"
+          />
+          <span className="text-sm text-[#2d2d2d]">{mondayWorkshopLabel}</span>
+        </label>
       )}
 
       <div>
