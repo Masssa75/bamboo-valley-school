@@ -88,8 +88,9 @@ export default function EventRegistrationForm({
     );
   }
 
-  const inputClass =
-    "w-full px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white text-[#2d2d2d] focus:outline-none focus:border-[#8fb07a] transition-colors";
+  const inputBase =
+    "px-4 py-3 rounded-lg border border-[#e5e5e5] bg-white text-[#2d2d2d] focus:outline-none focus:border-[#8fb07a] transition-colors";
+  const inputClass = `w-full ${inputBase}`;
   const labelClass = "block text-sm font-medium text-[#2d2d2d] mb-2";
 
   return (
@@ -152,7 +153,7 @@ export default function EventRegistrationForm({
                 value={kid.name}
                 onChange={e => updateKid(i, "name", e.target.value)}
                 placeholder="Child's name"
-                className={`${inputClass} flex-1`}
+                className={`${inputBase} flex-1 min-w-0`}
               />
               <input
                 type="number"
@@ -162,7 +163,7 @@ export default function EventRegistrationForm({
                 value={kid.age}
                 onChange={e => updateKid(i, "age", e.target.value)}
                 placeholder="Age"
-                className={`${inputClass} w-24`}
+                className={`${inputBase} w-20`}
               />
               {kids.length > 1 && (
                 <button
@@ -187,15 +188,17 @@ export default function EventRegistrationForm({
       </div>
 
       {showMondayWorkshopQuestion && (
-        <label className="flex items-center gap-3 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={mondayInterest}
-            onChange={e => setMondayInterest(e.target.checked)}
-            className="w-5 h-5 accent-[#8fb07a]"
-          />
-          <span className="text-sm text-[#2d2d2d]">{mondayWorkshopLabel}</span>
-        </label>
+        <div className="bg-[#FAD7AA]/30 border border-[#FAD7AA] rounded-lg p-4">
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={mondayInterest}
+              onChange={e => setMondayInterest(e.target.checked)}
+              className="mt-1 w-5 h-5 accent-[#8fb07a]"
+            />
+            <span className="text-sm text-[#2d2d2d]">{mondayWorkshopLabel}</span>
+          </label>
+        </div>
       )}
 
       <div>
