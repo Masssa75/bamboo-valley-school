@@ -210,12 +210,12 @@ export default async function ShortTermSchoolPage({
         {
           "@type": "Offer",
           name: "Monthly School Enrollment",
-          description: "1-3 month school enrollment for digital nomads",
+          description: "Flexible monthly school enrollment for digital nomads (1 month minimum, no commitment)",
         },
         {
           "@type": "Offer",
-          name: "Long-Term School Enrollment",
-          description: "3-4 month or longer school enrollment",
+          name: "Full Academic Year Enrollment",
+          description: "Full academic year enrollment (August–June) with discounted monthly rate and refundable enrollment deposit",
         },
         {
           "@type": "Offer",

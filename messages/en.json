@@ -986,8 +986,8 @@
       },
       "monthly": {
         "title": "Monthly Enrollment",
-        "subtitle": "1-3 months",
-        "description": "Ideal for digital nomad families or extended stays. Your child becomes part of the community.",
+        "subtitle": "1 month minimum",
+        "description": "Flexible billing for digital nomad families or extended stays. Stay as long as you like — your child becomes part of the community.",
         "bullets": {
           "one": "Better value per week",
           "two": "Progress tracking",
@@ -997,9 +997,9 @@
         "alt": "Storytelling at Waldorf kindergarten Phuket"
       },
       "longTerm": {
-        "title": "Long-Term Enrollment",
-        "subtitle": "3-4 months or more",
-        "description": "For families staying a full season. Complete immersion in our Waldorf-inspired program.",
+        "title": "Full Academic Year",
+        "subtitle": "August–June",
+        "description": "For families committing to the full school year. Lowest monthly rate plus a refundable enrollment deposit returned at year-end.",
         "bullets": {
           "one": "Best value",
           "two": "Full curriculum progression",
