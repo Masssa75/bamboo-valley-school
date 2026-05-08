@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching Roles at Bamboo Valley · Phuket · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --ink: #1B1C1A;
+  --ink-soft: #3A3A34;
+  --muted: #6E7670;
+  --accent: #4F7B4A;
+  --accent-soft: #BED7AF;
+  --border: #ECECEC;
+  --highlight: #FAF8F4;
+  --placeholder-bg: #FFF5E6;
+  --placeholder-border: #FAD7AA;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--ink); }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 32px 96px;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.draft-banner {
+  background: var(--placeholder-bg);
+  border: 1px solid var(--placeholder-border);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.role-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  margin: 64px 0 20px;
+  color: var(--ink);
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+.section-intro {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.bigline {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 28px 0 24px;
+  letter-spacing: -0.2px;
+}
+
+figure.page-image {
+  margin: 36px 0;
+}
+figure.page-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+figure.page-image.hero {
+  margin-top: 28px;
+  margin-bottom: 40px;
+}
+
+.placeholder {
+  background: var(--placeholder-bg);
+  border-left: 3px solid var(--placeholder-border);
+  padding: 14px 18px;
+  margin: 24px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+  font-style: italic;
+}
+.placeholder strong {
+  color: var(--ink-soft);
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+strong { font-weight: 600; }
+em { font-style: italic; color: var(--ink); }
+
+ul.clean { padding-left: 24px; margin-bottom: 22px; }
+ul.clean li { margin-bottom: 10px; }
+
+.signoff {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+.signoff strong {
+  color: var(--ink-soft);
+  font-style: normal;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  body { padding: 36px 22px 64px; font-size: 17px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 21px; }
+  .bigline { font-size: 19px; }
+  figure.page-image { margin: 28px 0; }
+}
+
+.form-prelude {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 8px 0 28px;
+}
+
+.ta-form {
+  margin: 0 0 24px;
+}
+.ta-form .ta-hp {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.ta-field, .ta-question {
+  margin-bottom: 22px;
+}
+.ta-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: 0.1px;
+}
+.ta-form .ta-req {
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 2px;
+}
+.ta-form .ta-help {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+.ta-q-prompt {
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.55;
+  margin: 0 0 6px;
+}
+.ta-q-prompt strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.ta-form input[type="text"],
+.ta-form input[type="email"],
+.ta-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.ta-form input[type="text"]:focus,
+.ta-form input[type="email"]:focus,
+.ta-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 123, 74, 0.15);
+}
+.ta-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.ta-form input[type="file"] {
+  display: block;
+  font-size: 15px;
+  color: var(--ink-soft);
+  padding: 6px 0;
+}
+.ta-error {
+  background: var(--placeholder-bg);
+  border-left: 3px solid var(--placeholder-border);
+  padding: 12px 16px;
+  margin: 0 0 16px;
+  border-radius: 0 6px 6px 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.ta-submit {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.ta-submit:hover { background: #3f6a3a; }
+.ta-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.ta-success {
+  background: var(--highlight);
+  border-left: 3px solid var(--accent-soft);
+  padding: 18px 22px;
+  margin: 8px 0 24px;
+  border-radius: 0 6px 6px 0;
+  font-size: 17px;
+  color: var(--ink);
+}
+.ta-success p { margin: 0; }
+
+@media (max-width: 640px) {
+  .ta-field, .ta-question { margin-bottom: 18px; }
+  .ta-form input[type="text"],
+  .ta-form input[type="email"],
+  .ta-form textarea {
+    padding: 11px 12px;
+    /* Keep 16px font-size to prevent iOS Safari zoom-on-focus. */
+  }
+  .ta-q-prompt { font-size: 15px; }
+  .ta-submit { width: 100%; padding: 14px 22px; }
+  .ta-success { padding: 16px 18px; font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="role-eyebrow">Two teacher / learning-researcher roles · Bamboo Valley · Phuket · 2026</div>
+
+<h1>We're hiring primary teachers / learning-researchers.</h1>
+
+<p class="section-intro">Curious by nature. In love with how children learn. Ready to lead one of our two new primary classrooms — lower or upper — and help us build the kind of education the future needs: one where children grow up happy, energetic, self-motivated, and learning at an exceptional pace.</p>
+
+<figure class="page-image hero">
+  <img src="images/boxing-gloves-children-playing-campus-wide-action.jpg" alt="Children with boxing gloves practicing Muay Thai outdoors on the lawn at Bamboo Valley, with the thatched pavilion and other children at tables in the background">
+</figure>
+
+<h2>About Bamboo Valley</h2>
+
+<p>We're an outdoor nature school on a beautiful 5,600-square-meter palm plantation in Cherngtalay, Phuket. Our Waldorf-inspired kindergarten has been running for several years. The primary program has been in pilot for the past year — and we're now expanding it into a full lower-and-upper international primary. We're hiring one teacher to lead each.</p>
+
+<figure class="page-image">
+  <img src="images/Community.jpeg" alt="Parents and children inside a Bamboo Valley classroom — children playing together with toys and a soft canopy, the chalkboard behind reading 'Listen to each other, Play and work together, Respect'">
+</figure>
+
+<h2>What we're about</h2>
+
+<p>We're working on one of the most important questions in our lives: what should we teach children so they grow up happy, successful, capable, and ready for a future none of us can fully see? Almost every parent and teacher we know is asking some version of this question, and with AI reshaping what work even looks like, it's becoming louder.</p>
+
+<p class="bigline">We believe the answer is much clearer than the conversation suggests.</p>
+
+<p>Decades of research, and the most successful school systems in the world — Finland's, for example — point clearly to one thing: a child pursuing something they've chosen will outwork any child pushed. Intrinsic motivation is the engine of real learning.</p>
+
+<p>The major institutions studying this question — the OECD, the WHO, Harvard's Center on the Developing Child, the World Economic Forum — converge on the same short list of human qualities that turn out to predict thriving lives far better than grades:</p>
+
+<ul class="clean">
+  <li>Knowing yourself</li>
+  <li>Steering yourself</li>
+  <li>Sticking with it</li>
+  <li>Connecting with others</li>
+  <li>Making and keeping friends</li>
+  <li>Speaking up for yourself</li>
+  <li>Spotting harm</li>
+  <li>Figuring things out</li>
+  <li>Staying curious</li>
+</ul>
+
+<figure class="page-image">
+  <img src="images/children-bamboo-aframe-fort-building-palms.jpg" alt="A group of children working together to build a bamboo A-frame fort under the palm trees at Bamboo Valley">
+</figure>
+
+<p>Take our daughter Rey. We didn't teach her to read until she was six, when she came to us asking — heavily — because a younger friend of hers was already reading and talking constantly about her favourite books. We searched for the best way to teach her, and the most effective material we found was a small phonics program made by a homeschooling mother — videos and exercises, intuitive, visceral, five minutes a day. Rey asked for those five minutes every morning and every evening. Within a couple of months, she was reading basic books. She started first grade, kept going, and two years later — in third grade — she reads at fifth- to seventh-grade level, fun books and science books alike. The whole thing started because she asked.</p>
+
+<p>Once the reading was there, more followed. Rey came across a science book about amber — the fossilised resin of trees — and got fascinated. She started searching for it across the plantation, studying the trees it comes from. A couple of her friends got drawn in by her fascination, and together they started an "Amber Club." They studied every tree around the campus, kept journals, made observations almost scientific. Reading flowed into writing, into science, into working together. The human qualities and the academics, both being practiced every day, in something they had built themselves.</p>
+
+<figure class="page-image">
+  <img src="images/rey-amber-magnifying-tree.jpg" alt="Rey examining a tree trunk with a magnifying glass next to an open page about amber, with a friend looking on">
+</figure>
+
+<p>The more children develop these human qualities, the more intrinsic motivation can do the work. That's true for Rey. It's true for every child. And it's what we've built Bamboo Valley to do.</p>
+
+<p>5,600 square meters of palm plantation. Outdoor classrooms under the trees. Indoor rooms with air conditioning for the hottest hours. The whole campus is set up as a kids' version of an adult playground — a mud kitchen, a science corner, a library, workshops, areas where a child can start a real project and stay with it for hours. The connection to nature supports their emotional regulation, their physical health, their attention.</p>
+
+<p class="bigline">This is what we believe is the future of education. And it's what we're building Bamboo Valley around.</p>
+
+<figure class="page-image">
+  <img src="images/outdoor-reading-circle-palm-trees.JPG" alt="Children gathered in an outdoor reading circle under the palm trees at Bamboo Valley">
+</figure>
+
+<p>We're hiring you to bring this to the next level. We have the environment. We have the daily mix. Here's what the next level means:</p>
+
+<p><strong>Expanding the sparks across the campus.</strong> Setting up new workshops, a fuller science lab, a gardening section — wherever you see the biggest opportunities for children to get excited and start real learning projects.</p>
+
+<p><strong>Building the curriculum for the human qualities themselves.</strong> Some schools have started teaching these — usually as one class per week. We want them to be much more central: daily structured lessons, plus a deliberate weaving into the child-initiated learning happening across the campus. Two parts of the work — developing the daily curriculum itself, and finding the right ways to integrate it with the projects children are already running on their own.</p>
+
+<p><strong>Weaving it all together with the academics.</strong> We'll continue to have direct instruction classes for math, literacy, and other subjects. The opportunity is figuring out what can be moved out: into the sparks around the campus, into the children's own projects. Where does bread baking teach fractions? Planting and gardening, geometry? When a child's project naturally pulls writing or science in, how do we make sure the academics really land? Finding these overlaps is much of the daily craft.</p>
+
+<figure class="page-image">
+  <img src="images/1G5A2085.jpg" alt="A Bamboo Valley primary classroom with desks facing a chalkboard showing a hand-drawn lesson on how to grow a plant — 'Put the seed in soil. Make sure you water it. Put the plant in sunlight. Don't let it get too hot or cold!'">
+</figure>
+
+<h2>What this work needs from you</h2>
+
+<p>Doing this well takes a particular kind of teacher. Six things matter most.</p>
+
+<p><strong>High power, high energy.</strong> Children feel a teacher before they hear them. In a free-environment school, every adult's energy ripples through the room.</p>
+
+<p><strong>You believe children have unimaginable potential.</strong> Not as a hopeful posture but as a working conviction. The model only works if you operate from it every day.</p>
+
+<p><strong>You actively look for ways to bring it out.</strong> Your default mode is scanning — what would unlock this child, what would get that group going, what would the science corner need to come alive. Building this kind of school is a curator's job before it's a teacher's.</p>
+
+<p><strong>You want to help build the model.</strong> Most of this is still informal at this point. Building it properly with us is half the job.</p>
+
+<p><strong>Outdoors energizes you.</strong> The plantation is most of your day, year-round. If being outside drains you, this work will too.</p>
+
+<p><strong>You find the right balance across the mix.</strong> Workshops, structured classes, direct teaching, focused practice — knowing when to facilitate, when to teach, when to let children run. The integration is the magic.</p>
+
+<figure class="page-image">
+  <img src="images/teacher-child-ukulele-lesson-outdoors.JPG" alt="Teacher giving a one-on-one ukulele lesson to a child outdoors at Bamboo Valley">
+</figure>
+
+<h2>Who you aren't</h2>
+
+<p>This won't fit if any of these ring true:</p>
+
+<ul class="clean">
+  <li>You're looking for a relaxed tropical posting — the autonomy and depth make this harder than a conventional school, not easier.</li>
+  <li>You want a finished curriculum to deliver. We have curriculum for academics, and we're building the rest with our teachers, not handing it down.</li>
+  <li>You think of children as behaviour to manage rather than potential to unlock.</li>
+  <li>You find the outdoors a strain rather than a default.</li>
+  <li>You're more motivated by the salary than the work.</li>
+</ul>
+
+<h2>What we offer</h2>
+
+<ul class="clean">
+  <li>A position at a small, founder-run school where you'll shape the program — not fit into someone else's mold.</li>
+  <li>5,600 square meters of plantation as your classroom, and the freedom to use every meter of it.</li>
+  <li>Real partnership with the founders — in the trenches with you, treating you as the expert you are.</li>
+  <li>12–15 children per teacher. Small enough to know each one.</li>
+  <li>A co-teacher you plan with weekly, and monthly family events with the parent community.</li>
+  <li>Competitive Phuket international primary teacher compensation, with relocation support for the right international candidate. <em>(Specifics in the interview — open to publishing a range later.)</em></li>
+  <li>A school where a good idea can become reality within a week of having it.</li>
+</ul>
+
+<figure class="page-image">
+  <img src="images/animal-care-goat-four-children-diverse-hero-landscape.jpg" alt="Four children outdoors caring for a goat at Bamboo Valley">
+</figure>
+
+<h2>How to apply</h2>
+
+<p class="form-prelude">We read every application personally. Tell us a little about yourself, and we'll get back to you soon.</p>
+
+<form id="teacher-application-form" class="ta-form" novalidate>
+  <!-- Honeypot — real users never fill this hidden field -->
+  <div class="ta-hp" aria-hidden="true">
+    <label for="ta-website">Website</label>
+    <input type="text" id="ta-website" name="website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-name">Name <span class="ta-req" aria-hidden="true">*</span></label>
+    <input type="text" id="ta-name" name="name" required aria-required="true" autocomplete="name">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-email">Email <span class="ta-req" aria-hidden="true">*</span></label>
+    <input type="email" id="ta-email" name="email" required aria-required="true" autocomplete="email">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-location">Where you are <span class="ta-req" aria-hidden="true">*</span></label>
+    <input type="text" id="ta-location" name="location" required aria-required="true" placeholder="e.g. Phuket, Thailand · Berlin, Germany · open to relocating">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-citizenship">Citizenship <span class="ta-req" aria-hidden="true">*</span></label>
+    <input type="text" id="ta-citizenship" name="citizenship" required aria-required="true" placeholder="e.g. Thai · British · German">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-visa">Visa status</label>
+    <input type="text" id="ta-visa" name="visa_status" placeholder="e.g. Thai national · currently on Non-B in Phuket · would need sponsorship">
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-cv">CV <span class="ta-req" aria-hidden="true">*</span></label>
+    <input type="file" id="ta-cv" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required aria-required="true" aria-describedby="ta-cv-help">
+    <p id="ta-cv-help" class="ta-help">PDF, DOC, or DOCX. Up to 10 MB.</p>
+  </div>
+
+  <div class="ta-field">
+    <label for="ta-letter">A short letter <span class="ta-req" aria-hidden="true">*</span></label>
+    <p id="ta-letter-help" class="ta-help">A few paragraphs is fine — what drew you to this, and what you'd want us to know.</p>
+    <textarea id="ta-letter" name="cover_letter" rows="6" required aria-required="true" aria-describedby="ta-letter-help"></textarea>
+  </div>
+
+  <div class="ta-question">
+    <p class="ta-q-prompt"><strong>A child you watched come alive.</strong> Tell us about a child whose learning shifted because something they encountered — a project, a place, a person — caught them. What were they doing before, and what changed?</p>
+    <p id="ta-q1-help" class="ta-help">(3–6 sentences)</p>
+    <textarea id="ta-q1" name="q1_child_came_alive" rows="5" required aria-required="true" aria-describedby="ta-q1-help"></textarea>
+  </div>
+
+  <div class="ta-question">
+    <p class="ta-q-prompt"><strong>What you'd start setting up in your first month.</strong> If you joined us in August, what's one thing you'd start setting up on the campus in your first month? A workshop, a corner, a project area — what, and why?</p>
+    <p id="ta-q2-help" class="ta-help">(3–6 sentences)</p>
+    <textarea id="ta-q2" name="q2_first_month_setup" rows="5" required aria-required="true" aria-describedby="ta-q2-help"></textarea>
+  </div>
+
+  <div class="ta-question">
+    <p class="ta-q-prompt"><strong>Getting along, and moving through conflict.</strong> How would you help children get along well with each other, and move through conflict when it comes up — disagreement over a tool, hurt feelings, struggling to share something? A specific moment from your experience would help us understand.</p>
+    <p id="ta-q3-help" class="ta-help">(3–6 sentences)</p>
+    <textarea id="ta-q3" name="q3_getting_along" rows="5" required aria-required="true" aria-describedby="ta-q3-help"></textarea>
+  </div>
+
+  <div id="ta-error" class="ta-error" role="alert" hidden></div>
+
+  <button type="submit" id="ta-submit" class="ta-submit">Send application</button>
+</form>
+
+<div id="ta-success" class="ta-success" hidden>
+  <p><strong>Thanks — we'll read this personally and get back to you soon.</strong></p>
+</div>
+
+<figure class="page-image">
+  <img src="images/schwyn-family-portrait.jpg" alt="Bamboo Valley founders Marc and Nutthanit Schwyn with their three children outside a school building with prayer flags overhead">
+</figure>
+
+<div class="signoff">— <strong>Marc &amp; Nutthanit Schwyn</strong>, Bamboo Valley, Phuket</div>
+
+<script>
+(function () {
+  // Public Supabase anon key — same value as NEXT_PUBLIC_SUPABASE_ANON_KEY in .env.local.
+  // Required by Supabase Storage as the apikey/Authorization header on signed-URL PUTs.
+  // Anon keys are safe to expose in client code by design.
+  var SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh1bmNjcWRyeWJ4cHdjdmFmdmFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNDY5MDMsImV4cCI6MjA2NjkyMjkwM30.rRAs7qWQpQ8rV_LIY5x6FeSaBk6etotb_9IHbYHPXf8";
+  var FN = "/.netlify/functions/teacher-application";
+  var MAX_BYTES = 10 * 1024 * 1024; // 10 MB
+  var ALLOWED_TYPES = {
+    "application/pdf": true,
+    "application/msword": true,
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": true
+  };
+  var ALLOWED_EXTS = ["pdf", "doc", "docx"];
+
+  var form = document.getElementById("teacher-application-form");
+  var success = document.getElementById("ta-success");
+  var errorBox = document.getElementById("ta-error");
+  var submitBtn = document.getElementById("ta-submit");
+  var loadedAt = Date.now();
+
+  if (!form) return;
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.hidden = false;
+  }
+  function clearError() {
+    errorBox.textContent = "";
+    errorBox.hidden = true;
+  }
+
+  function fileExt(name) {
+    var i = (name || "").lastIndexOf(".");
+    return i >= 0 ? name.slice(i + 1).toLowerCase() : "";
+  }
+
+  function uploadToSignedUrl(signedUrl, file) {
+    return new Promise(function (resolve, reject) {
+      var fd = new FormData();
+      fd.append("cacheControl", "3600");
+      fd.append("", file);
+      var xhr = new XMLHttpRequest();
+      xhr.open("PUT", signedUrl);
+      xhr.setRequestHeader("x-upsert", "false");
+      xhr.setRequestHeader("apikey", SUPABASE_ANON_KEY);
+      xhr.setRequestHeader("authorization", "Bearer " + SUPABASE_ANON_KEY);
+      xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) resolve();
+        else reject(new Error("Upload failed: " + xhr.status));
+      };
+      xhr.onerror = function () { reject(new Error("Upload network error")); };
+      xhr.send(fd);
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearError();
+
+    var fileInput = document.getElementById("ta-cv");
+    var file = fileInput && fileInput.files && fileInput.files[0];
+    if (!file) {
+      showError("Please attach your CV.");
+      return;
+    }
+
+    var ext = fileExt(file.name);
+    if (ALLOWED_EXTS.indexOf(ext) === -1 && !ALLOWED_TYPES[file.type]) {
+      showError("Please upload a PDF, DOC, or DOCX file.");
+      return;
+    }
+    if (file.size > MAX_BYTES) {
+      showError("That file is larger than 10 MB. Please attach a smaller file or email it to info@bamboovalleyphuket.com.");
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.setAttribute("aria-busy", "true");
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = "Sending…";
+
+    var contentType = file.type || (
+      ext === "pdf" ? "application/pdf"
+      : ext === "doc" ? "application/msword"
+      : ext === "docx" ? "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      : ""
+    );
+
+    fetch(FN, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "upload-url", contentType: contentType, fileName: file.name })
+    })
+    .then(function (res) { return res.json().then(function (j) { return { ok: res.ok, json: j }; }); })
+    .then(function (r) {
+      if (!r.ok || !r.json.signedUrl || !r.json.path) {
+        throw new Error(r.json && r.json.error ? r.json.error : "Could not start upload.");
+      }
+      var path = r.json.path;
+      return uploadToSignedUrl(r.json.signedUrl, file).then(function () { return path; });
+    })
+    .then(function (cvPath) {
+      // Defensive field access — uses form.elements.namedItem to avoid
+      // collisions with HTMLFormElement's prototype properties (e.g. `action`).
+      // Returns "" if a field is somehow missing, instead of throwing.
+      function val(n) {
+        var el = form.elements.namedItem(n);
+        return (el && typeof el.value === "string") ? el.value.trim() : "";
+      }
+      var payload = {
+        action: "submit",
+        name: val("name"),
+        email: val("email"),
+        location: val("location"),
+        citizenship: val("citizenship"),
+        visa_status: val("visa_status"),
+        cv_path: cvPath,
+        cover_letter: val("cover_letter"),
+        q1_child_came_alive: val("q1_child_came_alive"),
+        q2_first_month_setup: val("q2_first_month_setup"),
+        q3_getting_along: val("q3_getting_along"),
+        website: (function () { var el = form.elements.namedItem("website"); return el ? el.value : ""; })(),
+        _t: loadedAt
+      };
+      return fetch(FN, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function (res) { return res.json().then(function (j) { return { ok: res.ok, json: j }; }); });
+    })
+    .then(function (r) {
+      if (!r.ok || !r.json.success) {
+        throw new Error(r.json && r.json.error ? r.json.error : "Could not submit your application.");
+      }
+      form.hidden = true;
+      success.hidden = false;
+      try { success.scrollIntoView({ behavior: "smooth", block: "center" }); } catch (e) {}
+    })
+    .catch(function (err) {
+      console.error("Application submission error:", err);
+      // Surface a more specific message for size errors (bucket gateway returns 413/400 on oversize).
+      var msg = String(err && err.message || "");
+      if (/Upload failed: 413/.test(msg) || /Upload failed: 400/.test(msg) || /exceeded/i.test(msg)) {
+        showError("That file may be too large or in an unsupported format. Please attach a smaller PDF/DOC/DOCX, or email it to info@bamboovalleyphuket.com.");
+      } else {
+        showError("Something went wrong. Please email info@bamboovalleyphuket.com instead.");
+      }
+      submitBtn.disabled = false;
+      submitBtn.removeAttribute("aria-busy");
+      submitBtn.textContent = originalLabel;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
