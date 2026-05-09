@@ -34,6 +34,9 @@ export default function Footer({ locale = "en" }: FooterProps) {
             <Link href={localePath("/enroll")} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
               {t("apply")}
             </Link>
+            <a href="/careers/teacher/" className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+              Teaching jobs
+            </a>
             {/* Educator Program link — re-enable when needed: move drafts/educator-program.html back to public/ */}
             <a
               href="https://www.instagram.com/bamboovalleyphuket/"
