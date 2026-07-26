@@ -20,8 +20,11 @@ const localBusinessSchema = {
   "@id": "https://bamboovalleyphuket.com/#organization",
   name: "Bamboo Valley Phuket",
   alternateName: "Bamboo Valley School",
+  legalName: "BAMBOO VALLEY COMPANY LIMITED",
+  // Thai Business Registration Number doubles as the 13-digit Tax ID
+  taxID: "0415566001706",
   description:
-    "Waldorf-inspired kindergarten and primary school in Cherngtalay, Phuket. Nature-based education on a 3.5-rai palm plantation for children ages 2-9. Serving families in Bangtao, Laguna, and surrounding areas.",
+    "Waldorf-inspired kindergarten and primary school in Cherngtalay, Phuket. Nature-based education on a 5,600 m² palm plantation for children ages 2-9. Serving families in Bangtao, Laguna, and surrounding areas.",
   url: "https://bamboovalleyphuket.com",
   telephone: "+66989124218",
   email: "info@bamboovalleyphuket.com",
@@ -54,7 +57,10 @@ const localBusinessSchema = {
   },
   priceRange: "$$",
   image: "https://bamboovalleyphuket.com/images/hero-bg.jpg",
-  sameAs: ["https://www.instagram.com/bamboovalleyphuket/"],
+  sameAs: [
+    "https://www.instagram.com/bamboovalleyphuket/",
+    "https://www.facebook.com/BambooValleyPhuket",
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Educational Programs",

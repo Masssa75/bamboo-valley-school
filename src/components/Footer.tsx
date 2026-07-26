@@ -46,6 +46,14 @@ export default function Footer({ locale = "en" }: FooterProps) {
             >
               {t("instagram")}
             </a>
+            <a
+              href="https://www.facebook.com/BambooValleyPhuket"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm opacity-70 hover:opacity-100 transition-opacity"
+            >
+              Facebook
+            </a>
           </div>
         </div>
 
@@ -70,6 +78,16 @@ export default function Footer({ locale = "en" }: FooterProps) {
         {/* Copyright */}
         <div className="mt-8 text-center text-sm opacity-50">
           {t("copyright", { year: new Date().getFullYear() })}
+        </div>
+
+        {/* Legal entity details — English in every locale on purpose: the registered
+            name, registration number and registered office are legal identifiers and
+            must match the DBD certificate character for character. */}
+        <div className="mt-3 text-center text-xs opacity-40 leading-relaxed">
+          Bamboo Valley Company Limited · Business Registration No. 0415566001706
+          <br />
+          Registered office: 264/61 Mu 6, Soi Ban Duea, Mak Khaeng Sub-district, Mueang
+          Udon Thani, Udon Thani 41000, Thailand
         </div>
       </div>
     </footer>

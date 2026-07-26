@@ -142,6 +142,67 @@ export default async function ContactPage({
         </div>
       </section>
 
+      {/* Company information — English in every locale on purpose: these are legal
+          identifiers that must match the DBD certificate character for character.
+          The registered office (Udon Thani) differs from the campus (Phuket), so both
+          are shown side by side to explain the difference rather than hide it. */}
+      <section className="py-12 md:py-16 px-6 bg-[#f9f7f4]">
+        <div className="max-w-[1000px] mx-auto">
+          <h2 className="font-serif text-2xl font-normal mb-8 text-[#2d2d2d]">
+            Company information
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-[#666] leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-[#2d2d2d] mb-2">Registered entity</h3>
+              <p>
+                Bamboo Valley Company Limited
+                <br />
+                Business Registration No. 0415566001706
+                <br />
+                Registered 27 April 2023, Department of Business Development,
+                <br />
+                Ministry of Commerce, Thailand
+              </p>
+              <h3 className="font-semibold text-[#2d2d2d] mt-6 mb-2">Registered office</h3>
+              <p>
+                264/61 Mu 6, Soi Ban Duea
+                <br />
+                Mak Khaeng Sub-district, Mueang Udon Thani
+                <br />
+                Udon Thani 41000, Thailand
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-[#2d2d2d] mb-2">Campus / visiting address</h3>
+              <p>
+                Bamboo Valley
+                <br />
+                3/74 Moo 4, Cherngtalay
+                <br />
+                Thalang, Phuket 83110, Thailand
+              </p>
+              <h3 className="font-semibold text-[#2d2d2d] mt-6 mb-2">Contact</h3>
+              <p>
+                Phone / WhatsApp:{" "}
+                <a href="tel:+66989124218" className="text-[#8fb07a] hover:text-[#6d9b5a]">
+                  +66 98 912 4218
+                </a>
+                <br />
+                Email:{" "}
+                <a
+                  href="mailto:info@bamboovalleyphuket.com"
+                  className="text-[#8fb07a] hover:text-[#6d9b5a]"
+                >
+                  info@bamboovalleyphuket.com
+                </a>
+                <br />
+                Website: bamboovalleyphuket.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Map Section */}
       <section className="h-[400px] bg-gray-200">
         <iframe
