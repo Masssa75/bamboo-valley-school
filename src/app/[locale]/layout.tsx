@@ -49,6 +49,9 @@ export async function generateMetadata({
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
     keywords: ["kindergarten phuket", "waldorf school phuket", "international school phuket", "nature school thailand", "bamboo valley"],
+    other: {
+      "facebook-domain-verification": "yffe5lt15l7ibwq223cmarbne6uaru",
+    },
     icons: {
       icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
       apple: "/apple-icon.png",
