@@ -193,7 +193,7 @@
     "getInTouch": "Связаться с нами",
     "sendMessage": "Отправить сообщение",
     "address": "Адрес",
-    "addressLine1": "3/74 Moo 4, Ченгталай",
+    "addressLine1": "3/75 Moo 4, Ченгталай",
     "addressLine2": "Таланг, Пхукет 83110",
     "addressLine3": "Таиланд",
     "phoneWhatsApp": "Телефон / WhatsApp",
@@ -353,7 +353,7 @@
     "educatorProgram": "Educator Program",
     "instagram": "Instagram",
     "address": "Адрес",
-    "addressValue": "3/74 Moo 4, Ченгталай, Таланг, Пхукет 83110, Таиланд",
+    "addressValue": "3/75 Moo 4, Ченгталай, Таланг, Пхукет 83110, Таиланд",
     "phone": "Телефон / WhatsApp",
     "email": "Email",
     "apply": "Apply",
@@ -1087,7 +1087,7 @@
     },
     "schema": {
       "name": "Bamboo Valley - Kindergarten in Cherngtalay",
-      "description": "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 3.5-rai palm plantation for children ages 2-9.",
+      "description": "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 5,600 m² palm plantation for children ages 2-9.",
       "areaServed": [
         "Bangtao Beach",
         "Bangtao",
@@ -1140,7 +1140,7 @@
     },
     "why": {
       "title": "Why Families Choose Bamboo Valley",
-      "intro": "Whether you live in Bangtao, Laguna Phuket, or Cherngtalay, Bamboo Valley offers something you won't find in resort kids clubs or traditional schools: genuine nature-based education on a 3.5-rai palm plantation.",
+      "intro": "Whether you live in Bangtao, Laguna Phuket, or Cherngtalay, Bamboo Valley offers something you won't find in resort kids clubs or traditional schools: genuine nature-based education on a 5,600 m² palm plantation.",
       "bangtaoTitle": "For Bangtao & Laguna Families",
       "bangtaoBullets": [
         {
@@ -1164,7 +1164,7 @@
         },
         {
           "title": "Nature immersion",
-          "text": "3.5 rai with nearly 100 palm trees"
+          "text": "5,600 m² with nearly 100 palm trees"
         },
         {
           "title": "International community",
@@ -1921,11 +1921,11 @@
     },
     "campus": {
       "title": "Our Campus",
-      "intro": "A 3.5-rai palm plantation in Cherngtalay with lush green lawns, nearly 100 palm trees, bamboo play structures, animal areas, and wooden classrooms with glass walls that open onto the garden.",
+      "intro": "A 5,600 m² palm plantation in Cherngtalay with lush green lawns, nearly 100 palm trees, bamboo play structures, animal areas, and wooden classrooms with glass walls that open onto the garden.",
       "slider": {
         "panorama": {
           "alt": "Panoramic view of Bamboo Valley campus with families on green lawn under palm trees",
-          "caption": "Our 3.5-rai campus — where lessons happen under palm trees"
+          "caption": "Our 5,600 m² campus — where lessons happen under palm trees"
         },
         "classrooms": {
           "alt": "Wooden classrooms with colorful prayer flags surrounded by palm trees",
@@ -1946,7 +1946,7 @@
       },
       "stats": {
         "palms": "Nearly 100 palm trees",
-        "campus": "3.5 rai (5,600 m²) campus",
+        "campus": "5,600 m² campus",
         "outdoor": "80% learning happens outdoors"
       }
     },
@@ -1987,7 +1987,7 @@
       "whatMakesUsDifferent": {
         "title": "What Makes Bamboo Valley Different",
         "items": {
-          "nature": "3.5-rai nature campus with green lawns and nearly 100 palm trees — 80% of learning happens outdoors",
+          "nature": "5,600 m² nature campus with green lawns and nearly 100 palm trees — 80% of learning happens outdoors",
           "waldorf": "Waldorf-inspired curriculum with handwork, watercolor painting, storytelling, and music",
           "flexible": "Flexible enrollment — weekly, monthly, or long-term. Perfect for families still figuring things out",
           "parentBuilt": "Built by parents, for parents. Our own children attend. We are invested in this school's success in the most personal way possible",
@@ -2510,7 +2510,7 @@
       "p1": "Bamboo Valley sits in Cherngtalay, at the center of the Bangtao–Laguna corridor — the area where most expat families with young children already live. Boat Avenue, Laguna, and Bang Tao Beach are all minutes away.",
       "p2": "If you're living in Bangtao, Laguna, Surin, or Kamala, your child's commute is short and stress-free. No crossing the island to get to school.",
       "addressLabel": "Address",
-      "address": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110",
+      "address": "3/75 Moo 4, Cherngtalay, Thalang, Phuket 83110",
       "hoursLabel": "School Hours",
       "hours": "Monday – Friday, 8:00am – 3:30pm",
       "nearbyLabel": "Nearby Landmarks",

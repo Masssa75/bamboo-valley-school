@@ -197,7 +197,7 @@
     "getInTouch": "Get in Touch",
     "sendMessage": "Send us a Message",
     "address": "Address",
-    "addressLine1": "3/74 Moo 4, Cherngtalay",
+    "addressLine1": "3/75 Moo 4, Cherngtalay",
     "addressLine2": "Thalang, Phuket 83110",
     "addressLine3": "Thailand",
     "phoneWhatsApp": "Phone / WhatsApp",
@@ -253,7 +253,7 @@
     "nature2": "Picture this: In our Bangkok apartment, our two daughters would fight constantly. Even with 50 toys available, they'd battle over the exact same one every 15 minutes. There's something about indoor spaces, about bought stuff, that creates competition and conflict.",
     "nature3": "But take those exact same children at that exact same moment and walk outside into nature - to the woods, to our beach - and the fighting stops. Completely. They run around, play with sticks, dig in sand, splash in waves. Those sticks become toys, but somehow they don't fight over them. The competition vanishes.",
     "nature4": "Nature floods children with endless questions: Why do leaves spiral that way? What made these tracks? Why does this mushroom grow on dead wood? Every walk outside presents infinite mysteries - a single tree holds more learning opportunities than a room full of educational posters.",
-    "nature5": "Our 3.5-rai palm plantation isn't just a pretty setting. It's a living laboratory where curiosity explodes naturally. Children discover Fibonacci patterns in real plants, witness life and death cycles, watch storms build and water find its path. They're not memorizing facts about physics - they're building dams and testing them. They're not studying ecosystems from books - they're living in one.",
+    "nature5": "Our 5,600 m² palm plantation isn't just a pretty setting. It's a living laboratory where curiosity explodes naturally. Children discover Fibonacci patterns in real plants, witness life and death cycles, watch storms build and water find its path. They're not memorizing facts about physics - they're building dams and testing them. They're not studying ecosystems from books - they're living in one.",
     "paradiseTitle": "The Paradise School",
     "paradise1": "These discoveries changed everything about how we thought about education. If 3-5 hours of time transforms children... if nature eliminates conflict... if children desperately want to learn when we stop forcing them... then why are we sending them to schools designed around the exact opposite principles?",
     "paradise2": "So we're building a paradise where parenting becomes easy, not exhausting. Where children naturally want to learn instead of resisting at every turn. Where they develop academic excellence, deep confidence, genuine social skills, physical vitality, emotional intelligence - all through joy instead of struggle. Where your child wakes up excited for each day and comes home energized, not depleted.",
@@ -357,7 +357,7 @@
     "educatorProgram": "Educator Program",
     "instagram": "Instagram",
     "address": "Address",
-    "addressValue": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand",
+    "addressValue": "3/75 Moo 4, Cherngtalay, Thalang, Phuket 83110, Thailand",
     "phone": "Phone / WhatsApp",
     "email": "Email",
     "apply": "Apply",
@@ -1011,7 +1011,7 @@
     },
     "fullWidth": {
       "title": "Learning Happens Outdoors",
-      "description": "Our 3.5-rai palm plantation campus gives children space to explore, discover, and grow naturally.",
+      "description": "Our 5,600 m² palm plantation campus gives children space to explore, discover, and grow naturally.",
       "alt": "Bamboo Valley outdoor kindergarten campus Phuket"
     },
     "whoFor": {
@@ -1064,7 +1064,7 @@
     },
     "video": {
       "title": "See Our Campus",
-      "description": "Take a flyover tour of our 3.5-rai palm plantation campus"
+      "description": "Take a flyover tour of our 5,600 m² palm plantation campus"
     },
     "howItWorks": {
       "title": "How It Works",
@@ -1099,7 +1099,7 @@
       "title": "Why Families Choose Bamboo Valley",
       "features": {
         "campus": {
-          "title": "3.5-Rai Palm Plantation Campus",
+          "title": "5,600 m² Palm Plantation Campus",
           "desc": "100+ palm trees, farm animals, gardens. Learning happens outdoors in nature."
         },
         "waldorf": {
@@ -1161,7 +1161,7 @@
     },
     "schema": {
       "name": "Bamboo Valley - Kindergarten in Cherngtalay",
-      "description": "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 3.5-rai palm plantation for children ages 2-9.",
+      "description": "Waldorf-inspired kindergarten and primary school serving families in Bangtao, Laguna Phuket, Cherngtalay, and surrounding areas. Nature-based education on a 5,600 m² palm plantation for children ages 2-9.",
       "areaServed": [
         "Bangtao Beach",
         "Bangtao",
@@ -1214,7 +1214,7 @@
     },
     "why": {
       "title": "Why Families Choose Bamboo Valley",
-      "intro": "Whether you live in Bangtao, Laguna Phuket, or Cherngtalay, Bamboo Valley offers something you won't find in resort kids clubs or traditional schools: genuine nature-based education on a 3.5-rai palm plantation.",
+      "intro": "Whether you live in Bangtao, Laguna Phuket, or Cherngtalay, Bamboo Valley offers something you won't find in resort kids clubs or traditional schools: genuine nature-based education on a 5,600 m² palm plantation.",
       "bangtaoTitle": "For Bangtao & Laguna Families",
       "bangtaoBullets": [
         {
@@ -1238,7 +1238,7 @@
         },
         {
           "title": "Nature immersion",
-          "text": "3.5 rai with nearly 100 palm trees"
+          "text": "5,600 m² with nearly 100 palm trees"
         },
         {
           "title": "International community",
@@ -1909,7 +1909,7 @@
     },
     "different": {
       "title": "What we're building",
-      "p1": "Bamboo Valley is a nature-based school on a 3.5-rai palm plantation in Phuket. Nearly 80 palm trees. Chickens, ducks, rabbits. A mud kitchen, outdoor classrooms, space to run and climb and explore.",
+      "p1": "Bamboo Valley is a nature-based school on a 5,600 m² palm plantation in Phuket. Nearly 80 palm trees. Chickens, ducks, rabbits. A mud kitchen, outdoor classrooms, space to run and climb and explore.",
       "p2": "We combine Waldorf-inspired education with what we call precision learning — identifying specific learning blocks and removing them collaboratively, rather than drilling harder when children struggle.",
       "p3": "Our children don't sit at desks for hours. They learn through play, through nature, through real experiences. They care for animals. They bake bread. They get muddy. They do yoga under the trees.",
       "p4": "And it works. Children who learn this way develop stronger problem-solving skills, better emotional regulation, and — most importantly — they stay curious. They want to keep learning."
@@ -2068,11 +2068,11 @@
     },
     "campus": {
       "title": "Our Campus",
-      "intro": "A 3.5-rai palm plantation in Cherngtalay with lush green lawns, nearly 100 palm trees, bamboo play structures, animal areas, and wooden classrooms with glass walls that open onto the garden.",
+      "intro": "A 5,600 m² palm plantation in Cherngtalay with lush green lawns, nearly 100 palm trees, bamboo play structures, animal areas, and wooden classrooms with glass walls that open onto the garden.",
       "slider": {
         "panorama": {
           "alt": "Panoramic view of Bamboo Valley campus with families on green lawn under palm trees",
-          "caption": "Our 3.5-rai campus — where lessons happen under palm trees"
+          "caption": "Our 5,600 m² campus — where lessons happen under palm trees"
         },
         "classrooms": {
           "alt": "Wooden classrooms with colorful prayer flags surrounded by palm trees",
@@ -2093,7 +2093,7 @@
       },
       "stats": {
         "palms": "Nearly 100 palm trees",
-        "campus": "3.5 rai (5,600 m²) campus",
+        "campus": "5,600 m² campus",
         "outdoor": "80% learning happens outdoors"
       }
     },
@@ -2134,7 +2134,7 @@
       "whatMakesUsDifferent": {
         "title": "What Makes Bamboo Valley Different",
         "items": {
-          "nature": "3.5-rai nature campus with green lawns and nearly 100 palm trees — 80% of learning happens outdoors",
+          "nature": "5,600 m² nature campus with green lawns and nearly 100 palm trees — 80% of learning happens outdoors",
           "waldorf": "Waldorf-inspired curriculum with handwork, watercolor painting, storytelling, and music",
           "flexible": "Flexible enrollment — weekly, monthly, or long-term. Perfect for families still figuring things out",
           "parentBuilt": "Built by parents, for parents. Our own children attend. We are invested in this school's success in the most personal way possible",
@@ -2652,7 +2652,7 @@
       "p1": "Bamboo Valley sits in Cherngtalay, at the center of the Bangtao–Laguna corridor — the area where most expat families with young children already live. Boat Avenue, Laguna, and Bang Tao Beach are all minutes away.",
       "p2": "If you're living in Bangtao, Laguna, Surin, or Kamala, your child's commute is short and stress-free. No crossing the island to get to school.",
       "addressLabel": "Address",
-      "address": "3/74 Moo 4, Cherngtalay, Thalang, Phuket 83110",
+      "address": "3/75 Moo 4, Cherngtalay, Thalang, Phuket 83110",
       "hoursLabel": "School Hours",
       "hours": "Monday – Friday, 8:00am – 3:30pm",
       "nearbyLabel": "Nearby Landmarks",
