@@ -72,7 +72,7 @@ export default async function LocationsPage({
     email: "info@bamboovalleyphuket.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3/74 Moo 4",
+      streetAddress: "3/75 Moo 4",
       addressLocality: "Cherngtalay",
       addressRegion: "Thalang, Phuket",
       postalCode: "83110",
@@ -288,7 +288,7 @@ export default async function LocationsPage({
               <h3 className="font-semibold text-lg mb-4">{t("visit.addressTitle")}</h3>
               <p className="text-[#555]">
                 Bamboo Valley<br />
-                3/74 Moo 4, Cherngtalay<br />
+                3/75 Moo 4, Cherngtalay<br />
                 Thalang, Phuket 83110<br />
                 Thailand
               </p>

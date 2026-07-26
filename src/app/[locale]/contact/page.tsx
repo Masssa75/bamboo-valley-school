@@ -177,7 +177,7 @@ export default async function ContactPage({
               <p>
                 Bamboo Valley
                 <br />
-                3/74 Moo 4, Cherngtalay
+                3/75 Moo 4, Cherngtalay
                 <br />
                 Thalang, Phuket 83110, Thailand
               </p>

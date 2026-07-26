@@ -175,7 +175,7 @@ export default async function ShortTermSchoolPage({
     url: "https://bamboovalleyphuket.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3/74 Moo 4, Cherngtalay",
+      streetAddress: "3/75 Moo 4, Cherngtalay",
       addressLocality: "Thalang",
       addressRegion: "Phuket",
       postalCode: "83110",

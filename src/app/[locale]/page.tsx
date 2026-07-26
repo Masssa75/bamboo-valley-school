@@ -31,7 +31,7 @@ const localBusinessSchema = {
   foundingDate: "2022",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "3/74 Moo 4",
+    streetAddress: "3/75 Moo 4",
     addressLocality: "Cherngtalay",
     addressRegion: "Thalang, Phuket",
     postalCode: "83110",

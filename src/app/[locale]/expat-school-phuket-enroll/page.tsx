@@ -61,7 +61,7 @@ export default async function ExpatSchoolPage({
     foundingDate: "2022",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3/74 Moo 4, Cherngtalay",
+      streetAddress: "3/75 Moo 4, Cherngtalay",
       addressLocality: "Thalang",
       addressRegion: "Phuket",
       postalCode: "83110",
