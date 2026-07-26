@@ -80,6 +80,22 @@ export default function Footer({ locale = "en" }: FooterProps) {
           {t("copyright", { year: new Date().getFullYear() })}
         </div>
 
+        {/* Legal pages — English-only documents, so the labels stay English too. */}
+        <div className="mt-4 flex justify-center gap-6">
+          <Link
+            href={localePath("/privacy")}
+            className="text-xs opacity-50 hover:opacity-100 transition-opacity"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href={localePath("/terms")}
+            className="text-xs opacity-50 hover:opacity-100 transition-opacity"
+          >
+            Terms of Service
+          </Link>
+        </div>
+
         {/* Legal entity details — English in every locale on purpose: the registered
             name, registration number and registered office are legal identifiers and
             must match the DBD certificate character for character. */}
