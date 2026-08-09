@@ -22,6 +22,7 @@ const LOCALE_DIR = path.join(ROOT, 'src/app/[locale]')
 // Routes deliberately kept out of the sitemap.
 const EXCLUDE = new Set([
   '/events/kungfu-family', // dated past event (May 2) — don't ask Google to index it
+  '/blog/join-our-team',   // retired 2026-08-09, 301s to /careers/teacher (see public/_redirects)
 ])
 
 function walk(dir, base = '') {

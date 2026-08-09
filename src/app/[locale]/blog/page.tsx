@@ -103,21 +103,10 @@ export default async function BlogPage({
     },
   ];
 
-  // English-only posts (for teacher recruitment - we need English speakers)
-  const englishOnlyPosts = locale === "en" ? [
-    {
-      slug: "join-our-team",
-      href: `/en/blog/join-our-team`,
-      title: t("joinTeamTitle"),
-      excerpt: t("joinTeamExcerpt"),
-      date: t("joinTeamDate"),
-      category: t("joinTeamCategory"),
-      image: "/images/Gardening.jpeg",
-      imageAlt: "Teachers and children at Bamboo Valley nature school",
-    },
-  ] : [];
-
-  const posts = [...englishOnlyPosts, ...basePosts];
+  // The "Join Our Team" post (Jan 2025) was retired 2026-08-09 — /careers/teacher
+  // supersedes it and the two were competing for the same recruitment searches.
+  // The route still builds; /_redirects 301s it to /careers/teacher/.
+  const posts = basePosts;
 
   return (
     <>

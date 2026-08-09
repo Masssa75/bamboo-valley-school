@@ -35,3 +35,14 @@
 /ru/locations      /ru/kindergarten-bangtao-laguna-cherngtalay/    301
 /zh/locations/*    /zh/kindergarten-bangtao-laguna-cherngtalay/    301
 /zh/locations      /zh/kindergarten-bangtao-laguna-cherngtalay/    301
+
+# "Join Our Team" blog post retired 2026-08-09 — superseded by /careers/teacher.
+# The route still builds, so these need the force flag (301!) to win over the file.
+/en/blog/join-our-team/    /careers/teacher/    301!
+/en/blog/join-our-team     /careers/teacher/    301!
+/th/blog/join-our-team/    /careers/teacher/    301!
+/th/blog/join-our-team     /careers/teacher/    301!
+/ru/blog/join-our-team/    /careers/teacher/    301!
+/ru/blog/join-our-team     /careers/teacher/    301!
+/zh/blog/join-our-team/    /careers/teacher/    301!
+/zh/blog/join-our-team     /careers/teacher/    301!
