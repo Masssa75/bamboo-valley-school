@@ -6,6 +6,7 @@ import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
+import HeroVideoBg from "@/components/HeroVideoBg";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -190,18 +191,12 @@ export default async function DayAtBambooValleyPost({
       />
       <Navigation locale={locale as Locale} />
 
-      {/* Hero with Background Image */}
-      <header className="relative h-[70vh] min-h-[500px] flex items-end px-6 pb-16 md:pb-20">
-        <Image
-          src="/images/blog-hero-1.jpeg"
-          alt={t("hero.imageAlt")}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/50" />
-        <div className="relative max-w-[800px] mx-auto w-full">
+      {/* Hero with Background Video — the campus film shows the day this page describes */}
+      <header className="relative h-[70vh] min-h-[500px] flex items-end px-6 pb-16 md:pb-20 overflow-hidden">
+        <HeroVideoBg />
+        {/* z-[2]/z-[3]: HeroVideoBg sits at z-[1], so the scrim and copy must be lifted above it */}
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-black/20 to-black/50" />
+        <div className="relative z-[3] max-w-[800px] mx-auto w-full">
           <Link
             href={localePath("/blog")}
             className="text-sm text-white/80 hover:text-white mb-4 inline-block"
