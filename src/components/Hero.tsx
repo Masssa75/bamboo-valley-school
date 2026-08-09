@@ -52,17 +52,17 @@ export default function Hero({ locale = "en" }: HeroProps) {
         {/* Logo */}
         <Image
           src="/images/logo.png"
-          alt="Bamboo Valley"
+          alt="Bamboo Valley International School"
           width={220}
           height={220}
           className="mx-auto mb-6 h-[180px] md:h-[220px] w-auto"
           priority
         />
 
-        {/* Tagline */}
-        <div className="font-serif text-lg font-medium tracking-[3px] uppercase mb-8 opacity-95">
+        {/* Tagline — doubles as the page H1 (SEO: only heading above the fold) */}
+        <h1 className="font-serif text-lg font-medium tracking-[3px] uppercase mb-8 opacity-95">
           {common("tagline")}
-        </div>
+        </h1>
 
         {/* Three Interactive Words */}
         <div className="flex justify-center items-center gap-0 mb-6 flex-wrap md:flex-nowrap">

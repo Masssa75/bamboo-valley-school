@@ -32,23 +32,34 @@ export async function generateMetadata({
   const { locale } = await params;
 
   const titles: Record<string, string> = {
-    en: "Bamboo Valley | Natural Learning Community in Phuket",
-    th: "Bamboo Valley | ชุมชนการเรียนรู้ธรรมชาติในภูเก็ต",
-    ru: "Bamboo Valley | Естественное образование на Пхукете",
-    zh: "Bamboo Valley | 普吉岛自然学习社区",
+    en: "Bamboo Valley International School | Kindergarten in Phuket",
+    th: "โรงเรียนนานาชาติแบมบู แวลลีย์ | อนุบาลนานาชาติ ภูเก็ต",
+    ru: "Bamboo Valley International School | Детский сад, Пхукет",
+    zh: "Bamboo Valley 国际学校 | 普吉岛国际幼儿园",
   };
 
   const descriptions: Record<string, string> = {
-    en: "A Waldorf-inspired kindergarten and primary school in Phuket, Thailand. Free-minded, curious, capable children who thrive anywhere. Ages 2-9.",
-    th: "โรงเรียนอนุบาลและประถมศึกษาแนววอลดอร์ฟในภูเก็ต ประเทศไทย เด็กมีจิตใจเสรี อยากรู้อยากเห็น มีความสามารถ อายุ 2-9 ปี",
-    ru: "Детский сад и начальная школа в стиле Вальдорф на Пхукете, Таиланд. Свободомыслящие, любознательные, способные дети. Возраст 2-9 лет.",
-    zh: "泰国普吉岛华德福幼儿园和小学。培养自由思考、好奇、有能力的孩子。适合2-9岁儿童。",
+    en: "A nature-based international kindergarten and school in Cherngtalay, Phuket. Waldorf-inspired outdoor learning on a 5,600 m² palm plantation. Ages 2–9.",
+    th: "โรงเรียนอนุบาลนานาชาติแนวธรรมชาติ ในเชิงทะเล ภูเก็ต การเรียนรู้กลางแจ้งแนววอลดอร์ฟ บนพื้นที่สวนปาล์ม 5,600 ตร.ม. สำหรับเด็กอายุ 2-9 ปี",
+    ru: "Международный детский сад и школа на природе в Чернгталай, Пхукет. Вальдорфское обучение на открытом воздухе на пальмовой плантации 5600 м². Возраст 2–9 лет.",
+    zh: "位于普吉岛 Cherngtalay 的自然国际幼儿园与学校。5,600 平方米棕榈园中的华德福户外教学。适合 2–9 岁儿童。",
   };
 
   return {
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
-    keywords: ["kindergarten phuket", "waldorf school phuket", "international school phuket", "nature school thailand", "bamboo valley"],
+    keywords: [
+      "international kindergarten phuket",
+      "international school phuket",
+      "kindergarten phuket",
+      "kindergarten cherngtalay",
+      "kindergarten bangtao",
+      "preschool phuket",
+      "nursery phuket",
+      "waldorf school phuket",
+      "nature school thailand",
+      "bamboo valley international school",
+    ],
     other: {
       "facebook-domain-verification": "yffe5lt15l7ibwq223cmarbne6uaru",
     },
