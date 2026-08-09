@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { type Locale } from "@/i18n/config";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import HeroVideoBg from "@/components/HeroVideoBg";
 import SpaceVideo from "@/components/SpaceVideo";
 import Activities from "@/components/Activities";
 import Testimonials from "@/components/Testimonials";
@@ -64,7 +65,7 @@ export default async function LocationsPage({
   // LocalBusiness Schema with all areas served
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "ChildCare",
+    "@type": ["School", "Preschool", "LocalBusiness"],
     name: t("schema.name"),
     description: t("schema.description"),
     url: "https://bamboovalleyphuket.com/kindergarten-bangtao-laguna-cherngtalay",
@@ -94,7 +95,7 @@ export default async function LocationsPage({
       closes: "15:30",
     },
     priceRange: "$$",
-    image: "https://bamboovalleyphuket.com/images/hero-bg.jpg",
+    image: "https://bamboovalleyphuket.com/images/bamboo-valley-international-school-phuket-og.jpg",
   };
 
   const areas = t.raw("areas.items") as Array<{
@@ -122,16 +123,7 @@ export default async function LocationsPage({
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden">
         {/* Video Background */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/hero-bg.jpg"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        <HeroVideoBg />
         <div className="absolute inset-0 bg-black/50 z-[2]" />
         <div className="relative z-[3] max-w-[900px] mx-auto text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal mb-6 text-white">

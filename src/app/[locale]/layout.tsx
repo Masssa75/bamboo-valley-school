@@ -74,6 +74,20 @@ export async function generateMetadata({
       siteName: "Bamboo Valley",
       locale: locale === "zh" ? "zh_CN" : locale === "th" ? "th_TH" : locale === "ru" ? "ru_RU" : "en_US",
       type: "website",
+      images: [
+        {
+          url: "https://bamboovalleyphuket.com/images/bamboo-valley-international-school-phuket-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "A teacher and two children working with yarn at Bamboo Valley International School, Phuket",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titles[locale] || titles.en,
+      description: descriptions[locale] || descriptions.en,
+      images: ["https://bamboovalleyphuket.com/images/bamboo-valley-international-school-phuket-og.jpg"],
     },
   };
 }

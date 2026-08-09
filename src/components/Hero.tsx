@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import HeroVideoBg from "@/components/HeroVideoBg";
 import { trackCTAClick, trackRegisterClick } from "@/lib/gtag";
 
 type WordKey = "free" | "curious" | "capable";
@@ -28,16 +29,7 @@ export default function Hero({ locale = "en" }: HeroProps) {
   return (
     <section data-track-section="hero" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/hero-bg.jpg"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      <HeroVideoBg />
 
       {/* Overlay */}
       <div

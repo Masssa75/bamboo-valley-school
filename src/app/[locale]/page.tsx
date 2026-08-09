@@ -14,9 +14,12 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 // LocalBusiness Schema for SEO
+// Multi-typed: School/Preschool carry the education signal (we are a licensed
+// international school as of Aug 2026); LocalBusiness keeps openingHours,
+// priceRange and geo valid, which EducationalOrganization alone does not allow.
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "ChildCare",
+  "@type": ["School", "Preschool", "LocalBusiness"],
   "@id": "https://bamboovalleyphuket.com/#organization",
   name: "Bamboo Valley Phuket",
   alternateName: "Bamboo Valley School",
@@ -56,7 +59,23 @@ const localBusinessSchema = {
     closes: "15:30",
   },
   priceRange: "$$",
-  image: "https://bamboovalleyphuket.com/images/hero-bg.jpg",
+  image: "https://bamboovalleyphuket.com/images/bamboo-valley-international-school-phuket-og.jpg",
+  // The campus film. Declared as subjectOf, not as a top-level VideoObject:
+  // it is a background loop, and Google only treats a page as a video "watch
+  // page" when the video is the main content. subjectOf states the honest
+  // relationship — this organisation is what the film is about.
+  subjectOf: {
+    "@type": "VideoObject",
+    name: "Bamboo Valley International School, Phuket — campus film",
+    description:
+      "A walk through the Bamboo Valley campus in Cherngtalay, Phuket: outdoor classrooms under 5,600 m² of palm plantation, gardening, handwork, painting and free play with children ages 2-9.",
+    contentUrl:
+      "https://bamboovalleyphuket.com/videos/bamboo-valley-international-school-phuket.mp4",
+    thumbnailUrl:
+      "https://bamboovalleyphuket.com/images/bamboo-valley-international-school-phuket-og.jpg",
+    uploadDate: "2026-08-09",
+    duration: "PT1M33S",
+  },
   sameAs: [
     "https://www.instagram.com/bamboovalleyphuket/",
     "https://www.facebook.com/BambooValleyPhuket",
@@ -138,7 +157,7 @@ export default async function Home({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <Navigation locale={locale as Locale} />
-      <Hero />
+      <Hero locale={locale} />
       <WhatWeAre />
       <Activities />
       <Camps locale={locale} />
