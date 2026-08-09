@@ -9,7 +9,10 @@ require('dotenv').config({ path: '.env.local' })
 const { google } = require('googleapis')
 
 const days = parseInt(process.argv[2]) || 28
-const siteUrl = 'https://www.bamboovalleyphuket.com/'
+// The site 301-redirects www -> non-www, so the CANONICAL urls live in the non-www property.
+// The www property exists too but only ever sees the bare homepage — querying it reports
+// ~1 page / 56 queries instead of the real ~49 pages / 397 queries. Do not "fix" this back.
+const siteUrl = 'https://bamboovalleyphuket.com/'
 
 const auth = new google.auth.GoogleAuth({
   credentials: {
@@ -42,7 +45,7 @@ async function getQueries() {
         startDate: startDate.toISOString().split('T')[0],
         endDate: endDate.toISOString().split('T')[0],
         dimensions: ['query'],
-        rowLimit: 20,
+        rowLimit: 200,
       },
     })
     return response.data.rows || []
@@ -64,7 +67,7 @@ async function getPages() {
         startDate: startDate.toISOString().split('T')[0],
         endDate: endDate.toISOString().split('T')[0],
         dimensions: ['page'],
-        rowLimit: 20,
+        rowLimit: 200,
       },
     })
     return response.data.rows || []
@@ -117,7 +120,7 @@ async function main() {
     console.log('\n📄 TOP PAGES IN SEARCH')
     if (pages.length) {
       pages.forEach((row, i) => {
-        const page = row.keys[0].replace('https://www.bamboovalleyphuket.com', '')
+        const page = row.keys[0].replace(/^https?:\/\/(www\.)?bamboovalleyphuket\.com/, '')
         const clicks = row.clicks || 0
         const impressions = row.impressions || 0
         console.log(`   ${i + 1}. ${page || '/'}`)
