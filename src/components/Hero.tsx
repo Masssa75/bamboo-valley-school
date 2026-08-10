@@ -58,7 +58,7 @@ export default function Hero({ locale = "en" }: HeroProps) {
             alt={`Bamboo Valley International School — ${common("tagline")}`}
             width={953}
             height={1000}
-            className="mx-auto mb-[50px] h-[clamp(200px,42vh,404px)] w-auto
+            className="mx-auto mb-[50px] h-[clamp(150px,min(42vh,60vw),404px)] w-auto
                        [filter:drop-shadow(0_0_38px_rgba(0,0,0,0.85))]"
             priority
           />
