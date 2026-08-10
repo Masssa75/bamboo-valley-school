@@ -47,15 +47,19 @@ export default function Hero({ locale = "en" }: HeroProps) {
             alt text of a visible image is real heading text, and keeping the
             tagline string verbatim leaves the 2026-08-09 measurement window
             intact (see seo-licence-relaunch/handoff.md, rule 3).
-            Height is a clamp so it can't overflow a short viewport —
-            that's the knob to turn when tuning the size. */}
+            Size, gap and glow were dialled in over the live video in
+            working-docs/school-redesign/hero-lab.html — 404px is the chosen
+            height, the clamp only stops it overflowing a short viewport.
+            The +10% brightness is baked into the WebP by
+            Marketing/Brand/logo/build-web-logo.py, not applied here. */}
         <h1>
           <Image
             src="/images/bamboo-valley-international-school-logo.webp"
             alt={`Bamboo Valley International School — ${common("tagline")}`}
-            width={762}
-            height={800}
-            className="mx-auto mb-8 h-[clamp(200px,42vh,460px)] w-auto"
+            width={953}
+            height={1000}
+            className="mx-auto mb-[50px] h-[clamp(200px,42vh,404px)] w-auto
+                       [filter:drop-shadow(0_0_38px_rgba(0,0,0,0.85))]"
             priority
           />
         </h1>
