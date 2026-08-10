@@ -42,11 +42,14 @@ export default function Hero({ locale = "en" }: HeroProps) {
       {/* Content */}
       <div className="relative z-[3] text-center text-white max-w-[1100px] px-8 w-full">
         {/* Logo */}
+        {/* 440px WebP = 2x the 220px display size. next/image is unoptimized
+            (static export), so the source file is what ships — the 1279px
+            logo.png master was 280 KB for a 220px slot. Master kept on disk. */}
         <Image
-          src="/images/logo.png"
+          src="/images/bamboo-valley-logo.webp"
           alt="Bamboo Valley International School"
-          width={220}
-          height={220}
+          width={440}
+          height={441}
           className="mx-auto mb-6 h-[180px] md:h-[220px] w-auto"
           priority
         />
