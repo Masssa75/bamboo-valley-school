@@ -41,22 +41,23 @@ export default function Hero({ locale = "en" }: HeroProps) {
 
       {/* Content */}
       <div className="relative z-[3] text-center text-white max-w-[1100px] px-8 w-full">
-        {/* Logo */}
-        {/* 440px WebP = 2x the 220px display size. next/image is unoptimized
-            (static export), so the source file is what ships — the 1279px
-            logo.png master was 280 KB for a 220px slot. Master kept on disk. */}
-        <Image
-          src="/images/bamboo-valley-logo.webp"
-          alt="Bamboo Valley International School"
-          width={440}
-          height={441}
-          className="mx-auto mb-6 h-[180px] md:h-[220px] w-auto"
-          priority
-        />
-
-        {/* Tagline — doubles as the page H1 (SEO: only heading above the fold) */}
-        <h1 className="font-serif text-lg font-medium tracking-[3px] uppercase mb-8 opacity-95">
-          {common("tagline")}
+        {/* Logo — the full 2026 lockup, which already reads "International
+            School", so the separate eyebrow line it used to sit above is gone.
+            That line was the page's only H1, so the H1 moves onto the logo:
+            alt text of a visible image is real heading text, and keeping the
+            tagline string verbatim leaves the 2026-08-09 measurement window
+            intact (see seo-licence-relaunch/handoff.md, rule 3).
+            Height is a clamp so it can't overflow a short viewport —
+            that's the knob to turn when tuning the size. */}
+        <h1>
+          <Image
+            src="/images/bamboo-valley-international-school-logo.webp"
+            alt={`Bamboo Valley International School — ${common("tagline")}`}
+            width={762}
+            height={800}
+            className="mx-auto mb-8 h-[clamp(200px,42vh,460px)] w-auto"
+            priority
+          />
         </h1>
 
         {/* Three Interactive Words */}
