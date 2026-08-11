@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { locales, type Locale, localeNames } from "@/i18n/config";
 import { GA_MEASUREMENT_ID } from "@/lib/gtag";
+import { META_PIXEL_ID } from "@/lib/meta-pixel";
 import { EngagementTracker } from "@/components/EngagementTracker";
 import "../globals.css";
 
@@ -137,6 +138,29 @@ export default async function LocaleLayout({
               }}
             />
           </>
+        )}
+        {/* Meta pixel. PageView fires here; every other event is sent from
+            EngagementTracker and the forms, each with an eventID so the
+            Conversions API twin from netlify/functions dedupes against it. */}
+        {META_PIXEL_ID && (
+          <Script
+            id="meta-pixel"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window,document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '${META_PIXEL_ID}');
+                fbq('track', 'PageView');
+              `,
+            }}
+          />
         )}
         <NextIntlClientProvider messages={messages}>
           <EngagementTracker />

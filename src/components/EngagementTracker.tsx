@@ -4,6 +4,9 @@ import { useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { trackScrollDepth, trackSectionView, trackSectionEngagement, trackWhatsAppClick } from "@/lib/gtag";
 import { captureAttribution } from "@/lib/attribution";
+import { metaTrack, metaTrackCustom, isKeyPage } from "@/lib/meta-pixel";
+
+const QUALIFIED_KEY = "bv_qualified_visit";
 
 // Tracks scroll depth and section visibility for GA4
 export function EngagementTracker() {
@@ -11,12 +14,14 @@ export function EngagementTracker() {
   const scrollMilestonesReached = useRef<Set<number>>(new Set());
   const sectionsViewed = useRef<Set<string>>(new Set());
   const sectionEntryTimes = useRef<Map<string, number>>(new Map());
+  const viewContentSent = useRef(false);
 
   // Reset tracking on page change
   useEffect(() => {
     scrollMilestonesReached.current.clear();
     sectionsViewed.current.clear();
     sectionEntryTimes.current.clear();
+    viewContentSent.current = false;
   }, [pathname]);
 
   // Record where this visit came from, on every page (the module decides
@@ -34,9 +39,57 @@ export function EngagementTracker() {
       if (!link) return;
       const number = link.getAttribute("href")?.match(/wa\.me\/(\d+)/)?.[1] ?? "unknown";
       trackWhatsAppClick(`${pathname} | ${number}`);
+      metaTrack("Contact", { content_name: pathname });
     };
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
+  }, [pathname]);
+
+  // Meta's optimisable event. 60 seconds AND half the page — a bar that
+  // accidental clicks and bots don't clear. Once per session, not per page,
+  // so a browsing parent counts once rather than five times.
+  //
+  // This is the event ad sets should optimise against: the deep events
+  // (Lead, CompleteRegistration) are far below Meta's ~50/week learning
+  // threshold and always will be at this school's volume.
+  useEffect(() => {
+    const startedAt = Date.now();
+    let maxScroll = 0;
+
+    const onScroll = () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        maxScroll = Math.max(maxScroll, Math.round((window.scrollY / docHeight) * 100));
+      } else {
+        maxScroll = 100; // page fits the viewport — nothing to scroll past
+      }
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const tick = setInterval(() => {
+      const seconds = Math.round((Date.now() - startedAt) / 1000);
+
+      if (seconds >= 30 && isKeyPage(pathname) && !viewContentSent.current) {
+        viewContentSent.current = true;
+        metaTrack("ViewContent", { content_name: pathname });
+      }
+
+      if (seconds >= 60 && maxScroll >= 50 && !sessionStorage.getItem(QUALIFIED_KEY)) {
+        try {
+          sessionStorage.setItem(QUALIFIED_KEY, "1");
+        } catch {
+          /* private mode — fire anyway, worst case it counts twice */
+        }
+        metaTrackCustom("QualifiedVisit", { content_name: pathname, scroll_depth: maxScroll });
+        clearInterval(tick);
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(tick);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, [pathname]);
 
   // Scroll depth tracking

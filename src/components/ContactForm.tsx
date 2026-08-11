@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { getAttribution } from "@/lib/attribution";
+import { metaTrack, newEventId } from "@/lib/meta-pixel";
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
@@ -28,6 +29,9 @@ export default function ContactForm() {
     setStatus("loading");
     setErrorMessage("");
 
+    // Shared with the Conversions API twin so Meta counts one conversion.
+    const eventId = newEventId();
+
     try {
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
@@ -37,6 +41,7 @@ export default function ContactForm() {
           website: honeypot,
           _t: loadedAt,
           attribution: getAttribution(),
+          eventId,
         }),
       });
 
@@ -56,6 +61,7 @@ export default function ContactForm() {
           event_category: "engagement",
           event_label: locale,
         });
+        metaTrack("Lead", { content_name: pathname }, eventId);
       }
 
       setStatus("success");

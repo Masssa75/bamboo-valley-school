@@ -1,6 +1,7 @@
 // src/lib/enrollment/api.ts
 import type { EnrollmentFormState } from './types';
 import { getAttribution } from '@/lib/attribution';
+import { metaTrack, newEventId } from '@/lib/meta-pixel';
 
 const BASE = '/.netlify/functions';
 
@@ -17,10 +18,11 @@ export async function createDraft(data: {
   formLoadedAt: number;
   forceNew?: boolean;
 }): Promise<{ id?: string; resumeToken?: string; existingDraft?: boolean; existingToken?: string; error?: string }> {
+  const eventId = newEventId();
   const res = await fetch(`${BASE}/enrollment-save`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...data, attribution: getAttribution() }),
+    body: JSON.stringify({ ...data, attribution: getAttribution(), eventId }),
   });
   const result = await res.json();
 
@@ -31,6 +33,7 @@ export async function createDraft(data: {
       event_category: 'conversion',
       event_label: window.location.pathname,
     });
+    metaTrack('InitiateCheckout', { content_name: window.location.pathname }, eventId);
   }
 
   return result;
@@ -69,12 +72,21 @@ export async function submitEnrollment(resumeToken: string): Promise<{
   referenceNumber?: string;
   error?: string;
 }> {
+  const eventId = newEventId();
   const res = await fetch(`${BASE}/enrollment-submit`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ resumeToken }),
+    body: JSON.stringify({ resumeToken, eventId }),
   });
-  return res.json();
+  const result = await res.json();
+
+  // Kept here rather than in EnrollmentForm.tsx, which carries parked
+  // uncommitted work we must not stage.
+  if (result.referenceNumber) {
+    metaTrack('CompleteRegistration', { content_name: '/enroll' }, eventId);
+  }
+
+  return result;
 }
 
 // --- enrollment-upload: get signed URL ---

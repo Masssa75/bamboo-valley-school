@@ -54,8 +54,11 @@ export function getAgeDisplay(dob: string): string {
 // "How did you find us?" options
 export const HOW_FOUND_US_OPTIONS = [
   'google_search',
+  'naver',          // confirmed acquisition source — BV-2026-0047 came in this way
+  'ai_assistant',   // ChatGPT et al; visible in GA4 as chatgpt.com / ai-assistant
   'instagram',
   'facebook',
+  'tiktok',
   'friend_referral',
   'school_visit',
   'event',

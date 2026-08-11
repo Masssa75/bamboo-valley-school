@@ -3,6 +3,7 @@ import type { Handler } from "@netlify/functions";
 import { createClient } from "@supabase/supabase-js";
 import { nanoid } from "nanoid";
 import { attributionColumns } from "./lib/attribution";
+import { sendCapiEvent } from "./lib/capi";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,7 +26,7 @@ export const handler: Handler = async (event) => {
   // --- POST: Create new draft ---
   if (event.httpMethod === "POST") {
     try {
-      const { fullName, email, phone, childCount, honeypot, formLoadedAt, forceNew, attribution } = JSON.parse(event.body || "{}");
+      const { fullName, email, phone, childCount, honeypot, formLoadedAt, forceNew, attribution, eventId } = JSON.parse(event.body || "{}");
 
       // Honeypot check
       if (honeypot) {
@@ -113,6 +114,18 @@ export const handler: Handler = async (event) => {
           headers,
           body: JSON.stringify({ error: "Failed to create application" }),
         };
+      }
+
+      if (eventId) {
+        await sendCapiEvent({
+          eventName: "InitiateCheckout",
+          eventId,
+          email,
+          phone,
+          headers: event.headers as Record<string, string | undefined>,
+          attribution,
+          sourceUrl: event.headers?.referer,
+        });
       }
 
       return {

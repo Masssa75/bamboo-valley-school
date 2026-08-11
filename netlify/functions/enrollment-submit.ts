@@ -1,6 +1,7 @@
 // netlify/functions/enrollment-submit.ts
 import type { Handler } from "@netlify/functions";
 import { createClient } from "@supabase/supabase-js";
+import { sendCapiEvent } from "./lib/capi";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -44,7 +45,7 @@ export const handler: Handler = async (event) => {
   }
 
   try {
-    const { resumeToken } = JSON.parse(event.body || "{}");
+    const { resumeToken, eventId } = JSON.parse(event.body || "{}");
 
     if (!resumeToken) {
       return {
@@ -81,7 +82,7 @@ export const handler: Handler = async (event) => {
     // Get application details for Telegram notification
     const { data: app } = await supabase
       .from("enrollment_applications")
-      .select("parent1_name, parent1_email, parent1_phone, reference_number")
+      .select("parent1_name, parent1_email, parent1_phone, reference_number, attribution")
       .eq("reference_number", data.referenceNumber)
       .single();
 
@@ -120,6 +121,21 @@ ${childLines || '  (none)'}
     `.trim();
 
     await sendTelegramMessage(telegramMessage);
+
+    // The deepest conversion the site has. Awaited — Netlify drops in-flight
+    // fetches as soon as the handler returns.
+    if (eventId) {
+      await sendCapiEvent({
+        eventName: "CompleteRegistration",
+        eventId,
+        email: app?.parent1_email,
+        phone: app?.parent1_phone,
+        headers: event.headers as Record<string, string | undefined>,
+        attribution: app?.attribution,
+        sourceUrl: event.headers?.referer,
+        customData: { content_name: data.referenceNumber },
+      });
+    }
 
     return {
       statusCode: 200,

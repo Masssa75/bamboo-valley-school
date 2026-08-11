@@ -1,6 +1,7 @@
 import type { Handler } from "@netlify/functions";
 import { createClient } from "@supabase/supabase-js";
 import { attributionColumns, attributionSummary } from "./lib/attribution";
+import { sendCapiEvent } from "./lib/capi";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -45,7 +46,7 @@ export const handler: Handler = async (event) => {
   };
 
   try {
-    const { name, email, phone, subject, message, website, _t, attribution } = JSON.parse(event.body || "{}");
+    const { name, email, phone, subject, message, website, _t, attribution, eventId } = JSON.parse(event.body || "{}");
 
     // Honeypot check - real users never fill this hidden field
     if (website) {
@@ -107,6 +108,20 @@ ${message}
     `.trim();
 
     await sendTelegramMessage(telegramMessage);
+
+    // Server-side twin of the browser pixel's Lead. Awaited on purpose:
+    // Netlify drops in-flight fetches the moment the handler returns.
+    if (eventId) {
+      await sendCapiEvent({
+        eventName: "Lead",
+        eventId,
+        email,
+        phone,
+        headers: event.headers as Record<string, string | undefined>,
+        attribution,
+        sourceUrl: event.headers?.referer,
+      });
+    }
 
     return {
       statusCode: 200,
