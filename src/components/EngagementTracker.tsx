@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
-import { trackScrollDepth, trackSectionView, trackSectionEngagement } from "@/lib/gtag";
+import { trackScrollDepth, trackSectionView, trackSectionEngagement, trackWhatsAppClick } from "@/lib/gtag";
+import { captureAttribution } from "@/lib/attribution";
 
 // Tracks scroll depth and section visibility for GA4
 export function EngagementTracker() {
@@ -16,6 +17,26 @@ export function EngagementTracker() {
     scrollMilestonesReached.current.clear();
     sectionsViewed.current.clear();
     sectionEntryTimes.current.clear();
+  }, [pathname]);
+
+  // Record where this visit came from, on every page (the module decides
+  // whether there is anything new worth writing).
+  useEffect(() => {
+    captureAttribution();
+  }, [pathname]);
+
+  // WhatsApp is the primary conversion on most pages and there are 13 wa.me
+  // links spread across the site. One delegated listener catches all of them,
+  // including any added later — better than 13 onClick props to keep in sync.
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement | null)?.closest?.('a[href*="wa.me"]');
+      if (!link) return;
+      const number = link.getAttribute("href")?.match(/wa\.me\/(\d+)/)?.[1] ?? "unknown";
+      trackWhatsAppClick(`${pathname} | ${number}`);
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
   }, [pathname]);
 
   // Scroll depth tracking

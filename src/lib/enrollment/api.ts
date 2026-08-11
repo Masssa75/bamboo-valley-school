@@ -1,9 +1,13 @@
 // src/lib/enrollment/api.ts
 import type { EnrollmentFormState } from './types';
+import { getAttribution } from '@/lib/attribution';
 
 const BASE = '/.netlify/functions';
 
 // --- enrollment-save: create draft ---
+// Attribution and the enrollment_start event are attached here rather than at
+// the two call sites in EnrollmentForm, so starting the form can only ever be
+// counted once and can't drift out of sync between them.
 export async function createDraft(data: {
   fullName: string;
   email: string;
@@ -16,9 +20,20 @@ export async function createDraft(data: {
   const res = await fetch(`${BASE}/enrollment-save`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
+    body: JSON.stringify({ ...data, attribution: getAttribution() }),
   });
-  return res.json();
+  const result = await res.json();
+
+  // A real new draft only. `id: "ok"` is the honeypot/too-fast decoy, and
+  // existingDraft means they're resuming something they already started.
+  if (result.id && result.id !== 'ok' && !result.existingDraft) {
+    window.gtag?.('event', 'enrollment_start', {
+      event_category: 'conversion',
+      event_label: window.location.pathname,
+    });
+  }
+
+  return result;
 }
 
 // --- enrollment-save: update draft ---

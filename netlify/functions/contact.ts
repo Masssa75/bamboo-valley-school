@@ -1,5 +1,6 @@
 import type { Handler } from "@netlify/functions";
 import { createClient } from "@supabase/supabase-js";
+import { attributionColumns, attributionSummary } from "./lib/attribution";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -44,7 +45,7 @@ export const handler: Handler = async (event) => {
   };
 
   try {
-    const { name, email, phone, subject, message, website, _t } = JSON.parse(event.body || "{}");
+    const { name, email, phone, subject, message, website, _t, attribution } = JSON.parse(event.body || "{}");
 
     // Honeypot check - real users never fill this hidden field
     if (website) {
@@ -77,7 +78,7 @@ export const handler: Handler = async (event) => {
     // Save to Supabase
     const { data, error } = await supabase
       .from("school_enquiries")
-      .insert([{ name, email, phone: phone || null, subject, message }])
+      .insert([{ name, email, phone: phone || null, subject, message, ...attributionColumns(attribution) }])
       .select()
       .single();
 
@@ -99,6 +100,8 @@ export const handler: Handler = async (event) => {
 ${phone ? `<b>Phone:</b> ${phone}\n` : ""}${subject ? `<b>Subject:</b> ${subject}\n` : ""}
 <b>Message:</b>
 ${message}
+
+<b>Source:</b> ${attributionSummary(attribution)}
 
 <i>Sent from bamboovalleyphuket.com</i>
     `.trim();

@@ -2,6 +2,7 @@
 import type { Handler } from "@netlify/functions";
 import { createClient } from "@supabase/supabase-js";
 import { nanoid } from "nanoid";
+import { attributionColumns } from "./lib/attribution";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -24,7 +25,7 @@ export const handler: Handler = async (event) => {
   // --- POST: Create new draft ---
   if (event.httpMethod === "POST") {
     try {
-      const { fullName, email, phone, childCount, honeypot, formLoadedAt, forceNew } = JSON.parse(event.body || "{}");
+      const { fullName, email, phone, childCount, honeypot, formLoadedAt, forceNew, attribution } = JSON.parse(event.body || "{}");
 
       // Honeypot check
       if (honeypot) {
@@ -100,6 +101,7 @@ export const handler: Handler = async (event) => {
           parent1_phone: phone,
           form_data: initialFormData,
           current_step: 1,
+          ...attributionColumns(attribution),
         })
         .select("id")
         .single();

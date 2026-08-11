@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import { getAttribution } from "@/lib/attribution";
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
@@ -31,19 +32,31 @@ export default function ContactForm() {
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, website: honeypot, _t: loadedAt }),
+        body: JSON.stringify({
+          ...formData,
+          website: honeypot,
+          _t: loadedAt,
+          attribution: getAttribution(),
+        }),
       });
 
+      // A 502 from Netlify is HTML, not JSON — don't let a parse error mask it.
+      const data = await response.json().catch(() => ({}));
+
       if (!response.ok) {
-        const data = await response.json();
         throw new Error(data.error || "Failed to send message");
       }
 
-      // Track conversion in GA4
-      window.gtag?.("event", "contact_form_submit", {
-        event_category: "engagement",
-        event_label: locale,
-      });
+      // The function answers 200 with id:"ok" to honeypot and too-fast
+      // submissions so bots think they succeeded. Firing the conversion on
+      // those inflated contact_form_submit — it is a GA4 key event and would
+      // become an ad optimisation signal trained on bots.
+      if (data.id && data.id !== "ok") {
+        window.gtag?.("event", "contact_form_submit", {
+          event_category: "engagement",
+          event_label: locale,
+        });
+      }
 
       setStatus("success");
       setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
