@@ -181,6 +181,7 @@ export default function EnrollmentForm() {
         if (!c.gender) errs[`children.${i}.gender`] = t("required");
         if (!c.nationality.trim()) errs[`children.${i}.nationality`] = t("required");
         if (!c.program) errs[`children.${i}.program`] = t("required");
+        if (!c.preferredStartDate) errs[`children.${i}.preferredStartDate`] = t("required");
       });
     }
     if (step === 3) {
@@ -195,6 +196,10 @@ export default function EnrollmentForm() {
         if (!c.whatUpsetsChild.trim()) errs[`children.${i}.whatUpsetsChild`] = t("required");
         if (!c.howExpressesUpset.trim()) errs[`children.${i}.howExpressesUpset`] = t("required");
       });
+      // Parent 2 is optional, but the submit schema requires a phone when a name
+      // is given. Catch it here so it can't surface as an invisible error at submit.
+      const p2 = formData.family.parent2;
+      if (p2?.fullName?.trim() && !p2.phone?.trim()) errs["family.parent2.phone"] = t("required");
     }
     // Step 4: Required health boolean fields are defaulted to false, which is valid.
     // Only validate language fields per child.
@@ -219,7 +224,7 @@ export default function EnrollmentForm() {
 
   // Helper: check if a child has required Step 2 fields filled
   const isChildComplete = (c: typeof formData.children[0]) =>
-    c.fullName.trim() && c.dateOfBirth && c.gender && c.nationality.trim() && c.program;
+    c.fullName.trim() && c.dateOfBirth && c.gender && c.nationality.trim() && c.program && c.preferredStartDate;
 
   // --- Step navigation ---
   const goToStep = async (step: number) => {
@@ -345,7 +350,10 @@ export default function EnrollmentForm() {
       console.error("Zod validation errors:", JSON.stringify(validation.error.issues, null, 2));
       const fieldErrors: Record<string, string> = {};
       for (const issue of validation.error.issues) {
-        const path = issue.path.join(".");
+        // parent2's schema-level refine reports path "family.parent2", which no
+        // field renders — remap to the phone input so the error is visible.
+        const rawPath = issue.path.join(".");
+        const path = rawPath === "family.parent2" ? "family.parent2.phone" : rawPath;
         if (!fieldErrors[path]) {
           fieldErrors[path] = issue.message;
         }

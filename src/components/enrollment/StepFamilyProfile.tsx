@@ -113,7 +113,7 @@ export default function StepFamilyProfile({
             <input type="text" id="p2-name" value={family.parent2?.fullName || ""}
               onChange={(e) => updateParent2("fullName", e.target.value)} className={inputClassName} />
           </FormField>
-          <FormField label={t("parentPhone")} id="p2-phone">
+          <FormField label={t("parentPhone")} id="p2-phone" error={errors["family.parent2.phone"]}>
             <input type="tel" id="p2-phone" value={family.parent2?.phone || ""}
               onChange={(e) => updateParent2("phone", e.target.value)} className={inputClassName} />
           </FormField>

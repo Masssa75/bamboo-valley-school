@@ -212,7 +212,7 @@ export default function StepChildren({
         </FormField>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <FormField label={t("preferredStartDate")} id="child-start-date">
+          <FormField label={t("preferredStartDate")} id="child-start-date" required error={childErr("preferredStartDate")}>
             <input
               type="date"
               id="child-start-date"
